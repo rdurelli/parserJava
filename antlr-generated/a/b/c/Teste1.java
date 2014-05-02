@@ -20,6 +20,8 @@ import java.util.TreeSet;
 
 import javax.swing.text.StyledEditorKit.ItalicAction;
 
+import org.antlr.runtime.ANTLRFileStream;
+import org.antlr.runtime.ANTLRInputStream;
 import org.antlr.runtime.ANTLRStringStream;
 import org.antlr.runtime.CharStream;
 import org.antlr.runtime.CommonTokenStream;
@@ -40,7 +42,13 @@ import com.br.databaseDDL.Table;
 
 public class Teste1 {
 
+	
+	
+	
 	public static void main(String[] args) {
+		
+		
+		
 		CharStream stream = new ANTLRStringStream(
 				"public class AlteracaoEmail extends HttpServlet\n" + 
 				"{\n" + 
@@ -262,6 +270,9 @@ public class Teste1 {
 
 		try {
 
+			
+			parser.packageDeclaration();
+			
 			parser.blockStatement();
 
 			parser.localVariableDeclaration();

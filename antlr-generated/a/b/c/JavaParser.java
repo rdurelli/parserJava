@@ -1,4 +1,4 @@
-// $ANTLR 3.4 /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g 2013-01-15 14:33:03
+// $ANTLR 3.4 /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g 2014-05-01 13:50:30
 
   //packager of my parser
   package a.b.c;
@@ -296,8 +296,10 @@ public class JavaParser extends Parser {
     public String getGrammarFileName() { return "/Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g"; }
 
 
-    	
+
        private Set<String> selects = new HashSet<String>();
+       
+       private Set<String> imports = new HashSet<String>();
        
        private Set<String> updates = new HashSet<String>();
        
@@ -313,6 +315,11 @@ public class JavaParser extends Parser {
        
        public Set<String> getSelects () {
           return this.selects;
+       }
+       
+       public Set<String> getImports () {
+       
+       	return this.imports;
        }
        
        public Set<String> getUpdates () {
@@ -331,14 +338,14 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "compilationUnit"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:229:1: compilationUnit : ( annotations ( packageDeclaration ( importDeclaration )* ( typeDeclaration )* | classOrInterfaceDeclaration ( typeDeclaration )* ) | ( packageDeclaration )? ( importDeclaration )* ( typeDeclaration )* );
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:235:1: compilationUnit : ( annotations ( packageDeclaration ( importDeclaration )* ( typeDeclaration )* | classOrInterfaceDeclaration ( typeDeclaration )* ) | ( packageDeclaration )? ( importDeclaration )* ( typeDeclaration )* );
     public final void compilationUnit() throws RecognitionException {
         int compilationUnit_StartIndex = input.index();
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 1) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:230:5: ( annotations ( packageDeclaration ( importDeclaration )* ( typeDeclaration )* | classOrInterfaceDeclaration ( typeDeclaration )* ) | ( packageDeclaration )? ( importDeclaration )* ( typeDeclaration )* )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:236:5: ( annotations ( packageDeclaration ( importDeclaration )* ( typeDeclaration )* | classOrInterfaceDeclaration ( typeDeclaration )* ) | ( packageDeclaration )? ( importDeclaration )* ( typeDeclaration )* )
             int alt8=2;
             int LA8_0 = input.LA(1);
 
@@ -373,15 +380,15 @@ public class JavaParser extends Parser {
             }
             switch (alt8) {
                 case 1 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:230:9: annotations ( packageDeclaration ( importDeclaration )* ( typeDeclaration )* | classOrInterfaceDeclaration ( typeDeclaration )* )
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:236:9: annotations ( packageDeclaration ( importDeclaration )* ( typeDeclaration )* | classOrInterfaceDeclaration ( typeDeclaration )* )
                     {
-                    pushFollow(FOLLOW_annotations_in_compilationUnit66);
+                    pushFollow(FOLLOW_annotations_in_compilationUnit65);
                     annotations();
 
                     state._fsp--;
                     if (state.failed) return ;
 
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:231:9: ( packageDeclaration ( importDeclaration )* ( typeDeclaration )* | classOrInterfaceDeclaration ( typeDeclaration )* )
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:237:9: ( packageDeclaration ( importDeclaration )* ( typeDeclaration )* | classOrInterfaceDeclaration ( typeDeclaration )* )
                     int alt4=2;
                     int LA4_0 = input.LA(1);
 
@@ -401,15 +408,15 @@ public class JavaParser extends Parser {
                     }
                     switch (alt4) {
                         case 1 :
-                            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:231:13: packageDeclaration ( importDeclaration )* ( typeDeclaration )*
+                            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:237:13: packageDeclaration ( importDeclaration )* ( typeDeclaration )*
                             {
-                            pushFollow(FOLLOW_packageDeclaration_in_compilationUnit80);
+                            pushFollow(FOLLOW_packageDeclaration_in_compilationUnit79);
                             packageDeclaration();
 
                             state._fsp--;
                             if (state.failed) return ;
 
-                            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:231:32: ( importDeclaration )*
+                            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:237:32: ( importDeclaration )*
                             loop1:
                             do {
                                 int alt1=2;
@@ -422,9 +429,9 @@ public class JavaParser extends Parser {
 
                                 switch (alt1) {
                             	case 1 :
-                            	    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:231:32: importDeclaration
+                            	    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:237:32: importDeclaration
                             	    {
-                            	    pushFollow(FOLLOW_importDeclaration_in_compilationUnit82);
+                            	    pushFollow(FOLLOW_importDeclaration_in_compilationUnit81);
                             	    importDeclaration();
 
                             	    state._fsp--;
@@ -439,7 +446,7 @@ public class JavaParser extends Parser {
                             } while (true);
 
 
-                            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:231:51: ( typeDeclaration )*
+                            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:237:51: ( typeDeclaration )*
                             loop2:
                             do {
                                 int alt2=2;
@@ -452,9 +459,9 @@ public class JavaParser extends Parser {
 
                                 switch (alt2) {
                             	case 1 :
-                            	    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:231:51: typeDeclaration
+                            	    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:237:51: typeDeclaration
                             	    {
-                            	    pushFollow(FOLLOW_typeDeclaration_in_compilationUnit85);
+                            	    pushFollow(FOLLOW_typeDeclaration_in_compilationUnit84);
                             	    typeDeclaration();
 
                             	    state._fsp--;
@@ -472,7 +479,7 @@ public class JavaParser extends Parser {
                             }
                             break;
                         case 2 :
-                            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:232:13: classOrInterfaceDeclaration ( typeDeclaration )*
+                            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:238:13: classOrInterfaceDeclaration ( typeDeclaration )*
                             {
                             pushFollow(FOLLOW_classOrInterfaceDeclaration_in_compilationUnit100);
                             classOrInterfaceDeclaration();
@@ -480,7 +487,7 @@ public class JavaParser extends Parser {
                             state._fsp--;
                             if (state.failed) return ;
 
-                            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:232:41: ( typeDeclaration )*
+                            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:238:41: ( typeDeclaration )*
                             loop3:
                             do {
                                 int alt3=2;
@@ -493,7 +500,7 @@ public class JavaParser extends Parser {
 
                                 switch (alt3) {
                             	case 1 :
-                            	    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:232:41: typeDeclaration
+                            	    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:238:41: typeDeclaration
                             	    {
                             	    pushFollow(FOLLOW_typeDeclaration_in_compilationUnit102);
                             	    typeDeclaration();
@@ -519,9 +526,9 @@ public class JavaParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:234:9: ( packageDeclaration )? ( importDeclaration )* ( typeDeclaration )*
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:240:9: ( packageDeclaration )? ( importDeclaration )* ( typeDeclaration )*
                     {
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:234:9: ( packageDeclaration )?
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:240:9: ( packageDeclaration )?
                     int alt5=2;
                     int LA5_0 = input.LA(1);
 
@@ -530,7 +537,7 @@ public class JavaParser extends Parser {
                     }
                     switch (alt5) {
                         case 1 :
-                            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:234:9: packageDeclaration
+                            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:240:9: packageDeclaration
                             {
                             pushFollow(FOLLOW_packageDeclaration_in_compilationUnit123);
                             packageDeclaration();
@@ -544,7 +551,7 @@ public class JavaParser extends Parser {
                     }
 
 
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:234:29: ( importDeclaration )*
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:240:29: ( importDeclaration )*
                     loop6:
                     do {
                         int alt6=2;
@@ -557,7 +564,7 @@ public class JavaParser extends Parser {
 
                         switch (alt6) {
                     	case 1 :
-                    	    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:234:29: importDeclaration
+                    	    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:240:29: importDeclaration
                     	    {
                     	    pushFollow(FOLLOW_importDeclaration_in_compilationUnit126);
                     	    importDeclaration();
@@ -574,7 +581,7 @@ public class JavaParser extends Parser {
                     } while (true);
 
 
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:234:48: ( typeDeclaration )*
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:240:48: ( typeDeclaration )*
                     loop7:
                     do {
                         int alt7=2;
@@ -587,7 +594,7 @@ public class JavaParser extends Parser {
 
                         switch (alt7) {
                     	case 1 :
-                    	    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:234:48: typeDeclaration
+                    	    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:240:48: typeDeclaration
                     	    {
                     	    pushFollow(FOLLOW_typeDeclaration_in_compilationUnit129);
                     	    typeDeclaration();
@@ -626,25 +633,30 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "packageDeclaration"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:237:1: packageDeclaration : 'package' qualifiedName ';' ;
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:243:1: packageDeclaration : 'package' qualifiedName ';' ;
     public final void packageDeclaration() throws RecognitionException {
         int packageDeclaration_StartIndex = input.index();
+
+        JavaParser.qualifiedName_return qualifiedName1 =null;
+
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 2) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:238:5: ( 'package' qualifiedName ';' )
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:238:9: 'package' qualifiedName ';'
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:244:5: ( 'package' qualifiedName ';' )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:244:9: 'package' qualifiedName ';'
             {
             match(input,88,FOLLOW_88_in_packageDeclaration149); if (state.failed) return ;
 
             pushFollow(FOLLOW_qualifiedName_in_packageDeclaration151);
-            qualifiedName();
+            qualifiedName1=qualifiedName();
 
             state._fsp--;
             if (state.failed) return ;
 
             match(input,48,FOLLOW_48_in_packageDeclaration153); if (state.failed) return ;
+
+            if ( state.backtracking==0 ) {System.out.println("nome do Pacote "+ (qualifiedName1!=null?input.toString(qualifiedName1.start,qualifiedName1.stop):null));}
 
             }
 
@@ -666,19 +678,22 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "importDeclaration"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:241:1: importDeclaration : 'import' ( 'static' )? qualifiedName ( '.' '*' )? ';' ;
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:247:1: importDeclaration : 'import' ( 'static' )? qualifiedName ( '.' '*' )? ';' ;
     public final void importDeclaration() throws RecognitionException {
         int importDeclaration_StartIndex = input.index();
+
+        JavaParser.qualifiedName_return qualifiedName2 =null;
+
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 3) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:242:5: ( 'import' ( 'static' )? qualifiedName ( '.' '*' )? ';' )
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:242:9: 'import' ( 'static' )? qualifiedName ( '.' '*' )? ';'
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:248:5: ( 'import' ( 'static' )? qualifiedName ( '.' '*' )? ';' )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:248:9: 'import' ( 'static' )? qualifiedName ( '.' '*' )? ';'
             {
-            match(input,80,FOLLOW_80_in_importDeclaration176); if (state.failed) return ;
+            match(input,80,FOLLOW_80_in_importDeclaration178); if (state.failed) return ;
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:242:18: ( 'static' )?
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:248:18: ( 'static' )?
             int alt9=2;
             int LA9_0 = input.LA(1);
 
@@ -687,9 +702,9 @@ public class JavaParser extends Parser {
             }
             switch (alt9) {
                 case 1 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:242:18: 'static'
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:248:18: 'static'
                     {
-                    match(input,94,FOLLOW_94_in_importDeclaration178); if (state.failed) return ;
+                    match(input,94,FOLLOW_94_in_importDeclaration180); if (state.failed) return ;
 
                     }
                     break;
@@ -697,13 +712,13 @@ public class JavaParser extends Parser {
             }
 
 
-            pushFollow(FOLLOW_qualifiedName_in_importDeclaration181);
-            qualifiedName();
+            pushFollow(FOLLOW_qualifiedName_in_importDeclaration183);
+            qualifiedName2=qualifiedName();
 
             state._fsp--;
             if (state.failed) return ;
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:242:42: ( '.' '*' )?
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:248:42: ( '.' '*' )?
             int alt10=2;
             int LA10_0 = input.LA(1);
 
@@ -712,11 +727,11 @@ public class JavaParser extends Parser {
             }
             switch (alt10) {
                 case 1 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:242:43: '.' '*'
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:248:43: '.' '*'
                     {
-                    match(input,43,FOLLOW_43_in_importDeclaration184); if (state.failed) return ;
+                    match(input,43,FOLLOW_43_in_importDeclaration186); if (state.failed) return ;
 
-                    match(input,34,FOLLOW_34_in_importDeclaration186); if (state.failed) return ;
+                    match(input,34,FOLLOW_34_in_importDeclaration188); if (state.failed) return ;
 
                     }
                     break;
@@ -724,7 +739,13 @@ public class JavaParser extends Parser {
             }
 
 
-            match(input,48,FOLLOW_48_in_importDeclaration190); if (state.failed) return ;
+            match(input,48,FOLLOW_48_in_importDeclaration192); if (state.failed) return ;
+
+            if ( state.backtracking==0 ) {
+                
+                this.getImports().add((qualifiedName2!=null?input.toString(qualifiedName2.start,qualifiedName2.stop):null));
+                
+                }
 
             }
 
@@ -744,22 +765,16 @@ public class JavaParser extends Parser {
     // $ANTLR end "importDeclaration"
 
 
-    public static class typeDeclaration_return extends ParserRuleReturnScope {
-    };
-
 
     // $ANTLR start "typeDeclaration"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:245:1: typeDeclaration : ( classOrInterfaceDeclaration | ';' );
-    public final JavaParser.typeDeclaration_return typeDeclaration() throws RecognitionException {
-        JavaParser.typeDeclaration_return retval = new JavaParser.typeDeclaration_return();
-        retval.start = input.LT(1);
-
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:255:1: typeDeclaration : ( classOrInterfaceDeclaration | ';' );
+    public final void typeDeclaration() throws RecognitionException {
         int typeDeclaration_StartIndex = input.index();
 
         try {
-            if ( state.backtracking>0 && alreadyParsedRule(input, 4) ) { return retval; }
+            if ( state.backtracking>0 && alreadyParsedRule(input, 4) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:246:5: ( classOrInterfaceDeclaration | ';' )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:256:5: ( classOrInterfaceDeclaration | ';' )
             int alt11=2;
             int LA11_0 = input.LA(1);
 
@@ -770,7 +785,7 @@ public class JavaParser extends Parser {
                 alt11=2;
             }
             else {
-                if (state.backtracking>0) {state.failed=true; return retval;}
+                if (state.backtracking>0) {state.failed=true; return ;}
                 NoViableAltException nvae =
                     new NoViableAltException("", 11, 0, input);
 
@@ -779,30 +794,25 @@ public class JavaParser extends Parser {
             }
             switch (alt11) {
                 case 1 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:246:9: classOrInterfaceDeclaration
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:256:9: classOrInterfaceDeclaration
                     {
-                    pushFollow(FOLLOW_classOrInterfaceDeclaration_in_typeDeclaration213);
+                    pushFollow(FOLLOW_classOrInterfaceDeclaration_in_typeDeclaration217);
                     classOrInterfaceDeclaration();
 
                     state._fsp--;
-                    if (state.failed) return retval;
-
-                    if ( state.backtracking==0 ) {System.out.println( " Nome da Classe " +input.toString(retval.start,input.LT(-1)));}
+                    if (state.failed) return ;
 
                     }
                     break;
                 case 2 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:247:9: ';'
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:257:9: ';'
                     {
-                    match(input,48,FOLLOW_48_in_typeDeclaration225); if (state.failed) return retval;
+                    match(input,48,FOLLOW_48_in_typeDeclaration228); if (state.failed) return ;
 
                     }
                     break;
 
             }
-            retval.stop = input.LT(-1);
-
-
         }
         catch (RecognitionException re) {
             reportError(re);
@@ -814,30 +824,30 @@ public class JavaParser extends Parser {
             if ( state.backtracking>0 ) { memoize(input, 4, typeDeclaration_StartIndex); }
 
         }
-        return retval;
+        return ;
     }
     // $ANTLR end "typeDeclaration"
 
 
 
     // $ANTLR start "classOrInterfaceDeclaration"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:250:1: classOrInterfaceDeclaration : classOrInterfaceModifiers ( classDeclaration | interfaceDeclaration ) ;
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:260:1: classOrInterfaceDeclaration : classOrInterfaceModifiers ( classDeclaration | interfaceDeclaration ) ;
     public final void classOrInterfaceDeclaration() throws RecognitionException {
         int classOrInterfaceDeclaration_StartIndex = input.index();
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 5) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:251:5: ( classOrInterfaceModifiers ( classDeclaration | interfaceDeclaration ) )
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:251:9: classOrInterfaceModifiers ( classDeclaration | interfaceDeclaration )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:261:5: ( classOrInterfaceModifiers ( classDeclaration | interfaceDeclaration ) )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:261:9: classOrInterfaceModifiers ( classDeclaration | interfaceDeclaration )
             {
-            pushFollow(FOLLOW_classOrInterfaceModifiers_in_classOrInterfaceDeclaration248);
+            pushFollow(FOLLOW_classOrInterfaceModifiers_in_classOrInterfaceDeclaration251);
             classOrInterfaceModifiers();
 
             state._fsp--;
             if (state.failed) return ;
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:251:35: ( classDeclaration | interfaceDeclaration )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:261:35: ( classDeclaration | interfaceDeclaration )
             int alt12=2;
             int LA12_0 = input.LA(1);
 
@@ -857,9 +867,9 @@ public class JavaParser extends Parser {
             }
             switch (alt12) {
                 case 1 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:251:36: classDeclaration
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:261:36: classDeclaration
                     {
-                    pushFollow(FOLLOW_classDeclaration_in_classOrInterfaceDeclaration251);
+                    pushFollow(FOLLOW_classDeclaration_in_classOrInterfaceDeclaration254);
                     classDeclaration();
 
                     state._fsp--;
@@ -868,9 +878,9 @@ public class JavaParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:251:55: interfaceDeclaration
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:261:55: interfaceDeclaration
                     {
-                    pushFollow(FOLLOW_interfaceDeclaration_in_classOrInterfaceDeclaration255);
+                    pushFollow(FOLLOW_interfaceDeclaration_in_classOrInterfaceDeclaration258);
                     interfaceDeclaration();
 
                     state._fsp--;
@@ -902,17 +912,17 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "classOrInterfaceModifiers"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:254:1: classOrInterfaceModifiers : ( classOrInterfaceModifier )* ;
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:264:1: classOrInterfaceModifiers : ( classOrInterfaceModifier )* ;
     public final void classOrInterfaceModifiers() throws RecognitionException {
         int classOrInterfaceModifiers_StartIndex = input.index();
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 6) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:255:5: ( ( classOrInterfaceModifier )* )
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:255:9: ( classOrInterfaceModifier )*
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:265:5: ( ( classOrInterfaceModifier )* )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:265:9: ( classOrInterfaceModifier )*
             {
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:255:9: ( classOrInterfaceModifier )*
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:265:9: ( classOrInterfaceModifier )*
             loop13:
             do {
                 int alt13=2;
@@ -934,9 +944,9 @@ public class JavaParser extends Parser {
 
                 switch (alt13) {
             	case 1 :
-            	    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:255:9: classOrInterfaceModifier
+            	    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:265:9: classOrInterfaceModifier
             	    {
-            	    pushFollow(FOLLOW_classOrInterfaceModifier_in_classOrInterfaceModifiers279);
+            	    pushFollow(FOLLOW_classOrInterfaceModifier_in_classOrInterfaceModifiers282);
             	    classOrInterfaceModifier();
 
             	    state._fsp--;
@@ -971,14 +981,14 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "classOrInterfaceModifier"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:258:1: classOrInterfaceModifier : ( annotation | 'public' | 'protected' | 'private' | 'abstract' | 'static' | 'final' | 'strictfp' );
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:268:1: classOrInterfaceModifier : ( annotation | 'public' | 'protected' | 'private' | 'abstract' | 'static' | 'final' | 'strictfp' );
     public final void classOrInterfaceModifier() throws RecognitionException {
         int classOrInterfaceModifier_StartIndex = input.index();
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 7) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:259:5: ( annotation | 'public' | 'protected' | 'private' | 'abstract' | 'static' | 'final' | 'strictfp' )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:269:5: ( annotation | 'public' | 'protected' | 'private' | 'abstract' | 'static' | 'final' | 'strictfp' )
             int alt14=8;
             switch ( input.LA(1) ) {
             case 54:
@@ -1032,9 +1042,9 @@ public class JavaParser extends Parser {
 
             switch (alt14) {
                 case 1 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:259:9: annotation
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:269:9: annotation
                     {
-                    pushFollow(FOLLOW_annotation_in_classOrInterfaceModifier299);
+                    pushFollow(FOLLOW_annotation_in_classOrInterfaceModifier302);
                     annotation();
 
                     state._fsp--;
@@ -1043,51 +1053,51 @@ public class JavaParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:260:9: 'public'
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:270:9: 'public'
                     {
-                    match(input,91,FOLLOW_91_in_classOrInterfaceModifier312); if (state.failed) return ;
+                    match(input,91,FOLLOW_91_in_classOrInterfaceModifier315); if (state.failed) return ;
 
                     }
                     break;
                 case 3 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:261:9: 'protected'
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:271:9: 'protected'
                     {
-                    match(input,90,FOLLOW_90_in_classOrInterfaceModifier327); if (state.failed) return ;
+                    match(input,90,FOLLOW_90_in_classOrInterfaceModifier330); if (state.failed) return ;
 
                     }
                     break;
                 case 4 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:262:9: 'private'
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:272:9: 'private'
                     {
-                    match(input,89,FOLLOW_89_in_classOrInterfaceModifier339); if (state.failed) return ;
+                    match(input,89,FOLLOW_89_in_classOrInterfaceModifier342); if (state.failed) return ;
 
                     }
                     break;
                 case 5 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:263:9: 'abstract'
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:273:9: 'abstract'
                     {
-                    match(input,59,FOLLOW_59_in_classOrInterfaceModifier353); if (state.failed) return ;
+                    match(input,59,FOLLOW_59_in_classOrInterfaceModifier356); if (state.failed) return ;
 
                     }
                     break;
                 case 6 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:264:9: 'static'
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:274:9: 'static'
                     {
-                    match(input,94,FOLLOW_94_in_classOrInterfaceModifier366); if (state.failed) return ;
+                    match(input,94,FOLLOW_94_in_classOrInterfaceModifier369); if (state.failed) return ;
 
                     }
                     break;
                 case 7 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:265:9: 'final'
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:275:9: 'final'
                     {
-                    match(input,74,FOLLOW_74_in_classOrInterfaceModifier381); if (state.failed) return ;
+                    match(input,74,FOLLOW_74_in_classOrInterfaceModifier384); if (state.failed) return ;
 
                     }
                     break;
                 case 8 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:266:9: 'strictfp'
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:276:9: 'strictfp'
                     {
-                    match(input,95,FOLLOW_95_in_classOrInterfaceModifier397); if (state.failed) return ;
+                    match(input,95,FOLLOW_95_in_classOrInterfaceModifier400); if (state.failed) return ;
 
                     }
                     break;
@@ -1111,17 +1121,17 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "modifiers"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:269:1: modifiers : ( modifier )* ;
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:279:1: modifiers : ( modifier )* ;
     public final void modifiers() throws RecognitionException {
         int modifiers_StartIndex = input.index();
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 8) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:270:5: ( ( modifier )* )
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:270:9: ( modifier )*
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:280:5: ( ( modifier )* )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:280:9: ( modifier )*
             {
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:270:9: ( modifier )*
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:280:9: ( modifier )*
             loop15:
             do {
                 int alt15=2;
@@ -1143,9 +1153,9 @@ public class JavaParser extends Parser {
 
                 switch (alt15) {
             	case 1 :
-            	    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:270:9: modifier
+            	    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:280:9: modifier
             	    {
-            	    pushFollow(FOLLOW_modifier_in_modifiers419);
+            	    pushFollow(FOLLOW_modifier_in_modifiers422);
             	    modifier();
 
             	    state._fsp--;
@@ -1180,14 +1190,14 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "classDeclaration"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:273:1: classDeclaration : ( normalClassDeclaration | enumDeclaration );
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:283:1: classDeclaration : ( normalClassDeclaration | enumDeclaration );
     public final void classDeclaration() throws RecognitionException {
         int classDeclaration_StartIndex = input.index();
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 9) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:274:5: ( normalClassDeclaration | enumDeclaration )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:284:5: ( normalClassDeclaration | enumDeclaration )
             int alt16=2;
             int LA16_0 = input.LA(1);
 
@@ -1207,9 +1217,9 @@ public class JavaParser extends Parser {
             }
             switch (alt16) {
                 case 1 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:274:9: normalClassDeclaration
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:284:9: normalClassDeclaration
                     {
-                    pushFollow(FOLLOW_normalClassDeclaration_in_classDeclaration439);
+                    pushFollow(FOLLOW_normalClassDeclaration_in_classDeclaration442);
                     normalClassDeclaration();
 
                     state._fsp--;
@@ -1218,9 +1228,9 @@ public class JavaParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:275:9: enumDeclaration
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:285:9: enumDeclaration
                     {
-                    pushFollow(FOLLOW_enumDeclaration_in_classDeclaration449);
+                    pushFollow(FOLLOW_enumDeclaration_in_classDeclaration452);
                     enumDeclaration();
 
                     state._fsp--;
@@ -1248,23 +1258,23 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "normalClassDeclaration"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:278:1: normalClassDeclaration : 'class' Identifier ( typeParameters )? ( 'extends' type )? ( 'implements' typeList )? classBody ;
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:288:1: normalClassDeclaration : 'class' Identifier ( typeParameters )? ( 'extends' type )? ( 'implements' typeList )? classBody ;
     public final void normalClassDeclaration() throws RecognitionException {
         int normalClassDeclaration_StartIndex = input.index();
 
-        Token Identifier1=null;
+        Token Identifier3=null;
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 10) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:279:5: ( 'class' Identifier ( typeParameters )? ( 'extends' type )? ( 'implements' typeList )? classBody )
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:279:9: 'class' Identifier ( typeParameters )? ( 'extends' type )? ( 'implements' typeList )? classBody
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:289:5: ( 'class' Identifier ( typeParameters )? ( 'extends' type )? ( 'implements' typeList )? classBody )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:289:9: 'class' Identifier ( typeParameters )? ( 'extends' type )? ( 'implements' typeList )? classBody
             {
-            match(input,66,FOLLOW_66_in_normalClassDeclaration472); if (state.failed) return ;
+            match(input,66,FOLLOW_66_in_normalClassDeclaration475); if (state.failed) return ;
 
-            Identifier1=(Token)match(input,Identifier,FOLLOW_Identifier_in_normalClassDeclaration474); if (state.failed) return ;
+            Identifier3=(Token)match(input,Identifier,FOLLOW_Identifier_in_normalClassDeclaration477); if (state.failed) return ;
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:279:28: ( typeParameters )?
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:289:28: ( typeParameters )?
             int alt17=2;
             int LA17_0 = input.LA(1);
 
@@ -1273,9 +1283,9 @@ public class JavaParser extends Parser {
             }
             switch (alt17) {
                 case 1 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:279:28: typeParameters
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:289:28: typeParameters
                     {
-                    pushFollow(FOLLOW_typeParameters_in_normalClassDeclaration476);
+                    pushFollow(FOLLOW_typeParameters_in_normalClassDeclaration479);
                     typeParameters();
 
                     state._fsp--;
@@ -1287,9 +1297,9 @@ public class JavaParser extends Parser {
             }
 
 
-            if ( state.backtracking==0 ) {names.put("class_name", (Identifier1!=null?Identifier1.getText():null));}
+            if ( state.backtracking==0 ) {names.put("class_name", (Identifier3!=null?Identifier3.getText():null));}
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:280:9: ( 'extends' type )?
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:290:9: ( 'extends' type )?
             int alt18=2;
             int LA18_0 = input.LA(1);
 
@@ -1298,11 +1308,11 @@ public class JavaParser extends Parser {
             }
             switch (alt18) {
                 case 1 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:280:10: 'extends' type
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:290:10: 'extends' type
                     {
-                    match(input,72,FOLLOW_72_in_normalClassDeclaration490); if (state.failed) return ;
+                    match(input,72,FOLLOW_72_in_normalClassDeclaration493); if (state.failed) return ;
 
-                    pushFollow(FOLLOW_type_in_normalClassDeclaration492);
+                    pushFollow(FOLLOW_type_in_normalClassDeclaration495);
                     type();
 
                     state._fsp--;
@@ -1314,7 +1324,7 @@ public class JavaParser extends Parser {
             }
 
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:281:9: ( 'implements' typeList )?
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:291:9: ( 'implements' typeList )?
             int alt19=2;
             int LA19_0 = input.LA(1);
 
@@ -1323,11 +1333,11 @@ public class JavaParser extends Parser {
             }
             switch (alt19) {
                 case 1 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:281:10: 'implements' typeList
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:291:10: 'implements' typeList
                     {
-                    match(input,79,FOLLOW_79_in_normalClassDeclaration505); if (state.failed) return ;
+                    match(input,79,FOLLOW_79_in_normalClassDeclaration508); if (state.failed) return ;
 
-                    pushFollow(FOLLOW_typeList_in_normalClassDeclaration507);
+                    pushFollow(FOLLOW_typeList_in_normalClassDeclaration510);
                     typeList();
 
                     state._fsp--;
@@ -1339,7 +1349,7 @@ public class JavaParser extends Parser {
             }
 
 
-            pushFollow(FOLLOW_classBody_in_normalClassDeclaration519);
+            pushFollow(FOLLOW_classBody_in_normalClassDeclaration522);
             classBody();
 
             state._fsp--;
@@ -1365,25 +1375,25 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "typeParameters"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:285:1: typeParameters : '<' typeParameter ( ',' typeParameter )* '>' ;
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:295:1: typeParameters : '<' typeParameter ( ',' typeParameter )* '>' ;
     public final void typeParameters() throws RecognitionException {
         int typeParameters_StartIndex = input.index();
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 11) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:286:5: ( '<' typeParameter ( ',' typeParameter )* '>' )
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:286:9: '<' typeParameter ( ',' typeParameter )* '>'
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:296:5: ( '<' typeParameter ( ',' typeParameter )* '>' )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:296:9: '<' typeParameter ( ',' typeParameter )* '>'
             {
-            match(input,49,FOLLOW_49_in_typeParameters542); if (state.failed) return ;
+            match(input,49,FOLLOW_49_in_typeParameters545); if (state.failed) return ;
 
-            pushFollow(FOLLOW_typeParameter_in_typeParameters544);
+            pushFollow(FOLLOW_typeParameter_in_typeParameters547);
             typeParameter();
 
             state._fsp--;
             if (state.failed) return ;
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:286:27: ( ',' typeParameter )*
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:296:27: ( ',' typeParameter )*
             loop20:
             do {
                 int alt20=2;
@@ -1396,11 +1406,11 @@ public class JavaParser extends Parser {
 
                 switch (alt20) {
             	case 1 :
-            	    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:286:28: ',' typeParameter
+            	    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:296:28: ',' typeParameter
             	    {
-            	    match(input,39,FOLLOW_39_in_typeParameters547); if (state.failed) return ;
+            	    match(input,39,FOLLOW_39_in_typeParameters550); if (state.failed) return ;
 
-            	    pushFollow(FOLLOW_typeParameter_in_typeParameters549);
+            	    pushFollow(FOLLOW_typeParameter_in_typeParameters552);
             	    typeParameter();
 
             	    state._fsp--;
@@ -1415,7 +1425,7 @@ public class JavaParser extends Parser {
             } while (true);
 
 
-            match(input,52,FOLLOW_52_in_typeParameters553); if (state.failed) return ;
+            match(input,52,FOLLOW_52_in_typeParameters556); if (state.failed) return ;
 
             }
 
@@ -1437,19 +1447,19 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "typeParameter"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:289:1: typeParameter : Identifier ( 'extends' typeBound )? ;
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:299:1: typeParameter : Identifier ( 'extends' typeBound )? ;
     public final void typeParameter() throws RecognitionException {
         int typeParameter_StartIndex = input.index();
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 12) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:290:5: ( Identifier ( 'extends' typeBound )? )
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:290:9: Identifier ( 'extends' typeBound )?
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:300:5: ( Identifier ( 'extends' typeBound )? )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:300:9: Identifier ( 'extends' typeBound )?
             {
-            match(input,Identifier,FOLLOW_Identifier_in_typeParameter572); if (state.failed) return ;
+            match(input,Identifier,FOLLOW_Identifier_in_typeParameter575); if (state.failed) return ;
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:290:20: ( 'extends' typeBound )?
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:300:20: ( 'extends' typeBound )?
             int alt21=2;
             int LA21_0 = input.LA(1);
 
@@ -1458,11 +1468,11 @@ public class JavaParser extends Parser {
             }
             switch (alt21) {
                 case 1 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:290:21: 'extends' typeBound
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:300:21: 'extends' typeBound
                     {
-                    match(input,72,FOLLOW_72_in_typeParameter575); if (state.failed) return ;
+                    match(input,72,FOLLOW_72_in_typeParameter578); if (state.failed) return ;
 
-                    pushFollow(FOLLOW_typeBound_in_typeParameter577);
+                    pushFollow(FOLLOW_typeBound_in_typeParameter580);
                     typeBound();
 
                     state._fsp--;
@@ -1494,23 +1504,23 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "typeBound"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:293:1: typeBound : type ( '&' type )* ;
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:303:1: typeBound : type ( '&' type )* ;
     public final void typeBound() throws RecognitionException {
         int typeBound_StartIndex = input.index();
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 13) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:294:5: ( type ( '&' type )* )
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:294:9: type ( '&' type )*
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:304:5: ( type ( '&' type )* )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:304:9: type ( '&' type )*
             {
-            pushFollow(FOLLOW_type_in_typeBound606);
+            pushFollow(FOLLOW_type_in_typeBound609);
             type();
 
             state._fsp--;
             if (state.failed) return ;
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:294:14: ( '&' type )*
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:304:14: ( '&' type )*
             loop22:
             do {
                 int alt22=2;
@@ -1523,11 +1533,11 @@ public class JavaParser extends Parser {
 
                 switch (alt22) {
             	case 1 :
-            	    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:294:15: '&' type
+            	    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:304:15: '&' type
             	    {
-            	    match(input,30,FOLLOW_30_in_typeBound609); if (state.failed) return ;
+            	    match(input,30,FOLLOW_30_in_typeBound612); if (state.failed) return ;
 
-            	    pushFollow(FOLLOW_type_in_typeBound611);
+            	    pushFollow(FOLLOW_type_in_typeBound614);
             	    type();
 
             	    state._fsp--;
@@ -1562,21 +1572,21 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "enumDeclaration"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:297:1: enumDeclaration : ENUM Identifier ( 'implements' typeList )? enumBody ;
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:307:1: enumDeclaration : ENUM Identifier ( 'implements' typeList )? enumBody ;
     public final void enumDeclaration() throws RecognitionException {
         int enumDeclaration_StartIndex = input.index();
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 14) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:298:5: ( ENUM Identifier ( 'implements' typeList )? enumBody )
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:298:9: ENUM Identifier ( 'implements' typeList )? enumBody
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:308:5: ( ENUM Identifier ( 'implements' typeList )? enumBody )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:308:9: ENUM Identifier ( 'implements' typeList )? enumBody
             {
-            match(input,ENUM,FOLLOW_ENUM_in_enumDeclaration632); if (state.failed) return ;
+            match(input,ENUM,FOLLOW_ENUM_in_enumDeclaration635); if (state.failed) return ;
 
-            match(input,Identifier,FOLLOW_Identifier_in_enumDeclaration634); if (state.failed) return ;
+            match(input,Identifier,FOLLOW_Identifier_in_enumDeclaration637); if (state.failed) return ;
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:298:25: ( 'implements' typeList )?
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:308:25: ( 'implements' typeList )?
             int alt23=2;
             int LA23_0 = input.LA(1);
 
@@ -1585,11 +1595,11 @@ public class JavaParser extends Parser {
             }
             switch (alt23) {
                 case 1 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:298:26: 'implements' typeList
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:308:26: 'implements' typeList
                     {
-                    match(input,79,FOLLOW_79_in_enumDeclaration637); if (state.failed) return ;
+                    match(input,79,FOLLOW_79_in_enumDeclaration640); if (state.failed) return ;
 
-                    pushFollow(FOLLOW_typeList_in_enumDeclaration639);
+                    pushFollow(FOLLOW_typeList_in_enumDeclaration642);
                     typeList();
 
                     state._fsp--;
@@ -1601,7 +1611,7 @@ public class JavaParser extends Parser {
             }
 
 
-            pushFollow(FOLLOW_enumBody_in_enumDeclaration643);
+            pushFollow(FOLLOW_enumBody_in_enumDeclaration646);
             enumBody();
 
             state._fsp--;
@@ -1627,19 +1637,19 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "enumBody"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:301:1: enumBody : '{' ( enumConstants )? ( ',' )? ( enumBodyDeclarations )? '}' ;
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:311:1: enumBody : '{' ( enumConstants )? ( ',' )? ( enumBodyDeclarations )? '}' ;
     public final void enumBody() throws RecognitionException {
         int enumBody_StartIndex = input.index();
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 15) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:302:5: ( '{' ( enumConstants )? ( ',' )? ( enumBodyDeclarations )? '}' )
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:302:9: '{' ( enumConstants )? ( ',' )? ( enumBodyDeclarations )? '}'
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:312:5: ( '{' ( enumConstants )? ( ',' )? ( enumBodyDeclarations )? '}' )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:312:9: '{' ( enumConstants )? ( ',' )? ( enumBodyDeclarations )? '}'
             {
-            match(input,108,FOLLOW_108_in_enumBody662); if (state.failed) return ;
+            match(input,108,FOLLOW_108_in_enumBody665); if (state.failed) return ;
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:302:13: ( enumConstants )?
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:312:13: ( enumConstants )?
             int alt24=2;
             int LA24_0 = input.LA(1);
 
@@ -1648,9 +1658,9 @@ public class JavaParser extends Parser {
             }
             switch (alt24) {
                 case 1 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:302:13: enumConstants
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:312:13: enumConstants
                     {
-                    pushFollow(FOLLOW_enumConstants_in_enumBody664);
+                    pushFollow(FOLLOW_enumConstants_in_enumBody667);
                     enumConstants();
 
                     state._fsp--;
@@ -1662,7 +1672,7 @@ public class JavaParser extends Parser {
             }
 
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:302:28: ( ',' )?
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:312:28: ( ',' )?
             int alt25=2;
             int LA25_0 = input.LA(1);
 
@@ -1671,9 +1681,9 @@ public class JavaParser extends Parser {
             }
             switch (alt25) {
                 case 1 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:302:28: ','
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:312:28: ','
                     {
-                    match(input,39,FOLLOW_39_in_enumBody667); if (state.failed) return ;
+                    match(input,39,FOLLOW_39_in_enumBody670); if (state.failed) return ;
 
                     }
                     break;
@@ -1681,7 +1691,7 @@ public class JavaParser extends Parser {
             }
 
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:302:33: ( enumBodyDeclarations )?
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:312:33: ( enumBodyDeclarations )?
             int alt26=2;
             int LA26_0 = input.LA(1);
 
@@ -1690,9 +1700,9 @@ public class JavaParser extends Parser {
             }
             switch (alt26) {
                 case 1 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:302:33: enumBodyDeclarations
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:312:33: enumBodyDeclarations
                     {
-                    pushFollow(FOLLOW_enumBodyDeclarations_in_enumBody670);
+                    pushFollow(FOLLOW_enumBodyDeclarations_in_enumBody673);
                     enumBodyDeclarations();
 
                     state._fsp--;
@@ -1704,7 +1714,7 @@ public class JavaParser extends Parser {
             }
 
 
-            match(input,112,FOLLOW_112_in_enumBody673); if (state.failed) return ;
+            match(input,112,FOLLOW_112_in_enumBody676); if (state.failed) return ;
 
             }
 
@@ -1726,23 +1736,23 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "enumConstants"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:305:1: enumConstants : enumConstant ( ',' enumConstant )* ;
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:315:1: enumConstants : enumConstant ( ',' enumConstant )* ;
     public final void enumConstants() throws RecognitionException {
         int enumConstants_StartIndex = input.index();
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 16) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:306:5: ( enumConstant ( ',' enumConstant )* )
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:306:9: enumConstant ( ',' enumConstant )*
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:316:5: ( enumConstant ( ',' enumConstant )* )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:316:9: enumConstant ( ',' enumConstant )*
             {
-            pushFollow(FOLLOW_enumConstant_in_enumConstants692);
+            pushFollow(FOLLOW_enumConstant_in_enumConstants695);
             enumConstant();
 
             state._fsp--;
             if (state.failed) return ;
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:306:22: ( ',' enumConstant )*
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:316:22: ( ',' enumConstant )*
             loop27:
             do {
                 int alt27=2;
@@ -1761,11 +1771,11 @@ public class JavaParser extends Parser {
 
                 switch (alt27) {
             	case 1 :
-            	    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:306:23: ',' enumConstant
+            	    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:316:23: ',' enumConstant
             	    {
-            	    match(input,39,FOLLOW_39_in_enumConstants695); if (state.failed) return ;
+            	    match(input,39,FOLLOW_39_in_enumConstants698); if (state.failed) return ;
 
-            	    pushFollow(FOLLOW_enumConstant_in_enumConstants697);
+            	    pushFollow(FOLLOW_enumConstant_in_enumConstants700);
             	    enumConstant();
 
             	    state._fsp--;
@@ -1800,17 +1810,17 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "enumConstant"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:309:1: enumConstant : ( annotations )? Identifier ( arguments )? ( classBody )? ;
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:319:1: enumConstant : ( annotations )? Identifier ( arguments )? ( classBody )? ;
     public final void enumConstant() throws RecognitionException {
         int enumConstant_StartIndex = input.index();
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 17) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:310:5: ( ( annotations )? Identifier ( arguments )? ( classBody )? )
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:310:9: ( annotations )? Identifier ( arguments )? ( classBody )?
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:320:5: ( ( annotations )? Identifier ( arguments )? ( classBody )? )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:320:9: ( annotations )? Identifier ( arguments )? ( classBody )?
             {
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:310:9: ( annotations )?
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:320:9: ( annotations )?
             int alt28=2;
             int LA28_0 = input.LA(1);
 
@@ -1819,9 +1829,9 @@ public class JavaParser extends Parser {
             }
             switch (alt28) {
                 case 1 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:310:9: annotations
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:320:9: annotations
                     {
-                    pushFollow(FOLLOW_annotations_in_enumConstant722);
+                    pushFollow(FOLLOW_annotations_in_enumConstant725);
                     annotations();
 
                     state._fsp--;
@@ -1833,9 +1843,9 @@ public class JavaParser extends Parser {
             }
 
 
-            match(input,Identifier,FOLLOW_Identifier_in_enumConstant725); if (state.failed) return ;
+            match(input,Identifier,FOLLOW_Identifier_in_enumConstant728); if (state.failed) return ;
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:310:33: ( arguments )?
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:320:33: ( arguments )?
             int alt29=2;
             int LA29_0 = input.LA(1);
 
@@ -1844,9 +1854,9 @@ public class JavaParser extends Parser {
             }
             switch (alt29) {
                 case 1 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:310:33: arguments
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:320:33: arguments
                     {
-                    pushFollow(FOLLOW_arguments_in_enumConstant727);
+                    pushFollow(FOLLOW_arguments_in_enumConstant730);
                     arguments();
 
                     state._fsp--;
@@ -1858,7 +1868,7 @@ public class JavaParser extends Parser {
             }
 
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:310:44: ( classBody )?
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:320:44: ( classBody )?
             int alt30=2;
             int LA30_0 = input.LA(1);
 
@@ -1867,9 +1877,9 @@ public class JavaParser extends Parser {
             }
             switch (alt30) {
                 case 1 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:310:44: classBody
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:320:44: classBody
                     {
-                    pushFollow(FOLLOW_classBody_in_enumConstant730);
+                    pushFollow(FOLLOW_classBody_in_enumConstant733);
                     classBody();
 
                     state._fsp--;
@@ -1901,19 +1911,19 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "enumBodyDeclarations"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:313:1: enumBodyDeclarations : ';' ( classBodyDeclaration )* ;
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:323:1: enumBodyDeclarations : ';' ( classBodyDeclaration )* ;
     public final void enumBodyDeclarations() throws RecognitionException {
         int enumBodyDeclarations_StartIndex = input.index();
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 18) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:314:5: ( ';' ( classBodyDeclaration )* )
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:314:9: ';' ( classBodyDeclaration )*
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:324:5: ( ';' ( classBodyDeclaration )* )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:324:9: ';' ( classBodyDeclaration )*
             {
-            match(input,48,FOLLOW_48_in_enumBodyDeclarations754); if (state.failed) return ;
+            match(input,48,FOLLOW_48_in_enumBodyDeclarations757); if (state.failed) return ;
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:314:13: ( classBodyDeclaration )*
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:324:13: ( classBodyDeclaration )*
             loop31:
             do {
                 int alt31=2;
@@ -1926,9 +1936,9 @@ public class JavaParser extends Parser {
 
                 switch (alt31) {
             	case 1 :
-            	    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:314:14: classBodyDeclaration
+            	    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:324:14: classBodyDeclaration
             	    {
-            	    pushFollow(FOLLOW_classBodyDeclaration_in_enumBodyDeclarations757);
+            	    pushFollow(FOLLOW_classBodyDeclaration_in_enumBodyDeclarations760);
             	    classBodyDeclaration();
 
             	    state._fsp--;
@@ -1963,14 +1973,14 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "interfaceDeclaration"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:317:1: interfaceDeclaration : ( normalInterfaceDeclaration | annotationTypeDeclaration );
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:327:1: interfaceDeclaration : ( normalInterfaceDeclaration | annotationTypeDeclaration );
     public final void interfaceDeclaration() throws RecognitionException {
         int interfaceDeclaration_StartIndex = input.index();
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 19) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:318:5: ( normalInterfaceDeclaration | annotationTypeDeclaration )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:328:5: ( normalInterfaceDeclaration | annotationTypeDeclaration )
             int alt32=2;
             int LA32_0 = input.LA(1);
 
@@ -1990,9 +2000,9 @@ public class JavaParser extends Parser {
             }
             switch (alt32) {
                 case 1 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:318:9: normalInterfaceDeclaration
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:328:9: normalInterfaceDeclaration
                     {
-                    pushFollow(FOLLOW_normalInterfaceDeclaration_in_interfaceDeclaration782);
+                    pushFollow(FOLLOW_normalInterfaceDeclaration_in_interfaceDeclaration785);
                     normalInterfaceDeclaration();
 
                     state._fsp--;
@@ -2001,9 +2011,9 @@ public class JavaParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:319:9: annotationTypeDeclaration
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:329:9: annotationTypeDeclaration
                     {
-                    pushFollow(FOLLOW_annotationTypeDeclaration_in_interfaceDeclaration792);
+                    pushFollow(FOLLOW_annotationTypeDeclaration_in_interfaceDeclaration795);
                     annotationTypeDeclaration();
 
                     state._fsp--;
@@ -2031,21 +2041,21 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "normalInterfaceDeclaration"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:322:1: normalInterfaceDeclaration : 'interface' Identifier ( typeParameters )? ( 'extends' typeList )? interfaceBody ;
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:332:1: normalInterfaceDeclaration : 'interface' Identifier ( typeParameters )? ( 'extends' typeList )? interfaceBody ;
     public final void normalInterfaceDeclaration() throws RecognitionException {
         int normalInterfaceDeclaration_StartIndex = input.index();
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 20) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:323:5: ( 'interface' Identifier ( typeParameters )? ( 'extends' typeList )? interfaceBody )
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:323:9: 'interface' Identifier ( typeParameters )? ( 'extends' typeList )? interfaceBody
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:333:5: ( 'interface' Identifier ( typeParameters )? ( 'extends' typeList )? interfaceBody )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:333:9: 'interface' Identifier ( typeParameters )? ( 'extends' typeList )? interfaceBody
             {
-            match(input,83,FOLLOW_83_in_normalInterfaceDeclaration815); if (state.failed) return ;
+            match(input,83,FOLLOW_83_in_normalInterfaceDeclaration818); if (state.failed) return ;
 
-            match(input,Identifier,FOLLOW_Identifier_in_normalInterfaceDeclaration817); if (state.failed) return ;
+            match(input,Identifier,FOLLOW_Identifier_in_normalInterfaceDeclaration820); if (state.failed) return ;
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:323:32: ( typeParameters )?
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:333:32: ( typeParameters )?
             int alt33=2;
             int LA33_0 = input.LA(1);
 
@@ -2054,9 +2064,9 @@ public class JavaParser extends Parser {
             }
             switch (alt33) {
                 case 1 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:323:32: typeParameters
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:333:32: typeParameters
                     {
-                    pushFollow(FOLLOW_typeParameters_in_normalInterfaceDeclaration819);
+                    pushFollow(FOLLOW_typeParameters_in_normalInterfaceDeclaration822);
                     typeParameters();
 
                     state._fsp--;
@@ -2068,7 +2078,7 @@ public class JavaParser extends Parser {
             }
 
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:323:48: ( 'extends' typeList )?
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:333:48: ( 'extends' typeList )?
             int alt34=2;
             int LA34_0 = input.LA(1);
 
@@ -2077,11 +2087,11 @@ public class JavaParser extends Parser {
             }
             switch (alt34) {
                 case 1 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:323:49: 'extends' typeList
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:333:49: 'extends' typeList
                     {
-                    match(input,72,FOLLOW_72_in_normalInterfaceDeclaration823); if (state.failed) return ;
+                    match(input,72,FOLLOW_72_in_normalInterfaceDeclaration826); if (state.failed) return ;
 
-                    pushFollow(FOLLOW_typeList_in_normalInterfaceDeclaration825);
+                    pushFollow(FOLLOW_typeList_in_normalInterfaceDeclaration828);
                     typeList();
 
                     state._fsp--;
@@ -2093,7 +2103,7 @@ public class JavaParser extends Parser {
             }
 
 
-            pushFollow(FOLLOW_interfaceBody_in_normalInterfaceDeclaration829);
+            pushFollow(FOLLOW_interfaceBody_in_normalInterfaceDeclaration832);
             interfaceBody();
 
             state._fsp--;
@@ -2119,23 +2129,23 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "typeList"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:326:1: typeList : type ( ',' type )* ;
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:336:1: typeList : type ( ',' type )* ;
     public final void typeList() throws RecognitionException {
         int typeList_StartIndex = input.index();
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 21) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:327:5: ( type ( ',' type )* )
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:327:9: type ( ',' type )*
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:337:5: ( type ( ',' type )* )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:337:9: type ( ',' type )*
             {
-            pushFollow(FOLLOW_type_in_typeList852);
+            pushFollow(FOLLOW_type_in_typeList855);
             type();
 
             state._fsp--;
             if (state.failed) return ;
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:327:14: ( ',' type )*
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:337:14: ( ',' type )*
             loop35:
             do {
                 int alt35=2;
@@ -2148,11 +2158,11 @@ public class JavaParser extends Parser {
 
                 switch (alt35) {
             	case 1 :
-            	    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:327:15: ',' type
+            	    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:337:15: ',' type
             	    {
-            	    match(input,39,FOLLOW_39_in_typeList855); if (state.failed) return ;
+            	    match(input,39,FOLLOW_39_in_typeList858); if (state.failed) return ;
 
-            	    pushFollow(FOLLOW_type_in_typeList857);
+            	    pushFollow(FOLLOW_type_in_typeList860);
             	    type();
 
             	    state._fsp--;
@@ -2187,19 +2197,19 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "classBody"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:330:1: classBody : '{' ( classBodyDeclaration )* '}' ;
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:340:1: classBody : '{' ( classBodyDeclaration )* '}' ;
     public final void classBody() throws RecognitionException {
         int classBody_StartIndex = input.index();
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 22) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:331:5: ( '{' ( classBodyDeclaration )* '}' )
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:331:9: '{' ( classBodyDeclaration )* '}'
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:341:5: ( '{' ( classBodyDeclaration )* '}' )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:341:9: '{' ( classBodyDeclaration )* '}'
             {
-            match(input,108,FOLLOW_108_in_classBody882); if (state.failed) return ;
+            match(input,108,FOLLOW_108_in_classBody885); if (state.failed) return ;
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:331:13: ( classBodyDeclaration )*
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:341:13: ( classBodyDeclaration )*
             loop36:
             do {
                 int alt36=2;
@@ -2212,9 +2222,9 @@ public class JavaParser extends Parser {
 
                 switch (alt36) {
             	case 1 :
-            	    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:331:13: classBodyDeclaration
+            	    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:341:13: classBodyDeclaration
             	    {
-            	    pushFollow(FOLLOW_classBodyDeclaration_in_classBody884);
+            	    pushFollow(FOLLOW_classBodyDeclaration_in_classBody887);
             	    classBodyDeclaration();
 
             	    state._fsp--;
@@ -2229,7 +2239,7 @@ public class JavaParser extends Parser {
             } while (true);
 
 
-            match(input,112,FOLLOW_112_in_classBody887); if (state.failed) return ;
+            match(input,112,FOLLOW_112_in_classBody890); if (state.failed) return ;
 
             }
 
@@ -2251,19 +2261,19 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "interfaceBody"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:334:1: interfaceBody : '{' ( interfaceBodyDeclaration )* '}' ;
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:344:1: interfaceBody : '{' ( interfaceBodyDeclaration )* '}' ;
     public final void interfaceBody() throws RecognitionException {
         int interfaceBody_StartIndex = input.index();
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 23) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:335:5: ( '{' ( interfaceBodyDeclaration )* '}' )
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:335:9: '{' ( interfaceBodyDeclaration )* '}'
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:345:5: ( '{' ( interfaceBodyDeclaration )* '}' )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:345:9: '{' ( interfaceBodyDeclaration )* '}'
             {
-            match(input,108,FOLLOW_108_in_interfaceBody910); if (state.failed) return ;
+            match(input,108,FOLLOW_108_in_interfaceBody913); if (state.failed) return ;
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:335:13: ( interfaceBodyDeclaration )*
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:345:13: ( interfaceBodyDeclaration )*
             loop37:
             do {
                 int alt37=2;
@@ -2276,9 +2286,9 @@ public class JavaParser extends Parser {
 
                 switch (alt37) {
             	case 1 :
-            	    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:335:13: interfaceBodyDeclaration
+            	    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:345:13: interfaceBodyDeclaration
             	    {
-            	    pushFollow(FOLLOW_interfaceBodyDeclaration_in_interfaceBody912);
+            	    pushFollow(FOLLOW_interfaceBodyDeclaration_in_interfaceBody915);
             	    interfaceBodyDeclaration();
 
             	    state._fsp--;
@@ -2293,7 +2303,7 @@ public class JavaParser extends Parser {
             } while (true);
 
 
-            match(input,112,FOLLOW_112_in_interfaceBody915); if (state.failed) return ;
+            match(input,112,FOLLOW_112_in_interfaceBody918); if (state.failed) return ;
 
             }
 
@@ -2315,14 +2325,14 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "classBodyDeclaration"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:338:1: classBodyDeclaration : ( ';' | ( 'static' )? block | modifiers memberDecl );
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:348:1: classBodyDeclaration : ( ';' | ( 'static' )? block | modifiers memberDecl );
     public final void classBodyDeclaration() throws RecognitionException {
         int classBodyDeclaration_StartIndex = input.index();
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 24) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:339:5: ( ';' | ( 'static' )? block | modifiers memberDecl )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:349:5: ( ';' | ( 'static' )? block | modifiers memberDecl )
             int alt39=3;
             switch ( input.LA(1) ) {
             case 48:
@@ -2395,16 +2405,16 @@ public class JavaParser extends Parser {
 
             switch (alt39) {
                 case 1 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:339:9: ';'
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:349:9: ';'
                     {
-                    match(input,48,FOLLOW_48_in_classBodyDeclaration934); if (state.failed) return ;
+                    match(input,48,FOLLOW_48_in_classBodyDeclaration937); if (state.failed) return ;
 
                     }
                     break;
                 case 2 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:340:9: ( 'static' )? block
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:350:9: ( 'static' )? block
                     {
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:340:9: ( 'static' )?
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:350:9: ( 'static' )?
                     int alt38=2;
                     int LA38_0 = input.LA(1);
 
@@ -2413,9 +2423,9 @@ public class JavaParser extends Parser {
                     }
                     switch (alt38) {
                         case 1 :
-                            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:340:9: 'static'
+                            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:350:9: 'static'
                             {
-                            match(input,94,FOLLOW_94_in_classBodyDeclaration944); if (state.failed) return ;
+                            match(input,94,FOLLOW_94_in_classBodyDeclaration947); if (state.failed) return ;
 
                             }
                             break;
@@ -2423,7 +2433,7 @@ public class JavaParser extends Parser {
                     }
 
 
-                    pushFollow(FOLLOW_block_in_classBodyDeclaration947);
+                    pushFollow(FOLLOW_block_in_classBodyDeclaration950);
                     block();
 
                     state._fsp--;
@@ -2432,15 +2442,15 @@ public class JavaParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:341:9: modifiers memberDecl
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:351:9: modifiers memberDecl
                     {
-                    pushFollow(FOLLOW_modifiers_in_classBodyDeclaration957);
+                    pushFollow(FOLLOW_modifiers_in_classBodyDeclaration960);
                     modifiers();
 
                     state._fsp--;
                     if (state.failed) return ;
 
-                    pushFollow(FOLLOW_memberDecl_in_classBodyDeclaration959);
+                    pushFollow(FOLLOW_memberDecl_in_classBodyDeclaration962);
                     memberDecl();
 
                     state._fsp--;
@@ -2468,14 +2478,14 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "memberDecl"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:344:1: memberDecl : ( genericMethodOrConstructorDecl | memberDeclaration | 'void' Identifier voidMethodDeclaratorRest | Identifier constructorDeclaratorRest | interfaceDeclaration | classDeclaration );
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:354:1: memberDecl : ( genericMethodOrConstructorDecl | memberDeclaration | 'void' Identifier voidMethodDeclaratorRest | Identifier constructorDeclaratorRest | interfaceDeclaration | classDeclaration );
     public final void memberDecl() throws RecognitionException {
         int memberDecl_StartIndex = input.index();
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 25) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:345:5: ( genericMethodOrConstructorDecl | memberDeclaration | 'void' Identifier voidMethodDeclaratorRest | Identifier constructorDeclaratorRest | interfaceDeclaration | classDeclaration )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:355:5: ( genericMethodOrConstructorDecl | memberDeclaration | 'void' Identifier voidMethodDeclaratorRest | Identifier constructorDeclaratorRest | interfaceDeclaration | classDeclaration )
             int alt40=6;
             switch ( input.LA(1) ) {
             case 49:
@@ -2543,9 +2553,9 @@ public class JavaParser extends Parser {
 
             switch (alt40) {
                 case 1 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:345:9: genericMethodOrConstructorDecl
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:355:9: genericMethodOrConstructorDecl
                     {
-                    pushFollow(FOLLOW_genericMethodOrConstructorDecl_in_memberDecl982);
+                    pushFollow(FOLLOW_genericMethodOrConstructorDecl_in_memberDecl985);
                     genericMethodOrConstructorDecl();
 
                     state._fsp--;
@@ -2554,9 +2564,9 @@ public class JavaParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:346:9: memberDeclaration
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:356:9: memberDeclaration
                     {
-                    pushFollow(FOLLOW_memberDeclaration_in_memberDecl992);
+                    pushFollow(FOLLOW_memberDeclaration_in_memberDecl995);
                     memberDeclaration();
 
                     state._fsp--;
@@ -2565,13 +2575,13 @@ public class JavaParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:347:9: 'void' Identifier voidMethodDeclaratorRest
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:357:9: 'void' Identifier voidMethodDeclaratorRest
                     {
-                    match(input,105,FOLLOW_105_in_memberDecl1002); if (state.failed) return ;
+                    match(input,105,FOLLOW_105_in_memberDecl1005); if (state.failed) return ;
 
-                    match(input,Identifier,FOLLOW_Identifier_in_memberDecl1004); if (state.failed) return ;
+                    match(input,Identifier,FOLLOW_Identifier_in_memberDecl1007); if (state.failed) return ;
 
-                    pushFollow(FOLLOW_voidMethodDeclaratorRest_in_memberDecl1006);
+                    pushFollow(FOLLOW_voidMethodDeclaratorRest_in_memberDecl1009);
                     voidMethodDeclaratorRest();
 
                     state._fsp--;
@@ -2580,11 +2590,11 @@ public class JavaParser extends Parser {
                     }
                     break;
                 case 4 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:348:9: Identifier constructorDeclaratorRest
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:358:9: Identifier constructorDeclaratorRest
                     {
-                    match(input,Identifier,FOLLOW_Identifier_in_memberDecl1016); if (state.failed) return ;
+                    match(input,Identifier,FOLLOW_Identifier_in_memberDecl1019); if (state.failed) return ;
 
-                    pushFollow(FOLLOW_constructorDeclaratorRest_in_memberDecl1018);
+                    pushFollow(FOLLOW_constructorDeclaratorRest_in_memberDecl1021);
                     constructorDeclaratorRest();
 
                     state._fsp--;
@@ -2593,9 +2603,9 @@ public class JavaParser extends Parser {
                     }
                     break;
                 case 5 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:349:9: interfaceDeclaration
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:359:9: interfaceDeclaration
                     {
-                    pushFollow(FOLLOW_interfaceDeclaration_in_memberDecl1028);
+                    pushFollow(FOLLOW_interfaceDeclaration_in_memberDecl1031);
                     interfaceDeclaration();
 
                     state._fsp--;
@@ -2604,9 +2614,9 @@ public class JavaParser extends Parser {
                     }
                     break;
                 case 6 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:350:9: classDeclaration
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:360:9: classDeclaration
                     {
-                    pushFollow(FOLLOW_classDeclaration_in_memberDecl1038);
+                    pushFollow(FOLLOW_classDeclaration_in_memberDecl1041);
                     classDeclaration();
 
                     state._fsp--;
@@ -2634,23 +2644,28 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "memberDeclaration"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:353:1: memberDeclaration : type ( methodDeclaration | fieldDeclaration ) ;
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:363:1: memberDeclaration : type ( methodDeclaration | fieldDeclaration ) ;
     public final void memberDeclaration() throws RecognitionException {
         int memberDeclaration_StartIndex = input.index();
+
+        JavaParser.type_return type4 =null;
+
+        JavaParser.fieldDeclaration_return fieldDeclaration5 =null;
+
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 26) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:354:5: ( type ( methodDeclaration | fieldDeclaration ) )
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:354:9: type ( methodDeclaration | fieldDeclaration )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:364:5: ( type ( methodDeclaration | fieldDeclaration ) )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:364:9: type ( methodDeclaration | fieldDeclaration )
             {
-            pushFollow(FOLLOW_type_in_memberDeclaration1061);
-            type();
+            pushFollow(FOLLOW_type_in_memberDeclaration1064);
+            type4=type();
 
             state._fsp--;
             if (state.failed) return ;
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:354:14: ( methodDeclaration | fieldDeclaration )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:364:14: ( methodDeclaration | fieldDeclaration )
             int alt41=2;
             int LA41_0 = input.LA(1);
 
@@ -2682,9 +2697,9 @@ public class JavaParser extends Parser {
             }
             switch (alt41) {
                 case 1 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:354:15: methodDeclaration
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:364:15: methodDeclaration
                     {
-                    pushFollow(FOLLOW_methodDeclaration_in_memberDeclaration1064);
+                    pushFollow(FOLLOW_methodDeclaration_in_memberDeclaration1067);
                     methodDeclaration();
 
                     state._fsp--;
@@ -2693,10 +2708,10 @@ public class JavaParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:354:35: fieldDeclaration
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:364:35: fieldDeclaration
                     {
-                    pushFollow(FOLLOW_fieldDeclaration_in_memberDeclaration1068);
-                    fieldDeclaration();
+                    pushFollow(FOLLOW_fieldDeclaration_in_memberDeclaration1071);
+                    fieldDeclaration5=fieldDeclaration();
 
                     state._fsp--;
                     if (state.failed) return ;
@@ -2706,6 +2721,8 @@ public class JavaParser extends Parser {
 
             }
 
+
+            if ( state.backtracking==0 ) {System.out.println("The type is " + (type4!=null?input.toString(type4.start,type4.stop):null));  System.out.println("The fieldDeclaration is " + (fieldDeclaration5!=null?input.toString(fieldDeclaration5.start,fieldDeclaration5.stop):null));}
 
             }
 
@@ -2727,23 +2744,23 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "genericMethodOrConstructorDecl"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:357:1: genericMethodOrConstructorDecl : typeParameters genericMethodOrConstructorRest ;
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:367:1: genericMethodOrConstructorDecl : typeParameters genericMethodOrConstructorRest ;
     public final void genericMethodOrConstructorDecl() throws RecognitionException {
         int genericMethodOrConstructorDecl_StartIndex = input.index();
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 27) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:358:5: ( typeParameters genericMethodOrConstructorRest )
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:358:9: typeParameters genericMethodOrConstructorRest
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:368:5: ( typeParameters genericMethodOrConstructorRest )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:368:9: typeParameters genericMethodOrConstructorRest
             {
-            pushFollow(FOLLOW_typeParameters_in_genericMethodOrConstructorDecl1088);
+            pushFollow(FOLLOW_typeParameters_in_genericMethodOrConstructorDecl1093);
             typeParameters();
 
             state._fsp--;
             if (state.failed) return ;
 
-            pushFollow(FOLLOW_genericMethodOrConstructorRest_in_genericMethodOrConstructorDecl1090);
+            pushFollow(FOLLOW_genericMethodOrConstructorRest_in_genericMethodOrConstructorDecl1095);
             genericMethodOrConstructorRest();
 
             state._fsp--;
@@ -2769,14 +2786,14 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "genericMethodOrConstructorRest"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:361:1: genericMethodOrConstructorRest : ( ( type | 'void' ) Identifier methodDeclaratorRest | Identifier constructorDeclaratorRest );
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:371:1: genericMethodOrConstructorRest : ( ( type | 'void' ) Identifier methodDeclaratorRest | Identifier constructorDeclaratorRest );
     public final void genericMethodOrConstructorRest() throws RecognitionException {
         int genericMethodOrConstructorRest_StartIndex = input.index();
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 28) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:362:5: ( ( type | 'void' ) Identifier methodDeclaratorRest | Identifier constructorDeclaratorRest )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:372:5: ( ( type | 'void' ) Identifier methodDeclaratorRest | Identifier constructorDeclaratorRest )
             int alt43=2;
             int LA43_0 = input.LA(1);
 
@@ -2811,9 +2828,9 @@ public class JavaParser extends Parser {
             }
             switch (alt43) {
                 case 1 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:362:9: ( type | 'void' ) Identifier methodDeclaratorRest
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:372:9: ( type | 'void' ) Identifier methodDeclaratorRest
                     {
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:362:9: ( type | 'void' )
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:372:9: ( type | 'void' )
                     int alt42=2;
                     int LA42_0 = input.LA(1);
 
@@ -2833,9 +2850,9 @@ public class JavaParser extends Parser {
                     }
                     switch (alt42) {
                         case 1 :
-                            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:362:10: type
+                            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:372:10: type
                             {
-                            pushFollow(FOLLOW_type_in_genericMethodOrConstructorRest1114);
+                            pushFollow(FOLLOW_type_in_genericMethodOrConstructorRest1119);
                             type();
 
                             state._fsp--;
@@ -2844,9 +2861,9 @@ public class JavaParser extends Parser {
                             }
                             break;
                         case 2 :
-                            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:362:17: 'void'
+                            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:372:17: 'void'
                             {
-                            match(input,105,FOLLOW_105_in_genericMethodOrConstructorRest1118); if (state.failed) return ;
+                            match(input,105,FOLLOW_105_in_genericMethodOrConstructorRest1123); if (state.failed) return ;
 
                             }
                             break;
@@ -2854,9 +2871,9 @@ public class JavaParser extends Parser {
                     }
 
 
-                    match(input,Identifier,FOLLOW_Identifier_in_genericMethodOrConstructorRest1121); if (state.failed) return ;
+                    match(input,Identifier,FOLLOW_Identifier_in_genericMethodOrConstructorRest1126); if (state.failed) return ;
 
-                    pushFollow(FOLLOW_methodDeclaratorRest_in_genericMethodOrConstructorRest1123);
+                    pushFollow(FOLLOW_methodDeclaratorRest_in_genericMethodOrConstructorRest1128);
                     methodDeclaratorRest();
 
                     state._fsp--;
@@ -2865,11 +2882,11 @@ public class JavaParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:363:9: Identifier constructorDeclaratorRest
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:373:9: Identifier constructorDeclaratorRest
                     {
-                    match(input,Identifier,FOLLOW_Identifier_in_genericMethodOrConstructorRest1133); if (state.failed) return ;
+                    match(input,Identifier,FOLLOW_Identifier_in_genericMethodOrConstructorRest1138); if (state.failed) return ;
 
-                    pushFollow(FOLLOW_constructorDeclaratorRest_in_genericMethodOrConstructorRest1135);
+                    pushFollow(FOLLOW_constructorDeclaratorRest_in_genericMethodOrConstructorRest1140);
                     constructorDeclaratorRest();
 
                     state._fsp--;
@@ -2897,19 +2914,19 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "methodDeclaration"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:366:1: methodDeclaration : Identifier methodDeclaratorRest ;
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:376:1: methodDeclaration : Identifier methodDeclaratorRest ;
     public final void methodDeclaration() throws RecognitionException {
         int methodDeclaration_StartIndex = input.index();
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 29) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:367:5: ( Identifier methodDeclaratorRest )
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:367:9: Identifier methodDeclaratorRest
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:377:5: ( Identifier methodDeclaratorRest )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:377:9: Identifier methodDeclaratorRest
             {
-            match(input,Identifier,FOLLOW_Identifier_in_methodDeclaration1154); if (state.failed) return ;
+            match(input,Identifier,FOLLOW_Identifier_in_methodDeclaration1159); if (state.failed) return ;
 
-            pushFollow(FOLLOW_methodDeclaratorRest_in_methodDeclaration1156);
+            pushFollow(FOLLOW_methodDeclaratorRest_in_methodDeclaration1161);
             methodDeclaratorRest();
 
             state._fsp--;
@@ -2933,27 +2950,41 @@ public class JavaParser extends Parser {
     // $ANTLR end "methodDeclaration"
 
 
+    public static class fieldDeclaration_return extends ParserRuleReturnScope {
+    };
+
 
     // $ANTLR start "fieldDeclaration"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:370:1: fieldDeclaration : variableDeclarators ';' ;
-    public final void fieldDeclaration() throws RecognitionException {
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:380:1: fieldDeclaration : variableDeclarators ';' ;
+    public final JavaParser.fieldDeclaration_return fieldDeclaration() throws RecognitionException {
+        JavaParser.fieldDeclaration_return retval = new JavaParser.fieldDeclaration_return();
+        retval.start = input.LT(1);
+
         int fieldDeclaration_StartIndex = input.index();
 
-        try {
-            if ( state.backtracking>0 && alreadyParsedRule(input, 30) ) { return ; }
+        JavaParser.variableDeclarators_return variableDeclarators6 =null;
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:371:5: ( variableDeclarators ';' )
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:371:9: variableDeclarators ';'
+
+        try {
+            if ( state.backtracking>0 && alreadyParsedRule(input, 30) ) { return retval; }
+
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:381:5: ( variableDeclarators ';' )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:381:9: variableDeclarators ';'
             {
-            pushFollow(FOLLOW_variableDeclarators_in_fieldDeclaration1175);
-            variableDeclarators();
+            pushFollow(FOLLOW_variableDeclarators_in_fieldDeclaration1180);
+            variableDeclarators6=variableDeclarators();
 
             state._fsp--;
-            if (state.failed) return ;
+            if (state.failed) return retval;
 
-            match(input,48,FOLLOW_48_in_fieldDeclaration1177); if (state.failed) return ;
+            match(input,48,FOLLOW_48_in_fieldDeclaration1182); if (state.failed) return retval;
+
+            if ( state.backtracking==0 ) {System.out.println((variableDeclarators6!=null?input.toString(variableDeclarators6.start,variableDeclarators6.stop):null));}
 
             }
+
+            retval.stop = input.LT(-1);
+
 
         }
         catch (RecognitionException re) {
@@ -2966,21 +2997,21 @@ public class JavaParser extends Parser {
             if ( state.backtracking>0 ) { memoize(input, 30, fieldDeclaration_StartIndex); }
 
         }
-        return ;
+        return retval;
     }
     // $ANTLR end "fieldDeclaration"
 
 
 
     // $ANTLR start "interfaceBodyDeclaration"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:374:1: interfaceBodyDeclaration : ( modifiers interfaceMemberDecl | ';' );
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:384:1: interfaceBodyDeclaration : ( modifiers interfaceMemberDecl | ';' );
     public final void interfaceBodyDeclaration() throws RecognitionException {
         int interfaceBodyDeclaration_StartIndex = input.index();
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 31) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:375:5: ( modifiers interfaceMemberDecl | ';' )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:385:5: ( modifiers interfaceMemberDecl | ';' )
             int alt44=2;
             int LA44_0 = input.LA(1);
 
@@ -3000,15 +3031,15 @@ public class JavaParser extends Parser {
             }
             switch (alt44) {
                 case 1 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:375:9: modifiers interfaceMemberDecl
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:385:9: modifiers interfaceMemberDecl
                     {
-                    pushFollow(FOLLOW_modifiers_in_interfaceBodyDeclaration1204);
+                    pushFollow(FOLLOW_modifiers_in_interfaceBodyDeclaration1211);
                     modifiers();
 
                     state._fsp--;
                     if (state.failed) return ;
 
-                    pushFollow(FOLLOW_interfaceMemberDecl_in_interfaceBodyDeclaration1206);
+                    pushFollow(FOLLOW_interfaceMemberDecl_in_interfaceBodyDeclaration1213);
                     interfaceMemberDecl();
 
                     state._fsp--;
@@ -3017,9 +3048,9 @@ public class JavaParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:376:9: ';'
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:386:9: ';'
                     {
-                    match(input,48,FOLLOW_48_in_interfaceBodyDeclaration1216); if (state.failed) return ;
+                    match(input,48,FOLLOW_48_in_interfaceBodyDeclaration1223); if (state.failed) return ;
 
                     }
                     break;
@@ -3043,14 +3074,14 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "interfaceMemberDecl"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:379:1: interfaceMemberDecl : ( interfaceMethodOrFieldDecl | interfaceGenericMethodDecl | 'void' Identifier voidInterfaceMethodDeclaratorRest | interfaceDeclaration | classDeclaration );
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:389:1: interfaceMemberDecl : ( interfaceMethodOrFieldDecl | interfaceGenericMethodDecl | 'void' Identifier voidInterfaceMethodDeclaratorRest | interfaceDeclaration | classDeclaration );
     public final void interfaceMemberDecl() throws RecognitionException {
         int interfaceMemberDecl_StartIndex = input.index();
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 32) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:380:5: ( interfaceMethodOrFieldDecl | interfaceGenericMethodDecl | 'void' Identifier voidInterfaceMethodDeclaratorRest | interfaceDeclaration | classDeclaration )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:390:5: ( interfaceMethodOrFieldDecl | interfaceGenericMethodDecl | 'void' Identifier voidInterfaceMethodDeclaratorRest | interfaceDeclaration | classDeclaration )
             int alt45=5;
             switch ( input.LA(1) ) {
             case Identifier:
@@ -3099,9 +3130,9 @@ public class JavaParser extends Parser {
 
             switch (alt45) {
                 case 1 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:380:9: interfaceMethodOrFieldDecl
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:390:9: interfaceMethodOrFieldDecl
                     {
-                    pushFollow(FOLLOW_interfaceMethodOrFieldDecl_in_interfaceMemberDecl1235);
+                    pushFollow(FOLLOW_interfaceMethodOrFieldDecl_in_interfaceMemberDecl1242);
                     interfaceMethodOrFieldDecl();
 
                     state._fsp--;
@@ -3110,9 +3141,9 @@ public class JavaParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:381:9: interfaceGenericMethodDecl
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:391:9: interfaceGenericMethodDecl
                     {
-                    pushFollow(FOLLOW_interfaceGenericMethodDecl_in_interfaceMemberDecl1245);
+                    pushFollow(FOLLOW_interfaceGenericMethodDecl_in_interfaceMemberDecl1252);
                     interfaceGenericMethodDecl();
 
                     state._fsp--;
@@ -3121,13 +3152,13 @@ public class JavaParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:382:9: 'void' Identifier voidInterfaceMethodDeclaratorRest
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:392:9: 'void' Identifier voidInterfaceMethodDeclaratorRest
                     {
-                    match(input,105,FOLLOW_105_in_interfaceMemberDecl1255); if (state.failed) return ;
+                    match(input,105,FOLLOW_105_in_interfaceMemberDecl1262); if (state.failed) return ;
 
-                    match(input,Identifier,FOLLOW_Identifier_in_interfaceMemberDecl1257); if (state.failed) return ;
+                    match(input,Identifier,FOLLOW_Identifier_in_interfaceMemberDecl1264); if (state.failed) return ;
 
-                    pushFollow(FOLLOW_voidInterfaceMethodDeclaratorRest_in_interfaceMemberDecl1259);
+                    pushFollow(FOLLOW_voidInterfaceMethodDeclaratorRest_in_interfaceMemberDecl1266);
                     voidInterfaceMethodDeclaratorRest();
 
                     state._fsp--;
@@ -3136,9 +3167,9 @@ public class JavaParser extends Parser {
                     }
                     break;
                 case 4 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:383:9: interfaceDeclaration
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:393:9: interfaceDeclaration
                     {
-                    pushFollow(FOLLOW_interfaceDeclaration_in_interfaceMemberDecl1269);
+                    pushFollow(FOLLOW_interfaceDeclaration_in_interfaceMemberDecl1276);
                     interfaceDeclaration();
 
                     state._fsp--;
@@ -3147,9 +3178,9 @@ public class JavaParser extends Parser {
                     }
                     break;
                 case 5 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:384:9: classDeclaration
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:394:9: classDeclaration
                     {
-                    pushFollow(FOLLOW_classDeclaration_in_interfaceMemberDecl1279);
+                    pushFollow(FOLLOW_classDeclaration_in_interfaceMemberDecl1286);
                     classDeclaration();
 
                     state._fsp--;
@@ -3177,25 +3208,25 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "interfaceMethodOrFieldDecl"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:387:1: interfaceMethodOrFieldDecl : type Identifier interfaceMethodOrFieldRest ;
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:397:1: interfaceMethodOrFieldDecl : type Identifier interfaceMethodOrFieldRest ;
     public final void interfaceMethodOrFieldDecl() throws RecognitionException {
         int interfaceMethodOrFieldDecl_StartIndex = input.index();
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 33) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:388:5: ( type Identifier interfaceMethodOrFieldRest )
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:388:9: type Identifier interfaceMethodOrFieldRest
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:398:5: ( type Identifier interfaceMethodOrFieldRest )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:398:9: type Identifier interfaceMethodOrFieldRest
             {
-            pushFollow(FOLLOW_type_in_interfaceMethodOrFieldDecl1302);
+            pushFollow(FOLLOW_type_in_interfaceMethodOrFieldDecl1309);
             type();
 
             state._fsp--;
             if (state.failed) return ;
 
-            match(input,Identifier,FOLLOW_Identifier_in_interfaceMethodOrFieldDecl1304); if (state.failed) return ;
+            match(input,Identifier,FOLLOW_Identifier_in_interfaceMethodOrFieldDecl1311); if (state.failed) return ;
 
-            pushFollow(FOLLOW_interfaceMethodOrFieldRest_in_interfaceMethodOrFieldDecl1306);
+            pushFollow(FOLLOW_interfaceMethodOrFieldRest_in_interfaceMethodOrFieldDecl1313);
             interfaceMethodOrFieldRest();
 
             state._fsp--;
@@ -3221,14 +3252,14 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "interfaceMethodOrFieldRest"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:391:1: interfaceMethodOrFieldRest : ( constantDeclaratorsRest ';' | interfaceMethodDeclaratorRest );
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:401:1: interfaceMethodOrFieldRest : ( constantDeclaratorsRest ';' | interfaceMethodDeclaratorRest );
     public final void interfaceMethodOrFieldRest() throws RecognitionException {
         int interfaceMethodOrFieldRest_StartIndex = input.index();
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 34) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:392:5: ( constantDeclaratorsRest ';' | interfaceMethodDeclaratorRest )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:402:5: ( constantDeclaratorsRest ';' | interfaceMethodDeclaratorRest )
             int alt46=2;
             int LA46_0 = input.LA(1);
 
@@ -3248,22 +3279,22 @@ public class JavaParser extends Parser {
             }
             switch (alt46) {
                 case 1 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:392:9: constantDeclaratorsRest ';'
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:402:9: constantDeclaratorsRest ';'
                     {
-                    pushFollow(FOLLOW_constantDeclaratorsRest_in_interfaceMethodOrFieldRest1329);
+                    pushFollow(FOLLOW_constantDeclaratorsRest_in_interfaceMethodOrFieldRest1336);
                     constantDeclaratorsRest();
 
                     state._fsp--;
                     if (state.failed) return ;
 
-                    match(input,48,FOLLOW_48_in_interfaceMethodOrFieldRest1331); if (state.failed) return ;
+                    match(input,48,FOLLOW_48_in_interfaceMethodOrFieldRest1338); if (state.failed) return ;
 
                     }
                     break;
                 case 2 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:393:9: interfaceMethodDeclaratorRest
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:403:9: interfaceMethodDeclaratorRest
                     {
-                    pushFollow(FOLLOW_interfaceMethodDeclaratorRest_in_interfaceMethodOrFieldRest1341);
+                    pushFollow(FOLLOW_interfaceMethodDeclaratorRest_in_interfaceMethodOrFieldRest1348);
                     interfaceMethodDeclaratorRest();
 
                     state._fsp--;
@@ -3291,23 +3322,23 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "methodDeclaratorRest"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:396:1: methodDeclaratorRest : formalParameters ( '[' ']' )* ( 'throws' qualifiedNameList )? ( methodBody | ';' ) ;
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:406:1: methodDeclaratorRest : formalParameters ( '[' ']' )* ( 'throws' qualifiedNameList )? ( methodBody | ';' ) ;
     public final void methodDeclaratorRest() throws RecognitionException {
         int methodDeclaratorRest_StartIndex = input.index();
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 35) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:397:5: ( formalParameters ( '[' ']' )* ( 'throws' qualifiedNameList )? ( methodBody | ';' ) )
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:397:9: formalParameters ( '[' ']' )* ( 'throws' qualifiedNameList )? ( methodBody | ';' )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:407:5: ( formalParameters ( '[' ']' )* ( 'throws' qualifiedNameList )? ( methodBody | ';' ) )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:407:9: formalParameters ( '[' ']' )* ( 'throws' qualifiedNameList )? ( methodBody | ';' )
             {
-            pushFollow(FOLLOW_formalParameters_in_methodDeclaratorRest1364);
+            pushFollow(FOLLOW_formalParameters_in_methodDeclaratorRest1371);
             formalParameters();
 
             state._fsp--;
             if (state.failed) return ;
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:397:26: ( '[' ']' )*
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:407:26: ( '[' ']' )*
             loop47:
             do {
                 int alt47=2;
@@ -3320,11 +3351,11 @@ public class JavaParser extends Parser {
 
                 switch (alt47) {
             	case 1 :
-            	    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:397:27: '[' ']'
+            	    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:407:27: '[' ']'
             	    {
-            	    match(input,55,FOLLOW_55_in_methodDeclaratorRest1367); if (state.failed) return ;
+            	    match(input,55,FOLLOW_55_in_methodDeclaratorRest1374); if (state.failed) return ;
 
-            	    match(input,56,FOLLOW_56_in_methodDeclaratorRest1369); if (state.failed) return ;
+            	    match(input,56,FOLLOW_56_in_methodDeclaratorRest1376); if (state.failed) return ;
 
             	    }
             	    break;
@@ -3335,7 +3366,7 @@ public class JavaParser extends Parser {
             } while (true);
 
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:398:9: ( 'throws' qualifiedNameList )?
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:408:9: ( 'throws' qualifiedNameList )?
             int alt48=2;
             int LA48_0 = input.LA(1);
 
@@ -3344,11 +3375,11 @@ public class JavaParser extends Parser {
             }
             switch (alt48) {
                 case 1 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:398:10: 'throws' qualifiedNameList
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:408:10: 'throws' qualifiedNameList
                     {
-                    match(input,101,FOLLOW_101_in_methodDeclaratorRest1382); if (state.failed) return ;
+                    match(input,101,FOLLOW_101_in_methodDeclaratorRest1389); if (state.failed) return ;
 
-                    pushFollow(FOLLOW_qualifiedNameList_in_methodDeclaratorRest1384);
+                    pushFollow(FOLLOW_qualifiedNameList_in_methodDeclaratorRest1391);
                     qualifiedNameList();
 
                     state._fsp--;
@@ -3360,7 +3391,7 @@ public class JavaParser extends Parser {
             }
 
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:399:9: ( methodBody | ';' )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:409:9: ( methodBody | ';' )
             int alt49=2;
             int LA49_0 = input.LA(1);
 
@@ -3380,9 +3411,9 @@ public class JavaParser extends Parser {
             }
             switch (alt49) {
                 case 1 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:399:13: methodBody
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:409:13: methodBody
                     {
-                    pushFollow(FOLLOW_methodBody_in_methodDeclaratorRest1400);
+                    pushFollow(FOLLOW_methodBody_in_methodDeclaratorRest1407);
                     methodBody();
 
                     state._fsp--;
@@ -3391,9 +3422,9 @@ public class JavaParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:400:13: ';'
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:410:13: ';'
                     {
-                    match(input,48,FOLLOW_48_in_methodDeclaratorRest1414); if (state.failed) return ;
+                    match(input,48,FOLLOW_48_in_methodDeclaratorRest1421); if (state.failed) return ;
 
                     }
                     break;
@@ -3421,23 +3452,23 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "voidMethodDeclaratorRest"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:404:1: voidMethodDeclaratorRest : formalParameters ( 'throws' qualifiedNameList )? ( methodBody | ';' ) ;
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:414:1: voidMethodDeclaratorRest : formalParameters ( 'throws' qualifiedNameList )? ( methodBody | ';' ) ;
     public final void voidMethodDeclaratorRest() throws RecognitionException {
         int voidMethodDeclaratorRest_StartIndex = input.index();
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 36) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:405:5: ( formalParameters ( 'throws' qualifiedNameList )? ( methodBody | ';' ) )
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:405:9: formalParameters ( 'throws' qualifiedNameList )? ( methodBody | ';' )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:415:5: ( formalParameters ( 'throws' qualifiedNameList )? ( methodBody | ';' ) )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:415:9: formalParameters ( 'throws' qualifiedNameList )? ( methodBody | ';' )
             {
-            pushFollow(FOLLOW_formalParameters_in_voidMethodDeclaratorRest1447);
+            pushFollow(FOLLOW_formalParameters_in_voidMethodDeclaratorRest1454);
             formalParameters();
 
             state._fsp--;
             if (state.failed) return ;
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:405:26: ( 'throws' qualifiedNameList )?
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:415:26: ( 'throws' qualifiedNameList )?
             int alt50=2;
             int LA50_0 = input.LA(1);
 
@@ -3446,11 +3477,11 @@ public class JavaParser extends Parser {
             }
             switch (alt50) {
                 case 1 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:405:27: 'throws' qualifiedNameList
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:415:27: 'throws' qualifiedNameList
                     {
-                    match(input,101,FOLLOW_101_in_voidMethodDeclaratorRest1450); if (state.failed) return ;
+                    match(input,101,FOLLOW_101_in_voidMethodDeclaratorRest1457); if (state.failed) return ;
 
-                    pushFollow(FOLLOW_qualifiedNameList_in_voidMethodDeclaratorRest1452);
+                    pushFollow(FOLLOW_qualifiedNameList_in_voidMethodDeclaratorRest1459);
                     qualifiedNameList();
 
                     state._fsp--;
@@ -3462,7 +3493,7 @@ public class JavaParser extends Parser {
             }
 
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:406:9: ( methodBody | ';' )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:416:9: ( methodBody | ';' )
             int alt51=2;
             int LA51_0 = input.LA(1);
 
@@ -3482,9 +3513,9 @@ public class JavaParser extends Parser {
             }
             switch (alt51) {
                 case 1 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:406:13: methodBody
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:416:13: methodBody
                     {
-                    pushFollow(FOLLOW_methodBody_in_voidMethodDeclaratorRest1468);
+                    pushFollow(FOLLOW_methodBody_in_voidMethodDeclaratorRest1475);
                     methodBody();
 
                     state._fsp--;
@@ -3493,9 +3524,9 @@ public class JavaParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:407:13: ';'
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:417:13: ';'
                     {
-                    match(input,48,FOLLOW_48_in_voidMethodDeclaratorRest1482); if (state.failed) return ;
+                    match(input,48,FOLLOW_48_in_voidMethodDeclaratorRest1489); if (state.failed) return ;
 
                     }
                     break;
@@ -3523,23 +3554,23 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "interfaceMethodDeclaratorRest"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:411:1: interfaceMethodDeclaratorRest : formalParameters ( '[' ']' )* ( 'throws' qualifiedNameList )? ';' ;
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:421:1: interfaceMethodDeclaratorRest : formalParameters ( '[' ']' )* ( 'throws' qualifiedNameList )? ';' ;
     public final void interfaceMethodDeclaratorRest() throws RecognitionException {
         int interfaceMethodDeclaratorRest_StartIndex = input.index();
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 37) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:412:5: ( formalParameters ( '[' ']' )* ( 'throws' qualifiedNameList )? ';' )
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:412:9: formalParameters ( '[' ']' )* ( 'throws' qualifiedNameList )? ';'
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:422:5: ( formalParameters ( '[' ']' )* ( 'throws' qualifiedNameList )? ';' )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:422:9: formalParameters ( '[' ']' )* ( 'throws' qualifiedNameList )? ';'
             {
-            pushFollow(FOLLOW_formalParameters_in_interfaceMethodDeclaratorRest1515);
+            pushFollow(FOLLOW_formalParameters_in_interfaceMethodDeclaratorRest1522);
             formalParameters();
 
             state._fsp--;
             if (state.failed) return ;
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:412:26: ( '[' ']' )*
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:422:26: ( '[' ']' )*
             loop52:
             do {
                 int alt52=2;
@@ -3552,11 +3583,11 @@ public class JavaParser extends Parser {
 
                 switch (alt52) {
             	case 1 :
-            	    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:412:27: '[' ']'
+            	    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:422:27: '[' ']'
             	    {
-            	    match(input,55,FOLLOW_55_in_interfaceMethodDeclaratorRest1518); if (state.failed) return ;
+            	    match(input,55,FOLLOW_55_in_interfaceMethodDeclaratorRest1525); if (state.failed) return ;
 
-            	    match(input,56,FOLLOW_56_in_interfaceMethodDeclaratorRest1520); if (state.failed) return ;
+            	    match(input,56,FOLLOW_56_in_interfaceMethodDeclaratorRest1527); if (state.failed) return ;
 
             	    }
             	    break;
@@ -3567,7 +3598,7 @@ public class JavaParser extends Parser {
             } while (true);
 
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:412:37: ( 'throws' qualifiedNameList )?
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:422:37: ( 'throws' qualifiedNameList )?
             int alt53=2;
             int LA53_0 = input.LA(1);
 
@@ -3576,11 +3607,11 @@ public class JavaParser extends Parser {
             }
             switch (alt53) {
                 case 1 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:412:38: 'throws' qualifiedNameList
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:422:38: 'throws' qualifiedNameList
                     {
-                    match(input,101,FOLLOW_101_in_interfaceMethodDeclaratorRest1525); if (state.failed) return ;
+                    match(input,101,FOLLOW_101_in_interfaceMethodDeclaratorRest1532); if (state.failed) return ;
 
-                    pushFollow(FOLLOW_qualifiedNameList_in_interfaceMethodDeclaratorRest1527);
+                    pushFollow(FOLLOW_qualifiedNameList_in_interfaceMethodDeclaratorRest1534);
                     qualifiedNameList();
 
                     state._fsp--;
@@ -3592,7 +3623,7 @@ public class JavaParser extends Parser {
             }
 
 
-            match(input,48,FOLLOW_48_in_interfaceMethodDeclaratorRest1531); if (state.failed) return ;
+            match(input,48,FOLLOW_48_in_interfaceMethodDeclaratorRest1538); if (state.failed) return ;
 
             }
 
@@ -3614,23 +3645,23 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "interfaceGenericMethodDecl"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:415:1: interfaceGenericMethodDecl : typeParameters ( type | 'void' ) Identifier interfaceMethodDeclaratorRest ;
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:425:1: interfaceGenericMethodDecl : typeParameters ( type | 'void' ) Identifier interfaceMethodDeclaratorRest ;
     public final void interfaceGenericMethodDecl() throws RecognitionException {
         int interfaceGenericMethodDecl_StartIndex = input.index();
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 38) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:416:5: ( typeParameters ( type | 'void' ) Identifier interfaceMethodDeclaratorRest )
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:416:9: typeParameters ( type | 'void' ) Identifier interfaceMethodDeclaratorRest
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:426:5: ( typeParameters ( type | 'void' ) Identifier interfaceMethodDeclaratorRest )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:426:9: typeParameters ( type | 'void' ) Identifier interfaceMethodDeclaratorRest
             {
-            pushFollow(FOLLOW_typeParameters_in_interfaceGenericMethodDecl1554);
+            pushFollow(FOLLOW_typeParameters_in_interfaceGenericMethodDecl1561);
             typeParameters();
 
             state._fsp--;
             if (state.failed) return ;
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:416:24: ( type | 'void' )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:426:24: ( type | 'void' )
             int alt54=2;
             int LA54_0 = input.LA(1);
 
@@ -3650,9 +3681,9 @@ public class JavaParser extends Parser {
             }
             switch (alt54) {
                 case 1 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:416:25: type
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:426:25: type
                     {
-                    pushFollow(FOLLOW_type_in_interfaceGenericMethodDecl1557);
+                    pushFollow(FOLLOW_type_in_interfaceGenericMethodDecl1564);
                     type();
 
                     state._fsp--;
@@ -3661,9 +3692,9 @@ public class JavaParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:416:32: 'void'
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:426:32: 'void'
                     {
-                    match(input,105,FOLLOW_105_in_interfaceGenericMethodDecl1561); if (state.failed) return ;
+                    match(input,105,FOLLOW_105_in_interfaceGenericMethodDecl1568); if (state.failed) return ;
 
                     }
                     break;
@@ -3671,9 +3702,9 @@ public class JavaParser extends Parser {
             }
 
 
-            match(input,Identifier,FOLLOW_Identifier_in_interfaceGenericMethodDecl1564); if (state.failed) return ;
+            match(input,Identifier,FOLLOW_Identifier_in_interfaceGenericMethodDecl1571); if (state.failed) return ;
 
-            pushFollow(FOLLOW_interfaceMethodDeclaratorRest_in_interfaceGenericMethodDecl1574);
+            pushFollow(FOLLOW_interfaceMethodDeclaratorRest_in_interfaceGenericMethodDecl1581);
             interfaceMethodDeclaratorRest();
 
             state._fsp--;
@@ -3699,23 +3730,23 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "voidInterfaceMethodDeclaratorRest"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:420:1: voidInterfaceMethodDeclaratorRest : formalParameters ( 'throws' qualifiedNameList )? ';' ;
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:430:1: voidInterfaceMethodDeclaratorRest : formalParameters ( 'throws' qualifiedNameList )? ';' ;
     public final void voidInterfaceMethodDeclaratorRest() throws RecognitionException {
         int voidInterfaceMethodDeclaratorRest_StartIndex = input.index();
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 39) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:421:5: ( formalParameters ( 'throws' qualifiedNameList )? ';' )
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:421:9: formalParameters ( 'throws' qualifiedNameList )? ';'
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:431:5: ( formalParameters ( 'throws' qualifiedNameList )? ';' )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:431:9: formalParameters ( 'throws' qualifiedNameList )? ';'
             {
-            pushFollow(FOLLOW_formalParameters_in_voidInterfaceMethodDeclaratorRest1597);
+            pushFollow(FOLLOW_formalParameters_in_voidInterfaceMethodDeclaratorRest1604);
             formalParameters();
 
             state._fsp--;
             if (state.failed) return ;
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:421:26: ( 'throws' qualifiedNameList )?
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:431:26: ( 'throws' qualifiedNameList )?
             int alt55=2;
             int LA55_0 = input.LA(1);
 
@@ -3724,11 +3755,11 @@ public class JavaParser extends Parser {
             }
             switch (alt55) {
                 case 1 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:421:27: 'throws' qualifiedNameList
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:431:27: 'throws' qualifiedNameList
                     {
-                    match(input,101,FOLLOW_101_in_voidInterfaceMethodDeclaratorRest1600); if (state.failed) return ;
+                    match(input,101,FOLLOW_101_in_voidInterfaceMethodDeclaratorRest1607); if (state.failed) return ;
 
-                    pushFollow(FOLLOW_qualifiedNameList_in_voidInterfaceMethodDeclaratorRest1602);
+                    pushFollow(FOLLOW_qualifiedNameList_in_voidInterfaceMethodDeclaratorRest1609);
                     qualifiedNameList();
 
                     state._fsp--;
@@ -3740,7 +3771,7 @@ public class JavaParser extends Parser {
             }
 
 
-            match(input,48,FOLLOW_48_in_voidInterfaceMethodDeclaratorRest1606); if (state.failed) return ;
+            match(input,48,FOLLOW_48_in_voidInterfaceMethodDeclaratorRest1613); if (state.failed) return ;
 
             }
 
@@ -3762,23 +3793,23 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "constructorDeclaratorRest"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:424:1: constructorDeclaratorRest : formalParameters ( 'throws' qualifiedNameList )? constructorBody ;
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:434:1: constructorDeclaratorRest : formalParameters ( 'throws' qualifiedNameList )? constructorBody ;
     public final void constructorDeclaratorRest() throws RecognitionException {
         int constructorDeclaratorRest_StartIndex = input.index();
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 40) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:425:5: ( formalParameters ( 'throws' qualifiedNameList )? constructorBody )
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:425:9: formalParameters ( 'throws' qualifiedNameList )? constructorBody
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:435:5: ( formalParameters ( 'throws' qualifiedNameList )? constructorBody )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:435:9: formalParameters ( 'throws' qualifiedNameList )? constructorBody
             {
-            pushFollow(FOLLOW_formalParameters_in_constructorDeclaratorRest1629);
+            pushFollow(FOLLOW_formalParameters_in_constructorDeclaratorRest1636);
             formalParameters();
 
             state._fsp--;
             if (state.failed) return ;
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:425:26: ( 'throws' qualifiedNameList )?
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:435:26: ( 'throws' qualifiedNameList )?
             int alt56=2;
             int LA56_0 = input.LA(1);
 
@@ -3787,11 +3818,11 @@ public class JavaParser extends Parser {
             }
             switch (alt56) {
                 case 1 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:425:27: 'throws' qualifiedNameList
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:435:27: 'throws' qualifiedNameList
                     {
-                    match(input,101,FOLLOW_101_in_constructorDeclaratorRest1632); if (state.failed) return ;
+                    match(input,101,FOLLOW_101_in_constructorDeclaratorRest1639); if (state.failed) return ;
 
-                    pushFollow(FOLLOW_qualifiedNameList_in_constructorDeclaratorRest1634);
+                    pushFollow(FOLLOW_qualifiedNameList_in_constructorDeclaratorRest1641);
                     qualifiedNameList();
 
                     state._fsp--;
@@ -3803,7 +3834,7 @@ public class JavaParser extends Parser {
             }
 
 
-            pushFollow(FOLLOW_constructorBody_in_constructorDeclaratorRest1638);
+            pushFollow(FOLLOW_constructorBody_in_constructorDeclaratorRest1645);
             constructorBody();
 
             state._fsp--;
@@ -3829,19 +3860,19 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "constantDeclarator"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:428:1: constantDeclarator : Identifier constantDeclaratorRest ;
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:438:1: constantDeclarator : Identifier constantDeclaratorRest ;
     public final void constantDeclarator() throws RecognitionException {
         int constantDeclarator_StartIndex = input.index();
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 41) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:429:5: ( Identifier constantDeclaratorRest )
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:429:9: Identifier constantDeclaratorRest
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:439:5: ( Identifier constantDeclaratorRest )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:439:9: Identifier constantDeclaratorRest
             {
-            match(input,Identifier,FOLLOW_Identifier_in_constantDeclarator1657); if (state.failed) return ;
+            match(input,Identifier,FOLLOW_Identifier_in_constantDeclarator1664); if (state.failed) return ;
 
-            pushFollow(FOLLOW_constantDeclaratorRest_in_constantDeclarator1659);
+            pushFollow(FOLLOW_constantDeclaratorRest_in_constantDeclarator1666);
             constantDeclaratorRest();
 
             state._fsp--;
@@ -3870,7 +3901,7 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "variableDeclarators"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:432:1: variableDeclarators : variableDeclarator ( ',' variableDeclarator )* ;
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:442:1: variableDeclarators : variableDeclarator ( ',' variableDeclarator )* ;
     public final JavaParser.variableDeclarators_return variableDeclarators() throws RecognitionException {
         JavaParser.variableDeclarators_return retval = new JavaParser.variableDeclarators_return();
         retval.start = input.LT(1);
@@ -3880,16 +3911,16 @@ public class JavaParser extends Parser {
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 42) ) { return retval; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:433:5: ( variableDeclarator ( ',' variableDeclarator )* )
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:433:9: variableDeclarator ( ',' variableDeclarator )*
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:443:5: ( variableDeclarator ( ',' variableDeclarator )* )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:443:9: variableDeclarator ( ',' variableDeclarator )*
             {
-            pushFollow(FOLLOW_variableDeclarator_in_variableDeclarators1682);
+            pushFollow(FOLLOW_variableDeclarator_in_variableDeclarators1689);
             variableDeclarator();
 
             state._fsp--;
             if (state.failed) return retval;
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:433:28: ( ',' variableDeclarator )*
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:443:28: ( ',' variableDeclarator )*
             loop57:
             do {
                 int alt57=2;
@@ -3902,11 +3933,11 @@ public class JavaParser extends Parser {
 
                 switch (alt57) {
             	case 1 :
-            	    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:433:29: ',' variableDeclarator
+            	    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:443:29: ',' variableDeclarator
             	    {
-            	    match(input,39,FOLLOW_39_in_variableDeclarators1685); if (state.failed) return retval;
+            	    match(input,39,FOLLOW_39_in_variableDeclarators1692); if (state.failed) return retval;
 
-            	    pushFollow(FOLLOW_variableDeclarator_in_variableDeclarators1687);
+            	    pushFollow(FOLLOW_variableDeclarator_in_variableDeclarators1694);
             	    variableDeclarator();
 
             	    state._fsp--;
@@ -3944,23 +3975,23 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "variableDeclarator"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:436:1: variableDeclarator : variableDeclaratorId ( '=' variableInitializer )? ;
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:446:1: variableDeclarator : variableDeclaratorId ( '=' variableInitializer )? ;
     public final void variableDeclarator() throws RecognitionException {
         int variableDeclarator_StartIndex = input.index();
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 43) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:437:5: ( variableDeclaratorId ( '=' variableInitializer )? )
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:437:9: variableDeclaratorId ( '=' variableInitializer )?
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:447:5: ( variableDeclaratorId ( '=' variableInitializer )? )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:447:9: variableDeclaratorId ( '=' variableInitializer )?
             {
-            pushFollow(FOLLOW_variableDeclaratorId_in_variableDeclarator1708);
+            pushFollow(FOLLOW_variableDeclaratorId_in_variableDeclarator1715);
             variableDeclaratorId();
 
             state._fsp--;
             if (state.failed) return ;
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:437:30: ( '=' variableInitializer )?
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:447:30: ( '=' variableInitializer )?
             int alt58=2;
             int LA58_0 = input.LA(1);
 
@@ -3969,11 +4000,11 @@ public class JavaParser extends Parser {
             }
             switch (alt58) {
                 case 1 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:437:31: '=' variableInitializer
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:447:31: '=' variableInitializer
                     {
-                    match(input,50,FOLLOW_50_in_variableDeclarator1711); if (state.failed) return ;
+                    match(input,50,FOLLOW_50_in_variableDeclarator1718); if (state.failed) return ;
 
-                    pushFollow(FOLLOW_variableInitializer_in_variableDeclarator1713);
+                    pushFollow(FOLLOW_variableInitializer_in_variableDeclarator1720);
                     variableInitializer();
 
                     state._fsp--;
@@ -4005,23 +4036,23 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "constantDeclaratorsRest"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:440:1: constantDeclaratorsRest : constantDeclaratorRest ( ',' constantDeclarator )* ;
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:450:1: constantDeclaratorsRest : constantDeclaratorRest ( ',' constantDeclarator )* ;
     public final void constantDeclaratorsRest() throws RecognitionException {
         int constantDeclaratorsRest_StartIndex = input.index();
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 44) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:441:5: ( constantDeclaratorRest ( ',' constantDeclarator )* )
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:441:9: constantDeclaratorRest ( ',' constantDeclarator )*
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:451:5: ( constantDeclaratorRest ( ',' constantDeclarator )* )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:451:9: constantDeclaratorRest ( ',' constantDeclarator )*
             {
-            pushFollow(FOLLOW_constantDeclaratorRest_in_constantDeclaratorsRest1739);
+            pushFollow(FOLLOW_constantDeclaratorRest_in_constantDeclaratorsRest1746);
             constantDeclaratorRest();
 
             state._fsp--;
             if (state.failed) return ;
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:441:32: ( ',' constantDeclarator )*
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:451:32: ( ',' constantDeclarator )*
             loop59:
             do {
                 int alt59=2;
@@ -4034,11 +4065,11 @@ public class JavaParser extends Parser {
 
                 switch (alt59) {
             	case 1 :
-            	    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:441:33: ',' constantDeclarator
+            	    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:451:33: ',' constantDeclarator
             	    {
-            	    match(input,39,FOLLOW_39_in_constantDeclaratorsRest1742); if (state.failed) return ;
+            	    match(input,39,FOLLOW_39_in_constantDeclaratorsRest1749); if (state.failed) return ;
 
-            	    pushFollow(FOLLOW_constantDeclarator_in_constantDeclaratorsRest1744);
+            	    pushFollow(FOLLOW_constantDeclarator_in_constantDeclaratorsRest1751);
             	    constantDeclarator();
 
             	    state._fsp--;
@@ -4073,17 +4104,17 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "constantDeclaratorRest"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:444:1: constantDeclaratorRest : ( '[' ']' )* '=' variableInitializer ;
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:454:1: constantDeclaratorRest : ( '[' ']' )* '=' variableInitializer ;
     public final void constantDeclaratorRest() throws RecognitionException {
         int constantDeclaratorRest_StartIndex = input.index();
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 45) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:445:5: ( ( '[' ']' )* '=' variableInitializer )
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:445:9: ( '[' ']' )* '=' variableInitializer
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:455:5: ( ( '[' ']' )* '=' variableInitializer )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:455:9: ( '[' ']' )* '=' variableInitializer
             {
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:445:9: ( '[' ']' )*
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:455:9: ( '[' ']' )*
             loop60:
             do {
                 int alt60=2;
@@ -4096,11 +4127,11 @@ public class JavaParser extends Parser {
 
                 switch (alt60) {
             	case 1 :
-            	    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:445:10: '[' ']'
+            	    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:455:10: '[' ']'
             	    {
-            	    match(input,55,FOLLOW_55_in_constantDeclaratorRest1766); if (state.failed) return ;
+            	    match(input,55,FOLLOW_55_in_constantDeclaratorRest1773); if (state.failed) return ;
 
-            	    match(input,56,FOLLOW_56_in_constantDeclaratorRest1768); if (state.failed) return ;
+            	    match(input,56,FOLLOW_56_in_constantDeclaratorRest1775); if (state.failed) return ;
 
             	    }
             	    break;
@@ -4111,9 +4142,9 @@ public class JavaParser extends Parser {
             } while (true);
 
 
-            match(input,50,FOLLOW_50_in_constantDeclaratorRest1772); if (state.failed) return ;
+            match(input,50,FOLLOW_50_in_constantDeclaratorRest1779); if (state.failed) return ;
 
-            pushFollow(FOLLOW_variableInitializer_in_constantDeclaratorRest1774);
+            pushFollow(FOLLOW_variableInitializer_in_constantDeclaratorRest1781);
             variableInitializer();
 
             state._fsp--;
@@ -4139,19 +4170,19 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "variableDeclaratorId"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:448:1: variableDeclaratorId : Identifier ( '[' ']' )* ;
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:458:1: variableDeclaratorId : Identifier ( '[' ']' )* ;
     public final void variableDeclaratorId() throws RecognitionException {
         int variableDeclaratorId_StartIndex = input.index();
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 46) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:449:5: ( Identifier ( '[' ']' )* )
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:449:9: Identifier ( '[' ']' )*
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:459:5: ( Identifier ( '[' ']' )* )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:459:9: Identifier ( '[' ']' )*
             {
-            match(input,Identifier,FOLLOW_Identifier_in_variableDeclaratorId1797); if (state.failed) return ;
+            match(input,Identifier,FOLLOW_Identifier_in_variableDeclaratorId1804); if (state.failed) return ;
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:449:20: ( '[' ']' )*
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:459:20: ( '[' ']' )*
             loop61:
             do {
                 int alt61=2;
@@ -4164,11 +4195,11 @@ public class JavaParser extends Parser {
 
                 switch (alt61) {
             	case 1 :
-            	    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:449:21: '[' ']'
+            	    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:459:21: '[' ']'
             	    {
-            	    match(input,55,FOLLOW_55_in_variableDeclaratorId1800); if (state.failed) return ;
+            	    match(input,55,FOLLOW_55_in_variableDeclaratorId1807); if (state.failed) return ;
 
-            	    match(input,56,FOLLOW_56_in_variableDeclaratorId1802); if (state.failed) return ;
+            	    match(input,56,FOLLOW_56_in_variableDeclaratorId1809); if (state.failed) return ;
 
             	    }
             	    break;
@@ -4199,17 +4230,17 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "variableInitializer"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:452:1: variableInitializer : ( arrayInitializer | expression );
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:462:1: variableInitializer : ( arrayInitializer | expression );
     public final void variableInitializer() throws RecognitionException {
         int variableInitializer_StartIndex = input.index();
 
-        JavaParser.expression_return expression2 =null;
+        JavaParser.expression_return expression7 =null;
 
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 47) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:453:5: ( arrayInitializer | expression )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:463:5: ( arrayInitializer | expression )
             int alt62=2;
             int LA62_0 = input.LA(1);
 
@@ -4229,9 +4260,9 @@ public class JavaParser extends Parser {
             }
             switch (alt62) {
                 case 1 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:453:9: arrayInitializer
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:463:9: arrayInitializer
                     {
-                    pushFollow(FOLLOW_arrayInitializer_in_variableInitializer1823);
+                    pushFollow(FOLLOW_arrayInitializer_in_variableInitializer1830);
                     arrayInitializer();
 
                     state._fsp--;
@@ -4240,15 +4271,15 @@ public class JavaParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:454:9: expression
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:464:9: expression
                     {
-                    pushFollow(FOLLOW_expression_in_variableInitializer1833);
-                    expression2=expression();
+                    pushFollow(FOLLOW_expression_in_variableInitializer1840);
+                    expression7=expression();
 
                     state._fsp--;
                     if (state.failed) return ;
 
-                    if ( state.backtracking==0 ) {System.out.println("Expression Mother "+ (expression2!=null?input.toString(expression2.start,expression2.stop):null));}
+                    if ( state.backtracking==0 ) {System.out.println("Expression Mother "+ (expression7!=null?input.toString(expression7.start,expression7.stop):null));}
 
                     }
                     break;
@@ -4272,19 +4303,19 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "arrayInitializer"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:457:1: arrayInitializer : '{' ( variableInitializer ( ',' variableInitializer )* ( ',' )? )? '}' ;
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:467:1: arrayInitializer : '{' ( variableInitializer ( ',' variableInitializer )* ( ',' )? )? '}' ;
     public final void arrayInitializer() throws RecognitionException {
         int arrayInitializer_StartIndex = input.index();
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 48) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:458:5: ( '{' ( variableInitializer ( ',' variableInitializer )* ( ',' )? )? '}' )
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:458:9: '{' ( variableInitializer ( ',' variableInitializer )* ( ',' )? )? '}'
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:468:5: ( '{' ( variableInitializer ( ',' variableInitializer )* ( ',' )? )? '}' )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:468:9: '{' ( variableInitializer ( ',' variableInitializer )* ( ',' )? )? '}'
             {
-            match(input,108,FOLLOW_108_in_arrayInitializer1862); if (state.failed) return ;
+            match(input,108,FOLLOW_108_in_arrayInitializer1869); if (state.failed) return ;
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:458:13: ( variableInitializer ( ',' variableInitializer )* ( ',' )? )?
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:468:13: ( variableInitializer ( ',' variableInitializer )* ( ',' )? )?
             int alt65=2;
             int LA65_0 = input.LA(1);
 
@@ -4293,15 +4324,15 @@ public class JavaParser extends Parser {
             }
             switch (alt65) {
                 case 1 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:458:14: variableInitializer ( ',' variableInitializer )* ( ',' )?
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:468:14: variableInitializer ( ',' variableInitializer )* ( ',' )?
                     {
-                    pushFollow(FOLLOW_variableInitializer_in_arrayInitializer1865);
+                    pushFollow(FOLLOW_variableInitializer_in_arrayInitializer1872);
                     variableInitializer();
 
                     state._fsp--;
                     if (state.failed) return ;
 
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:458:34: ( ',' variableInitializer )*
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:468:34: ( ',' variableInitializer )*
                     loop63:
                     do {
                         int alt63=2;
@@ -4320,11 +4351,11 @@ public class JavaParser extends Parser {
 
                         switch (alt63) {
                     	case 1 :
-                    	    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:458:35: ',' variableInitializer
+                    	    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:468:35: ',' variableInitializer
                     	    {
-                    	    match(input,39,FOLLOW_39_in_arrayInitializer1868); if (state.failed) return ;
+                    	    match(input,39,FOLLOW_39_in_arrayInitializer1875); if (state.failed) return ;
 
-                    	    pushFollow(FOLLOW_variableInitializer_in_arrayInitializer1870);
+                    	    pushFollow(FOLLOW_variableInitializer_in_arrayInitializer1877);
                     	    variableInitializer();
 
                     	    state._fsp--;
@@ -4339,7 +4370,7 @@ public class JavaParser extends Parser {
                     } while (true);
 
 
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:458:61: ( ',' )?
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:468:61: ( ',' )?
                     int alt64=2;
                     int LA64_0 = input.LA(1);
 
@@ -4348,9 +4379,9 @@ public class JavaParser extends Parser {
                     }
                     switch (alt64) {
                         case 1 :
-                            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:458:62: ','
+                            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:468:62: ','
                             {
-                            match(input,39,FOLLOW_39_in_arrayInitializer1875); if (state.failed) return ;
+                            match(input,39,FOLLOW_39_in_arrayInitializer1882); if (state.failed) return ;
 
                             }
                             break;
@@ -4364,7 +4395,7 @@ public class JavaParser extends Parser {
             }
 
 
-            match(input,112,FOLLOW_112_in_arrayInitializer1882); if (state.failed) return ;
+            match(input,112,FOLLOW_112_in_arrayInitializer1889); if (state.failed) return ;
 
             }
 
@@ -4386,14 +4417,14 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "modifier"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:461:1: modifier : ( annotation | 'public' | 'protected' | 'private' | 'static' | 'abstract' | 'final' | 'native' | 'synchronized' | 'transient' | 'volatile' | 'strictfp' );
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:471:1: modifier : ( annotation | 'public' | 'protected' | 'private' | 'static' | 'abstract' | 'final' | 'native' | 'synchronized' | 'transient' | 'volatile' | 'strictfp' );
     public final void modifier() throws RecognitionException {
         int modifier_StartIndex = input.index();
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 49) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:462:5: ( annotation | 'public' | 'protected' | 'private' | 'static' | 'abstract' | 'final' | 'native' | 'synchronized' | 'transient' | 'volatile' | 'strictfp' )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:472:5: ( annotation | 'public' | 'protected' | 'private' | 'static' | 'abstract' | 'final' | 'native' | 'synchronized' | 'transient' | 'volatile' | 'strictfp' )
             int alt66=12;
             switch ( input.LA(1) ) {
             case 54:
@@ -4467,9 +4498,9 @@ public class JavaParser extends Parser {
 
             switch (alt66) {
                 case 1 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:462:9: annotation
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:472:9: annotation
                     {
-                    pushFollow(FOLLOW_annotation_in_modifier1901);
+                    pushFollow(FOLLOW_annotation_in_modifier1908);
                     annotation();
 
                     state._fsp--;
@@ -4478,79 +4509,79 @@ public class JavaParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:463:9: 'public'
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:473:9: 'public'
                     {
-                    match(input,91,FOLLOW_91_in_modifier1911); if (state.failed) return ;
+                    match(input,91,FOLLOW_91_in_modifier1918); if (state.failed) return ;
 
                     }
                     break;
                 case 3 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:464:9: 'protected'
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:474:9: 'protected'
                     {
-                    match(input,90,FOLLOW_90_in_modifier1921); if (state.failed) return ;
+                    match(input,90,FOLLOW_90_in_modifier1928); if (state.failed) return ;
 
                     }
                     break;
                 case 4 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:465:9: 'private'
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:475:9: 'private'
                     {
-                    match(input,89,FOLLOW_89_in_modifier1931); if (state.failed) return ;
+                    match(input,89,FOLLOW_89_in_modifier1938); if (state.failed) return ;
 
                     }
                     break;
                 case 5 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:466:9: 'static'
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:476:9: 'static'
                     {
-                    match(input,94,FOLLOW_94_in_modifier1941); if (state.failed) return ;
+                    match(input,94,FOLLOW_94_in_modifier1948); if (state.failed) return ;
 
                     }
                     break;
                 case 6 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:467:9: 'abstract'
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:477:9: 'abstract'
                     {
-                    match(input,59,FOLLOW_59_in_modifier1951); if (state.failed) return ;
+                    match(input,59,FOLLOW_59_in_modifier1958); if (state.failed) return ;
 
                     }
                     break;
                 case 7 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:468:9: 'final'
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:478:9: 'final'
                     {
-                    match(input,74,FOLLOW_74_in_modifier1961); if (state.failed) return ;
+                    match(input,74,FOLLOW_74_in_modifier1968); if (state.failed) return ;
 
                     }
                     break;
                 case 8 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:469:9: 'native'
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:479:9: 'native'
                     {
-                    match(input,85,FOLLOW_85_in_modifier1971); if (state.failed) return ;
+                    match(input,85,FOLLOW_85_in_modifier1978); if (state.failed) return ;
 
                     }
                     break;
                 case 9 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:470:9: 'synchronized'
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:480:9: 'synchronized'
                     {
-                    match(input,98,FOLLOW_98_in_modifier1981); if (state.failed) return ;
+                    match(input,98,FOLLOW_98_in_modifier1988); if (state.failed) return ;
 
                     }
                     break;
                 case 10 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:471:9: 'transient'
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:481:9: 'transient'
                     {
-                    match(input,102,FOLLOW_102_in_modifier1991); if (state.failed) return ;
+                    match(input,102,FOLLOW_102_in_modifier1998); if (state.failed) return ;
 
                     }
                     break;
                 case 11 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:472:9: 'volatile'
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:482:9: 'volatile'
                     {
-                    match(input,106,FOLLOW_106_in_modifier2001); if (state.failed) return ;
+                    match(input,106,FOLLOW_106_in_modifier2008); if (state.failed) return ;
 
                     }
                     break;
                 case 12 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:473:9: 'strictfp'
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:483:9: 'strictfp'
                     {
-                    match(input,95,FOLLOW_95_in_modifier2011); if (state.failed) return ;
+                    match(input,95,FOLLOW_95_in_modifier2018); if (state.failed) return ;
 
                     }
                     break;
@@ -4574,17 +4605,17 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "packageOrTypeName"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:476:1: packageOrTypeName : qualifiedName ;
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:486:1: packageOrTypeName : qualifiedName ;
     public final void packageOrTypeName() throws RecognitionException {
         int packageOrTypeName_StartIndex = input.index();
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 50) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:477:5: ( qualifiedName )
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:477:9: qualifiedName
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:487:5: ( qualifiedName )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:487:9: qualifiedName
             {
-            pushFollow(FOLLOW_qualifiedName_in_packageOrTypeName2030);
+            pushFollow(FOLLOW_qualifiedName_in_packageOrTypeName2037);
             qualifiedName();
 
             state._fsp--;
@@ -4610,17 +4641,17 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "enumConstantName"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:480:1: enumConstantName : Identifier ;
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:490:1: enumConstantName : Identifier ;
     public final void enumConstantName() throws RecognitionException {
         int enumConstantName_StartIndex = input.index();
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 51) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:481:5: ( Identifier )
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:481:9: Identifier
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:491:5: ( Identifier )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:491:9: Identifier
             {
-            match(input,Identifier,FOLLOW_Identifier_in_enumConstantName2049); if (state.failed) return ;
+            match(input,Identifier,FOLLOW_Identifier_in_enumConstantName2056); if (state.failed) return ;
 
             }
 
@@ -4642,17 +4673,17 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "typeName"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:484:1: typeName : qualifiedName ;
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:494:1: typeName : qualifiedName ;
     public final void typeName() throws RecognitionException {
         int typeName_StartIndex = input.index();
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 52) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:485:5: ( qualifiedName )
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:485:9: qualifiedName
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:495:5: ( qualifiedName )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:495:9: qualifiedName
             {
-            pushFollow(FOLLOW_qualifiedName_in_typeName2068);
+            pushFollow(FOLLOW_qualifiedName_in_typeName2075);
             qualifiedName();
 
             state._fsp--;
@@ -4681,7 +4712,7 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "type"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:488:1: type : ( classOrInterfaceType ( '[' ']' )* | primitiveType ( '[' ']' )* );
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:498:1: type : ( classOrInterfaceType ( '[' ']' )* | primitiveType ( '[' ']' )* );
     public final JavaParser.type_return type() throws RecognitionException {
         JavaParser.type_return retval = new JavaParser.type_return();
         retval.start = input.LT(1);
@@ -4691,7 +4722,7 @@ public class JavaParser extends Parser {
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 53) ) { return retval; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:489:2: ( classOrInterfaceType ( '[' ']' )* | primitiveType ( '[' ']' )* )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:499:2: ( classOrInterfaceType ( '[' ']' )* | primitiveType ( '[' ']' )* )
             int alt69=2;
             int LA69_0 = input.LA(1);
 
@@ -4711,15 +4742,15 @@ public class JavaParser extends Parser {
             }
             switch (alt69) {
                 case 1 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:489:4: classOrInterfaceType ( '[' ']' )*
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:499:4: classOrInterfaceType ( '[' ']' )*
                     {
-                    pushFollow(FOLLOW_classOrInterfaceType_in_type2082);
+                    pushFollow(FOLLOW_classOrInterfaceType_in_type2089);
                     classOrInterfaceType();
 
                     state._fsp--;
                     if (state.failed) return retval;
 
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:489:25: ( '[' ']' )*
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:499:25: ( '[' ']' )*
                     loop67:
                     do {
                         int alt67=2;
@@ -4732,11 +4763,11 @@ public class JavaParser extends Parser {
 
                         switch (alt67) {
                     	case 1 :
-                    	    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:489:26: '[' ']'
+                    	    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:499:26: '[' ']'
                     	    {
-                    	    match(input,55,FOLLOW_55_in_type2085); if (state.failed) return retval;
+                    	    match(input,55,FOLLOW_55_in_type2092); if (state.failed) return retval;
 
-                    	    match(input,56,FOLLOW_56_in_type2087); if (state.failed) return retval;
+                    	    match(input,56,FOLLOW_56_in_type2094); if (state.failed) return retval;
 
                     	    }
                     	    break;
@@ -4750,15 +4781,15 @@ public class JavaParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:490:4: primitiveType ( '[' ']' )*
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:500:4: primitiveType ( '[' ']' )*
                     {
-                    pushFollow(FOLLOW_primitiveType_in_type2094);
+                    pushFollow(FOLLOW_primitiveType_in_type2101);
                     primitiveType();
 
                     state._fsp--;
                     if (state.failed) return retval;
 
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:490:18: ( '[' ']' )*
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:500:18: ( '[' ']' )*
                     loop68:
                     do {
                         int alt68=2;
@@ -4771,11 +4802,11 @@ public class JavaParser extends Parser {
 
                         switch (alt68) {
                     	case 1 :
-                    	    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:490:19: '[' ']'
+                    	    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:500:19: '[' ']'
                     	    {
-                    	    match(input,55,FOLLOW_55_in_type2097); if (state.failed) return retval;
+                    	    match(input,55,FOLLOW_55_in_type2104); if (state.failed) return retval;
 
-                    	    match(input,56,FOLLOW_56_in_type2099); if (state.failed) return retval;
+                    	    match(input,56,FOLLOW_56_in_type2106); if (state.failed) return retval;
 
                     	    }
                     	    break;
@@ -4811,19 +4842,19 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "classOrInterfaceType"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:493:1: classOrInterfaceType : Identifier ( typeArguments )? ( '.' Identifier ( typeArguments )? )* ;
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:503:1: classOrInterfaceType : Identifier ( typeArguments )? ( '.' Identifier ( typeArguments )? )* ;
     public final void classOrInterfaceType() throws RecognitionException {
         int classOrInterfaceType_StartIndex = input.index();
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 54) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:494:2: ( Identifier ( typeArguments )? ( '.' Identifier ( typeArguments )? )* )
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:494:4: Identifier ( typeArguments )? ( '.' Identifier ( typeArguments )? )*
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:504:2: ( Identifier ( typeArguments )? ( '.' Identifier ( typeArguments )? )* )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:504:4: Identifier ( typeArguments )? ( '.' Identifier ( typeArguments )? )*
             {
-            match(input,Identifier,FOLLOW_Identifier_in_classOrInterfaceType2112); if (state.failed) return ;
+            match(input,Identifier,FOLLOW_Identifier_in_classOrInterfaceType2119); if (state.failed) return ;
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:494:15: ( typeArguments )?
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:504:15: ( typeArguments )?
             int alt70=2;
             int LA70_0 = input.LA(1);
 
@@ -4836,9 +4867,9 @@ public class JavaParser extends Parser {
             }
             switch (alt70) {
                 case 1 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:494:15: typeArguments
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:504:15: typeArguments
                     {
-                    pushFollow(FOLLOW_typeArguments_in_classOrInterfaceType2114);
+                    pushFollow(FOLLOW_typeArguments_in_classOrInterfaceType2121);
                     typeArguments();
 
                     state._fsp--;
@@ -4850,7 +4881,7 @@ public class JavaParser extends Parser {
             }
 
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:494:30: ( '.' Identifier ( typeArguments )? )*
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:504:30: ( '.' Identifier ( typeArguments )? )*
             loop72:
             do {
                 int alt72=2;
@@ -4863,13 +4894,13 @@ public class JavaParser extends Parser {
 
                 switch (alt72) {
             	case 1 :
-            	    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:494:31: '.' Identifier ( typeArguments )?
+            	    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:504:31: '.' Identifier ( typeArguments )?
             	    {
-            	    match(input,43,FOLLOW_43_in_classOrInterfaceType2118); if (state.failed) return ;
+            	    match(input,43,FOLLOW_43_in_classOrInterfaceType2125); if (state.failed) return ;
 
-            	    match(input,Identifier,FOLLOW_Identifier_in_classOrInterfaceType2120); if (state.failed) return ;
+            	    match(input,Identifier,FOLLOW_Identifier_in_classOrInterfaceType2127); if (state.failed) return ;
 
-            	    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:494:46: ( typeArguments )?
+            	    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:504:46: ( typeArguments )?
             	    int alt71=2;
             	    int LA71_0 = input.LA(1);
 
@@ -4882,9 +4913,9 @@ public class JavaParser extends Parser {
             	    }
             	    switch (alt71) {
             	        case 1 :
-            	            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:494:46: typeArguments
+            	            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:504:46: typeArguments
             	            {
-            	            pushFollow(FOLLOW_typeArguments_in_classOrInterfaceType2122);
+            	            pushFollow(FOLLOW_typeArguments_in_classOrInterfaceType2129);
             	            typeArguments();
 
             	            state._fsp--;
@@ -4925,14 +4956,14 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "primitiveType"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:497:1: primitiveType : ( 'boolean' | 'char' | 'byte' | 'short' | 'int' | 'long' | 'float' | 'double' );
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:507:1: primitiveType : ( 'boolean' | 'char' | 'byte' | 'short' | 'int' | 'long' | 'float' | 'double' );
     public final void primitiveType() throws RecognitionException {
         int primitiveType_StartIndex = input.index();
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 55) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:498:5: ( 'boolean' | 'char' | 'byte' | 'short' | 'int' | 'long' | 'float' | 'double' )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:508:5: ( 'boolean' | 'char' | 'byte' | 'short' | 'int' | 'long' | 'float' | 'double' )
             // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:
             {
             if ( input.LA(1)==60||input.LA(1)==62||input.LA(1)==65||input.LA(1)==70||input.LA(1)==76||input.LA(1)==82||input.LA(1)==84||input.LA(1)==93 ) {
@@ -4967,14 +4998,14 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "variableModifier"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:508:1: variableModifier : ( 'final' | annotation );
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:518:1: variableModifier : ( 'final' | annotation );
     public final void variableModifier() throws RecognitionException {
         int variableModifier_StartIndex = input.index();
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 56) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:509:5: ( 'final' | annotation )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:519:5: ( 'final' | annotation )
             int alt73=2;
             int LA73_0 = input.LA(1);
 
@@ -4994,16 +5025,16 @@ public class JavaParser extends Parser {
             }
             switch (alt73) {
                 case 1 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:509:9: 'final'
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:519:9: 'final'
                     {
-                    match(input,74,FOLLOW_74_in_variableModifier2231); if (state.failed) return ;
+                    match(input,74,FOLLOW_74_in_variableModifier2238); if (state.failed) return ;
 
                     }
                     break;
                 case 2 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:510:9: annotation
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:520:9: annotation
                     {
-                    pushFollow(FOLLOW_annotation_in_variableModifier2241);
+                    pushFollow(FOLLOW_annotation_in_variableModifier2248);
                     annotation();
 
                     state._fsp--;
@@ -5031,25 +5062,25 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "typeArguments"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:513:1: typeArguments : '<' typeArgument ( ',' typeArgument )* '>' ;
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:523:1: typeArguments : '<' typeArgument ( ',' typeArgument )* '>' ;
     public final void typeArguments() throws RecognitionException {
         int typeArguments_StartIndex = input.index();
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 57) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:514:5: ( '<' typeArgument ( ',' typeArgument )* '>' )
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:514:9: '<' typeArgument ( ',' typeArgument )* '>'
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:524:5: ( '<' typeArgument ( ',' typeArgument )* '>' )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:524:9: '<' typeArgument ( ',' typeArgument )* '>'
             {
-            match(input,49,FOLLOW_49_in_typeArguments2260); if (state.failed) return ;
+            match(input,49,FOLLOW_49_in_typeArguments2267); if (state.failed) return ;
 
-            pushFollow(FOLLOW_typeArgument_in_typeArguments2262);
+            pushFollow(FOLLOW_typeArgument_in_typeArguments2269);
             typeArgument();
 
             state._fsp--;
             if (state.failed) return ;
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:514:26: ( ',' typeArgument )*
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:524:26: ( ',' typeArgument )*
             loop74:
             do {
                 int alt74=2;
@@ -5062,11 +5093,11 @@ public class JavaParser extends Parser {
 
                 switch (alt74) {
             	case 1 :
-            	    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:514:27: ',' typeArgument
+            	    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:524:27: ',' typeArgument
             	    {
-            	    match(input,39,FOLLOW_39_in_typeArguments2265); if (state.failed) return ;
+            	    match(input,39,FOLLOW_39_in_typeArguments2272); if (state.failed) return ;
 
-            	    pushFollow(FOLLOW_typeArgument_in_typeArguments2267);
+            	    pushFollow(FOLLOW_typeArgument_in_typeArguments2274);
             	    typeArgument();
 
             	    state._fsp--;
@@ -5081,7 +5112,7 @@ public class JavaParser extends Parser {
             } while (true);
 
 
-            match(input,52,FOLLOW_52_in_typeArguments2271); if (state.failed) return ;
+            match(input,52,FOLLOW_52_in_typeArguments2278); if (state.failed) return ;
 
             }
 
@@ -5103,14 +5134,14 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "typeArgument"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:517:1: typeArgument : ( type | '?' ( ( 'extends' | 'super' ) type )? );
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:527:1: typeArgument : ( type | '?' ( ( 'extends' | 'super' ) type )? );
     public final void typeArgument() throws RecognitionException {
         int typeArgument_StartIndex = input.index();
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 58) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:518:5: ( type | '?' ( ( 'extends' | 'super' ) type )? )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:528:5: ( type | '?' ( ( 'extends' | 'super' ) type )? )
             int alt76=2;
             int LA76_0 = input.LA(1);
 
@@ -5130,9 +5161,9 @@ public class JavaParser extends Parser {
             }
             switch (alt76) {
                 case 1 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:518:9: type
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:528:9: type
                     {
-                    pushFollow(FOLLOW_type_in_typeArgument2294);
+                    pushFollow(FOLLOW_type_in_typeArgument2301);
                     type();
 
                     state._fsp--;
@@ -5141,11 +5172,11 @@ public class JavaParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:519:9: '?' ( ( 'extends' | 'super' ) type )?
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:529:9: '?' ( ( 'extends' | 'super' ) type )?
                     {
-                    match(input,53,FOLLOW_53_in_typeArgument2304); if (state.failed) return ;
+                    match(input,53,FOLLOW_53_in_typeArgument2311); if (state.failed) return ;
 
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:519:13: ( ( 'extends' | 'super' ) type )?
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:529:13: ( ( 'extends' | 'super' ) type )?
                     int alt75=2;
                     int LA75_0 = input.LA(1);
 
@@ -5154,7 +5185,7 @@ public class JavaParser extends Parser {
                     }
                     switch (alt75) {
                         case 1 :
-                            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:519:14: ( 'extends' | 'super' ) type
+                            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:529:14: ( 'extends' | 'super' ) type
                             {
                             if ( input.LA(1)==72||input.LA(1)==96 ) {
                                 input.consume();
@@ -5168,7 +5199,7 @@ public class JavaParser extends Parser {
                             }
 
 
-                            pushFollow(FOLLOW_type_in_typeArgument2315);
+                            pushFollow(FOLLOW_type_in_typeArgument2322);
                             type();
 
                             state._fsp--;
@@ -5202,23 +5233,23 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "qualifiedNameList"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:522:1: qualifiedNameList : qualifiedName ( ',' qualifiedName )* ;
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:532:1: qualifiedNameList : qualifiedName ( ',' qualifiedName )* ;
     public final void qualifiedNameList() throws RecognitionException {
         int qualifiedNameList_StartIndex = input.index();
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 59) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:523:5: ( qualifiedName ( ',' qualifiedName )* )
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:523:9: qualifiedName ( ',' qualifiedName )*
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:533:5: ( qualifiedName ( ',' qualifiedName )* )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:533:9: qualifiedName ( ',' qualifiedName )*
             {
-            pushFollow(FOLLOW_qualifiedName_in_qualifiedNameList2340);
+            pushFollow(FOLLOW_qualifiedName_in_qualifiedNameList2347);
             qualifiedName();
 
             state._fsp--;
             if (state.failed) return ;
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:523:23: ( ',' qualifiedName )*
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:533:23: ( ',' qualifiedName )*
             loop77:
             do {
                 int alt77=2;
@@ -5231,11 +5262,11 @@ public class JavaParser extends Parser {
 
                 switch (alt77) {
             	case 1 :
-            	    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:523:24: ',' qualifiedName
+            	    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:533:24: ',' qualifiedName
             	    {
-            	    match(input,39,FOLLOW_39_in_qualifiedNameList2343); if (state.failed) return ;
+            	    match(input,39,FOLLOW_39_in_qualifiedNameList2350); if (state.failed) return ;
 
-            	    pushFollow(FOLLOW_qualifiedName_in_qualifiedNameList2345);
+            	    pushFollow(FOLLOW_qualifiedName_in_qualifiedNameList2352);
             	    qualifiedName();
 
             	    state._fsp--;
@@ -5270,19 +5301,19 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "formalParameters"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:526:1: formalParameters : '(' ( formalParameterDecls )? ')' ;
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:536:1: formalParameters : '(' ( formalParameterDecls )? ')' ;
     public final void formalParameters() throws RecognitionException {
         int formalParameters_StartIndex = input.index();
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 60) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:527:5: ( '(' ( formalParameterDecls )? ')' )
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:527:9: '(' ( formalParameterDecls )? ')'
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:537:5: ( '(' ( formalParameterDecls )? ')' )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:537:9: '(' ( formalParameterDecls )? ')'
             {
-            match(input,32,FOLLOW_32_in_formalParameters2366); if (state.failed) return ;
+            match(input,32,FOLLOW_32_in_formalParameters2373); if (state.failed) return ;
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:527:13: ( formalParameterDecls )?
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:537:13: ( formalParameterDecls )?
             int alt78=2;
             int LA78_0 = input.LA(1);
 
@@ -5291,9 +5322,9 @@ public class JavaParser extends Parser {
             }
             switch (alt78) {
                 case 1 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:527:13: formalParameterDecls
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:537:13: formalParameterDecls
                     {
-                    pushFollow(FOLLOW_formalParameterDecls_in_formalParameters2368);
+                    pushFollow(FOLLOW_formalParameterDecls_in_formalParameters2375);
                     formalParameterDecls();
 
                     state._fsp--;
@@ -5305,7 +5336,7 @@ public class JavaParser extends Parser {
             }
 
 
-            match(input,33,FOLLOW_33_in_formalParameters2371); if (state.failed) return ;
+            match(input,33,FOLLOW_33_in_formalParameters2378); if (state.failed) return ;
 
             }
 
@@ -5327,29 +5358,29 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "formalParameterDecls"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:530:1: formalParameterDecls : variableModifiers type formalParameterDeclsRest ;
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:540:1: formalParameterDecls : variableModifiers type formalParameterDeclsRest ;
     public final void formalParameterDecls() throws RecognitionException {
         int formalParameterDecls_StartIndex = input.index();
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 61) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:531:5: ( variableModifiers type formalParameterDeclsRest )
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:531:9: variableModifiers type formalParameterDeclsRest
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:541:5: ( variableModifiers type formalParameterDeclsRest )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:541:9: variableModifiers type formalParameterDeclsRest
             {
-            pushFollow(FOLLOW_variableModifiers_in_formalParameterDecls2394);
+            pushFollow(FOLLOW_variableModifiers_in_formalParameterDecls2401);
             variableModifiers();
 
             state._fsp--;
             if (state.failed) return ;
 
-            pushFollow(FOLLOW_type_in_formalParameterDecls2396);
+            pushFollow(FOLLOW_type_in_formalParameterDecls2403);
             type();
 
             state._fsp--;
             if (state.failed) return ;
 
-            pushFollow(FOLLOW_formalParameterDeclsRest_in_formalParameterDecls2398);
+            pushFollow(FOLLOW_formalParameterDeclsRest_in_formalParameterDecls2405);
             formalParameterDeclsRest();
 
             state._fsp--;
@@ -5375,14 +5406,14 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "formalParameterDeclsRest"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:534:1: formalParameterDeclsRest : ( variableDeclaratorId ( ',' formalParameterDecls )? | '...' variableDeclaratorId );
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:544:1: formalParameterDeclsRest : ( variableDeclaratorId ( ',' formalParameterDecls )? | '...' variableDeclaratorId );
     public final void formalParameterDeclsRest() throws RecognitionException {
         int formalParameterDeclsRest_StartIndex = input.index();
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 62) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:535:5: ( variableDeclaratorId ( ',' formalParameterDecls )? | '...' variableDeclaratorId )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:545:5: ( variableDeclaratorId ( ',' formalParameterDecls )? | '...' variableDeclaratorId )
             int alt80=2;
             int LA80_0 = input.LA(1);
 
@@ -5402,15 +5433,15 @@ public class JavaParser extends Parser {
             }
             switch (alt80) {
                 case 1 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:535:9: variableDeclaratorId ( ',' formalParameterDecls )?
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:545:9: variableDeclaratorId ( ',' formalParameterDecls )?
                     {
-                    pushFollow(FOLLOW_variableDeclaratorId_in_formalParameterDeclsRest2421);
+                    pushFollow(FOLLOW_variableDeclaratorId_in_formalParameterDeclsRest2428);
                     variableDeclaratorId();
 
                     state._fsp--;
                     if (state.failed) return ;
 
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:535:30: ( ',' formalParameterDecls )?
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:545:30: ( ',' formalParameterDecls )?
                     int alt79=2;
                     int LA79_0 = input.LA(1);
 
@@ -5419,11 +5450,11 @@ public class JavaParser extends Parser {
                     }
                     switch (alt79) {
                         case 1 :
-                            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:535:31: ',' formalParameterDecls
+                            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:545:31: ',' formalParameterDecls
                             {
-                            match(input,39,FOLLOW_39_in_formalParameterDeclsRest2424); if (state.failed) return ;
+                            match(input,39,FOLLOW_39_in_formalParameterDeclsRest2431); if (state.failed) return ;
 
-                            pushFollow(FOLLOW_formalParameterDecls_in_formalParameterDeclsRest2426);
+                            pushFollow(FOLLOW_formalParameterDecls_in_formalParameterDeclsRest2433);
                             formalParameterDecls();
 
                             state._fsp--;
@@ -5438,11 +5469,11 @@ public class JavaParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:536:9: '...' variableDeclaratorId
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:546:9: '...' variableDeclaratorId
                     {
-                    match(input,44,FOLLOW_44_in_formalParameterDeclsRest2438); if (state.failed) return ;
+                    match(input,44,FOLLOW_44_in_formalParameterDeclsRest2445); if (state.failed) return ;
 
-                    pushFollow(FOLLOW_variableDeclaratorId_in_formalParameterDeclsRest2440);
+                    pushFollow(FOLLOW_variableDeclaratorId_in_formalParameterDeclsRest2447);
                     variableDeclaratorId();
 
                     state._fsp--;
@@ -5470,17 +5501,17 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "methodBody"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:539:1: methodBody : block ;
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:549:1: methodBody : block ;
     public final void methodBody() throws RecognitionException {
         int methodBody_StartIndex = input.index();
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 63) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:540:5: ( block )
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:540:9: block
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:550:5: ( block )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:550:9: block
             {
-            pushFollow(FOLLOW_block_in_methodBody2463);
+            pushFollow(FOLLOW_block_in_methodBody2470);
             block();
 
             state._fsp--;
@@ -5506,19 +5537,19 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "constructorBody"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:543:1: constructorBody : '{' ( explicitConstructorInvocation )? ( blockStatement )* '}' ;
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:553:1: constructorBody : '{' ( explicitConstructorInvocation )? ( blockStatement )* '}' ;
     public final void constructorBody() throws RecognitionException {
         int constructorBody_StartIndex = input.index();
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 64) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:544:5: ( '{' ( explicitConstructorInvocation )? ( blockStatement )* '}' )
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:544:9: '{' ( explicitConstructorInvocation )? ( blockStatement )* '}'
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:554:5: ( '{' ( explicitConstructorInvocation )? ( blockStatement )* '}' )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:554:9: '{' ( explicitConstructorInvocation )? ( blockStatement )* '}'
             {
-            match(input,108,FOLLOW_108_in_constructorBody2482); if (state.failed) return ;
+            match(input,108,FOLLOW_108_in_constructorBody2489); if (state.failed) return ;
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:544:13: ( explicitConstructorInvocation )?
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:554:13: ( explicitConstructorInvocation )?
             int alt81=2;
             switch ( input.LA(1) ) {
                 case 49:
@@ -5657,9 +5688,9 @@ public class JavaParser extends Parser {
 
             switch (alt81) {
                 case 1 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:544:13: explicitConstructorInvocation
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:554:13: explicitConstructorInvocation
                     {
-                    pushFollow(FOLLOW_explicitConstructorInvocation_in_constructorBody2484);
+                    pushFollow(FOLLOW_explicitConstructorInvocation_in_constructorBody2491);
                     explicitConstructorInvocation();
 
                     state._fsp--;
@@ -5671,7 +5702,7 @@ public class JavaParser extends Parser {
             }
 
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:544:44: ( blockStatement )*
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:554:44: ( blockStatement )*
             loop82:
             do {
                 int alt82=2;
@@ -5684,9 +5715,9 @@ public class JavaParser extends Parser {
 
                 switch (alt82) {
             	case 1 :
-            	    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:544:44: blockStatement
+            	    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:554:44: blockStatement
             	    {
-            	    pushFollow(FOLLOW_blockStatement_in_constructorBody2487);
+            	    pushFollow(FOLLOW_blockStatement_in_constructorBody2494);
             	    blockStatement();
 
             	    state._fsp--;
@@ -5701,7 +5732,7 @@ public class JavaParser extends Parser {
             } while (true);
 
 
-            match(input,112,FOLLOW_112_in_constructorBody2490); if (state.failed) return ;
+            match(input,112,FOLLOW_112_in_constructorBody2497); if (state.failed) return ;
 
             }
 
@@ -5723,14 +5754,14 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "explicitConstructorInvocation"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:547:1: explicitConstructorInvocation : ( ( nonWildcardTypeArguments )? ( 'this' | 'super' ) arguments ';' | primary '.' ( nonWildcardTypeArguments )? 'super' arguments ';' );
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:557:1: explicitConstructorInvocation : ( ( nonWildcardTypeArguments )? ( 'this' | 'super' ) arguments ';' | primary '.' ( nonWildcardTypeArguments )? 'super' arguments ';' );
     public final void explicitConstructorInvocation() throws RecognitionException {
         int explicitConstructorInvocation_StartIndex = input.index();
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 65) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:548:5: ( ( nonWildcardTypeArguments )? ( 'this' | 'super' ) arguments ';' | primary '.' ( nonWildcardTypeArguments )? 'super' arguments ';' )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:558:5: ( ( nonWildcardTypeArguments )? ( 'this' | 'super' ) arguments ';' | primary '.' ( nonWildcardTypeArguments )? 'super' arguments ';' )
             int alt85=2;
             switch ( input.LA(1) ) {
             case 49:
@@ -5814,9 +5845,9 @@ public class JavaParser extends Parser {
 
             switch (alt85) {
                 case 1 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:548:9: ( nonWildcardTypeArguments )? ( 'this' | 'super' ) arguments ';'
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:558:9: ( nonWildcardTypeArguments )? ( 'this' | 'super' ) arguments ';'
                     {
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:548:9: ( nonWildcardTypeArguments )?
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:558:9: ( nonWildcardTypeArguments )?
                     int alt83=2;
                     int LA83_0 = input.LA(1);
 
@@ -5825,9 +5856,9 @@ public class JavaParser extends Parser {
                     }
                     switch (alt83) {
                         case 1 :
-                            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:548:9: nonWildcardTypeArguments
+                            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:558:9: nonWildcardTypeArguments
                             {
-                            pushFollow(FOLLOW_nonWildcardTypeArguments_in_explicitConstructorInvocation2509);
+                            pushFollow(FOLLOW_nonWildcardTypeArguments_in_explicitConstructorInvocation2516);
                             nonWildcardTypeArguments();
 
                             state._fsp--;
@@ -5851,28 +5882,28 @@ public class JavaParser extends Parser {
                     }
 
 
-                    pushFollow(FOLLOW_arguments_in_explicitConstructorInvocation2520);
+                    pushFollow(FOLLOW_arguments_in_explicitConstructorInvocation2527);
                     arguments();
 
                     state._fsp--;
                     if (state.failed) return ;
 
-                    match(input,48,FOLLOW_48_in_explicitConstructorInvocation2522); if (state.failed) return ;
+                    match(input,48,FOLLOW_48_in_explicitConstructorInvocation2529); if (state.failed) return ;
 
                     }
                     break;
                 case 2 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:549:9: primary '.' ( nonWildcardTypeArguments )? 'super' arguments ';'
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:559:9: primary '.' ( nonWildcardTypeArguments )? 'super' arguments ';'
                     {
-                    pushFollow(FOLLOW_primary_in_explicitConstructorInvocation2532);
+                    pushFollow(FOLLOW_primary_in_explicitConstructorInvocation2539);
                     primary();
 
                     state._fsp--;
                     if (state.failed) return ;
 
-                    match(input,43,FOLLOW_43_in_explicitConstructorInvocation2534); if (state.failed) return ;
+                    match(input,43,FOLLOW_43_in_explicitConstructorInvocation2541); if (state.failed) return ;
 
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:549:21: ( nonWildcardTypeArguments )?
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:559:21: ( nonWildcardTypeArguments )?
                     int alt84=2;
                     int LA84_0 = input.LA(1);
 
@@ -5881,9 +5912,9 @@ public class JavaParser extends Parser {
                     }
                     switch (alt84) {
                         case 1 :
-                            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:549:21: nonWildcardTypeArguments
+                            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:559:21: nonWildcardTypeArguments
                             {
-                            pushFollow(FOLLOW_nonWildcardTypeArguments_in_explicitConstructorInvocation2536);
+                            pushFollow(FOLLOW_nonWildcardTypeArguments_in_explicitConstructorInvocation2543);
                             nonWildcardTypeArguments();
 
                             state._fsp--;
@@ -5895,15 +5926,15 @@ public class JavaParser extends Parser {
                     }
 
 
-                    match(input,96,FOLLOW_96_in_explicitConstructorInvocation2539); if (state.failed) return ;
+                    match(input,96,FOLLOW_96_in_explicitConstructorInvocation2546); if (state.failed) return ;
 
-                    pushFollow(FOLLOW_arguments_in_explicitConstructorInvocation2541);
+                    pushFollow(FOLLOW_arguments_in_explicitConstructorInvocation2548);
                     arguments();
 
                     state._fsp--;
                     if (state.failed) return ;
 
-                    match(input,48,FOLLOW_48_in_explicitConstructorInvocation2543); if (state.failed) return ;
+                    match(input,48,FOLLOW_48_in_explicitConstructorInvocation2550); if (state.failed) return ;
 
                     }
                     break;
@@ -5925,21 +5956,27 @@ public class JavaParser extends Parser {
     // $ANTLR end "explicitConstructorInvocation"
 
 
+    public static class qualifiedName_return extends ParserRuleReturnScope {
+    };
+
 
     // $ANTLR start "qualifiedName"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:553:1: qualifiedName : Identifier ( '.' Identifier )* ;
-    public final void qualifiedName() throws RecognitionException {
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:563:1: qualifiedName : Identifier ( '.' Identifier )* ;
+    public final JavaParser.qualifiedName_return qualifiedName() throws RecognitionException {
+        JavaParser.qualifiedName_return retval = new JavaParser.qualifiedName_return();
+        retval.start = input.LT(1);
+
         int qualifiedName_StartIndex = input.index();
 
         try {
-            if ( state.backtracking>0 && alreadyParsedRule(input, 66) ) { return ; }
+            if ( state.backtracking>0 && alreadyParsedRule(input, 66) ) { return retval; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:554:5: ( Identifier ( '.' Identifier )* )
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:554:9: Identifier ( '.' Identifier )*
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:564:5: ( Identifier ( '.' Identifier )* )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:564:9: Identifier ( '.' Identifier )*
             {
-            match(input,Identifier,FOLLOW_Identifier_in_qualifiedName2563); if (state.failed) return ;
+            match(input,Identifier,FOLLOW_Identifier_in_qualifiedName2570); if (state.failed) return retval;
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:554:20: ( '.' Identifier )*
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:564:20: ( '.' Identifier )*
             loop86:
             do {
                 int alt86=2;
@@ -5958,11 +5995,11 @@ public class JavaParser extends Parser {
 
                 switch (alt86) {
             	case 1 :
-            	    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:554:21: '.' Identifier
+            	    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:564:21: '.' Identifier
             	    {
-            	    match(input,43,FOLLOW_43_in_qualifiedName2566); if (state.failed) return ;
+            	    match(input,43,FOLLOW_43_in_qualifiedName2573); if (state.failed) return retval;
 
-            	    match(input,Identifier,FOLLOW_Identifier_in_qualifiedName2568); if (state.failed) return ;
+            	    match(input,Identifier,FOLLOW_Identifier_in_qualifiedName2575); if (state.failed) return retval;
 
             	    }
             	    break;
@@ -5975,6 +6012,9 @@ public class JavaParser extends Parser {
 
             }
 
+            retval.stop = input.LT(-1);
+
+
         }
         catch (RecognitionException re) {
             reportError(re);
@@ -5986,21 +6026,21 @@ public class JavaParser extends Parser {
             if ( state.backtracking>0 ) { memoize(input, 66, qualifiedName_StartIndex); }
 
         }
-        return ;
+        return retval;
     }
     // $ANTLR end "qualifiedName"
 
 
 
     // $ANTLR start "literal"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:557:1: literal : ( integerLiteral | FloatingPointLiteral | CharacterLiteral | StringLiteral | booleanLiteral | 'null' );
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:567:1: literal : ( integerLiteral | FloatingPointLiteral | CharacterLiteral | StringLiteral | booleanLiteral | 'null' );
     public final void literal() throws RecognitionException {
         int literal_StartIndex = input.index();
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 67) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:558:5: ( integerLiteral | FloatingPointLiteral | CharacterLiteral | StringLiteral | booleanLiteral | 'null' )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:568:5: ( integerLiteral | FloatingPointLiteral | CharacterLiteral | StringLiteral | booleanLiteral | 'null' )
             int alt87=6;
             switch ( input.LA(1) ) {
             case DecimalLiteral:
@@ -6047,9 +6087,9 @@ public class JavaParser extends Parser {
 
             switch (alt87) {
                 case 1 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:558:9: integerLiteral
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:568:9: integerLiteral
                     {
-                    pushFollow(FOLLOW_integerLiteral_in_literal2594);
+                    pushFollow(FOLLOW_integerLiteral_in_literal2601);
                     integerLiteral();
 
                     state._fsp--;
@@ -6058,30 +6098,30 @@ public class JavaParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:559:9: FloatingPointLiteral
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:569:9: FloatingPointLiteral
                     {
-                    match(input,FloatingPointLiteral,FOLLOW_FloatingPointLiteral_in_literal2604); if (state.failed) return ;
+                    match(input,FloatingPointLiteral,FOLLOW_FloatingPointLiteral_in_literal2611); if (state.failed) return ;
 
                     }
                     break;
                 case 3 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:560:9: CharacterLiteral
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:570:9: CharacterLiteral
                     {
-                    match(input,CharacterLiteral,FOLLOW_CharacterLiteral_in_literal2614); if (state.failed) return ;
+                    match(input,CharacterLiteral,FOLLOW_CharacterLiteral_in_literal2621); if (state.failed) return ;
 
                     }
                     break;
                 case 4 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:561:9: StringLiteral
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:571:9: StringLiteral
                     {
-                    match(input,StringLiteral,FOLLOW_StringLiteral_in_literal2624); if (state.failed) return ;
+                    match(input,StringLiteral,FOLLOW_StringLiteral_in_literal2631); if (state.failed) return ;
 
                     }
                     break;
                 case 5 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:562:9: booleanLiteral
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:572:9: booleanLiteral
                     {
-                    pushFollow(FOLLOW_booleanLiteral_in_literal2634);
+                    pushFollow(FOLLOW_booleanLiteral_in_literal2641);
                     booleanLiteral();
 
                     state._fsp--;
@@ -6090,9 +6130,9 @@ public class JavaParser extends Parser {
                     }
                     break;
                 case 6 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:563:9: 'null'
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:573:9: 'null'
                     {
-                    match(input,87,FOLLOW_87_in_literal2644); if (state.failed) return ;
+                    match(input,87,FOLLOW_87_in_literal2651); if (state.failed) return ;
 
                     }
                     break;
@@ -6116,14 +6156,14 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "integerLiteral"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:566:1: integerLiteral : ( HexLiteral | OctalLiteral | DecimalLiteral );
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:576:1: integerLiteral : ( HexLiteral | OctalLiteral | DecimalLiteral );
     public final void integerLiteral() throws RecognitionException {
         int integerLiteral_StartIndex = input.index();
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 68) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:567:5: ( HexLiteral | OctalLiteral | DecimalLiteral )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:577:5: ( HexLiteral | OctalLiteral | DecimalLiteral )
             // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:
             {
             if ( input.LA(1)==DecimalLiteral||input.LA(1)==HexLiteral||input.LA(1)==OctalLiteral ) {
@@ -6158,14 +6198,14 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "booleanLiteral"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:572:1: booleanLiteral : ( 'true' | 'false' );
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:582:1: booleanLiteral : ( 'true' | 'false' );
     public final void booleanLiteral() throws RecognitionException {
         int booleanLiteral_StartIndex = input.index();
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 69) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:573:5: ( 'true' | 'false' )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:583:5: ( 'true' | 'false' )
             // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:
             {
             if ( input.LA(1)==73||input.LA(1)==103 ) {
@@ -6200,17 +6240,17 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "annotations"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:579:1: annotations : ( annotation )+ ;
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:589:1: annotations : ( annotation )+ ;
     public final void annotations() throws RecognitionException {
         int annotations_StartIndex = input.index();
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 70) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:580:5: ( ( annotation )+ )
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:580:9: ( annotation )+
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:590:5: ( ( annotation )+ )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:590:9: ( annotation )+
             {
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:580:9: ( annotation )+
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:590:9: ( annotation )+
             int cnt88=0;
             loop88:
             do {
@@ -6236,9 +6276,9 @@ public class JavaParser extends Parser {
 
                 switch (alt88) {
             	case 1 :
-            	    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:580:9: annotation
+            	    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:590:9: annotation
             	    {
-            	    pushFollow(FOLLOW_annotation_in_annotations2733);
+            	    pushFollow(FOLLOW_annotation_in_annotations2740);
             	    annotation();
 
             	    state._fsp--;
@@ -6278,25 +6318,25 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "annotation"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:583:1: annotation : '@' annotationName ( '(' ( elementValuePairs | elementValue )? ')' )? ;
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:593:1: annotation : '@' annotationName ( '(' ( elementValuePairs | elementValue )? ')' )? ;
     public final void annotation() throws RecognitionException {
         int annotation_StartIndex = input.index();
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 71) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:584:5: ( '@' annotationName ( '(' ( elementValuePairs | elementValue )? ')' )? )
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:584:9: '@' annotationName ( '(' ( elementValuePairs | elementValue )? ')' )?
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:594:5: ( '@' annotationName ( '(' ( elementValuePairs | elementValue )? ')' )? )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:594:9: '@' annotationName ( '(' ( elementValuePairs | elementValue )? ')' )?
             {
-            match(input,54,FOLLOW_54_in_annotation2753); if (state.failed) return ;
+            match(input,54,FOLLOW_54_in_annotation2760); if (state.failed) return ;
 
-            pushFollow(FOLLOW_annotationName_in_annotation2755);
+            pushFollow(FOLLOW_annotationName_in_annotation2762);
             annotationName();
 
             state._fsp--;
             if (state.failed) return ;
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:584:28: ( '(' ( elementValuePairs | elementValue )? ')' )?
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:594:28: ( '(' ( elementValuePairs | elementValue )? ')' )?
             int alt90=2;
             int LA90_0 = input.LA(1);
 
@@ -6305,11 +6345,11 @@ public class JavaParser extends Parser {
             }
             switch (alt90) {
                 case 1 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:584:30: '(' ( elementValuePairs | elementValue )? ')'
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:594:30: '(' ( elementValuePairs | elementValue )? ')'
                     {
-                    match(input,32,FOLLOW_32_in_annotation2759); if (state.failed) return ;
+                    match(input,32,FOLLOW_32_in_annotation2766); if (state.failed) return ;
 
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:584:34: ( elementValuePairs | elementValue )?
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:594:34: ( elementValuePairs | elementValue )?
                     int alt89=3;
                     int LA89_0 = input.LA(1);
 
@@ -6328,9 +6368,9 @@ public class JavaParser extends Parser {
                     }
                     switch (alt89) {
                         case 1 :
-                            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:584:36: elementValuePairs
+                            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:594:36: elementValuePairs
                             {
-                            pushFollow(FOLLOW_elementValuePairs_in_annotation2763);
+                            pushFollow(FOLLOW_elementValuePairs_in_annotation2770);
                             elementValuePairs();
 
                             state._fsp--;
@@ -6339,9 +6379,9 @@ public class JavaParser extends Parser {
                             }
                             break;
                         case 2 :
-                            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:584:56: elementValue
+                            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:594:56: elementValue
                             {
-                            pushFollow(FOLLOW_elementValue_in_annotation2767);
+                            pushFollow(FOLLOW_elementValue_in_annotation2774);
                             elementValue();
 
                             state._fsp--;
@@ -6353,7 +6393,7 @@ public class JavaParser extends Parser {
                     }
 
 
-                    match(input,33,FOLLOW_33_in_annotation2772); if (state.failed) return ;
+                    match(input,33,FOLLOW_33_in_annotation2779); if (state.failed) return ;
 
                     }
                     break;
@@ -6381,19 +6421,19 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "annotationName"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:587:1: annotationName : Identifier ( '.' Identifier )* ;
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:597:1: annotationName : Identifier ( '.' Identifier )* ;
     public final void annotationName() throws RecognitionException {
         int annotationName_StartIndex = input.index();
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 72) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:588:5: ( Identifier ( '.' Identifier )* )
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:588:7: Identifier ( '.' Identifier )*
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:598:5: ( Identifier ( '.' Identifier )* )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:598:7: Identifier ( '.' Identifier )*
             {
-            match(input,Identifier,FOLLOW_Identifier_in_annotationName2796); if (state.failed) return ;
+            match(input,Identifier,FOLLOW_Identifier_in_annotationName2803); if (state.failed) return ;
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:588:18: ( '.' Identifier )*
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:598:18: ( '.' Identifier )*
             loop91:
             do {
                 int alt91=2;
@@ -6406,11 +6446,11 @@ public class JavaParser extends Parser {
 
                 switch (alt91) {
             	case 1 :
-            	    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:588:19: '.' Identifier
+            	    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:598:19: '.' Identifier
             	    {
-            	    match(input,43,FOLLOW_43_in_annotationName2799); if (state.failed) return ;
+            	    match(input,43,FOLLOW_43_in_annotationName2806); if (state.failed) return ;
 
-            	    match(input,Identifier,FOLLOW_Identifier_in_annotationName2801); if (state.failed) return ;
+            	    match(input,Identifier,FOLLOW_Identifier_in_annotationName2808); if (state.failed) return ;
 
             	    }
             	    break;
@@ -6441,23 +6481,23 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "elementValuePairs"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:591:1: elementValuePairs : elementValuePair ( ',' elementValuePair )* ;
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:601:1: elementValuePairs : elementValuePair ( ',' elementValuePair )* ;
     public final void elementValuePairs() throws RecognitionException {
         int elementValuePairs_StartIndex = input.index();
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 73) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:592:5: ( elementValuePair ( ',' elementValuePair )* )
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:592:9: elementValuePair ( ',' elementValuePair )*
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:602:5: ( elementValuePair ( ',' elementValuePair )* )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:602:9: elementValuePair ( ',' elementValuePair )*
             {
-            pushFollow(FOLLOW_elementValuePair_in_elementValuePairs2822);
+            pushFollow(FOLLOW_elementValuePair_in_elementValuePairs2829);
             elementValuePair();
 
             state._fsp--;
             if (state.failed) return ;
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:592:26: ( ',' elementValuePair )*
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:602:26: ( ',' elementValuePair )*
             loop92:
             do {
                 int alt92=2;
@@ -6470,11 +6510,11 @@ public class JavaParser extends Parser {
 
                 switch (alt92) {
             	case 1 :
-            	    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:592:27: ',' elementValuePair
+            	    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:602:27: ',' elementValuePair
             	    {
-            	    match(input,39,FOLLOW_39_in_elementValuePairs2825); if (state.failed) return ;
+            	    match(input,39,FOLLOW_39_in_elementValuePairs2832); if (state.failed) return ;
 
-            	    pushFollow(FOLLOW_elementValuePair_in_elementValuePairs2827);
+            	    pushFollow(FOLLOW_elementValuePair_in_elementValuePairs2834);
             	    elementValuePair();
 
             	    state._fsp--;
@@ -6509,21 +6549,21 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "elementValuePair"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:595:1: elementValuePair : Identifier '=' elementValue ;
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:605:1: elementValuePair : Identifier '=' elementValue ;
     public final void elementValuePair() throws RecognitionException {
         int elementValuePair_StartIndex = input.index();
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 74) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:596:5: ( Identifier '=' elementValue )
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:596:9: Identifier '=' elementValue
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:606:5: ( Identifier '=' elementValue )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:606:9: Identifier '=' elementValue
             {
-            match(input,Identifier,FOLLOW_Identifier_in_elementValuePair2848); if (state.failed) return ;
+            match(input,Identifier,FOLLOW_Identifier_in_elementValuePair2855); if (state.failed) return ;
 
-            match(input,50,FOLLOW_50_in_elementValuePair2850); if (state.failed) return ;
+            match(input,50,FOLLOW_50_in_elementValuePair2857); if (state.failed) return ;
 
-            pushFollow(FOLLOW_elementValue_in_elementValuePair2852);
+            pushFollow(FOLLOW_elementValue_in_elementValuePair2859);
             elementValue();
 
             state._fsp--;
@@ -6549,14 +6589,14 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "elementValue"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:599:1: elementValue : ( conditionalExpression | annotation | elementValueArrayInitializer );
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:609:1: elementValue : ( conditionalExpression | annotation | elementValueArrayInitializer );
     public final void elementValue() throws RecognitionException {
         int elementValue_StartIndex = input.index();
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 75) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:600:5: ( conditionalExpression | annotation | elementValueArrayInitializer )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:610:5: ( conditionalExpression | annotation | elementValueArrayInitializer )
             int alt93=3;
             switch ( input.LA(1) ) {
             case CharacterLiteral:
@@ -6613,9 +6653,9 @@ public class JavaParser extends Parser {
 
             switch (alt93) {
                 case 1 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:600:9: conditionalExpression
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:610:9: conditionalExpression
                     {
-                    pushFollow(FOLLOW_conditionalExpression_in_elementValue2875);
+                    pushFollow(FOLLOW_conditionalExpression_in_elementValue2882);
                     conditionalExpression();
 
                     state._fsp--;
@@ -6624,9 +6664,9 @@ public class JavaParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:601:9: annotation
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:611:9: annotation
                     {
-                    pushFollow(FOLLOW_annotation_in_elementValue2885);
+                    pushFollow(FOLLOW_annotation_in_elementValue2892);
                     annotation();
 
                     state._fsp--;
@@ -6635,9 +6675,9 @@ public class JavaParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:602:9: elementValueArrayInitializer
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:612:9: elementValueArrayInitializer
                     {
-                    pushFollow(FOLLOW_elementValueArrayInitializer_in_elementValue2895);
+                    pushFollow(FOLLOW_elementValueArrayInitializer_in_elementValue2902);
                     elementValueArrayInitializer();
 
                     state._fsp--;
@@ -6665,19 +6705,19 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "elementValueArrayInitializer"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:605:1: elementValueArrayInitializer : '{' ( elementValue ( ',' elementValue )* )? ( ',' )? '}' ;
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:615:1: elementValueArrayInitializer : '{' ( elementValue ( ',' elementValue )* )? ( ',' )? '}' ;
     public final void elementValueArrayInitializer() throws RecognitionException {
         int elementValueArrayInitializer_StartIndex = input.index();
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 76) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:606:5: ( '{' ( elementValue ( ',' elementValue )* )? ( ',' )? '}' )
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:606:9: '{' ( elementValue ( ',' elementValue )* )? ( ',' )? '}'
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:616:5: ( '{' ( elementValue ( ',' elementValue )* )? ( ',' )? '}' )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:616:9: '{' ( elementValue ( ',' elementValue )* )? ( ',' )? '}'
             {
-            match(input,108,FOLLOW_108_in_elementValueArrayInitializer2918); if (state.failed) return ;
+            match(input,108,FOLLOW_108_in_elementValueArrayInitializer2925); if (state.failed) return ;
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:606:13: ( elementValue ( ',' elementValue )* )?
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:616:13: ( elementValue ( ',' elementValue )* )?
             int alt95=2;
             int LA95_0 = input.LA(1);
 
@@ -6686,15 +6726,15 @@ public class JavaParser extends Parser {
             }
             switch (alt95) {
                 case 1 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:606:14: elementValue ( ',' elementValue )*
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:616:14: elementValue ( ',' elementValue )*
                     {
-                    pushFollow(FOLLOW_elementValue_in_elementValueArrayInitializer2921);
+                    pushFollow(FOLLOW_elementValue_in_elementValueArrayInitializer2928);
                     elementValue();
 
                     state._fsp--;
                     if (state.failed) return ;
 
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:606:27: ( ',' elementValue )*
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:616:27: ( ',' elementValue )*
                     loop94:
                     do {
                         int alt94=2;
@@ -6713,11 +6753,11 @@ public class JavaParser extends Parser {
 
                         switch (alt94) {
                     	case 1 :
-                    	    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:606:28: ',' elementValue
+                    	    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:616:28: ',' elementValue
                     	    {
-                    	    match(input,39,FOLLOW_39_in_elementValueArrayInitializer2924); if (state.failed) return ;
+                    	    match(input,39,FOLLOW_39_in_elementValueArrayInitializer2931); if (state.failed) return ;
 
-                    	    pushFollow(FOLLOW_elementValue_in_elementValueArrayInitializer2926);
+                    	    pushFollow(FOLLOW_elementValue_in_elementValueArrayInitializer2933);
                     	    elementValue();
 
                     	    state._fsp--;
@@ -6738,7 +6778,7 @@ public class JavaParser extends Parser {
             }
 
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:606:49: ( ',' )?
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:616:49: ( ',' )?
             int alt96=2;
             int LA96_0 = input.LA(1);
 
@@ -6747,9 +6787,9 @@ public class JavaParser extends Parser {
             }
             switch (alt96) {
                 case 1 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:606:50: ','
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:616:50: ','
                     {
-                    match(input,39,FOLLOW_39_in_elementValueArrayInitializer2933); if (state.failed) return ;
+                    match(input,39,FOLLOW_39_in_elementValueArrayInitializer2940); if (state.failed) return ;
 
                     }
                     break;
@@ -6757,7 +6797,7 @@ public class JavaParser extends Parser {
             }
 
 
-            match(input,112,FOLLOW_112_in_elementValueArrayInitializer2937); if (state.failed) return ;
+            match(input,112,FOLLOW_112_in_elementValueArrayInitializer2944); if (state.failed) return ;
 
             }
 
@@ -6779,23 +6819,23 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "annotationTypeDeclaration"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:609:1: annotationTypeDeclaration : '@' 'interface' Identifier annotationTypeBody ;
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:619:1: annotationTypeDeclaration : '@' 'interface' Identifier annotationTypeBody ;
     public final void annotationTypeDeclaration() throws RecognitionException {
         int annotationTypeDeclaration_StartIndex = input.index();
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 77) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:610:5: ( '@' 'interface' Identifier annotationTypeBody )
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:610:9: '@' 'interface' Identifier annotationTypeBody
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:620:5: ( '@' 'interface' Identifier annotationTypeBody )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:620:9: '@' 'interface' Identifier annotationTypeBody
             {
-            match(input,54,FOLLOW_54_in_annotationTypeDeclaration2960); if (state.failed) return ;
+            match(input,54,FOLLOW_54_in_annotationTypeDeclaration2967); if (state.failed) return ;
 
-            match(input,83,FOLLOW_83_in_annotationTypeDeclaration2962); if (state.failed) return ;
+            match(input,83,FOLLOW_83_in_annotationTypeDeclaration2969); if (state.failed) return ;
 
-            match(input,Identifier,FOLLOW_Identifier_in_annotationTypeDeclaration2964); if (state.failed) return ;
+            match(input,Identifier,FOLLOW_Identifier_in_annotationTypeDeclaration2971); if (state.failed) return ;
 
-            pushFollow(FOLLOW_annotationTypeBody_in_annotationTypeDeclaration2966);
+            pushFollow(FOLLOW_annotationTypeBody_in_annotationTypeDeclaration2973);
             annotationTypeBody();
 
             state._fsp--;
@@ -6821,19 +6861,19 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "annotationTypeBody"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:613:1: annotationTypeBody : '{' ( annotationTypeElementDeclaration )* '}' ;
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:623:1: annotationTypeBody : '{' ( annotationTypeElementDeclaration )* '}' ;
     public final void annotationTypeBody() throws RecognitionException {
         int annotationTypeBody_StartIndex = input.index();
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 78) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:614:5: ( '{' ( annotationTypeElementDeclaration )* '}' )
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:614:9: '{' ( annotationTypeElementDeclaration )* '}'
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:624:5: ( '{' ( annotationTypeElementDeclaration )* '}' )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:624:9: '{' ( annotationTypeElementDeclaration )* '}'
             {
-            match(input,108,FOLLOW_108_in_annotationTypeBody2989); if (state.failed) return ;
+            match(input,108,FOLLOW_108_in_annotationTypeBody2996); if (state.failed) return ;
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:614:13: ( annotationTypeElementDeclaration )*
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:624:13: ( annotationTypeElementDeclaration )*
             loop97:
             do {
                 int alt97=2;
@@ -6846,9 +6886,9 @@ public class JavaParser extends Parser {
 
                 switch (alt97) {
             	case 1 :
-            	    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:614:14: annotationTypeElementDeclaration
+            	    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:624:14: annotationTypeElementDeclaration
             	    {
-            	    pushFollow(FOLLOW_annotationTypeElementDeclaration_in_annotationTypeBody2992);
+            	    pushFollow(FOLLOW_annotationTypeElementDeclaration_in_annotationTypeBody2999);
             	    annotationTypeElementDeclaration();
 
             	    state._fsp--;
@@ -6863,7 +6903,7 @@ public class JavaParser extends Parser {
             } while (true);
 
 
-            match(input,112,FOLLOW_112_in_annotationTypeBody2996); if (state.failed) return ;
+            match(input,112,FOLLOW_112_in_annotationTypeBody3003); if (state.failed) return ;
 
             }
 
@@ -6885,23 +6925,23 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "annotationTypeElementDeclaration"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:617:1: annotationTypeElementDeclaration : modifiers annotationTypeElementRest ;
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:627:1: annotationTypeElementDeclaration : modifiers annotationTypeElementRest ;
     public final void annotationTypeElementDeclaration() throws RecognitionException {
         int annotationTypeElementDeclaration_StartIndex = input.index();
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 79) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:618:5: ( modifiers annotationTypeElementRest )
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:618:9: modifiers annotationTypeElementRest
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:628:5: ( modifiers annotationTypeElementRest )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:628:9: modifiers annotationTypeElementRest
             {
-            pushFollow(FOLLOW_modifiers_in_annotationTypeElementDeclaration3019);
+            pushFollow(FOLLOW_modifiers_in_annotationTypeElementDeclaration3026);
             modifiers();
 
             state._fsp--;
             if (state.failed) return ;
 
-            pushFollow(FOLLOW_annotationTypeElementRest_in_annotationTypeElementDeclaration3021);
+            pushFollow(FOLLOW_annotationTypeElementRest_in_annotationTypeElementDeclaration3028);
             annotationTypeElementRest();
 
             state._fsp--;
@@ -6927,14 +6967,14 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "annotationTypeElementRest"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:621:1: annotationTypeElementRest : ( type annotationMethodOrConstantRest ';' | normalClassDeclaration ( ';' )? | normalInterfaceDeclaration ( ';' )? | enumDeclaration ( ';' )? | annotationTypeDeclaration ( ';' )? );
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:631:1: annotationTypeElementRest : ( type annotationMethodOrConstantRest ';' | normalClassDeclaration ( ';' )? | normalInterfaceDeclaration ( ';' )? | enumDeclaration ( ';' )? | annotationTypeDeclaration ( ';' )? );
     public final void annotationTypeElementRest() throws RecognitionException {
         int annotationTypeElementRest_StartIndex = input.index();
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 80) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:622:5: ( type annotationMethodOrConstantRest ';' | normalClassDeclaration ( ';' )? | normalInterfaceDeclaration ( ';' )? | enumDeclaration ( ';' )? | annotationTypeDeclaration ( ';' )? )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:632:5: ( type annotationMethodOrConstantRest ';' | normalClassDeclaration ( ';' )? | normalInterfaceDeclaration ( ';' )? | enumDeclaration ( ';' )? | annotationTypeDeclaration ( ';' )? )
             int alt102=5;
             switch ( input.LA(1) ) {
             case Identifier:
@@ -6981,34 +7021,34 @@ public class JavaParser extends Parser {
 
             switch (alt102) {
                 case 1 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:622:9: type annotationMethodOrConstantRest ';'
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:632:9: type annotationMethodOrConstantRest ';'
                     {
-                    pushFollow(FOLLOW_type_in_annotationTypeElementRest3044);
+                    pushFollow(FOLLOW_type_in_annotationTypeElementRest3051);
                     type();
 
                     state._fsp--;
                     if (state.failed) return ;
 
-                    pushFollow(FOLLOW_annotationMethodOrConstantRest_in_annotationTypeElementRest3046);
+                    pushFollow(FOLLOW_annotationMethodOrConstantRest_in_annotationTypeElementRest3053);
                     annotationMethodOrConstantRest();
 
                     state._fsp--;
                     if (state.failed) return ;
 
-                    match(input,48,FOLLOW_48_in_annotationTypeElementRest3048); if (state.failed) return ;
+                    match(input,48,FOLLOW_48_in_annotationTypeElementRest3055); if (state.failed) return ;
 
                     }
                     break;
                 case 2 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:623:9: normalClassDeclaration ( ';' )?
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:633:9: normalClassDeclaration ( ';' )?
                     {
-                    pushFollow(FOLLOW_normalClassDeclaration_in_annotationTypeElementRest3058);
+                    pushFollow(FOLLOW_normalClassDeclaration_in_annotationTypeElementRest3065);
                     normalClassDeclaration();
 
                     state._fsp--;
                     if (state.failed) return ;
 
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:623:32: ( ';' )?
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:633:32: ( ';' )?
                     int alt98=2;
                     int LA98_0 = input.LA(1);
 
@@ -7017,9 +7057,9 @@ public class JavaParser extends Parser {
                     }
                     switch (alt98) {
                         case 1 :
-                            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:623:32: ';'
+                            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:633:32: ';'
                             {
-                            match(input,48,FOLLOW_48_in_annotationTypeElementRest3060); if (state.failed) return ;
+                            match(input,48,FOLLOW_48_in_annotationTypeElementRest3067); if (state.failed) return ;
 
                             }
                             break;
@@ -7030,15 +7070,15 @@ public class JavaParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:624:9: normalInterfaceDeclaration ( ';' )?
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:634:9: normalInterfaceDeclaration ( ';' )?
                     {
-                    pushFollow(FOLLOW_normalInterfaceDeclaration_in_annotationTypeElementRest3071);
+                    pushFollow(FOLLOW_normalInterfaceDeclaration_in_annotationTypeElementRest3078);
                     normalInterfaceDeclaration();
 
                     state._fsp--;
                     if (state.failed) return ;
 
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:624:36: ( ';' )?
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:634:36: ( ';' )?
                     int alt99=2;
                     int LA99_0 = input.LA(1);
 
@@ -7047,9 +7087,9 @@ public class JavaParser extends Parser {
                     }
                     switch (alt99) {
                         case 1 :
-                            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:624:36: ';'
+                            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:634:36: ';'
                             {
-                            match(input,48,FOLLOW_48_in_annotationTypeElementRest3073); if (state.failed) return ;
+                            match(input,48,FOLLOW_48_in_annotationTypeElementRest3080); if (state.failed) return ;
 
                             }
                             break;
@@ -7060,15 +7100,15 @@ public class JavaParser extends Parser {
                     }
                     break;
                 case 4 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:625:9: enumDeclaration ( ';' )?
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:635:9: enumDeclaration ( ';' )?
                     {
-                    pushFollow(FOLLOW_enumDeclaration_in_annotationTypeElementRest3084);
+                    pushFollow(FOLLOW_enumDeclaration_in_annotationTypeElementRest3091);
                     enumDeclaration();
 
                     state._fsp--;
                     if (state.failed) return ;
 
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:625:25: ( ';' )?
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:635:25: ( ';' )?
                     int alt100=2;
                     int LA100_0 = input.LA(1);
 
@@ -7077,9 +7117,9 @@ public class JavaParser extends Parser {
                     }
                     switch (alt100) {
                         case 1 :
-                            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:625:25: ';'
+                            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:635:25: ';'
                             {
-                            match(input,48,FOLLOW_48_in_annotationTypeElementRest3086); if (state.failed) return ;
+                            match(input,48,FOLLOW_48_in_annotationTypeElementRest3093); if (state.failed) return ;
 
                             }
                             break;
@@ -7090,15 +7130,15 @@ public class JavaParser extends Parser {
                     }
                     break;
                 case 5 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:626:9: annotationTypeDeclaration ( ';' )?
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:636:9: annotationTypeDeclaration ( ';' )?
                     {
-                    pushFollow(FOLLOW_annotationTypeDeclaration_in_annotationTypeElementRest3097);
+                    pushFollow(FOLLOW_annotationTypeDeclaration_in_annotationTypeElementRest3104);
                     annotationTypeDeclaration();
 
                     state._fsp--;
                     if (state.failed) return ;
 
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:626:35: ( ';' )?
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:636:35: ( ';' )?
                     int alt101=2;
                     int LA101_0 = input.LA(1);
 
@@ -7107,9 +7147,9 @@ public class JavaParser extends Parser {
                     }
                     switch (alt101) {
                         case 1 :
-                            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:626:35: ';'
+                            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:636:35: ';'
                             {
-                            match(input,48,FOLLOW_48_in_annotationTypeElementRest3099); if (state.failed) return ;
+                            match(input,48,FOLLOW_48_in_annotationTypeElementRest3106); if (state.failed) return ;
 
                             }
                             break;
@@ -7139,14 +7179,14 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "annotationMethodOrConstantRest"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:629:1: annotationMethodOrConstantRest : ( annotationMethodRest | annotationConstantRest );
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:639:1: annotationMethodOrConstantRest : ( annotationMethodRest | annotationConstantRest );
     public final void annotationMethodOrConstantRest() throws RecognitionException {
         int annotationMethodOrConstantRest_StartIndex = input.index();
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 81) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:630:5: ( annotationMethodRest | annotationConstantRest )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:640:5: ( annotationMethodRest | annotationConstantRest )
             int alt103=2;
             int LA103_0 = input.LA(1);
 
@@ -7178,9 +7218,9 @@ public class JavaParser extends Parser {
             }
             switch (alt103) {
                 case 1 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:630:9: annotationMethodRest
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:640:9: annotationMethodRest
                     {
-                    pushFollow(FOLLOW_annotationMethodRest_in_annotationMethodOrConstantRest3123);
+                    pushFollow(FOLLOW_annotationMethodRest_in_annotationMethodOrConstantRest3130);
                     annotationMethodRest();
 
                     state._fsp--;
@@ -7189,9 +7229,9 @@ public class JavaParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:631:9: annotationConstantRest
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:641:9: annotationConstantRest
                     {
-                    pushFollow(FOLLOW_annotationConstantRest_in_annotationMethodOrConstantRest3133);
+                    pushFollow(FOLLOW_annotationConstantRest_in_annotationMethodOrConstantRest3140);
                     annotationConstantRest();
 
                     state._fsp--;
@@ -7219,23 +7259,23 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "annotationMethodRest"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:634:1: annotationMethodRest : Identifier '(' ')' ( defaultValue )? ;
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:644:1: annotationMethodRest : Identifier '(' ')' ( defaultValue )? ;
     public final void annotationMethodRest() throws RecognitionException {
         int annotationMethodRest_StartIndex = input.index();
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 82) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:635:5: ( Identifier '(' ')' ( defaultValue )? )
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:635:9: Identifier '(' ')' ( defaultValue )?
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:645:5: ( Identifier '(' ')' ( defaultValue )? )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:645:9: Identifier '(' ')' ( defaultValue )?
             {
-            match(input,Identifier,FOLLOW_Identifier_in_annotationMethodRest3156); if (state.failed) return ;
+            match(input,Identifier,FOLLOW_Identifier_in_annotationMethodRest3163); if (state.failed) return ;
 
-            match(input,32,FOLLOW_32_in_annotationMethodRest3158); if (state.failed) return ;
+            match(input,32,FOLLOW_32_in_annotationMethodRest3165); if (state.failed) return ;
 
-            match(input,33,FOLLOW_33_in_annotationMethodRest3160); if (state.failed) return ;
+            match(input,33,FOLLOW_33_in_annotationMethodRest3167); if (state.failed) return ;
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:635:28: ( defaultValue )?
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:645:28: ( defaultValue )?
             int alt104=2;
             int LA104_0 = input.LA(1);
 
@@ -7244,9 +7284,9 @@ public class JavaParser extends Parser {
             }
             switch (alt104) {
                 case 1 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:635:28: defaultValue
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:645:28: defaultValue
                     {
-                    pushFollow(FOLLOW_defaultValue_in_annotationMethodRest3162);
+                    pushFollow(FOLLOW_defaultValue_in_annotationMethodRest3169);
                     defaultValue();
 
                     state._fsp--;
@@ -7278,17 +7318,17 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "annotationConstantRest"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:638:1: annotationConstantRest : variableDeclarators ;
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:648:1: annotationConstantRest : variableDeclarators ;
     public final void annotationConstantRest() throws RecognitionException {
         int annotationConstantRest_StartIndex = input.index();
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 83) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:639:5: ( variableDeclarators )
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:639:9: variableDeclarators
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:649:5: ( variableDeclarators )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:649:9: variableDeclarators
             {
-            pushFollow(FOLLOW_variableDeclarators_in_annotationConstantRest3186);
+            pushFollow(FOLLOW_variableDeclarators_in_annotationConstantRest3193);
             variableDeclarators();
 
             state._fsp--;
@@ -7314,19 +7354,19 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "defaultValue"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:642:1: defaultValue : 'default' elementValue ;
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:652:1: defaultValue : 'default' elementValue ;
     public final void defaultValue() throws RecognitionException {
         int defaultValue_StartIndex = input.index();
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 84) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:643:5: ( 'default' elementValue )
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:643:9: 'default' elementValue
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:653:5: ( 'default' elementValue )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:653:9: 'default' elementValue
             {
-            match(input,68,FOLLOW_68_in_defaultValue3209); if (state.failed) return ;
+            match(input,68,FOLLOW_68_in_defaultValue3216); if (state.failed) return ;
 
-            pushFollow(FOLLOW_elementValue_in_defaultValue3211);
+            pushFollow(FOLLOW_elementValue_in_defaultValue3218);
             elementValue();
 
             state._fsp--;
@@ -7352,19 +7392,19 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "block"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:648:1: block : '{' ( blockStatement )* '}' ;
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:658:1: block : '{' ( blockStatement )* '}' ;
     public final void block() throws RecognitionException {
         int block_StartIndex = input.index();
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 85) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:649:5: ( '{' ( blockStatement )* '}' )
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:649:9: '{' ( blockStatement )* '}'
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:659:5: ( '{' ( blockStatement )* '}' )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:659:9: '{' ( blockStatement )* '}'
             {
-            match(input,108,FOLLOW_108_in_block3232); if (state.failed) return ;
+            match(input,108,FOLLOW_108_in_block3239); if (state.failed) return ;
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:649:13: ( blockStatement )*
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:659:13: ( blockStatement )*
             loop105:
             do {
                 int alt105=2;
@@ -7377,9 +7417,9 @@ public class JavaParser extends Parser {
 
                 switch (alt105) {
             	case 1 :
-            	    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:649:13: blockStatement
+            	    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:659:13: blockStatement
             	    {
-            	    pushFollow(FOLLOW_blockStatement_in_block3234);
+            	    pushFollow(FOLLOW_blockStatement_in_block3241);
             	    blockStatement();
 
             	    state._fsp--;
@@ -7394,7 +7434,7 @@ public class JavaParser extends Parser {
             } while (true);
 
 
-            match(input,112,FOLLOW_112_in_block3237); if (state.failed) return ;
+            match(input,112,FOLLOW_112_in_block3244); if (state.failed) return ;
 
             }
 
@@ -7416,17 +7456,17 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "blockStatement"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:652:1: blockStatement : ( localVariableDeclarationStatement | classOrInterfaceDeclaration | statement );
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:662:1: blockStatement : ( localVariableDeclarationStatement | classOrInterfaceDeclaration | statement );
     public final void blockStatement() throws RecognitionException {
         int blockStatement_StartIndex = input.index();
 
-        JavaParser.localVariableDeclarationStatement_return localVariableDeclarationStatement3 =null;
+        JavaParser.localVariableDeclarationStatement_return localVariableDeclarationStatement8 =null;
 
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 86) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:653:5: ( localVariableDeclarationStatement | classOrInterfaceDeclaration | statement )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:663:5: ( localVariableDeclarationStatement | classOrInterfaceDeclaration | statement )
             int alt106=3;
             switch ( input.LA(1) ) {
             case 74:
@@ -7578,22 +7618,22 @@ public class JavaParser extends Parser {
 
             switch (alt106) {
                 case 1 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:653:9: localVariableDeclarationStatement
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:663:9: localVariableDeclarationStatement
                     {
-                    pushFollow(FOLLOW_localVariableDeclarationStatement_in_blockStatement3260);
-                    localVariableDeclarationStatement3=localVariableDeclarationStatement();
+                    pushFollow(FOLLOW_localVariableDeclarationStatement_in_blockStatement3267);
+                    localVariableDeclarationStatement8=localVariableDeclarationStatement();
 
                     state._fsp--;
                     if (state.failed) return ;
 
-                    if ( state.backtracking==0 ) {System.out.println((localVariableDeclarationStatement3!=null?input.toString(localVariableDeclarationStatement3.start,localVariableDeclarationStatement3.stop):null));}
+                    if ( state.backtracking==0 ) {System.out.println((localVariableDeclarationStatement8!=null?input.toString(localVariableDeclarationStatement8.start,localVariableDeclarationStatement8.stop):null));}
 
                     }
                     break;
                 case 2 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:654:9: classOrInterfaceDeclaration
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:664:9: classOrInterfaceDeclaration
                     {
-                    pushFollow(FOLLOW_classOrInterfaceDeclaration_in_blockStatement3272);
+                    pushFollow(FOLLOW_classOrInterfaceDeclaration_in_blockStatement3279);
                     classOrInterfaceDeclaration();
 
                     state._fsp--;
@@ -7602,9 +7642,9 @@ public class JavaParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:655:9: statement
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:665:9: statement
                     {
-                    pushFollow(FOLLOW_statement_in_blockStatement3282);
+                    pushFollow(FOLLOW_statement_in_blockStatement3289);
                     statement();
 
                     state._fsp--;
@@ -7635,31 +7675,31 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "localVariableDeclarationStatement"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:658:1: localVariableDeclarationStatement : localVariableDeclaration ';' ;
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:668:1: localVariableDeclarationStatement : localVariableDeclaration ';' ;
     public final JavaParser.localVariableDeclarationStatement_return localVariableDeclarationStatement() throws RecognitionException {
         JavaParser.localVariableDeclarationStatement_return retval = new JavaParser.localVariableDeclarationStatement_return();
         retval.start = input.LT(1);
 
         int localVariableDeclarationStatement_StartIndex = input.index();
 
-        JavaParser.localVariableDeclaration_return localVariableDeclaration4 =null;
+        JavaParser.localVariableDeclaration_return localVariableDeclaration9 =null;
 
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 87) ) { return retval; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:659:5: ( localVariableDeclaration ';' )
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:659:10: localVariableDeclaration ';'
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:669:5: ( localVariableDeclaration ';' )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:669:10: localVariableDeclaration ';'
             {
-            pushFollow(FOLLOW_localVariableDeclaration_in_localVariableDeclarationStatement3306);
-            localVariableDeclaration4=localVariableDeclaration();
+            pushFollow(FOLLOW_localVariableDeclaration_in_localVariableDeclarationStatement3313);
+            localVariableDeclaration9=localVariableDeclaration();
 
             state._fsp--;
             if (state.failed) return retval;
 
-            if ( state.backtracking==0 ) {System.out.println("LocalVariableDeclaration " + (localVariableDeclaration4!=null?input.toString(localVariableDeclaration4.start,localVariableDeclaration4.stop):null));}
+            if ( state.backtracking==0 ) {System.out.println("LocalVariableDeclaration " + (localVariableDeclaration9!=null?input.toString(localVariableDeclaration9.start,localVariableDeclaration9.stop):null));}
 
-            match(input,48,FOLLOW_48_in_localVariableDeclarationStatement3309); if (state.failed) return retval;
+            match(input,48,FOLLOW_48_in_localVariableDeclarationStatement3316); if (state.failed) return retval;
 
             }
 
@@ -7687,45 +7727,45 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "localVariableDeclaration"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:662:1: localVariableDeclaration : variableModifiers type variableDeclarators ;
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:672:1: localVariableDeclaration : variableModifiers type variableDeclarators ;
     public final JavaParser.localVariableDeclaration_return localVariableDeclaration() throws RecognitionException {
         JavaParser.localVariableDeclaration_return retval = new JavaParser.localVariableDeclaration_return();
         retval.start = input.LT(1);
 
         int localVariableDeclaration_StartIndex = input.index();
 
-        JavaParser.variableDeclarators_return variableDeclarators5 =null;
+        JavaParser.variableDeclarators_return variableDeclarators10 =null;
 
-        JavaParser.type_return type6 =null;
+        JavaParser.type_return type11 =null;
 
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 88) ) { return retval; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:663:5: ( variableModifiers type variableDeclarators )
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:663:9: variableModifiers type variableDeclarators
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:673:5: ( variableModifiers type variableDeclarators )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:673:9: variableModifiers type variableDeclarators
             {
-            pushFollow(FOLLOW_variableModifiers_in_localVariableDeclaration3328);
+            pushFollow(FOLLOW_variableModifiers_in_localVariableDeclaration3335);
             variableModifiers();
 
             state._fsp--;
             if (state.failed) return retval;
 
-            pushFollow(FOLLOW_type_in_localVariableDeclaration3330);
-            type6=type();
+            pushFollow(FOLLOW_type_in_localVariableDeclaration3337);
+            type11=type();
 
             state._fsp--;
             if (state.failed) return retval;
 
-            pushFollow(FOLLOW_variableDeclarators_in_localVariableDeclaration3332);
-            variableDeclarators5=variableDeclarators();
+            pushFollow(FOLLOW_variableDeclarators_in_localVariableDeclaration3339);
+            variableDeclarators10=variableDeclarators();
 
             state._fsp--;
             if (state.failed) return retval;
 
-            if ( state.backtracking==0 ) {System.out.println("O declarator Ž "+ (variableDeclarators5!=null?input.toString(variableDeclarators5.start,variableDeclarators5.stop):null));}
+            if ( state.backtracking==0 ) {System.out.println("O declarator ÂŽ "+ (variableDeclarators10!=null?input.toString(variableDeclarators10.start,variableDeclarators10.stop):null));}
 
-            if ( state.backtracking==0 ) {System.out.println("O type Ž "+ (type6!=null?input.toString(type6.start,type6.stop):null));}
+            if ( state.backtracking==0 ) {System.out.println("O type ÂŽ "+ (type11!=null?input.toString(type11.start,type11.stop):null));}
 
             }
 
@@ -7750,17 +7790,17 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "variableModifiers"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:667:1: variableModifiers : ( variableModifier )* ;
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:677:1: variableModifiers : ( variableModifier )* ;
     public final void variableModifiers() throws RecognitionException {
         int variableModifiers_StartIndex = input.index();
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 89) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:668:5: ( ( variableModifier )* )
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:668:9: ( variableModifier )*
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:678:5: ( ( variableModifier )* )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:678:9: ( variableModifier )*
             {
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:668:9: ( variableModifier )*
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:678:9: ( variableModifier )*
             loop107:
             do {
                 int alt107=2;
@@ -7773,9 +7813,9 @@ public class JavaParser extends Parser {
 
                 switch (alt107) {
             	case 1 :
-            	    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:668:9: variableModifier
+            	    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:678:9: variableModifier
             	    {
-            	    pushFollow(FOLLOW_variableModifier_in_variableModifiers3363);
+            	    pushFollow(FOLLOW_variableModifier_in_variableModifiers3370);
             	    variableModifier();
 
             	    state._fsp--;
@@ -7810,14 +7850,14 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "statement"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:671:1: statement : ( block | ASSERT expression ( ':' expression )? ';' | 'if' parExpression statement ( options {k=1; } : 'else' statement )? | 'for' '(' forControl ')' statement | 'while' parExpression statement | 'do' statement 'while' parExpression ';' | 'try' block ( catches 'finally' block | catches | 'finally' block ) | 'switch' parExpression '{' switchBlockStatementGroups '}' | 'synchronized' parExpression block | 'return' ( expression )? ';' | 'throw' expression ';' | 'break' ( Identifier )? ';' | 'continue' ( Identifier )? ';' | ';' | statementExpression ';' | Identifier ':' statement );
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:681:1: statement : ( block | ASSERT expression ( ':' expression )? ';' | 'if' parExpression statement ( options {k=1; } : 'else' statement )? | 'for' '(' forControl ')' statement | 'while' parExpression statement | 'do' statement 'while' parExpression ';' | 'try' block ( catches 'finally' block | catches | 'finally' block ) | 'switch' parExpression '{' switchBlockStatementGroups '}' | 'synchronized' parExpression block | 'return' ( expression )? ';' | 'throw' expression ';' | 'break' ( Identifier )? ';' | 'continue' ( Identifier )? ';' | ';' | statementExpression ';' | Identifier ':' statement );
     public final void statement() throws RecognitionException {
         int statement_StartIndex = input.index();
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 90) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:672:5: ( block | ASSERT expression ( ':' expression )? ';' | 'if' parExpression statement ( options {k=1; } : 'else' statement )? | 'for' '(' forControl ')' statement | 'while' parExpression statement | 'do' statement 'while' parExpression ';' | 'try' block ( catches 'finally' block | catches | 'finally' block ) | 'switch' parExpression '{' switchBlockStatementGroups '}' | 'synchronized' parExpression block | 'return' ( expression )? ';' | 'throw' expression ';' | 'break' ( Identifier )? ';' | 'continue' ( Identifier )? ';' | ';' | statementExpression ';' | Identifier ':' statement )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:682:5: ( block | ASSERT expression ( ':' expression )? ';' | 'if' parExpression statement ( options {k=1; } : 'else' statement )? | 'for' '(' forControl ')' statement | 'while' parExpression statement | 'do' statement 'while' parExpression ';' | 'try' block ( catches 'finally' block | catches | 'finally' block ) | 'switch' parExpression '{' switchBlockStatementGroups '}' | 'synchronized' parExpression block | 'return' ( expression )? ';' | 'throw' expression ';' | 'break' ( Identifier )? ';' | 'continue' ( Identifier )? ';' | ';' | statementExpression ';' | Identifier ':' statement )
             int alt114=16;
             switch ( input.LA(1) ) {
             case 108:
@@ -7953,9 +7993,9 @@ public class JavaParser extends Parser {
 
             switch (alt114) {
                 case 1 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:672:7: block
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:682:7: block
                     {
-                    pushFollow(FOLLOW_block_in_statement3381);
+                    pushFollow(FOLLOW_block_in_statement3388);
                     block();
 
                     state._fsp--;
@@ -7964,17 +8004,17 @@ public class JavaParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:673:9: ASSERT expression ( ':' expression )? ';'
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:683:9: ASSERT expression ( ':' expression )? ';'
                     {
-                    match(input,ASSERT,FOLLOW_ASSERT_in_statement3391); if (state.failed) return ;
+                    match(input,ASSERT,FOLLOW_ASSERT_in_statement3398); if (state.failed) return ;
 
-                    pushFollow(FOLLOW_expression_in_statement3393);
+                    pushFollow(FOLLOW_expression_in_statement3400);
                     expression();
 
                     state._fsp--;
                     if (state.failed) return ;
 
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:673:27: ( ':' expression )?
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:683:27: ( ':' expression )?
                     int alt108=2;
                     int LA108_0 = input.LA(1);
 
@@ -7983,11 +8023,11 @@ public class JavaParser extends Parser {
                     }
                     switch (alt108) {
                         case 1 :
-                            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:673:28: ':' expression
+                            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:683:28: ':' expression
                             {
-                            match(input,47,FOLLOW_47_in_statement3396); if (state.failed) return ;
+                            match(input,47,FOLLOW_47_in_statement3403); if (state.failed) return ;
 
-                            pushFollow(FOLLOW_expression_in_statement3398);
+                            pushFollow(FOLLOW_expression_in_statement3405);
                             expression();
 
                             state._fsp--;
@@ -7999,28 +8039,28 @@ public class JavaParser extends Parser {
                     }
 
 
-                    match(input,48,FOLLOW_48_in_statement3402); if (state.failed) return ;
+                    match(input,48,FOLLOW_48_in_statement3409); if (state.failed) return ;
 
                     }
                     break;
                 case 3 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:674:9: 'if' parExpression statement ( options {k=1; } : 'else' statement )?
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:684:9: 'if' parExpression statement ( options {k=1; } : 'else' statement )?
                     {
-                    match(input,78,FOLLOW_78_in_statement3412); if (state.failed) return ;
+                    match(input,78,FOLLOW_78_in_statement3419); if (state.failed) return ;
 
-                    pushFollow(FOLLOW_parExpression_in_statement3414);
+                    pushFollow(FOLLOW_parExpression_in_statement3421);
                     parExpression();
 
                     state._fsp--;
                     if (state.failed) return ;
 
-                    pushFollow(FOLLOW_statement_in_statement3416);
+                    pushFollow(FOLLOW_statement_in_statement3423);
                     statement();
 
                     state._fsp--;
                     if (state.failed) return ;
 
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:674:38: ( options {k=1; } : 'else' statement )?
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:684:38: ( options {k=1; } : 'else' statement )?
                     int alt109=2;
                     int LA109_0 = input.LA(1);
 
@@ -8033,11 +8073,11 @@ public class JavaParser extends Parser {
                     }
                     switch (alt109) {
                         case 1 :
-                            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:674:54: 'else' statement
+                            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:684:54: 'else' statement
                             {
-                            match(input,71,FOLLOW_71_in_statement3426); if (state.failed) return ;
+                            match(input,71,FOLLOW_71_in_statement3433); if (state.failed) return ;
 
-                            pushFollow(FOLLOW_statement_in_statement3428);
+                            pushFollow(FOLLOW_statement_in_statement3435);
                             statement();
 
                             state._fsp--;
@@ -8052,21 +8092,21 @@ public class JavaParser extends Parser {
                     }
                     break;
                 case 4 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:675:9: 'for' '(' forControl ')' statement
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:685:9: 'for' '(' forControl ')' statement
                     {
-                    match(input,77,FOLLOW_77_in_statement3440); if (state.failed) return ;
+                    match(input,77,FOLLOW_77_in_statement3447); if (state.failed) return ;
 
-                    match(input,32,FOLLOW_32_in_statement3442); if (state.failed) return ;
+                    match(input,32,FOLLOW_32_in_statement3449); if (state.failed) return ;
 
-                    pushFollow(FOLLOW_forControl_in_statement3444);
+                    pushFollow(FOLLOW_forControl_in_statement3451);
                     forControl();
 
                     state._fsp--;
                     if (state.failed) return ;
 
-                    match(input,33,FOLLOW_33_in_statement3446); if (state.failed) return ;
+                    match(input,33,FOLLOW_33_in_statement3453); if (state.failed) return ;
 
-                    pushFollow(FOLLOW_statement_in_statement3448);
+                    pushFollow(FOLLOW_statement_in_statement3455);
                     statement();
 
                     state._fsp--;
@@ -8075,17 +8115,17 @@ public class JavaParser extends Parser {
                     }
                     break;
                 case 5 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:676:9: 'while' parExpression statement
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:686:9: 'while' parExpression statement
                     {
-                    match(input,107,FOLLOW_107_in_statement3458); if (state.failed) return ;
+                    match(input,107,FOLLOW_107_in_statement3465); if (state.failed) return ;
 
-                    pushFollow(FOLLOW_parExpression_in_statement3460);
+                    pushFollow(FOLLOW_parExpression_in_statement3467);
                     parExpression();
 
                     state._fsp--;
                     if (state.failed) return ;
 
-                    pushFollow(FOLLOW_statement_in_statement3462);
+                    pushFollow(FOLLOW_statement_in_statement3469);
                     statement();
 
                     state._fsp--;
@@ -8094,40 +8134,40 @@ public class JavaParser extends Parser {
                     }
                     break;
                 case 6 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:677:9: 'do' statement 'while' parExpression ';'
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:687:9: 'do' statement 'while' parExpression ';'
                     {
-                    match(input,69,FOLLOW_69_in_statement3472); if (state.failed) return ;
+                    match(input,69,FOLLOW_69_in_statement3479); if (state.failed) return ;
 
-                    pushFollow(FOLLOW_statement_in_statement3474);
+                    pushFollow(FOLLOW_statement_in_statement3481);
                     statement();
 
                     state._fsp--;
                     if (state.failed) return ;
 
-                    match(input,107,FOLLOW_107_in_statement3476); if (state.failed) return ;
+                    match(input,107,FOLLOW_107_in_statement3483); if (state.failed) return ;
 
-                    pushFollow(FOLLOW_parExpression_in_statement3478);
+                    pushFollow(FOLLOW_parExpression_in_statement3485);
                     parExpression();
 
                     state._fsp--;
                     if (state.failed) return ;
 
-                    match(input,48,FOLLOW_48_in_statement3480); if (state.failed) return ;
+                    match(input,48,FOLLOW_48_in_statement3487); if (state.failed) return ;
 
                     }
                     break;
                 case 7 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:678:9: 'try' block ( catches 'finally' block | catches | 'finally' block )
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:688:9: 'try' block ( catches 'finally' block | catches | 'finally' block )
                     {
-                    match(input,104,FOLLOW_104_in_statement3490); if (state.failed) return ;
+                    match(input,104,FOLLOW_104_in_statement3497); if (state.failed) return ;
 
-                    pushFollow(FOLLOW_block_in_statement3492);
+                    pushFollow(FOLLOW_block_in_statement3499);
                     block();
 
                     state._fsp--;
                     if (state.failed) return ;
 
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:679:9: ( catches 'finally' block | catches | 'finally' block )
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:689:9: ( catches 'finally' block | catches | 'finally' block )
                     int alt110=3;
                     int LA110_0 = input.LA(1);
 
@@ -8162,17 +8202,17 @@ public class JavaParser extends Parser {
                     }
                     switch (alt110) {
                         case 1 :
-                            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:679:11: catches 'finally' block
+                            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:689:11: catches 'finally' block
                             {
-                            pushFollow(FOLLOW_catches_in_statement3504);
+                            pushFollow(FOLLOW_catches_in_statement3511);
                             catches();
 
                             state._fsp--;
                             if (state.failed) return ;
 
-                            match(input,75,FOLLOW_75_in_statement3506); if (state.failed) return ;
+                            match(input,75,FOLLOW_75_in_statement3513); if (state.failed) return ;
 
-                            pushFollow(FOLLOW_block_in_statement3508);
+                            pushFollow(FOLLOW_block_in_statement3515);
                             block();
 
                             state._fsp--;
@@ -8181,9 +8221,9 @@ public class JavaParser extends Parser {
                             }
                             break;
                         case 2 :
-                            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:680:11: catches
+                            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:690:11: catches
                             {
-                            pushFollow(FOLLOW_catches_in_statement3520);
+                            pushFollow(FOLLOW_catches_in_statement3527);
                             catches();
 
                             state._fsp--;
@@ -8192,11 +8232,11 @@ public class JavaParser extends Parser {
                             }
                             break;
                         case 3 :
-                            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:681:13: 'finally' block
+                            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:691:13: 'finally' block
                             {
-                            match(input,75,FOLLOW_75_in_statement3534); if (state.failed) return ;
+                            match(input,75,FOLLOW_75_in_statement3541); if (state.failed) return ;
 
-                            pushFollow(FOLLOW_block_in_statement3536);
+                            pushFollow(FOLLOW_block_in_statement3543);
                             block();
 
                             state._fsp--;
@@ -8211,40 +8251,40 @@ public class JavaParser extends Parser {
                     }
                     break;
                 case 8 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:683:9: 'switch' parExpression '{' switchBlockStatementGroups '}'
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:693:9: 'switch' parExpression '{' switchBlockStatementGroups '}'
                     {
-                    match(input,97,FOLLOW_97_in_statement3556); if (state.failed) return ;
+                    match(input,97,FOLLOW_97_in_statement3563); if (state.failed) return ;
 
-                    pushFollow(FOLLOW_parExpression_in_statement3558);
+                    pushFollow(FOLLOW_parExpression_in_statement3565);
                     parExpression();
 
                     state._fsp--;
                     if (state.failed) return ;
 
-                    match(input,108,FOLLOW_108_in_statement3560); if (state.failed) return ;
+                    match(input,108,FOLLOW_108_in_statement3567); if (state.failed) return ;
 
-                    pushFollow(FOLLOW_switchBlockStatementGroups_in_statement3562);
+                    pushFollow(FOLLOW_switchBlockStatementGroups_in_statement3569);
                     switchBlockStatementGroups();
 
                     state._fsp--;
                     if (state.failed) return ;
 
-                    match(input,112,FOLLOW_112_in_statement3564); if (state.failed) return ;
+                    match(input,112,FOLLOW_112_in_statement3571); if (state.failed) return ;
 
                     }
                     break;
                 case 9 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:684:9: 'synchronized' parExpression block
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:694:9: 'synchronized' parExpression block
                     {
-                    match(input,98,FOLLOW_98_in_statement3574); if (state.failed) return ;
+                    match(input,98,FOLLOW_98_in_statement3581); if (state.failed) return ;
 
-                    pushFollow(FOLLOW_parExpression_in_statement3576);
+                    pushFollow(FOLLOW_parExpression_in_statement3583);
                     parExpression();
 
                     state._fsp--;
                     if (state.failed) return ;
 
-                    pushFollow(FOLLOW_block_in_statement3578);
+                    pushFollow(FOLLOW_block_in_statement3585);
                     block();
 
                     state._fsp--;
@@ -8253,11 +8293,11 @@ public class JavaParser extends Parser {
                     }
                     break;
                 case 10 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:685:9: 'return' ( expression )? ';'
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:695:9: 'return' ( expression )? ';'
                     {
-                    match(input,92,FOLLOW_92_in_statement3588); if (state.failed) return ;
+                    match(input,92,FOLLOW_92_in_statement3595); if (state.failed) return ;
 
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:685:18: ( expression )?
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:695:18: ( expression )?
                     int alt111=2;
                     int LA111_0 = input.LA(1);
 
@@ -8266,9 +8306,9 @@ public class JavaParser extends Parser {
                     }
                     switch (alt111) {
                         case 1 :
-                            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:685:18: expression
+                            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:695:18: expression
                             {
-                            pushFollow(FOLLOW_expression_in_statement3590);
+                            pushFollow(FOLLOW_expression_in_statement3597);
                             expression();
 
                             state._fsp--;
@@ -8280,31 +8320,31 @@ public class JavaParser extends Parser {
                     }
 
 
-                    match(input,48,FOLLOW_48_in_statement3593); if (state.failed) return ;
+                    match(input,48,FOLLOW_48_in_statement3600); if (state.failed) return ;
 
                     }
                     break;
                 case 11 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:686:9: 'throw' expression ';'
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:696:9: 'throw' expression ';'
                     {
-                    match(input,100,FOLLOW_100_in_statement3603); if (state.failed) return ;
+                    match(input,100,FOLLOW_100_in_statement3610); if (state.failed) return ;
 
-                    pushFollow(FOLLOW_expression_in_statement3605);
+                    pushFollow(FOLLOW_expression_in_statement3612);
                     expression();
 
                     state._fsp--;
                     if (state.failed) return ;
 
-                    match(input,48,FOLLOW_48_in_statement3607); if (state.failed) return ;
+                    match(input,48,FOLLOW_48_in_statement3614); if (state.failed) return ;
 
                     }
                     break;
                 case 12 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:687:9: 'break' ( Identifier )? ';'
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:697:9: 'break' ( Identifier )? ';'
                     {
-                    match(input,61,FOLLOW_61_in_statement3617); if (state.failed) return ;
+                    match(input,61,FOLLOW_61_in_statement3624); if (state.failed) return ;
 
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:687:17: ( Identifier )?
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:697:17: ( Identifier )?
                     int alt112=2;
                     int LA112_0 = input.LA(1);
 
@@ -8313,9 +8353,9 @@ public class JavaParser extends Parser {
                     }
                     switch (alt112) {
                         case 1 :
-                            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:687:17: Identifier
+                            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:697:17: Identifier
                             {
-                            match(input,Identifier,FOLLOW_Identifier_in_statement3619); if (state.failed) return ;
+                            match(input,Identifier,FOLLOW_Identifier_in_statement3626); if (state.failed) return ;
 
                             }
                             break;
@@ -8323,16 +8363,16 @@ public class JavaParser extends Parser {
                     }
 
 
-                    match(input,48,FOLLOW_48_in_statement3622); if (state.failed) return ;
+                    match(input,48,FOLLOW_48_in_statement3629); if (state.failed) return ;
 
                     }
                     break;
                 case 13 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:688:9: 'continue' ( Identifier )? ';'
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:698:9: 'continue' ( Identifier )? ';'
                     {
-                    match(input,67,FOLLOW_67_in_statement3632); if (state.failed) return ;
+                    match(input,67,FOLLOW_67_in_statement3639); if (state.failed) return ;
 
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:688:20: ( Identifier )?
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:698:20: ( Identifier )?
                     int alt113=2;
                     int LA113_0 = input.LA(1);
 
@@ -8341,9 +8381,9 @@ public class JavaParser extends Parser {
                     }
                     switch (alt113) {
                         case 1 :
-                            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:688:20: Identifier
+                            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:698:20: Identifier
                             {
-                            match(input,Identifier,FOLLOW_Identifier_in_statement3634); if (state.failed) return ;
+                            match(input,Identifier,FOLLOW_Identifier_in_statement3641); if (state.failed) return ;
 
                             }
                             break;
@@ -8351,38 +8391,38 @@ public class JavaParser extends Parser {
                     }
 
 
-                    match(input,48,FOLLOW_48_in_statement3637); if (state.failed) return ;
+                    match(input,48,FOLLOW_48_in_statement3644); if (state.failed) return ;
 
                     }
                     break;
                 case 14 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:689:9: ';'
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:699:9: ';'
                     {
-                    match(input,48,FOLLOW_48_in_statement3647); if (state.failed) return ;
+                    match(input,48,FOLLOW_48_in_statement3654); if (state.failed) return ;
 
                     }
                     break;
                 case 15 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:690:9: statementExpression ';'
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:700:9: statementExpression ';'
                     {
-                    pushFollow(FOLLOW_statementExpression_in_statement3658);
+                    pushFollow(FOLLOW_statementExpression_in_statement3665);
                     statementExpression();
 
                     state._fsp--;
                     if (state.failed) return ;
 
-                    match(input,48,FOLLOW_48_in_statement3660); if (state.failed) return ;
+                    match(input,48,FOLLOW_48_in_statement3667); if (state.failed) return ;
 
                     }
                     break;
                 case 16 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:691:9: Identifier ':' statement
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:701:9: Identifier ':' statement
                     {
-                    match(input,Identifier,FOLLOW_Identifier_in_statement3670); if (state.failed) return ;
+                    match(input,Identifier,FOLLOW_Identifier_in_statement3677); if (state.failed) return ;
 
-                    match(input,47,FOLLOW_47_in_statement3672); if (state.failed) return ;
+                    match(input,47,FOLLOW_47_in_statement3679); if (state.failed) return ;
 
-                    pushFollow(FOLLOW_statement_in_statement3674);
+                    pushFollow(FOLLOW_statement_in_statement3681);
                     statement();
 
                     state._fsp--;
@@ -8410,23 +8450,23 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "catches"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:694:1: catches : catchClause ( catchClause )* ;
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:704:1: catches : catchClause ( catchClause )* ;
     public final void catches() throws RecognitionException {
         int catches_StartIndex = input.index();
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 91) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:695:5: ( catchClause ( catchClause )* )
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:695:9: catchClause ( catchClause )*
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:705:5: ( catchClause ( catchClause )* )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:705:9: catchClause ( catchClause )*
             {
-            pushFollow(FOLLOW_catchClause_in_catches3697);
+            pushFollow(FOLLOW_catchClause_in_catches3704);
             catchClause();
 
             state._fsp--;
             if (state.failed) return ;
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:695:21: ( catchClause )*
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:705:21: ( catchClause )*
             loop115:
             do {
                 int alt115=2;
@@ -8439,9 +8479,9 @@ public class JavaParser extends Parser {
 
                 switch (alt115) {
             	case 1 :
-            	    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:695:22: catchClause
+            	    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:705:22: catchClause
             	    {
-            	    pushFollow(FOLLOW_catchClause_in_catches3700);
+            	    pushFollow(FOLLOW_catchClause_in_catches3707);
             	    catchClause();
 
             	    state._fsp--;
@@ -8476,29 +8516,29 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "catchClause"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:698:1: catchClause : 'catch' '(' formalParameter ')' block ;
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:708:1: catchClause : 'catch' '(' formalParameter ')' block ;
     public final void catchClause() throws RecognitionException {
         int catchClause_StartIndex = input.index();
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 92) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:699:5: ( 'catch' '(' formalParameter ')' block )
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:699:9: 'catch' '(' formalParameter ')' block
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:709:5: ( 'catch' '(' formalParameter ')' block )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:709:9: 'catch' '(' formalParameter ')' block
             {
-            match(input,64,FOLLOW_64_in_catchClause3725); if (state.failed) return ;
+            match(input,64,FOLLOW_64_in_catchClause3732); if (state.failed) return ;
 
-            match(input,32,FOLLOW_32_in_catchClause3727); if (state.failed) return ;
+            match(input,32,FOLLOW_32_in_catchClause3734); if (state.failed) return ;
 
-            pushFollow(FOLLOW_formalParameter_in_catchClause3729);
+            pushFollow(FOLLOW_formalParameter_in_catchClause3736);
             formalParameter();
 
             state._fsp--;
             if (state.failed) return ;
 
-            match(input,33,FOLLOW_33_in_catchClause3731); if (state.failed) return ;
+            match(input,33,FOLLOW_33_in_catchClause3738); if (state.failed) return ;
 
-            pushFollow(FOLLOW_block_in_catchClause3733);
+            pushFollow(FOLLOW_block_in_catchClause3740);
             block();
 
             state._fsp--;
@@ -8524,29 +8564,29 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "formalParameter"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:702:1: formalParameter : variableModifiers type variableDeclaratorId ;
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:712:1: formalParameter : variableModifiers type variableDeclaratorId ;
     public final void formalParameter() throws RecognitionException {
         int formalParameter_StartIndex = input.index();
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 93) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:703:5: ( variableModifiers type variableDeclaratorId )
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:703:9: variableModifiers type variableDeclaratorId
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:713:5: ( variableModifiers type variableDeclaratorId )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:713:9: variableModifiers type variableDeclaratorId
             {
-            pushFollow(FOLLOW_variableModifiers_in_formalParameter3752);
+            pushFollow(FOLLOW_variableModifiers_in_formalParameter3759);
             variableModifiers();
 
             state._fsp--;
             if (state.failed) return ;
 
-            pushFollow(FOLLOW_type_in_formalParameter3754);
+            pushFollow(FOLLOW_type_in_formalParameter3761);
             type();
 
             state._fsp--;
             if (state.failed) return ;
 
-            pushFollow(FOLLOW_variableDeclaratorId_in_formalParameter3756);
+            pushFollow(FOLLOW_variableDeclaratorId_in_formalParameter3763);
             variableDeclaratorId();
 
             state._fsp--;
@@ -8572,17 +8612,17 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "switchBlockStatementGroups"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:706:1: switchBlockStatementGroups : ( switchBlockStatementGroup )* ;
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:716:1: switchBlockStatementGroups : ( switchBlockStatementGroup )* ;
     public final void switchBlockStatementGroups() throws RecognitionException {
         int switchBlockStatementGroups_StartIndex = input.index();
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 94) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:707:5: ( ( switchBlockStatementGroup )* )
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:707:9: ( switchBlockStatementGroup )*
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:717:5: ( ( switchBlockStatementGroup )* )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:717:9: ( switchBlockStatementGroup )*
             {
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:707:9: ( switchBlockStatementGroup )*
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:717:9: ( switchBlockStatementGroup )*
             loop116:
             do {
                 int alt116=2;
@@ -8595,9 +8635,9 @@ public class JavaParser extends Parser {
 
                 switch (alt116) {
             	case 1 :
-            	    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:707:10: switchBlockStatementGroup
+            	    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:717:10: switchBlockStatementGroup
             	    {
-            	    pushFollow(FOLLOW_switchBlockStatementGroup_in_switchBlockStatementGroups3784);
+            	    pushFollow(FOLLOW_switchBlockStatementGroup_in_switchBlockStatementGroups3791);
             	    switchBlockStatementGroup();
 
             	    state._fsp--;
@@ -8632,17 +8672,17 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "switchBlockStatementGroup"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:714:1: switchBlockStatementGroup : ( switchLabel )+ ( blockStatement )* ;
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:724:1: switchBlockStatementGroup : ( switchLabel )+ ( blockStatement )* ;
     public final void switchBlockStatementGroup() throws RecognitionException {
         int switchBlockStatementGroup_StartIndex = input.index();
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 95) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:715:5: ( ( switchLabel )+ ( blockStatement )* )
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:715:9: ( switchLabel )+ ( blockStatement )*
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:725:5: ( ( switchLabel )+ ( blockStatement )* )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:725:9: ( switchLabel )+ ( blockStatement )*
             {
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:715:9: ( switchLabel )+
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:725:9: ( switchLabel )+
             int cnt117=0;
             loop117:
             do {
@@ -8671,9 +8711,9 @@ public class JavaParser extends Parser {
 
                 switch (alt117) {
             	case 1 :
-            	    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:715:9: switchLabel
+            	    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:725:9: switchLabel
             	    {
-            	    pushFollow(FOLLOW_switchLabel_in_switchBlockStatementGroup3811);
+            	    pushFollow(FOLLOW_switchLabel_in_switchBlockStatementGroup3818);
             	    switchLabel();
 
             	    state._fsp--;
@@ -8693,7 +8733,7 @@ public class JavaParser extends Parser {
             } while (true);
 
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:715:22: ( blockStatement )*
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:725:22: ( blockStatement )*
             loop118:
             do {
                 int alt118=2;
@@ -8706,9 +8746,9 @@ public class JavaParser extends Parser {
 
                 switch (alt118) {
             	case 1 :
-            	    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:715:22: blockStatement
+            	    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:725:22: blockStatement
             	    {
-            	    pushFollow(FOLLOW_blockStatement_in_switchBlockStatementGroup3814);
+            	    pushFollow(FOLLOW_blockStatement_in_switchBlockStatementGroup3821);
             	    blockStatement();
 
             	    state._fsp--;
@@ -8743,14 +8783,14 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "switchLabel"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:718:1: switchLabel : ( 'case' constantExpression ':' | 'case' enumConstantName ':' | 'default' ':' );
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:728:1: switchLabel : ( 'case' constantExpression ':' | 'case' enumConstantName ':' | 'default' ':' );
     public final void switchLabel() throws RecognitionException {
         int switchLabel_StartIndex = input.index();
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 96) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:719:5: ( 'case' constantExpression ':' | 'case' enumConstantName ':' | 'default' ':' )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:729:5: ( 'case' constantExpression ':' | 'case' enumConstantName ':' | 'default' ':' )
             int alt119=3;
             int LA119_0 = input.LA(1);
 
@@ -8815,41 +8855,41 @@ public class JavaParser extends Parser {
             }
             switch (alt119) {
                 case 1 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:719:9: 'case' constantExpression ':'
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:729:9: 'case' constantExpression ':'
                     {
-                    match(input,63,FOLLOW_63_in_switchLabel3838); if (state.failed) return ;
+                    match(input,63,FOLLOW_63_in_switchLabel3845); if (state.failed) return ;
 
-                    pushFollow(FOLLOW_constantExpression_in_switchLabel3840);
+                    pushFollow(FOLLOW_constantExpression_in_switchLabel3847);
                     constantExpression();
 
                     state._fsp--;
                     if (state.failed) return ;
 
-                    match(input,47,FOLLOW_47_in_switchLabel3842); if (state.failed) return ;
+                    match(input,47,FOLLOW_47_in_switchLabel3849); if (state.failed) return ;
 
                     }
                     break;
                 case 2 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:720:9: 'case' enumConstantName ':'
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:730:9: 'case' enumConstantName ':'
                     {
-                    match(input,63,FOLLOW_63_in_switchLabel3852); if (state.failed) return ;
+                    match(input,63,FOLLOW_63_in_switchLabel3859); if (state.failed) return ;
 
-                    pushFollow(FOLLOW_enumConstantName_in_switchLabel3854);
+                    pushFollow(FOLLOW_enumConstantName_in_switchLabel3861);
                     enumConstantName();
 
                     state._fsp--;
                     if (state.failed) return ;
 
-                    match(input,47,FOLLOW_47_in_switchLabel3856); if (state.failed) return ;
+                    match(input,47,FOLLOW_47_in_switchLabel3863); if (state.failed) return ;
 
                     }
                     break;
                 case 3 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:721:9: 'default' ':'
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:731:9: 'default' ':'
                     {
-                    match(input,68,FOLLOW_68_in_switchLabel3866); if (state.failed) return ;
+                    match(input,68,FOLLOW_68_in_switchLabel3873); if (state.failed) return ;
 
-                    match(input,47,FOLLOW_47_in_switchLabel3868); if (state.failed) return ;
+                    match(input,47,FOLLOW_47_in_switchLabel3875); if (state.failed) return ;
 
                     }
                     break;
@@ -8873,21 +8913,21 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "forControl"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:724:1: forControl options {k=3; } : ( enhancedForControl | ( forInit )? ';' ( expression )? ';' ( forUpdate )? );
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:734:1: forControl options {k=3; } : ( enhancedForControl | ( forInit )? ';' ( expression )? ';' ( forUpdate )? );
     public final void forControl() throws RecognitionException {
         int forControl_StartIndex = input.index();
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 97) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:726:5: ( enhancedForControl | ( forInit )? ';' ( expression )? ';' ( forUpdate )? )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:736:5: ( enhancedForControl | ( forInit )? ';' ( expression )? ';' ( forUpdate )? )
             int alt123=2;
             alt123 = dfa123.predict(input);
             switch (alt123) {
                 case 1 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:726:9: enhancedForControl
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:736:9: enhancedForControl
                     {
-                    pushFollow(FOLLOW_enhancedForControl_in_forControl3899);
+                    pushFollow(FOLLOW_enhancedForControl_in_forControl3906);
                     enhancedForControl();
 
                     state._fsp--;
@@ -8896,9 +8936,9 @@ public class JavaParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:727:9: ( forInit )? ';' ( expression )? ';' ( forUpdate )?
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:737:9: ( forInit )? ';' ( expression )? ';' ( forUpdate )?
                     {
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:727:9: ( forInit )?
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:737:9: ( forInit )?
                     int alt120=2;
                     int LA120_0 = input.LA(1);
 
@@ -8907,9 +8947,9 @@ public class JavaParser extends Parser {
                     }
                     switch (alt120) {
                         case 1 :
-                            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:727:9: forInit
+                            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:737:9: forInit
                             {
-                            pushFollow(FOLLOW_forInit_in_forControl3909);
+                            pushFollow(FOLLOW_forInit_in_forControl3916);
                             forInit();
 
                             state._fsp--;
@@ -8921,9 +8961,9 @@ public class JavaParser extends Parser {
                     }
 
 
-                    match(input,48,FOLLOW_48_in_forControl3912); if (state.failed) return ;
+                    match(input,48,FOLLOW_48_in_forControl3919); if (state.failed) return ;
 
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:727:22: ( expression )?
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:737:22: ( expression )?
                     int alt121=2;
                     int LA121_0 = input.LA(1);
 
@@ -8932,9 +8972,9 @@ public class JavaParser extends Parser {
                     }
                     switch (alt121) {
                         case 1 :
-                            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:727:22: expression
+                            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:737:22: expression
                             {
-                            pushFollow(FOLLOW_expression_in_forControl3914);
+                            pushFollow(FOLLOW_expression_in_forControl3921);
                             expression();
 
                             state._fsp--;
@@ -8946,9 +8986,9 @@ public class JavaParser extends Parser {
                     }
 
 
-                    match(input,48,FOLLOW_48_in_forControl3917); if (state.failed) return ;
+                    match(input,48,FOLLOW_48_in_forControl3924); if (state.failed) return ;
 
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:727:38: ( forUpdate )?
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:737:38: ( forUpdate )?
                     int alt122=2;
                     int LA122_0 = input.LA(1);
 
@@ -8957,9 +8997,9 @@ public class JavaParser extends Parser {
                     }
                     switch (alt122) {
                         case 1 :
-                            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:727:38: forUpdate
+                            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:737:38: forUpdate
                             {
-                            pushFollow(FOLLOW_forUpdate_in_forControl3919);
+                            pushFollow(FOLLOW_forUpdate_in_forControl3926);
                             forUpdate();
 
                             state._fsp--;
@@ -8993,14 +9033,14 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "forInit"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:730:1: forInit : ( localVariableDeclaration | expressionList );
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:740:1: forInit : ( localVariableDeclaration | expressionList );
     public final void forInit() throws RecognitionException {
         int forInit_StartIndex = input.index();
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 98) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:731:5: ( localVariableDeclaration | expressionList )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:741:5: ( localVariableDeclaration | expressionList )
             int alt124=2;
             switch ( input.LA(1) ) {
             case 54:
@@ -9091,9 +9131,9 @@ public class JavaParser extends Parser {
 
             switch (alt124) {
                 case 1 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:731:9: localVariableDeclaration
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:741:9: localVariableDeclaration
                     {
-                    pushFollow(FOLLOW_localVariableDeclaration_in_forInit3939);
+                    pushFollow(FOLLOW_localVariableDeclaration_in_forInit3946);
                     localVariableDeclaration();
 
                     state._fsp--;
@@ -9102,9 +9142,9 @@ public class JavaParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:732:9: expressionList
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:742:9: expressionList
                     {
-                    pushFollow(FOLLOW_expressionList_in_forInit3949);
+                    pushFollow(FOLLOW_expressionList_in_forInit3956);
                     expressionList();
 
                     state._fsp--;
@@ -9132,33 +9172,33 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "enhancedForControl"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:735:1: enhancedForControl : variableModifiers type Identifier ':' expression ;
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:745:1: enhancedForControl : variableModifiers type Identifier ':' expression ;
     public final void enhancedForControl() throws RecognitionException {
         int enhancedForControl_StartIndex = input.index();
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 99) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:736:5: ( variableModifiers type Identifier ':' expression )
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:736:9: variableModifiers type Identifier ':' expression
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:746:5: ( variableModifiers type Identifier ':' expression )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:746:9: variableModifiers type Identifier ':' expression
             {
-            pushFollow(FOLLOW_variableModifiers_in_enhancedForControl3972);
+            pushFollow(FOLLOW_variableModifiers_in_enhancedForControl3979);
             variableModifiers();
 
             state._fsp--;
             if (state.failed) return ;
 
-            pushFollow(FOLLOW_type_in_enhancedForControl3974);
+            pushFollow(FOLLOW_type_in_enhancedForControl3981);
             type();
 
             state._fsp--;
             if (state.failed) return ;
 
-            match(input,Identifier,FOLLOW_Identifier_in_enhancedForControl3976); if (state.failed) return ;
+            match(input,Identifier,FOLLOW_Identifier_in_enhancedForControl3983); if (state.failed) return ;
 
-            match(input,47,FOLLOW_47_in_enhancedForControl3978); if (state.failed) return ;
+            match(input,47,FOLLOW_47_in_enhancedForControl3985); if (state.failed) return ;
 
-            pushFollow(FOLLOW_expression_in_enhancedForControl3980);
+            pushFollow(FOLLOW_expression_in_enhancedForControl3987);
             expression();
 
             state._fsp--;
@@ -9184,17 +9224,17 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "forUpdate"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:739:1: forUpdate : expressionList ;
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:749:1: forUpdate : expressionList ;
     public final void forUpdate() throws RecognitionException {
         int forUpdate_StartIndex = input.index();
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 100) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:740:5: ( expressionList )
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:740:9: expressionList
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:750:5: ( expressionList )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:750:9: expressionList
             {
-            pushFollow(FOLLOW_expressionList_in_forUpdate3999);
+            pushFollow(FOLLOW_expressionList_in_forUpdate4006);
             expressionList();
 
             state._fsp--;
@@ -9220,25 +9260,25 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "parExpression"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:745:1: parExpression : '(' expression ')' ;
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:755:1: parExpression : '(' expression ')' ;
     public final void parExpression() throws RecognitionException {
         int parExpression_StartIndex = input.index();
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 101) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:746:5: ( '(' expression ')' )
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:746:9: '(' expression ')'
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:756:5: ( '(' expression ')' )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:756:9: '(' expression ')'
             {
-            match(input,32,FOLLOW_32_in_parExpression4020); if (state.failed) return ;
+            match(input,32,FOLLOW_32_in_parExpression4027); if (state.failed) return ;
 
-            pushFollow(FOLLOW_expression_in_parExpression4022);
+            pushFollow(FOLLOW_expression_in_parExpression4029);
             expression();
 
             state._fsp--;
             if (state.failed) return ;
 
-            match(input,33,FOLLOW_33_in_parExpression4024); if (state.failed) return ;
+            match(input,33,FOLLOW_33_in_parExpression4031); if (state.failed) return ;
 
             }
 
@@ -9260,23 +9300,23 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "expressionList"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:749:1: expressionList : expression ( ',' expression )* ;
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:759:1: expressionList : expression ( ',' expression )* ;
     public final void expressionList() throws RecognitionException {
         int expressionList_StartIndex = input.index();
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 102) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:750:5: ( expression ( ',' expression )* )
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:750:9: expression ( ',' expression )*
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:760:5: ( expression ( ',' expression )* )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:760:9: expression ( ',' expression )*
             {
-            pushFollow(FOLLOW_expression_in_expressionList4047);
+            pushFollow(FOLLOW_expression_in_expressionList4054);
             expression();
 
             state._fsp--;
             if (state.failed) return ;
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:750:20: ( ',' expression )*
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:760:20: ( ',' expression )*
             loop125:
             do {
                 int alt125=2;
@@ -9289,11 +9329,11 @@ public class JavaParser extends Parser {
 
                 switch (alt125) {
             	case 1 :
-            	    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:750:21: ',' expression
+            	    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:760:21: ',' expression
             	    {
-            	    match(input,39,FOLLOW_39_in_expressionList4050); if (state.failed) return ;
+            	    match(input,39,FOLLOW_39_in_expressionList4057); if (state.failed) return ;
 
-            	    pushFollow(FOLLOW_expression_in_expressionList4052);
+            	    pushFollow(FOLLOW_expression_in_expressionList4059);
             	    expression();
 
             	    state._fsp--;
@@ -9328,17 +9368,17 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "statementExpression"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:753:1: statementExpression : expression ;
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:763:1: statementExpression : expression ;
     public final void statementExpression() throws RecognitionException {
         int statementExpression_StartIndex = input.index();
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 103) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:754:5: ( expression )
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:754:9: expression
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:764:5: ( expression )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:764:9: expression
             {
-            pushFollow(FOLLOW_expression_in_statementExpression4073);
+            pushFollow(FOLLOW_expression_in_statementExpression4080);
             expression();
 
             state._fsp--;
@@ -9364,17 +9404,17 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "constantExpression"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:757:1: constantExpression : expression ;
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:767:1: constantExpression : expression ;
     public final void constantExpression() throws RecognitionException {
         int constantExpression_StartIndex = input.index();
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 104) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:758:5: ( expression )
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:758:9: expression
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:768:5: ( expression )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:768:9: expression
             {
-            pushFollow(FOLLOW_expression_in_constantExpression4096);
+            pushFollow(FOLLOW_expression_in_constantExpression4103);
             expression();
 
             state._fsp--;
@@ -9403,7 +9443,7 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "expression"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:761:1: expression : conditionalExpression ( assignmentOperator expression )? ;
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:771:1: expression : conditionalExpression ( assignmentOperator expression )? ;
     public final JavaParser.expression_return expression() throws RecognitionException {
         JavaParser.expression_return retval = new JavaParser.expression_return();
         retval.start = input.LT(1);
@@ -9413,16 +9453,16 @@ public class JavaParser extends Parser {
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 105) ) { return retval; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:762:5: ( conditionalExpression ( assignmentOperator expression )? )
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:762:9: conditionalExpression ( assignmentOperator expression )?
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:772:5: ( conditionalExpression ( assignmentOperator expression )? )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:772:9: conditionalExpression ( assignmentOperator expression )?
             {
-            pushFollow(FOLLOW_conditionalExpression_in_expression4119);
+            pushFollow(FOLLOW_conditionalExpression_in_expression4126);
             conditionalExpression();
 
             state._fsp--;
             if (state.failed) return retval;
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:762:31: ( assignmentOperator expression )?
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:772:31: ( assignmentOperator expression )?
             int alt126=2;
             switch ( input.LA(1) ) {
                 case 50:
@@ -9528,15 +9568,15 @@ public class JavaParser extends Parser {
 
             switch (alt126) {
                 case 1 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:762:32: assignmentOperator expression
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:772:32: assignmentOperator expression
                     {
-                    pushFollow(FOLLOW_assignmentOperator_in_expression4122);
+                    pushFollow(FOLLOW_assignmentOperator_in_expression4129);
                     assignmentOperator();
 
                     state._fsp--;
                     if (state.failed) return retval;
 
-                    pushFollow(FOLLOW_expression_in_expression4124);
+                    pushFollow(FOLLOW_expression_in_expression4131);
                     expression();
 
                     state._fsp--;
@@ -9571,7 +9611,7 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "assignmentOperator"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:765:1: assignmentOperator : ( '=' | '+=' | '-=' | '*=' | '/=' | '&=' | '|=' | '^=' | '%=' | ( '<' '<' '=' )=>t1= '<' t2= '<' t3= '=' {...}?| ( '>' '>' '>' '=' )=>t1= '>' t2= '>' t3= '>' t4= '=' {...}?| ( '>' '>' '=' )=>t1= '>' t2= '>' t3= '=' {...}?);
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:775:1: assignmentOperator : ( '=' | '+=' | '-=' | '*=' | '/=' | '&=' | '|=' | '^=' | '%=' | ( '<' '<' '=' )=>t1= '<' t2= '<' t3= '=' {...}?| ( '>' '>' '>' '=' )=>t1= '>' t2= '>' t3= '>' t4= '=' {...}?| ( '>' '>' '=' )=>t1= '>' t2= '>' t3= '=' {...}?);
     public final void assignmentOperator() throws RecognitionException {
         int assignmentOperator_StartIndex = input.index();
 
@@ -9583,7 +9623,7 @@ public class JavaParser extends Parser {
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 106) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:766:5: ( '=' | '+=' | '-=' | '*=' | '/=' | '&=' | '|=' | '^=' | '%=' | ( '<' '<' '=' )=>t1= '<' t2= '<' t3= '=' {...}?| ( '>' '>' '>' '=' )=>t1= '>' t2= '>' t3= '>' t4= '=' {...}?| ( '>' '>' '=' )=>t1= '>' t2= '>' t3= '=' {...}?)
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:776:5: ( '=' | '+=' | '-=' | '*=' | '/=' | '&=' | '|=' | '^=' | '%=' | ( '<' '<' '=' )=>t1= '<' t2= '<' t3= '=' {...}?| ( '>' '>' '>' '=' )=>t1= '>' t2= '>' t3= '>' t4= '=' {...}?| ( '>' '>' '=' )=>t1= '>' t2= '>' t3= '=' {...}?)
             int alt127=12;
             int LA127_0 = input.LA(1);
 
@@ -9657,76 +9697,76 @@ public class JavaParser extends Parser {
             }
             switch (alt127) {
                 case 1 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:766:9: '='
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:776:9: '='
                     {
-                    match(input,50,FOLLOW_50_in_assignmentOperator4150); if (state.failed) return ;
+                    match(input,50,FOLLOW_50_in_assignmentOperator4157); if (state.failed) return ;
 
                     }
                     break;
                 case 2 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:767:9: '+='
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:777:9: '+='
                     {
-                    match(input,38,FOLLOW_38_in_assignmentOperator4160); if (state.failed) return ;
+                    match(input,38,FOLLOW_38_in_assignmentOperator4167); if (state.failed) return ;
 
                     }
                     break;
                 case 3 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:768:9: '-='
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:778:9: '-='
                     {
-                    match(input,42,FOLLOW_42_in_assignmentOperator4170); if (state.failed) return ;
+                    match(input,42,FOLLOW_42_in_assignmentOperator4177); if (state.failed) return ;
 
                     }
                     break;
                 case 4 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:769:9: '*='
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:779:9: '*='
                     {
-                    match(input,35,FOLLOW_35_in_assignmentOperator4180); if (state.failed) return ;
+                    match(input,35,FOLLOW_35_in_assignmentOperator4187); if (state.failed) return ;
 
                     }
                     break;
                 case 5 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:770:9: '/='
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:780:9: '/='
                     {
-                    match(input,46,FOLLOW_46_in_assignmentOperator4190); if (state.failed) return ;
+                    match(input,46,FOLLOW_46_in_assignmentOperator4197); if (state.failed) return ;
 
                     }
                     break;
                 case 6 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:771:9: '&='
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:781:9: '&='
                     {
-                    match(input,31,FOLLOW_31_in_assignmentOperator4200); if (state.failed) return ;
+                    match(input,31,FOLLOW_31_in_assignmentOperator4207); if (state.failed) return ;
 
                     }
                     break;
                 case 7 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:772:9: '|='
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:782:9: '|='
                     {
-                    match(input,110,FOLLOW_110_in_assignmentOperator4210); if (state.failed) return ;
+                    match(input,110,FOLLOW_110_in_assignmentOperator4217); if (state.failed) return ;
 
                     }
                     break;
                 case 8 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:773:9: '^='
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:783:9: '^='
                     {
-                    match(input,58,FOLLOW_58_in_assignmentOperator4220); if (state.failed) return ;
+                    match(input,58,FOLLOW_58_in_assignmentOperator4227); if (state.failed) return ;
 
                     }
                     break;
                 case 9 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:774:9: '%='
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:784:9: '%='
                     {
-                    match(input,28,FOLLOW_28_in_assignmentOperator4230); if (state.failed) return ;
+                    match(input,28,FOLLOW_28_in_assignmentOperator4237); if (state.failed) return ;
 
                     }
                     break;
                 case 10 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:775:9: ( '<' '<' '=' )=>t1= '<' t2= '<' t3= '=' {...}?
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:785:9: ( '<' '<' '=' )=>t1= '<' t2= '<' t3= '=' {...}?
                     {
-                    t1=(Token)match(input,49,FOLLOW_49_in_assignmentOperator4251); if (state.failed) return ;
+                    t1=(Token)match(input,49,FOLLOW_49_in_assignmentOperator4258); if (state.failed) return ;
 
-                    t2=(Token)match(input,49,FOLLOW_49_in_assignmentOperator4255); if (state.failed) return ;
+                    t2=(Token)match(input,49,FOLLOW_49_in_assignmentOperator4262); if (state.failed) return ;
 
-                    t3=(Token)match(input,50,FOLLOW_50_in_assignmentOperator4259); if (state.failed) return ;
+                    t3=(Token)match(input,50,FOLLOW_50_in_assignmentOperator4266); if (state.failed) return ;
 
                     if ( !(( t1.getLine() == t2.getLine() &&
                               t1.getCharPositionInLine() + 1 == t2.getCharPositionInLine() && 
@@ -9739,15 +9779,15 @@ public class JavaParser extends Parser {
                     }
                     break;
                 case 11 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:780:9: ( '>' '>' '>' '=' )=>t1= '>' t2= '>' t3= '>' t4= '=' {...}?
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:790:9: ( '>' '>' '>' '=' )=>t1= '>' t2= '>' t3= '>' t4= '=' {...}?
                     {
-                    t1=(Token)match(input,52,FOLLOW_52_in_assignmentOperator4293); if (state.failed) return ;
+                    t1=(Token)match(input,52,FOLLOW_52_in_assignmentOperator4300); if (state.failed) return ;
 
-                    t2=(Token)match(input,52,FOLLOW_52_in_assignmentOperator4297); if (state.failed) return ;
+                    t2=(Token)match(input,52,FOLLOW_52_in_assignmentOperator4304); if (state.failed) return ;
 
-                    t3=(Token)match(input,52,FOLLOW_52_in_assignmentOperator4301); if (state.failed) return ;
+                    t3=(Token)match(input,52,FOLLOW_52_in_assignmentOperator4308); if (state.failed) return ;
 
-                    t4=(Token)match(input,50,FOLLOW_50_in_assignmentOperator4305); if (state.failed) return ;
+                    t4=(Token)match(input,50,FOLLOW_50_in_assignmentOperator4312); if (state.failed) return ;
 
                     if ( !(( t1.getLine() == t2.getLine() && 
                               t1.getCharPositionInLine() + 1 == t2.getCharPositionInLine() &&
@@ -9762,13 +9802,13 @@ public class JavaParser extends Parser {
                     }
                     break;
                 case 12 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:787:9: ( '>' '>' '=' )=>t1= '>' t2= '>' t3= '=' {...}?
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:797:9: ( '>' '>' '=' )=>t1= '>' t2= '>' t3= '=' {...}?
                     {
-                    t1=(Token)match(input,52,FOLLOW_52_in_assignmentOperator4336); if (state.failed) return ;
+                    t1=(Token)match(input,52,FOLLOW_52_in_assignmentOperator4343); if (state.failed) return ;
 
-                    t2=(Token)match(input,52,FOLLOW_52_in_assignmentOperator4340); if (state.failed) return ;
+                    t2=(Token)match(input,52,FOLLOW_52_in_assignmentOperator4347); if (state.failed) return ;
 
-                    t3=(Token)match(input,50,FOLLOW_50_in_assignmentOperator4344); if (state.failed) return ;
+                    t3=(Token)match(input,50,FOLLOW_50_in_assignmentOperator4351); if (state.failed) return ;
 
                     if ( !(( t1.getLine() == t2.getLine() && 
                               t1.getCharPositionInLine() + 1 == t2.getCharPositionInLine() && 
@@ -9803,7 +9843,7 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "conditionalExpression"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:794:1: conditionalExpression : conditionalOrExpression ( '?' expression ':' expression )? ;
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:804:1: conditionalExpression : conditionalOrExpression ( '?' expression ':' expression )? ;
     public final JavaParser.conditionalExpression_return conditionalExpression() throws RecognitionException {
         JavaParser.conditionalExpression_return retval = new JavaParser.conditionalExpression_return();
         retval.start = input.LT(1);
@@ -9813,16 +9853,16 @@ public class JavaParser extends Parser {
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 107) ) { return retval; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:795:5: ( conditionalOrExpression ( '?' expression ':' expression )? )
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:795:9: conditionalOrExpression ( '?' expression ':' expression )?
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:805:5: ( conditionalOrExpression ( '?' expression ':' expression )? )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:805:9: conditionalOrExpression ( '?' expression ':' expression )?
             {
-            pushFollow(FOLLOW_conditionalOrExpression_in_conditionalExpression4373);
+            pushFollow(FOLLOW_conditionalOrExpression_in_conditionalExpression4380);
             conditionalOrExpression();
 
             state._fsp--;
             if (state.failed) return retval;
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:795:33: ( '?' expression ':' expression )?
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:805:33: ( '?' expression ':' expression )?
             int alt128=2;
             int LA128_0 = input.LA(1);
 
@@ -9831,19 +9871,19 @@ public class JavaParser extends Parser {
             }
             switch (alt128) {
                 case 1 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:795:35: '?' expression ':' expression
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:805:35: '?' expression ':' expression
                     {
-                    match(input,53,FOLLOW_53_in_conditionalExpression4377); if (state.failed) return retval;
+                    match(input,53,FOLLOW_53_in_conditionalExpression4384); if (state.failed) return retval;
 
-                    pushFollow(FOLLOW_expression_in_conditionalExpression4379);
+                    pushFollow(FOLLOW_expression_in_conditionalExpression4386);
                     expression();
 
                     state._fsp--;
                     if (state.failed) return retval;
 
-                    match(input,47,FOLLOW_47_in_conditionalExpression4381); if (state.failed) return retval;
+                    match(input,47,FOLLOW_47_in_conditionalExpression4388); if (state.failed) return retval;
 
-                    pushFollow(FOLLOW_expression_in_conditionalExpression4383);
+                    pushFollow(FOLLOW_expression_in_conditionalExpression4390);
                     expression();
 
                     state._fsp--;
@@ -9865,57 +9905,57 @@ public class JavaParser extends Parser {
                 	
                 	//regex para obter somente select
                 	Pattern pattern = Pattern.compile("^\\W\\s*select", Pattern.CASE_INSENSITIVE);
-            		
+
             		Matcher matcher = pattern.matcher(input.toString(retval.start,input.LT(-1)));
-            		
+
             		if(matcher.find()) {
-            		
+
             			this.getSelects().add(input.toString(retval.start,input.LT(-1)).trim().replaceFirst("\\s*select", "select").replace('"', ' ').replaceAll("\\+"+lineSeparator, "").replaceAll("\\s+", " ").replaceAll("\\+\\D*?\\+", " ")+";");
             			//System.err.println("ConditionalExpression AQUI "+ input.toString(retval.start,input.LT(-1)));
-            		
+
             		}
-            		
-            		
+
+
             		//regex para obter somente update statement
             		Pattern patternUpdate = Pattern.compile("^\\W\\s*update", Pattern.CASE_INSENSITIVE);
-            		
+
             		Matcher matcherUpdate = patternUpdate.matcher(input.toString(retval.start,input.LT(-1)));
-            		
+
             		if(matcherUpdate.find()) {
-            		
+
             			this.getUpdates().add(input.toString(retval.start,input.LT(-1)).trim().replaceFirst("\\s*update", "update").replace('"', ' ').replaceAll("\\+"+lineSeparator, "").replaceAll("\\s+", " ").replaceAll("\\+\\D*?\\+", " ")+";");
             			//System.err.println("ConditionalExpression AQUI "+ input.toString(retval.start,input.LT(-1)));
-            		
+
             		}
-            		
+
             		//regex para obter somente insert statement
             		Pattern patternInsert = Pattern.compile("^\\W\\s*insert", Pattern.CASE_INSENSITIVE);
-            		
+
             		Matcher matcherInsert = patternInsert.matcher(input.toString(retval.start,input.LT(-1)));
-            		
+
             		if(matcherInsert.find()) {
-            		
+
             			this.getInserts().add(input.toString(retval.start,input.LT(-1)).trim().replaceFirst("\\s*insert", "insert").replace('"', ' ').replaceAll("\\+"+lineSeparator, "").replaceAll("\\s+", " ").replaceAll("\\+\\D*?\\+", " ")+";");
             			//System.err.println("ConditionalExpression AQUI "+ input.toString(retval.start,input.LT(-1)));
-            		
+
             		}
-            		
+
             		//regex para obter somente delele statement
             		Pattern patternDelete = Pattern.compile("^\\W\\s*delete", Pattern.CASE_INSENSITIVE);
-            		
+
             		Matcher matcherDelete = patternDelete.matcher(input.toString(retval.start,input.LT(-1)));
-            		
+
             		if(matcherDelete.find()) {
-            		
+
             			this.getDeletes().add(input.toString(retval.start,input.LT(-1)).trim().replaceFirst("\\s*delete", "delete").replace('"', ' ').replaceAll("\\+"+lineSeparator, "").replaceAll("\\s+", " ").replaceAll("\\+\\D*?\\+", " ")+";");
             			//System.err.println("ConditionalExpression AQUI "+ input.toString(retval.start,input.LT(-1)));
-            		
+
             		} 
-            		
-            		
-            		
-            		
-            		
+
+
+
+
+
                 
             //    	if(input.toString(retval.start,input.LT(-1)).contains("select")){
             //    	
@@ -9951,23 +9991,23 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "conditionalOrExpression"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:872:1: conditionalOrExpression : conditionalAndExpression ( '||' conditionalAndExpression )* ;
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:882:1: conditionalOrExpression : conditionalAndExpression ( '||' conditionalAndExpression )* ;
     public final void conditionalOrExpression() throws RecognitionException {
         int conditionalOrExpression_StartIndex = input.index();
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 108) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:873:5: ( conditionalAndExpression ( '||' conditionalAndExpression )* )
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:873:9: conditionalAndExpression ( '||' conditionalAndExpression )*
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:883:5: ( conditionalAndExpression ( '||' conditionalAndExpression )* )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:883:9: conditionalAndExpression ( '||' conditionalAndExpression )*
             {
-            pushFollow(FOLLOW_conditionalAndExpression_in_conditionalOrExpression4421);
+            pushFollow(FOLLOW_conditionalAndExpression_in_conditionalOrExpression4428);
             conditionalAndExpression();
 
             state._fsp--;
             if (state.failed) return ;
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:873:34: ( '||' conditionalAndExpression )*
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:883:34: ( '||' conditionalAndExpression )*
             loop129:
             do {
                 int alt129=2;
@@ -9980,11 +10020,11 @@ public class JavaParser extends Parser {
 
                 switch (alt129) {
             	case 1 :
-            	    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:873:36: '||' conditionalAndExpression
+            	    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:883:36: '||' conditionalAndExpression
             	    {
-            	    match(input,111,FOLLOW_111_in_conditionalOrExpression4425); if (state.failed) return ;
+            	    match(input,111,FOLLOW_111_in_conditionalOrExpression4432); if (state.failed) return ;
 
-            	    pushFollow(FOLLOW_conditionalAndExpression_in_conditionalOrExpression4427);
+            	    pushFollow(FOLLOW_conditionalAndExpression_in_conditionalOrExpression4434);
             	    conditionalAndExpression();
 
             	    state._fsp--;
@@ -10019,23 +10059,23 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "conditionalAndExpression"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:876:1: conditionalAndExpression : inclusiveOrExpression ( '&&' inclusiveOrExpression )* ;
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:886:1: conditionalAndExpression : inclusiveOrExpression ( '&&' inclusiveOrExpression )* ;
     public final void conditionalAndExpression() throws RecognitionException {
         int conditionalAndExpression_StartIndex = input.index();
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 109) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:877:5: ( inclusiveOrExpression ( '&&' inclusiveOrExpression )* )
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:877:9: inclusiveOrExpression ( '&&' inclusiveOrExpression )*
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:887:5: ( inclusiveOrExpression ( '&&' inclusiveOrExpression )* )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:887:9: inclusiveOrExpression ( '&&' inclusiveOrExpression )*
             {
-            pushFollow(FOLLOW_inclusiveOrExpression_in_conditionalAndExpression4449);
+            pushFollow(FOLLOW_inclusiveOrExpression_in_conditionalAndExpression4456);
             inclusiveOrExpression();
 
             state._fsp--;
             if (state.failed) return ;
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:877:31: ( '&&' inclusiveOrExpression )*
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:887:31: ( '&&' inclusiveOrExpression )*
             loop130:
             do {
                 int alt130=2;
@@ -10048,11 +10088,11 @@ public class JavaParser extends Parser {
 
                 switch (alt130) {
             	case 1 :
-            	    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:877:33: '&&' inclusiveOrExpression
+            	    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:887:33: '&&' inclusiveOrExpression
             	    {
-            	    match(input,29,FOLLOW_29_in_conditionalAndExpression4453); if (state.failed) return ;
+            	    match(input,29,FOLLOW_29_in_conditionalAndExpression4460); if (state.failed) return ;
 
-            	    pushFollow(FOLLOW_inclusiveOrExpression_in_conditionalAndExpression4455);
+            	    pushFollow(FOLLOW_inclusiveOrExpression_in_conditionalAndExpression4462);
             	    inclusiveOrExpression();
 
             	    state._fsp--;
@@ -10087,23 +10127,23 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "inclusiveOrExpression"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:880:1: inclusiveOrExpression : exclusiveOrExpression ( '|' exclusiveOrExpression )* ;
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:890:1: inclusiveOrExpression : exclusiveOrExpression ( '|' exclusiveOrExpression )* ;
     public final void inclusiveOrExpression() throws RecognitionException {
         int inclusiveOrExpression_StartIndex = input.index();
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 110) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:881:5: ( exclusiveOrExpression ( '|' exclusiveOrExpression )* )
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:881:9: exclusiveOrExpression ( '|' exclusiveOrExpression )*
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:891:5: ( exclusiveOrExpression ( '|' exclusiveOrExpression )* )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:891:9: exclusiveOrExpression ( '|' exclusiveOrExpression )*
             {
-            pushFollow(FOLLOW_exclusiveOrExpression_in_inclusiveOrExpression4477);
+            pushFollow(FOLLOW_exclusiveOrExpression_in_inclusiveOrExpression4484);
             exclusiveOrExpression();
 
             state._fsp--;
             if (state.failed) return ;
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:881:31: ( '|' exclusiveOrExpression )*
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:891:31: ( '|' exclusiveOrExpression )*
             loop131:
             do {
                 int alt131=2;
@@ -10116,11 +10156,11 @@ public class JavaParser extends Parser {
 
                 switch (alt131) {
             	case 1 :
-            	    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:881:33: '|' exclusiveOrExpression
+            	    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:891:33: '|' exclusiveOrExpression
             	    {
-            	    match(input,109,FOLLOW_109_in_inclusiveOrExpression4481); if (state.failed) return ;
+            	    match(input,109,FOLLOW_109_in_inclusiveOrExpression4488); if (state.failed) return ;
 
-            	    pushFollow(FOLLOW_exclusiveOrExpression_in_inclusiveOrExpression4483);
+            	    pushFollow(FOLLOW_exclusiveOrExpression_in_inclusiveOrExpression4490);
             	    exclusiveOrExpression();
 
             	    state._fsp--;
@@ -10155,23 +10195,23 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "exclusiveOrExpression"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:884:1: exclusiveOrExpression : andExpression ( '^' andExpression )* ;
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:894:1: exclusiveOrExpression : andExpression ( '^' andExpression )* ;
     public final void exclusiveOrExpression() throws RecognitionException {
         int exclusiveOrExpression_StartIndex = input.index();
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 111) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:885:5: ( andExpression ( '^' andExpression )* )
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:885:9: andExpression ( '^' andExpression )*
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:895:5: ( andExpression ( '^' andExpression )* )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:895:9: andExpression ( '^' andExpression )*
             {
-            pushFollow(FOLLOW_andExpression_in_exclusiveOrExpression4505);
+            pushFollow(FOLLOW_andExpression_in_exclusiveOrExpression4512);
             andExpression();
 
             state._fsp--;
             if (state.failed) return ;
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:885:23: ( '^' andExpression )*
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:895:23: ( '^' andExpression )*
             loop132:
             do {
                 int alt132=2;
@@ -10184,11 +10224,11 @@ public class JavaParser extends Parser {
 
                 switch (alt132) {
             	case 1 :
-            	    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:885:25: '^' andExpression
+            	    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:895:25: '^' andExpression
             	    {
-            	    match(input,57,FOLLOW_57_in_exclusiveOrExpression4509); if (state.failed) return ;
+            	    match(input,57,FOLLOW_57_in_exclusiveOrExpression4516); if (state.failed) return ;
 
-            	    pushFollow(FOLLOW_andExpression_in_exclusiveOrExpression4511);
+            	    pushFollow(FOLLOW_andExpression_in_exclusiveOrExpression4518);
             	    andExpression();
 
             	    state._fsp--;
@@ -10223,23 +10263,23 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "andExpression"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:888:1: andExpression : equalityExpression ( '&' equalityExpression )* ;
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:898:1: andExpression : equalityExpression ( '&' equalityExpression )* ;
     public final void andExpression() throws RecognitionException {
         int andExpression_StartIndex = input.index();
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 112) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:889:5: ( equalityExpression ( '&' equalityExpression )* )
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:889:9: equalityExpression ( '&' equalityExpression )*
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:899:5: ( equalityExpression ( '&' equalityExpression )* )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:899:9: equalityExpression ( '&' equalityExpression )*
             {
-            pushFollow(FOLLOW_equalityExpression_in_andExpression4533);
+            pushFollow(FOLLOW_equalityExpression_in_andExpression4540);
             equalityExpression();
 
             state._fsp--;
             if (state.failed) return ;
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:889:28: ( '&' equalityExpression )*
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:899:28: ( '&' equalityExpression )*
             loop133:
             do {
                 int alt133=2;
@@ -10252,11 +10292,11 @@ public class JavaParser extends Parser {
 
                 switch (alt133) {
             	case 1 :
-            	    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:889:30: '&' equalityExpression
+            	    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:899:30: '&' equalityExpression
             	    {
-            	    match(input,30,FOLLOW_30_in_andExpression4537); if (state.failed) return ;
+            	    match(input,30,FOLLOW_30_in_andExpression4544); if (state.failed) return ;
 
-            	    pushFollow(FOLLOW_equalityExpression_in_andExpression4539);
+            	    pushFollow(FOLLOW_equalityExpression_in_andExpression4546);
             	    equalityExpression();
 
             	    state._fsp--;
@@ -10291,23 +10331,23 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "equalityExpression"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:892:1: equalityExpression : instanceOfExpression ( ( '==' | '!=' ) instanceOfExpression )* ;
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:902:1: equalityExpression : instanceOfExpression ( ( '==' | '!=' ) instanceOfExpression )* ;
     public final void equalityExpression() throws RecognitionException {
         int equalityExpression_StartIndex = input.index();
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 113) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:893:5: ( instanceOfExpression ( ( '==' | '!=' ) instanceOfExpression )* )
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:893:9: instanceOfExpression ( ( '==' | '!=' ) instanceOfExpression )*
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:903:5: ( instanceOfExpression ( ( '==' | '!=' ) instanceOfExpression )* )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:903:9: instanceOfExpression ( ( '==' | '!=' ) instanceOfExpression )*
             {
-            pushFollow(FOLLOW_instanceOfExpression_in_equalityExpression4561);
+            pushFollow(FOLLOW_instanceOfExpression_in_equalityExpression4568);
             instanceOfExpression();
 
             state._fsp--;
             if (state.failed) return ;
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:893:30: ( ( '==' | '!=' ) instanceOfExpression )*
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:903:30: ( ( '==' | '!=' ) instanceOfExpression )*
             loop134:
             do {
                 int alt134=2;
@@ -10320,7 +10360,7 @@ public class JavaParser extends Parser {
 
                 switch (alt134) {
             	case 1 :
-            	    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:893:32: ( '==' | '!=' ) instanceOfExpression
+            	    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:903:32: ( '==' | '!=' ) instanceOfExpression
             	    {
             	    if ( input.LA(1)==26||input.LA(1)==51 ) {
             	        input.consume();
@@ -10334,7 +10374,7 @@ public class JavaParser extends Parser {
             	    }
 
 
-            	    pushFollow(FOLLOW_instanceOfExpression_in_equalityExpression4573);
+            	    pushFollow(FOLLOW_instanceOfExpression_in_equalityExpression4580);
             	    instanceOfExpression();
 
             	    state._fsp--;
@@ -10369,23 +10409,23 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "instanceOfExpression"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:896:1: instanceOfExpression : relationalExpression ( 'instanceof' type )? ;
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:906:1: instanceOfExpression : relationalExpression ( 'instanceof' type )? ;
     public final void instanceOfExpression() throws RecognitionException {
         int instanceOfExpression_StartIndex = input.index();
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 114) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:897:5: ( relationalExpression ( 'instanceof' type )? )
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:897:9: relationalExpression ( 'instanceof' type )?
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:907:5: ( relationalExpression ( 'instanceof' type )? )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:907:9: relationalExpression ( 'instanceof' type )?
             {
-            pushFollow(FOLLOW_relationalExpression_in_instanceOfExpression4595);
+            pushFollow(FOLLOW_relationalExpression_in_instanceOfExpression4602);
             relationalExpression();
 
             state._fsp--;
             if (state.failed) return ;
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:897:30: ( 'instanceof' type )?
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:907:30: ( 'instanceof' type )?
             int alt135=2;
             int LA135_0 = input.LA(1);
 
@@ -10394,11 +10434,11 @@ public class JavaParser extends Parser {
             }
             switch (alt135) {
                 case 1 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:897:31: 'instanceof' type
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:907:31: 'instanceof' type
                     {
-                    match(input,81,FOLLOW_81_in_instanceOfExpression4598); if (state.failed) return ;
+                    match(input,81,FOLLOW_81_in_instanceOfExpression4605); if (state.failed) return ;
 
-                    pushFollow(FOLLOW_type_in_instanceOfExpression4600);
+                    pushFollow(FOLLOW_type_in_instanceOfExpression4607);
                     type();
 
                     state._fsp--;
@@ -10430,23 +10470,23 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "relationalExpression"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:900:1: relationalExpression : shiftExpression ( relationalOp shiftExpression )* ;
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:910:1: relationalExpression : shiftExpression ( relationalOp shiftExpression )* ;
     public final void relationalExpression() throws RecognitionException {
         int relationalExpression_StartIndex = input.index();
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 115) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:901:5: ( shiftExpression ( relationalOp shiftExpression )* )
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:901:9: shiftExpression ( relationalOp shiftExpression )*
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:911:5: ( shiftExpression ( relationalOp shiftExpression )* )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:911:9: shiftExpression ( relationalOp shiftExpression )*
             {
-            pushFollow(FOLLOW_shiftExpression_in_relationalExpression4621);
+            pushFollow(FOLLOW_shiftExpression_in_relationalExpression4628);
             shiftExpression();
 
             state._fsp--;
             if (state.failed) return ;
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:901:25: ( relationalOp shiftExpression )*
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:911:25: ( relationalOp shiftExpression )*
             loop136:
             do {
                 int alt136=2;
@@ -10474,15 +10514,15 @@ public class JavaParser extends Parser {
 
                 switch (alt136) {
             	case 1 :
-            	    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:901:27: relationalOp shiftExpression
+            	    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:911:27: relationalOp shiftExpression
             	    {
-            	    pushFollow(FOLLOW_relationalOp_in_relationalExpression4625);
+            	    pushFollow(FOLLOW_relationalOp_in_relationalExpression4632);
             	    relationalOp();
 
             	    state._fsp--;
             	    if (state.failed) return ;
 
-            	    pushFollow(FOLLOW_shiftExpression_in_relationalExpression4627);
+            	    pushFollow(FOLLOW_shiftExpression_in_relationalExpression4634);
             	    shiftExpression();
 
             	    state._fsp--;
@@ -10517,7 +10557,7 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "relationalOp"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:904:1: relationalOp : ( ( '<' '=' )=>t1= '<' t2= '=' {...}?| ( '>' '=' )=>t1= '>' t2= '=' {...}?| '<' | '>' );
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:914:1: relationalOp : ( ( '<' '=' )=>t1= '<' t2= '=' {...}?| ( '>' '=' )=>t1= '>' t2= '=' {...}?| '<' | '>' );
     public final void relationalOp() throws RecognitionException {
         int relationalOp_StartIndex = input.index();
 
@@ -10527,7 +10567,7 @@ public class JavaParser extends Parser {
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 116) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:905:5: ( ( '<' '=' )=>t1= '<' t2= '=' {...}?| ( '>' '=' )=>t1= '>' t2= '=' {...}?| '<' | '>' )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:915:5: ( ( '<' '=' )=>t1= '<' t2= '=' {...}?| ( '>' '=' )=>t1= '>' t2= '=' {...}?| '<' | '>' )
             int alt137=4;
             int LA137_0 = input.LA(1);
 
@@ -10577,11 +10617,11 @@ public class JavaParser extends Parser {
             }
             switch (alt137) {
                 case 1 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:905:9: ( '<' '=' )=>t1= '<' t2= '=' {...}?
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:915:9: ( '<' '=' )=>t1= '<' t2= '=' {...}?
                     {
-                    t1=(Token)match(input,49,FOLLOW_49_in_relationalOp4662); if (state.failed) return ;
+                    t1=(Token)match(input,49,FOLLOW_49_in_relationalOp4669); if (state.failed) return ;
 
-                    t2=(Token)match(input,50,FOLLOW_50_in_relationalOp4666); if (state.failed) return ;
+                    t2=(Token)match(input,50,FOLLOW_50_in_relationalOp4673); if (state.failed) return ;
 
                     if ( !(( t1.getLine() == t2.getLine() && 
                               t1.getCharPositionInLine() + 1 == t2.getCharPositionInLine() )) ) {
@@ -10592,11 +10632,11 @@ public class JavaParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:908:9: ( '>' '=' )=>t1= '>' t2= '=' {...}?
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:918:9: ( '>' '=' )=>t1= '>' t2= '=' {...}?
                     {
-                    t1=(Token)match(input,52,FOLLOW_52_in_relationalOp4696); if (state.failed) return ;
+                    t1=(Token)match(input,52,FOLLOW_52_in_relationalOp4703); if (state.failed) return ;
 
-                    t2=(Token)match(input,50,FOLLOW_50_in_relationalOp4700); if (state.failed) return ;
+                    t2=(Token)match(input,50,FOLLOW_50_in_relationalOp4707); if (state.failed) return ;
 
                     if ( !(( t1.getLine() == t2.getLine() && 
                               t1.getCharPositionInLine() + 1 == t2.getCharPositionInLine() )) ) {
@@ -10607,16 +10647,16 @@ public class JavaParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:911:9: '<'
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:921:9: '<'
                     {
-                    match(input,49,FOLLOW_49_in_relationalOp4721); if (state.failed) return ;
+                    match(input,49,FOLLOW_49_in_relationalOp4728); if (state.failed) return ;
 
                     }
                     break;
                 case 4 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:912:9: '>'
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:922:9: '>'
                     {
-                    match(input,52,FOLLOW_52_in_relationalOp4732); if (state.failed) return ;
+                    match(input,52,FOLLOW_52_in_relationalOp4739); if (state.failed) return ;
 
                     }
                     break;
@@ -10640,23 +10680,23 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "shiftExpression"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:915:1: shiftExpression : additiveExpression ( shiftOp additiveExpression )* ;
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:925:1: shiftExpression : additiveExpression ( shiftOp additiveExpression )* ;
     public final void shiftExpression() throws RecognitionException {
         int shiftExpression_StartIndex = input.index();
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 117) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:916:5: ( additiveExpression ( shiftOp additiveExpression )* )
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:916:9: additiveExpression ( shiftOp additiveExpression )*
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:926:5: ( additiveExpression ( shiftOp additiveExpression )* )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:926:9: additiveExpression ( shiftOp additiveExpression )*
             {
-            pushFollow(FOLLOW_additiveExpression_in_shiftExpression4752);
+            pushFollow(FOLLOW_additiveExpression_in_shiftExpression4759);
             additiveExpression();
 
             state._fsp--;
             if (state.failed) return ;
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:916:28: ( shiftOp additiveExpression )*
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:926:28: ( shiftOp additiveExpression )*
             loop138:
             do {
                 int alt138=2;
@@ -10705,15 +10745,15 @@ public class JavaParser extends Parser {
 
                 switch (alt138) {
             	case 1 :
-            	    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:916:30: shiftOp additiveExpression
+            	    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:926:30: shiftOp additiveExpression
             	    {
-            	    pushFollow(FOLLOW_shiftOp_in_shiftExpression4756);
+            	    pushFollow(FOLLOW_shiftOp_in_shiftExpression4763);
             	    shiftOp();
 
             	    state._fsp--;
             	    if (state.failed) return ;
 
-            	    pushFollow(FOLLOW_additiveExpression_in_shiftExpression4758);
+            	    pushFollow(FOLLOW_additiveExpression_in_shiftExpression4765);
             	    additiveExpression();
 
             	    state._fsp--;
@@ -10748,7 +10788,7 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "shiftOp"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:919:1: shiftOp : ( ( '<' '<' )=>t1= '<' t2= '<' {...}?| ( '>' '>' '>' )=>t1= '>' t2= '>' t3= '>' {...}?| ( '>' '>' )=>t1= '>' t2= '>' {...}?);
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:929:1: shiftOp : ( ( '<' '<' )=>t1= '<' t2= '<' {...}?| ( '>' '>' '>' )=>t1= '>' t2= '>' t3= '>' {...}?| ( '>' '>' )=>t1= '>' t2= '>' {...}?);
     public final void shiftOp() throws RecognitionException {
         int shiftOp_StartIndex = input.index();
 
@@ -10759,7 +10799,7 @@ public class JavaParser extends Parser {
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 118) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:920:5: ( ( '<' '<' )=>t1= '<' t2= '<' {...}?| ( '>' '>' '>' )=>t1= '>' t2= '>' t3= '>' {...}?| ( '>' '>' )=>t1= '>' t2= '>' {...}?)
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:930:5: ( ( '<' '<' )=>t1= '<' t2= '<' {...}?| ( '>' '>' '>' )=>t1= '>' t2= '>' t3= '>' {...}?| ( '>' '>' )=>t1= '>' t2= '>' {...}?)
             int alt139=3;
             int LA139_0 = input.LA(1);
 
@@ -10860,11 +10900,11 @@ public class JavaParser extends Parser {
             }
             switch (alt139) {
                 case 1 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:920:9: ( '<' '<' )=>t1= '<' t2= '<' {...}?
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:930:9: ( '<' '<' )=>t1= '<' t2= '<' {...}?
                     {
-                    t1=(Token)match(input,49,FOLLOW_49_in_shiftOp4789); if (state.failed) return ;
+                    t1=(Token)match(input,49,FOLLOW_49_in_shiftOp4796); if (state.failed) return ;
 
-                    t2=(Token)match(input,49,FOLLOW_49_in_shiftOp4793); if (state.failed) return ;
+                    t2=(Token)match(input,49,FOLLOW_49_in_shiftOp4800); if (state.failed) return ;
 
                     if ( !(( t1.getLine() == t2.getLine() && 
                               t1.getCharPositionInLine() + 1 == t2.getCharPositionInLine() )) ) {
@@ -10875,13 +10915,13 @@ public class JavaParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:923:9: ( '>' '>' '>' )=>t1= '>' t2= '>' t3= '>' {...}?
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:933:9: ( '>' '>' '>' )=>t1= '>' t2= '>' t3= '>' {...}?
                     {
-                    t1=(Token)match(input,52,FOLLOW_52_in_shiftOp4825); if (state.failed) return ;
+                    t1=(Token)match(input,52,FOLLOW_52_in_shiftOp4832); if (state.failed) return ;
 
-                    t2=(Token)match(input,52,FOLLOW_52_in_shiftOp4829); if (state.failed) return ;
+                    t2=(Token)match(input,52,FOLLOW_52_in_shiftOp4836); if (state.failed) return ;
 
-                    t3=(Token)match(input,52,FOLLOW_52_in_shiftOp4833); if (state.failed) return ;
+                    t3=(Token)match(input,52,FOLLOW_52_in_shiftOp4840); if (state.failed) return ;
 
                     if ( !(( t1.getLine() == t2.getLine() && 
                               t1.getCharPositionInLine() + 1 == t2.getCharPositionInLine() &&
@@ -10894,11 +10934,11 @@ public class JavaParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:928:9: ( '>' '>' )=>t1= '>' t2= '>' {...}?
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:938:9: ( '>' '>' )=>t1= '>' t2= '>' {...}?
                     {
-                    t1=(Token)match(input,52,FOLLOW_52_in_shiftOp4863); if (state.failed) return ;
+                    t1=(Token)match(input,52,FOLLOW_52_in_shiftOp4870); if (state.failed) return ;
 
-                    t2=(Token)match(input,52,FOLLOW_52_in_shiftOp4867); if (state.failed) return ;
+                    t2=(Token)match(input,52,FOLLOW_52_in_shiftOp4874); if (state.failed) return ;
 
                     if ( !(( t1.getLine() == t2.getLine() && 
                               t1.getCharPositionInLine() + 1 == t2.getCharPositionInLine() )) ) {
@@ -10928,23 +10968,23 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "additiveExpression"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:934:1: additiveExpression : multiplicativeExpression ( ( '+' | '-' ) multiplicativeExpression )* ;
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:944:1: additiveExpression : multiplicativeExpression ( ( '+' | '-' ) multiplicativeExpression )* ;
     public final void additiveExpression() throws RecognitionException {
         int additiveExpression_StartIndex = input.index();
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 119) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:935:5: ( multiplicativeExpression ( ( '+' | '-' ) multiplicativeExpression )* )
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:935:9: multiplicativeExpression ( ( '+' | '-' ) multiplicativeExpression )*
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:945:5: ( multiplicativeExpression ( ( '+' | '-' ) multiplicativeExpression )* )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:945:9: multiplicativeExpression ( ( '+' | '-' ) multiplicativeExpression )*
             {
-            pushFollow(FOLLOW_multiplicativeExpression_in_additiveExpression4897);
+            pushFollow(FOLLOW_multiplicativeExpression_in_additiveExpression4904);
             multiplicativeExpression();
 
             state._fsp--;
             if (state.failed) return ;
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:935:34: ( ( '+' | '-' ) multiplicativeExpression )*
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:945:34: ( ( '+' | '-' ) multiplicativeExpression )*
             loop140:
             do {
                 int alt140=2;
@@ -10957,7 +10997,7 @@ public class JavaParser extends Parser {
 
                 switch (alt140) {
             	case 1 :
-            	    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:935:36: ( '+' | '-' ) multiplicativeExpression
+            	    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:945:36: ( '+' | '-' ) multiplicativeExpression
             	    {
             	    if ( input.LA(1)==36||input.LA(1)==40 ) {
             	        input.consume();
@@ -10971,7 +11011,7 @@ public class JavaParser extends Parser {
             	    }
 
 
-            	    pushFollow(FOLLOW_multiplicativeExpression_in_additiveExpression4909);
+            	    pushFollow(FOLLOW_multiplicativeExpression_in_additiveExpression4916);
             	    multiplicativeExpression();
 
             	    state._fsp--;
@@ -11006,23 +11046,23 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "multiplicativeExpression"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:938:1: multiplicativeExpression : unaryExpression ( ( '*' | '/' | '%' ) unaryExpression )* ;
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:948:1: multiplicativeExpression : unaryExpression ( ( '*' | '/' | '%' ) unaryExpression )* ;
     public final void multiplicativeExpression() throws RecognitionException {
         int multiplicativeExpression_StartIndex = input.index();
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 120) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:939:5: ( unaryExpression ( ( '*' | '/' | '%' ) unaryExpression )* )
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:939:9: unaryExpression ( ( '*' | '/' | '%' ) unaryExpression )*
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:949:5: ( unaryExpression ( ( '*' | '/' | '%' ) unaryExpression )* )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:949:9: unaryExpression ( ( '*' | '/' | '%' ) unaryExpression )*
             {
-            pushFollow(FOLLOW_unaryExpression_in_multiplicativeExpression4931);
+            pushFollow(FOLLOW_unaryExpression_in_multiplicativeExpression4938);
             unaryExpression();
 
             state._fsp--;
             if (state.failed) return ;
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:939:25: ( ( '*' | '/' | '%' ) unaryExpression )*
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:949:25: ( ( '*' | '/' | '%' ) unaryExpression )*
             loop141:
             do {
                 int alt141=2;
@@ -11035,7 +11075,7 @@ public class JavaParser extends Parser {
 
                 switch (alt141) {
             	case 1 :
-            	    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:939:27: ( '*' | '/' | '%' ) unaryExpression
+            	    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:949:27: ( '*' | '/' | '%' ) unaryExpression
             	    {
             	    if ( input.LA(1)==27||input.LA(1)==34||input.LA(1)==45 ) {
             	        input.consume();
@@ -11049,7 +11089,7 @@ public class JavaParser extends Parser {
             	    }
 
 
-            	    pushFollow(FOLLOW_unaryExpression_in_multiplicativeExpression4949);
+            	    pushFollow(FOLLOW_unaryExpression_in_multiplicativeExpression4956);
             	    unaryExpression();
 
             	    state._fsp--;
@@ -11084,14 +11124,14 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "unaryExpression"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:942:1: unaryExpression : ( '+' unaryExpression | '-' unaryExpression | '++' unaryExpression | '--' unaryExpression | unaryExpressionNotPlusMinus );
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:952:1: unaryExpression : ( '+' unaryExpression | '-' unaryExpression | '++' unaryExpression | '--' unaryExpression | unaryExpressionNotPlusMinus );
     public final void unaryExpression() throws RecognitionException {
         int unaryExpression_StartIndex = input.index();
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 121) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:943:5: ( '+' unaryExpression | '-' unaryExpression | '++' unaryExpression | '--' unaryExpression | unaryExpressionNotPlusMinus )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:953:5: ( '+' unaryExpression | '-' unaryExpression | '++' unaryExpression | '--' unaryExpression | unaryExpressionNotPlusMinus )
             int alt142=5;
             switch ( input.LA(1) ) {
             case 36:
@@ -11154,11 +11194,11 @@ public class JavaParser extends Parser {
 
             switch (alt142) {
                 case 1 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:943:9: '+' unaryExpression
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:953:9: '+' unaryExpression
                     {
-                    match(input,36,FOLLOW_36_in_unaryExpression4975); if (state.failed) return ;
+                    match(input,36,FOLLOW_36_in_unaryExpression4982); if (state.failed) return ;
 
-                    pushFollow(FOLLOW_unaryExpression_in_unaryExpression4977);
+                    pushFollow(FOLLOW_unaryExpression_in_unaryExpression4984);
                     unaryExpression();
 
                     state._fsp--;
@@ -11167,11 +11207,11 @@ public class JavaParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:944:9: '-' unaryExpression
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:954:9: '-' unaryExpression
                     {
-                    match(input,40,FOLLOW_40_in_unaryExpression4987); if (state.failed) return ;
+                    match(input,40,FOLLOW_40_in_unaryExpression4994); if (state.failed) return ;
 
-                    pushFollow(FOLLOW_unaryExpression_in_unaryExpression4989);
+                    pushFollow(FOLLOW_unaryExpression_in_unaryExpression4996);
                     unaryExpression();
 
                     state._fsp--;
@@ -11180,11 +11220,11 @@ public class JavaParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:945:9: '++' unaryExpression
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:955:9: '++' unaryExpression
                     {
-                    match(input,37,FOLLOW_37_in_unaryExpression4999); if (state.failed) return ;
+                    match(input,37,FOLLOW_37_in_unaryExpression5006); if (state.failed) return ;
 
-                    pushFollow(FOLLOW_unaryExpression_in_unaryExpression5001);
+                    pushFollow(FOLLOW_unaryExpression_in_unaryExpression5008);
                     unaryExpression();
 
                     state._fsp--;
@@ -11193,11 +11233,11 @@ public class JavaParser extends Parser {
                     }
                     break;
                 case 4 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:946:9: '--' unaryExpression
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:956:9: '--' unaryExpression
                     {
-                    match(input,41,FOLLOW_41_in_unaryExpression5011); if (state.failed) return ;
+                    match(input,41,FOLLOW_41_in_unaryExpression5018); if (state.failed) return ;
 
-                    pushFollow(FOLLOW_unaryExpression_in_unaryExpression5013);
+                    pushFollow(FOLLOW_unaryExpression_in_unaryExpression5020);
                     unaryExpression();
 
                     state._fsp--;
@@ -11206,9 +11246,9 @@ public class JavaParser extends Parser {
                     }
                     break;
                 case 5 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:947:9: unaryExpressionNotPlusMinus
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:957:9: unaryExpressionNotPlusMinus
                     {
-                    pushFollow(FOLLOW_unaryExpressionNotPlusMinus_in_unaryExpression5023);
+                    pushFollow(FOLLOW_unaryExpressionNotPlusMinus_in_unaryExpression5030);
                     unaryExpressionNotPlusMinus();
 
                     state._fsp--;
@@ -11236,14 +11276,14 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "unaryExpressionNotPlusMinus"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:950:1: unaryExpressionNotPlusMinus : ( '~' unaryExpression | '!' unaryExpression | castExpression | primary ( selector )* ( '++' | '--' )? );
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:960:1: unaryExpressionNotPlusMinus : ( '~' unaryExpression | '!' unaryExpression | castExpression | primary ( selector )* ( '++' | '--' )? );
     public final void unaryExpressionNotPlusMinus() throws RecognitionException {
         int unaryExpressionNotPlusMinus_StartIndex = input.index();
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 122) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:951:5: ( '~' unaryExpression | '!' unaryExpression | castExpression | primary ( selector )* ( '++' | '--' )? )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:961:5: ( '~' unaryExpression | '!' unaryExpression | castExpression | primary ( selector )* ( '++' | '--' )? )
             int alt145=4;
             switch ( input.LA(1) ) {
             case 113:
@@ -11313,11 +11353,11 @@ public class JavaParser extends Parser {
 
             switch (alt145) {
                 case 1 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:951:9: '~' unaryExpression
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:961:9: '~' unaryExpression
                     {
-                    match(input,113,FOLLOW_113_in_unaryExpressionNotPlusMinus5042); if (state.failed) return ;
+                    match(input,113,FOLLOW_113_in_unaryExpressionNotPlusMinus5049); if (state.failed) return ;
 
-                    pushFollow(FOLLOW_unaryExpression_in_unaryExpressionNotPlusMinus5044);
+                    pushFollow(FOLLOW_unaryExpression_in_unaryExpressionNotPlusMinus5051);
                     unaryExpression();
 
                     state._fsp--;
@@ -11326,11 +11366,11 @@ public class JavaParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:952:9: '!' unaryExpression
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:962:9: '!' unaryExpression
                     {
-                    match(input,25,FOLLOW_25_in_unaryExpressionNotPlusMinus5054); if (state.failed) return ;
+                    match(input,25,FOLLOW_25_in_unaryExpressionNotPlusMinus5061); if (state.failed) return ;
 
-                    pushFollow(FOLLOW_unaryExpression_in_unaryExpressionNotPlusMinus5056);
+                    pushFollow(FOLLOW_unaryExpression_in_unaryExpressionNotPlusMinus5063);
                     unaryExpression();
 
                     state._fsp--;
@@ -11339,9 +11379,9 @@ public class JavaParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:953:9: castExpression
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:963:9: castExpression
                     {
-                    pushFollow(FOLLOW_castExpression_in_unaryExpressionNotPlusMinus5066);
+                    pushFollow(FOLLOW_castExpression_in_unaryExpressionNotPlusMinus5073);
                     castExpression();
 
                     state._fsp--;
@@ -11350,15 +11390,15 @@ public class JavaParser extends Parser {
                     }
                     break;
                 case 4 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:954:9: primary ( selector )* ( '++' | '--' )?
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:964:9: primary ( selector )* ( '++' | '--' )?
                     {
-                    pushFollow(FOLLOW_primary_in_unaryExpressionNotPlusMinus5076);
+                    pushFollow(FOLLOW_primary_in_unaryExpressionNotPlusMinus5083);
                     primary();
 
                     state._fsp--;
                     if (state.failed) return ;
 
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:954:17: ( selector )*
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:964:17: ( selector )*
                     loop143:
                     do {
                         int alt143=2;
@@ -11371,9 +11411,9 @@ public class JavaParser extends Parser {
 
                         switch (alt143) {
                     	case 1 :
-                    	    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:954:17: selector
+                    	    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:964:17: selector
                     	    {
-                    	    pushFollow(FOLLOW_selector_in_unaryExpressionNotPlusMinus5078);
+                    	    pushFollow(FOLLOW_selector_in_unaryExpressionNotPlusMinus5085);
                     	    selector();
 
                     	    state._fsp--;
@@ -11388,7 +11428,7 @@ public class JavaParser extends Parser {
                     } while (true);
 
 
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:954:27: ( '++' | '--' )?
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:964:27: ( '++' | '--' )?
                     int alt144=2;
                     int LA144_0 = input.LA(1);
 
@@ -11439,14 +11479,14 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "castExpression"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:957:1: castExpression : ( '(' primitiveType ')' unaryExpression | '(' ( type | expression ) ')' unaryExpressionNotPlusMinus );
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:967:1: castExpression : ( '(' primitiveType ')' unaryExpression | '(' ( type | expression ) ')' unaryExpressionNotPlusMinus );
     public final void castExpression() throws RecognitionException {
         int castExpression_StartIndex = input.index();
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 123) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:958:5: ( '(' primitiveType ')' unaryExpression | '(' ( type | expression ) ')' unaryExpressionNotPlusMinus )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:968:5: ( '(' primitiveType ')' unaryExpression | '(' ( type | expression ) ')' unaryExpressionNotPlusMinus )
             int alt147=2;
             int LA147_0 = input.LA(1);
 
@@ -11478,19 +11518,19 @@ public class JavaParser extends Parser {
             }
             switch (alt147) {
                 case 1 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:958:8: '(' primitiveType ')' unaryExpression
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:968:8: '(' primitiveType ')' unaryExpression
                     {
-                    match(input,32,FOLLOW_32_in_castExpression5104); if (state.failed) return ;
+                    match(input,32,FOLLOW_32_in_castExpression5111); if (state.failed) return ;
 
-                    pushFollow(FOLLOW_primitiveType_in_castExpression5106);
+                    pushFollow(FOLLOW_primitiveType_in_castExpression5113);
                     primitiveType();
 
                     state._fsp--;
                     if (state.failed) return ;
 
-                    match(input,33,FOLLOW_33_in_castExpression5108); if (state.failed) return ;
+                    match(input,33,FOLLOW_33_in_castExpression5115); if (state.failed) return ;
 
-                    pushFollow(FOLLOW_unaryExpression_in_castExpression5110);
+                    pushFollow(FOLLOW_unaryExpression_in_castExpression5117);
                     unaryExpression();
 
                     state._fsp--;
@@ -11499,18 +11539,18 @@ public class JavaParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:959:8: '(' ( type | expression ) ')' unaryExpressionNotPlusMinus
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:969:8: '(' ( type | expression ) ')' unaryExpressionNotPlusMinus
                     {
-                    match(input,32,FOLLOW_32_in_castExpression5119); if (state.failed) return ;
+                    match(input,32,FOLLOW_32_in_castExpression5126); if (state.failed) return ;
 
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:959:12: ( type | expression )
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:969:12: ( type | expression )
                     int alt146=2;
                     alt146 = dfa146.predict(input);
                     switch (alt146) {
                         case 1 :
-                            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:959:13: type
+                            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:969:13: type
                             {
-                            pushFollow(FOLLOW_type_in_castExpression5122);
+                            pushFollow(FOLLOW_type_in_castExpression5129);
                             type();
 
                             state._fsp--;
@@ -11519,9 +11559,9 @@ public class JavaParser extends Parser {
                             }
                             break;
                         case 2 :
-                            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:959:20: expression
+                            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:969:20: expression
                             {
-                            pushFollow(FOLLOW_expression_in_castExpression5126);
+                            pushFollow(FOLLOW_expression_in_castExpression5133);
                             expression();
 
                             state._fsp--;
@@ -11533,9 +11573,9 @@ public class JavaParser extends Parser {
                     }
 
 
-                    match(input,33,FOLLOW_33_in_castExpression5129); if (state.failed) return ;
+                    match(input,33,FOLLOW_33_in_castExpression5136); if (state.failed) return ;
 
-                    pushFollow(FOLLOW_unaryExpressionNotPlusMinus_in_castExpression5131);
+                    pushFollow(FOLLOW_unaryExpressionNotPlusMinus_in_castExpression5138);
                     unaryExpressionNotPlusMinus();
 
                     state._fsp--;
@@ -11563,14 +11603,14 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "primary"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:962:1: primary : ( parExpression | 'this' ( '.' Identifier )* ( identifierSuffix )? | 'super' superSuffix | literal | 'new' creator | Identifier ( '.' Identifier )* ( identifierSuffix )? | primitiveType ( '[' ']' )* '.' 'class' | 'void' '.' 'class' );
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:972:1: primary : ( parExpression | 'this' ( '.' Identifier )* ( identifierSuffix )? | 'super' superSuffix | literal | 'new' creator | Identifier ( '.' Identifier )* ( identifierSuffix )? | primitiveType ( '[' ']' )* '.' 'class' | 'void' '.' 'class' );
     public final void primary() throws RecognitionException {
         int primary_StartIndex = input.index();
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 124) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:963:5: ( parExpression | 'this' ( '.' Identifier )* ( identifierSuffix )? | 'super' superSuffix | literal | 'new' creator | Identifier ( '.' Identifier )* ( identifierSuffix )? | primitiveType ( '[' ']' )* '.' 'class' | 'void' '.' 'class' )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:973:5: ( parExpression | 'this' ( '.' Identifier )* ( identifierSuffix )? | 'super' superSuffix | literal | 'new' creator | Identifier ( '.' Identifier )* ( identifierSuffix )? | primitiveType ( '[' ']' )* '.' 'class' | 'void' '.' 'class' )
             int alt153=8;
             switch ( input.LA(1) ) {
             case 32:
@@ -11639,9 +11679,9 @@ public class JavaParser extends Parser {
 
             switch (alt153) {
                 case 1 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:963:9: parExpression
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:973:9: parExpression
                     {
-                    pushFollow(FOLLOW_parExpression_in_primary5150);
+                    pushFollow(FOLLOW_parExpression_in_primary5157);
                     parExpression();
 
                     state._fsp--;
@@ -11650,11 +11690,11 @@ public class JavaParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:964:9: 'this' ( '.' Identifier )* ( identifierSuffix )?
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:974:9: 'this' ( '.' Identifier )* ( identifierSuffix )?
                     {
-                    match(input,99,FOLLOW_99_in_primary5160); if (state.failed) return ;
+                    match(input,99,FOLLOW_99_in_primary5167); if (state.failed) return ;
 
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:964:16: ( '.' Identifier )*
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:974:16: ( '.' Identifier )*
                     loop148:
                     do {
                         int alt148=2;
@@ -11679,11 +11719,11 @@ public class JavaParser extends Parser {
 
                         switch (alt148) {
                     	case 1 :
-                    	    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:964:17: '.' Identifier
+                    	    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:974:17: '.' Identifier
                     	    {
-                    	    match(input,43,FOLLOW_43_in_primary5163); if (state.failed) return ;
+                    	    match(input,43,FOLLOW_43_in_primary5170); if (state.failed) return ;
 
-                    	    match(input,Identifier,FOLLOW_Identifier_in_primary5165); if (state.failed) return ;
+                    	    match(input,Identifier,FOLLOW_Identifier_in_primary5172); if (state.failed) return ;
 
                     	    }
                     	    break;
@@ -11694,7 +11734,7 @@ public class JavaParser extends Parser {
                     } while (true);
 
 
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:964:34: ( identifierSuffix )?
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:974:34: ( identifierSuffix )?
                     int alt149=2;
                     switch ( input.LA(1) ) {
                         case 55:
@@ -11724,9 +11764,9 @@ public class JavaParser extends Parser {
 
                     switch (alt149) {
                         case 1 :
-                            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:964:34: identifierSuffix
+                            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:974:34: identifierSuffix
                             {
-                            pushFollow(FOLLOW_identifierSuffix_in_primary5169);
+                            pushFollow(FOLLOW_identifierSuffix_in_primary5176);
                             identifierSuffix();
 
                             state._fsp--;
@@ -11741,11 +11781,11 @@ public class JavaParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:965:9: 'super' superSuffix
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:975:9: 'super' superSuffix
                     {
-                    match(input,96,FOLLOW_96_in_primary5180); if (state.failed) return ;
+                    match(input,96,FOLLOW_96_in_primary5187); if (state.failed) return ;
 
-                    pushFollow(FOLLOW_superSuffix_in_primary5182);
+                    pushFollow(FOLLOW_superSuffix_in_primary5189);
                     superSuffix();
 
                     state._fsp--;
@@ -11754,9 +11794,9 @@ public class JavaParser extends Parser {
                     }
                     break;
                 case 4 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:966:9: literal
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:976:9: literal
                     {
-                    pushFollow(FOLLOW_literal_in_primary5192);
+                    pushFollow(FOLLOW_literal_in_primary5199);
                     literal();
 
                     state._fsp--;
@@ -11765,11 +11805,11 @@ public class JavaParser extends Parser {
                     }
                     break;
                 case 5 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:967:9: 'new' creator
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:977:9: 'new' creator
                     {
-                    match(input,86,FOLLOW_86_in_primary5202); if (state.failed) return ;
+                    match(input,86,FOLLOW_86_in_primary5209); if (state.failed) return ;
 
-                    pushFollow(FOLLOW_creator_in_primary5204);
+                    pushFollow(FOLLOW_creator_in_primary5211);
                     creator();
 
                     state._fsp--;
@@ -11778,11 +11818,11 @@ public class JavaParser extends Parser {
                     }
                     break;
                 case 6 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:968:9: Identifier ( '.' Identifier )* ( identifierSuffix )?
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:978:9: Identifier ( '.' Identifier )* ( identifierSuffix )?
                     {
-                    match(input,Identifier,FOLLOW_Identifier_in_primary5214); if (state.failed) return ;
+                    match(input,Identifier,FOLLOW_Identifier_in_primary5221); if (state.failed) return ;
 
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:968:20: ( '.' Identifier )*
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:978:20: ( '.' Identifier )*
                     loop150:
                     do {
                         int alt150=2;
@@ -11807,11 +11847,11 @@ public class JavaParser extends Parser {
 
                         switch (alt150) {
                     	case 1 :
-                    	    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:968:21: '.' Identifier
+                    	    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:978:21: '.' Identifier
                     	    {
-                    	    match(input,43,FOLLOW_43_in_primary5217); if (state.failed) return ;
+                    	    match(input,43,FOLLOW_43_in_primary5224); if (state.failed) return ;
 
-                    	    match(input,Identifier,FOLLOW_Identifier_in_primary5219); if (state.failed) return ;
+                    	    match(input,Identifier,FOLLOW_Identifier_in_primary5226); if (state.failed) return ;
 
                     	    }
                     	    break;
@@ -11822,7 +11862,7 @@ public class JavaParser extends Parser {
                     } while (true);
 
 
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:968:38: ( identifierSuffix )?
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:978:38: ( identifierSuffix )?
                     int alt151=2;
                     switch ( input.LA(1) ) {
                         case 55:
@@ -11852,9 +11892,9 @@ public class JavaParser extends Parser {
 
                     switch (alt151) {
                         case 1 :
-                            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:968:38: identifierSuffix
+                            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:978:38: identifierSuffix
                             {
-                            pushFollow(FOLLOW_identifierSuffix_in_primary5223);
+                            pushFollow(FOLLOW_identifierSuffix_in_primary5230);
                             identifierSuffix();
 
                             state._fsp--;
@@ -11869,15 +11909,15 @@ public class JavaParser extends Parser {
                     }
                     break;
                 case 7 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:969:9: primitiveType ( '[' ']' )* '.' 'class'
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:979:9: primitiveType ( '[' ']' )* '.' 'class'
                     {
-                    pushFollow(FOLLOW_primitiveType_in_primary5234);
+                    pushFollow(FOLLOW_primitiveType_in_primary5241);
                     primitiveType();
 
                     state._fsp--;
                     if (state.failed) return ;
 
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:969:23: ( '[' ']' )*
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:979:23: ( '[' ']' )*
                     loop152:
                     do {
                         int alt152=2;
@@ -11890,11 +11930,11 @@ public class JavaParser extends Parser {
 
                         switch (alt152) {
                     	case 1 :
-                    	    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:969:24: '[' ']'
+                    	    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:979:24: '[' ']'
                     	    {
-                    	    match(input,55,FOLLOW_55_in_primary5237); if (state.failed) return ;
+                    	    match(input,55,FOLLOW_55_in_primary5244); if (state.failed) return ;
 
-                    	    match(input,56,FOLLOW_56_in_primary5239); if (state.failed) return ;
+                    	    match(input,56,FOLLOW_56_in_primary5246); if (state.failed) return ;
 
                     	    }
                     	    break;
@@ -11905,20 +11945,20 @@ public class JavaParser extends Parser {
                     } while (true);
 
 
-                    match(input,43,FOLLOW_43_in_primary5243); if (state.failed) return ;
+                    match(input,43,FOLLOW_43_in_primary5250); if (state.failed) return ;
 
-                    match(input,66,FOLLOW_66_in_primary5245); if (state.failed) return ;
+                    match(input,66,FOLLOW_66_in_primary5252); if (state.failed) return ;
 
                     }
                     break;
                 case 8 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:970:9: 'void' '.' 'class'
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:980:9: 'void' '.' 'class'
                     {
-                    match(input,105,FOLLOW_105_in_primary5255); if (state.failed) return ;
+                    match(input,105,FOLLOW_105_in_primary5262); if (state.failed) return ;
 
-                    match(input,43,FOLLOW_43_in_primary5257); if (state.failed) return ;
+                    match(input,43,FOLLOW_43_in_primary5264); if (state.failed) return ;
 
-                    match(input,66,FOLLOW_66_in_primary5259); if (state.failed) return ;
+                    match(input,66,FOLLOW_66_in_primary5266); if (state.failed) return ;
 
                     }
                     break;
@@ -11942,14 +11982,14 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "identifierSuffix"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:973:1: identifierSuffix : ( ( '[' ']' )+ '.' 'class' | ( '[' expression ']' )+ | arguments | '.' 'class' | '.' explicitGenericInvocation | '.' 'this' | '.' 'super' arguments | '.' 'new' innerCreator );
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:983:1: identifierSuffix : ( ( '[' ']' )+ '.' 'class' | ( '[' expression ']' )+ | arguments | '.' 'class' | '.' explicitGenericInvocation | '.' 'this' | '.' 'super' arguments | '.' 'new' innerCreator );
     public final void identifierSuffix() throws RecognitionException {
         int identifierSuffix_StartIndex = input.index();
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 125) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:974:5: ( ( '[' ']' )+ '.' 'class' | ( '[' expression ']' )+ | arguments | '.' 'class' | '.' explicitGenericInvocation | '.' 'this' | '.' 'super' arguments | '.' 'new' innerCreator )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:984:5: ( ( '[' ']' )+ '.' 'class' | ( '[' expression ']' )+ | arguments | '.' 'class' | '.' explicitGenericInvocation | '.' 'this' | '.' 'super' arguments | '.' 'new' innerCreator )
             int alt156=8;
             switch ( input.LA(1) ) {
             case 55:
@@ -12027,9 +12067,9 @@ public class JavaParser extends Parser {
 
             switch (alt156) {
                 case 1 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:974:9: ( '[' ']' )+ '.' 'class'
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:984:9: ( '[' ']' )+ '.' 'class'
                     {
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:974:9: ( '[' ']' )+
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:984:9: ( '[' ']' )+
                     int cnt154=0;
                     loop154:
                     do {
@@ -12043,11 +12083,11 @@ public class JavaParser extends Parser {
 
                         switch (alt154) {
                     	case 1 :
-                    	    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:974:10: '[' ']'
+                    	    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:984:10: '[' ']'
                     	    {
-                    	    match(input,55,FOLLOW_55_in_identifierSuffix5279); if (state.failed) return ;
+                    	    match(input,55,FOLLOW_55_in_identifierSuffix5286); if (state.failed) return ;
 
-                    	    match(input,56,FOLLOW_56_in_identifierSuffix5281); if (state.failed) return ;
+                    	    match(input,56,FOLLOW_56_in_identifierSuffix5288); if (state.failed) return ;
 
                     	    }
                     	    break;
@@ -12063,16 +12103,16 @@ public class JavaParser extends Parser {
                     } while (true);
 
 
-                    match(input,43,FOLLOW_43_in_identifierSuffix5285); if (state.failed) return ;
+                    match(input,43,FOLLOW_43_in_identifierSuffix5292); if (state.failed) return ;
 
-                    match(input,66,FOLLOW_66_in_identifierSuffix5287); if (state.failed) return ;
+                    match(input,66,FOLLOW_66_in_identifierSuffix5294); if (state.failed) return ;
 
                     }
                     break;
                 case 2 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:975:9: ( '[' expression ']' )+
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:985:9: ( '[' expression ']' )+
                     {
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:975:9: ( '[' expression ']' )+
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:985:9: ( '[' expression ']' )+
                     int cnt155=0;
                     loop155:
                     do {
@@ -12092,17 +12132,17 @@ public class JavaParser extends Parser {
 
                         switch (alt155) {
                     	case 1 :
-                    	    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:975:10: '[' expression ']'
+                    	    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:985:10: '[' expression ']'
                     	    {
-                    	    match(input,55,FOLLOW_55_in_identifierSuffix5298); if (state.failed) return ;
+                    	    match(input,55,FOLLOW_55_in_identifierSuffix5305); if (state.failed) return ;
 
-                    	    pushFollow(FOLLOW_expression_in_identifierSuffix5300);
+                    	    pushFollow(FOLLOW_expression_in_identifierSuffix5307);
                     	    expression();
 
                     	    state._fsp--;
                     	    if (state.failed) return ;
 
-                    	    match(input,56,FOLLOW_56_in_identifierSuffix5302); if (state.failed) return ;
+                    	    match(input,56,FOLLOW_56_in_identifierSuffix5309); if (state.failed) return ;
 
                     	    }
                     	    break;
@@ -12121,9 +12161,9 @@ public class JavaParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:976:9: arguments
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:986:9: arguments
                     {
-                    pushFollow(FOLLOW_arguments_in_identifierSuffix5315);
+                    pushFollow(FOLLOW_arguments_in_identifierSuffix5322);
                     arguments();
 
                     state._fsp--;
@@ -12132,20 +12172,20 @@ public class JavaParser extends Parser {
                     }
                     break;
                 case 4 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:977:9: '.' 'class'
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:987:9: '.' 'class'
                     {
-                    match(input,43,FOLLOW_43_in_identifierSuffix5325); if (state.failed) return ;
+                    match(input,43,FOLLOW_43_in_identifierSuffix5332); if (state.failed) return ;
 
-                    match(input,66,FOLLOW_66_in_identifierSuffix5327); if (state.failed) return ;
+                    match(input,66,FOLLOW_66_in_identifierSuffix5334); if (state.failed) return ;
 
                     }
                     break;
                 case 5 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:978:9: '.' explicitGenericInvocation
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:988:9: '.' explicitGenericInvocation
                     {
-                    match(input,43,FOLLOW_43_in_identifierSuffix5337); if (state.failed) return ;
+                    match(input,43,FOLLOW_43_in_identifierSuffix5344); if (state.failed) return ;
 
-                    pushFollow(FOLLOW_explicitGenericInvocation_in_identifierSuffix5339);
+                    pushFollow(FOLLOW_explicitGenericInvocation_in_identifierSuffix5346);
                     explicitGenericInvocation();
 
                     state._fsp--;
@@ -12154,22 +12194,22 @@ public class JavaParser extends Parser {
                     }
                     break;
                 case 6 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:979:9: '.' 'this'
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:989:9: '.' 'this'
                     {
-                    match(input,43,FOLLOW_43_in_identifierSuffix5349); if (state.failed) return ;
+                    match(input,43,FOLLOW_43_in_identifierSuffix5356); if (state.failed) return ;
 
-                    match(input,99,FOLLOW_99_in_identifierSuffix5351); if (state.failed) return ;
+                    match(input,99,FOLLOW_99_in_identifierSuffix5358); if (state.failed) return ;
 
                     }
                     break;
                 case 7 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:980:9: '.' 'super' arguments
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:990:9: '.' 'super' arguments
                     {
-                    match(input,43,FOLLOW_43_in_identifierSuffix5361); if (state.failed) return ;
+                    match(input,43,FOLLOW_43_in_identifierSuffix5368); if (state.failed) return ;
 
-                    match(input,96,FOLLOW_96_in_identifierSuffix5363); if (state.failed) return ;
+                    match(input,96,FOLLOW_96_in_identifierSuffix5370); if (state.failed) return ;
 
-                    pushFollow(FOLLOW_arguments_in_identifierSuffix5365);
+                    pushFollow(FOLLOW_arguments_in_identifierSuffix5372);
                     arguments();
 
                     state._fsp--;
@@ -12178,13 +12218,13 @@ public class JavaParser extends Parser {
                     }
                     break;
                 case 8 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:981:9: '.' 'new' innerCreator
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:991:9: '.' 'new' innerCreator
                     {
-                    match(input,43,FOLLOW_43_in_identifierSuffix5375); if (state.failed) return ;
+                    match(input,43,FOLLOW_43_in_identifierSuffix5382); if (state.failed) return ;
 
-                    match(input,86,FOLLOW_86_in_identifierSuffix5377); if (state.failed) return ;
+                    match(input,86,FOLLOW_86_in_identifierSuffix5384); if (state.failed) return ;
 
-                    pushFollow(FOLLOW_innerCreator_in_identifierSuffix5379);
+                    pushFollow(FOLLOW_innerCreator_in_identifierSuffix5386);
                     innerCreator();
 
                     state._fsp--;
@@ -12212,14 +12252,14 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "creator"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:984:1: creator : ( nonWildcardTypeArguments createdName classCreatorRest | createdName ( arrayCreatorRest | classCreatorRest ) );
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:994:1: creator : ( nonWildcardTypeArguments createdName classCreatorRest | createdName ( arrayCreatorRest | classCreatorRest ) );
     public final void creator() throws RecognitionException {
         int creator_StartIndex = input.index();
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 126) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:985:5: ( nonWildcardTypeArguments createdName classCreatorRest | createdName ( arrayCreatorRest | classCreatorRest ) )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:995:5: ( nonWildcardTypeArguments createdName classCreatorRest | createdName ( arrayCreatorRest | classCreatorRest ) )
             int alt158=2;
             int LA158_0 = input.LA(1);
 
@@ -12239,21 +12279,21 @@ public class JavaParser extends Parser {
             }
             switch (alt158) {
                 case 1 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:985:9: nonWildcardTypeArguments createdName classCreatorRest
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:995:9: nonWildcardTypeArguments createdName classCreatorRest
                     {
-                    pushFollow(FOLLOW_nonWildcardTypeArguments_in_creator5398);
+                    pushFollow(FOLLOW_nonWildcardTypeArguments_in_creator5405);
                     nonWildcardTypeArguments();
 
                     state._fsp--;
                     if (state.failed) return ;
 
-                    pushFollow(FOLLOW_createdName_in_creator5400);
+                    pushFollow(FOLLOW_createdName_in_creator5407);
                     createdName();
 
                     state._fsp--;
                     if (state.failed) return ;
 
-                    pushFollow(FOLLOW_classCreatorRest_in_creator5402);
+                    pushFollow(FOLLOW_classCreatorRest_in_creator5409);
                     classCreatorRest();
 
                     state._fsp--;
@@ -12262,15 +12302,15 @@ public class JavaParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:986:9: createdName ( arrayCreatorRest | classCreatorRest )
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:996:9: createdName ( arrayCreatorRest | classCreatorRest )
                     {
-                    pushFollow(FOLLOW_createdName_in_creator5412);
+                    pushFollow(FOLLOW_createdName_in_creator5419);
                     createdName();
 
                     state._fsp--;
                     if (state.failed) return ;
 
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:986:21: ( arrayCreatorRest | classCreatorRest )
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:996:21: ( arrayCreatorRest | classCreatorRest )
                     int alt157=2;
                     int LA157_0 = input.LA(1);
 
@@ -12290,9 +12330,9 @@ public class JavaParser extends Parser {
                     }
                     switch (alt157) {
                         case 1 :
-                            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:986:22: arrayCreatorRest
+                            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:996:22: arrayCreatorRest
                             {
-                            pushFollow(FOLLOW_arrayCreatorRest_in_creator5415);
+                            pushFollow(FOLLOW_arrayCreatorRest_in_creator5422);
                             arrayCreatorRest();
 
                             state._fsp--;
@@ -12301,9 +12341,9 @@ public class JavaParser extends Parser {
                             }
                             break;
                         case 2 :
-                            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:986:41: classCreatorRest
+                            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:996:41: classCreatorRest
                             {
-                            pushFollow(FOLLOW_classCreatorRest_in_creator5419);
+                            pushFollow(FOLLOW_classCreatorRest_in_creator5426);
                             classCreatorRest();
 
                             state._fsp--;
@@ -12337,14 +12377,14 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "createdName"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:989:1: createdName : ( classOrInterfaceType | primitiveType );
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:999:1: createdName : ( classOrInterfaceType | primitiveType );
     public final void createdName() throws RecognitionException {
         int createdName_StartIndex = input.index();
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 127) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:990:5: ( classOrInterfaceType | primitiveType )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:1000:5: ( classOrInterfaceType | primitiveType )
             int alt159=2;
             int LA159_0 = input.LA(1);
 
@@ -12364,9 +12404,9 @@ public class JavaParser extends Parser {
             }
             switch (alt159) {
                 case 1 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:990:9: classOrInterfaceType
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:1000:9: classOrInterfaceType
                     {
-                    pushFollow(FOLLOW_classOrInterfaceType_in_createdName5439);
+                    pushFollow(FOLLOW_classOrInterfaceType_in_createdName5446);
                     classOrInterfaceType();
 
                     state._fsp--;
@@ -12375,9 +12415,9 @@ public class JavaParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:991:9: primitiveType
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:1001:9: primitiveType
                     {
-                    pushFollow(FOLLOW_primitiveType_in_createdName5449);
+                    pushFollow(FOLLOW_primitiveType_in_createdName5456);
                     primitiveType();
 
                     state._fsp--;
@@ -12405,17 +12445,17 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "innerCreator"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:994:1: innerCreator : ( nonWildcardTypeArguments )? Identifier classCreatorRest ;
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:1004:1: innerCreator : ( nonWildcardTypeArguments )? Identifier classCreatorRest ;
     public final void innerCreator() throws RecognitionException {
         int innerCreator_StartIndex = input.index();
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 128) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:995:5: ( ( nonWildcardTypeArguments )? Identifier classCreatorRest )
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:995:9: ( nonWildcardTypeArguments )? Identifier classCreatorRest
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:1005:5: ( ( nonWildcardTypeArguments )? Identifier classCreatorRest )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:1005:9: ( nonWildcardTypeArguments )? Identifier classCreatorRest
             {
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:995:9: ( nonWildcardTypeArguments )?
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:1005:9: ( nonWildcardTypeArguments )?
             int alt160=2;
             int LA160_0 = input.LA(1);
 
@@ -12424,9 +12464,9 @@ public class JavaParser extends Parser {
             }
             switch (alt160) {
                 case 1 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:995:9: nonWildcardTypeArguments
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:1005:9: nonWildcardTypeArguments
                     {
-                    pushFollow(FOLLOW_nonWildcardTypeArguments_in_innerCreator5472);
+                    pushFollow(FOLLOW_nonWildcardTypeArguments_in_innerCreator5479);
                     nonWildcardTypeArguments();
 
                     state._fsp--;
@@ -12438,9 +12478,9 @@ public class JavaParser extends Parser {
             }
 
 
-            match(input,Identifier,FOLLOW_Identifier_in_innerCreator5475); if (state.failed) return ;
+            match(input,Identifier,FOLLOW_Identifier_in_innerCreator5482); if (state.failed) return ;
 
-            pushFollow(FOLLOW_classCreatorRest_in_innerCreator5477);
+            pushFollow(FOLLOW_classCreatorRest_in_innerCreator5484);
             classCreatorRest();
 
             state._fsp--;
@@ -12466,19 +12506,19 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "arrayCreatorRest"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:998:1: arrayCreatorRest : '[' ( ']' ( '[' ']' )* arrayInitializer | expression ']' ( '[' expression ']' )* ( '[' ']' )* ) ;
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:1008:1: arrayCreatorRest : '[' ( ']' ( '[' ']' )* arrayInitializer | expression ']' ( '[' expression ']' )* ( '[' ']' )* ) ;
     public final void arrayCreatorRest() throws RecognitionException {
         int arrayCreatorRest_StartIndex = input.index();
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 129) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:999:5: ( '[' ( ']' ( '[' ']' )* arrayInitializer | expression ']' ( '[' expression ']' )* ( '[' ']' )* ) )
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:999:9: '[' ( ']' ( '[' ']' )* arrayInitializer | expression ']' ( '[' expression ']' )* ( '[' ']' )* )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:1009:5: ( '[' ( ']' ( '[' ']' )* arrayInitializer | expression ']' ( '[' expression ']' )* ( '[' ']' )* ) )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:1009:9: '[' ( ']' ( '[' ']' )* arrayInitializer | expression ']' ( '[' expression ']' )* ( '[' ']' )* )
             {
-            match(input,55,FOLLOW_55_in_arrayCreatorRest5496); if (state.failed) return ;
+            match(input,55,FOLLOW_55_in_arrayCreatorRest5503); if (state.failed) return ;
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:1000:9: ( ']' ( '[' ']' )* arrayInitializer | expression ']' ( '[' expression ']' )* ( '[' ']' )* )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:1010:9: ( ']' ( '[' ']' )* arrayInitializer | expression ']' ( '[' expression ']' )* ( '[' ']' )* )
             int alt164=2;
             int LA164_0 = input.LA(1);
 
@@ -12498,11 +12538,11 @@ public class JavaParser extends Parser {
             }
             switch (alt164) {
                 case 1 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:1000:13: ']' ( '[' ']' )* arrayInitializer
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:1010:13: ']' ( '[' ']' )* arrayInitializer
                     {
-                    match(input,56,FOLLOW_56_in_arrayCreatorRest5510); if (state.failed) return ;
+                    match(input,56,FOLLOW_56_in_arrayCreatorRest5517); if (state.failed) return ;
 
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:1000:17: ( '[' ']' )*
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:1010:17: ( '[' ']' )*
                     loop161:
                     do {
                         int alt161=2;
@@ -12515,11 +12555,11 @@ public class JavaParser extends Parser {
 
                         switch (alt161) {
                     	case 1 :
-                    	    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:1000:18: '[' ']'
+                    	    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:1010:18: '[' ']'
                     	    {
-                    	    match(input,55,FOLLOW_55_in_arrayCreatorRest5513); if (state.failed) return ;
+                    	    match(input,55,FOLLOW_55_in_arrayCreatorRest5520); if (state.failed) return ;
 
-                    	    match(input,56,FOLLOW_56_in_arrayCreatorRest5515); if (state.failed) return ;
+                    	    match(input,56,FOLLOW_56_in_arrayCreatorRest5522); if (state.failed) return ;
 
                     	    }
                     	    break;
@@ -12530,7 +12570,7 @@ public class JavaParser extends Parser {
                     } while (true);
 
 
-                    pushFollow(FOLLOW_arrayInitializer_in_arrayCreatorRest5519);
+                    pushFollow(FOLLOW_arrayInitializer_in_arrayCreatorRest5526);
                     arrayInitializer();
 
                     state._fsp--;
@@ -12539,17 +12579,17 @@ public class JavaParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:1001:13: expression ']' ( '[' expression ']' )* ( '[' ']' )*
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:1011:13: expression ']' ( '[' expression ']' )* ( '[' ']' )*
                     {
-                    pushFollow(FOLLOW_expression_in_arrayCreatorRest5533);
+                    pushFollow(FOLLOW_expression_in_arrayCreatorRest5540);
                     expression();
 
                     state._fsp--;
                     if (state.failed) return ;
 
-                    match(input,56,FOLLOW_56_in_arrayCreatorRest5535); if (state.failed) return ;
+                    match(input,56,FOLLOW_56_in_arrayCreatorRest5542); if (state.failed) return ;
 
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:1001:28: ( '[' expression ']' )*
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:1011:28: ( '[' expression ']' )*
                     loop162:
                     do {
                         int alt162=2;
@@ -12568,17 +12608,17 @@ public class JavaParser extends Parser {
 
                         switch (alt162) {
                     	case 1 :
-                    	    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:1001:29: '[' expression ']'
+                    	    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:1011:29: '[' expression ']'
                     	    {
-                    	    match(input,55,FOLLOW_55_in_arrayCreatorRest5538); if (state.failed) return ;
+                    	    match(input,55,FOLLOW_55_in_arrayCreatorRest5545); if (state.failed) return ;
 
-                    	    pushFollow(FOLLOW_expression_in_arrayCreatorRest5540);
+                    	    pushFollow(FOLLOW_expression_in_arrayCreatorRest5547);
                     	    expression();
 
                     	    state._fsp--;
                     	    if (state.failed) return ;
 
-                    	    match(input,56,FOLLOW_56_in_arrayCreatorRest5542); if (state.failed) return ;
+                    	    match(input,56,FOLLOW_56_in_arrayCreatorRest5549); if (state.failed) return ;
 
                     	    }
                     	    break;
@@ -12589,7 +12629,7 @@ public class JavaParser extends Parser {
                     } while (true);
 
 
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:1001:50: ( '[' ']' )*
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:1011:50: ( '[' ']' )*
                     loop163:
                     do {
                         int alt163=2;
@@ -12608,11 +12648,11 @@ public class JavaParser extends Parser {
 
                         switch (alt163) {
                     	case 1 :
-                    	    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:1001:51: '[' ']'
+                    	    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:1011:51: '[' ']'
                     	    {
-                    	    match(input,55,FOLLOW_55_in_arrayCreatorRest5547); if (state.failed) return ;
+                    	    match(input,55,FOLLOW_55_in_arrayCreatorRest5554); if (state.failed) return ;
 
-                    	    match(input,56,FOLLOW_56_in_arrayCreatorRest5549); if (state.failed) return ;
+                    	    match(input,56,FOLLOW_56_in_arrayCreatorRest5556); if (state.failed) return ;
 
                     	    }
                     	    break;
@@ -12649,23 +12689,23 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "classCreatorRest"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:1005:1: classCreatorRest : arguments ( classBody )? ;
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:1015:1: classCreatorRest : arguments ( classBody )? ;
     public final void classCreatorRest() throws RecognitionException {
         int classCreatorRest_StartIndex = input.index();
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 130) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:1006:5: ( arguments ( classBody )? )
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:1006:9: arguments ( classBody )?
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:1016:5: ( arguments ( classBody )? )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:1016:9: arguments ( classBody )?
             {
-            pushFollow(FOLLOW_arguments_in_classCreatorRest5580);
+            pushFollow(FOLLOW_arguments_in_classCreatorRest5587);
             arguments();
 
             state._fsp--;
             if (state.failed) return ;
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:1006:19: ( classBody )?
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:1016:19: ( classBody )?
             int alt165=2;
             int LA165_0 = input.LA(1);
 
@@ -12674,9 +12714,9 @@ public class JavaParser extends Parser {
             }
             switch (alt165) {
                 case 1 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:1006:19: classBody
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:1016:19: classBody
                     {
-                    pushFollow(FOLLOW_classBody_in_classCreatorRest5582);
+                    pushFollow(FOLLOW_classBody_in_classCreatorRest5589);
                     classBody();
 
                     state._fsp--;
@@ -12708,25 +12748,25 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "explicitGenericInvocation"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:1009:1: explicitGenericInvocation : nonWildcardTypeArguments Identifier arguments ;
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:1019:1: explicitGenericInvocation : nonWildcardTypeArguments Identifier arguments ;
     public final void explicitGenericInvocation() throws RecognitionException {
         int explicitGenericInvocation_StartIndex = input.index();
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 131) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:1010:5: ( nonWildcardTypeArguments Identifier arguments )
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:1010:9: nonWildcardTypeArguments Identifier arguments
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:1020:5: ( nonWildcardTypeArguments Identifier arguments )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:1020:9: nonWildcardTypeArguments Identifier arguments
             {
-            pushFollow(FOLLOW_nonWildcardTypeArguments_in_explicitGenericInvocation5606);
+            pushFollow(FOLLOW_nonWildcardTypeArguments_in_explicitGenericInvocation5613);
             nonWildcardTypeArguments();
 
             state._fsp--;
             if (state.failed) return ;
 
-            match(input,Identifier,FOLLOW_Identifier_in_explicitGenericInvocation5608); if (state.failed) return ;
+            match(input,Identifier,FOLLOW_Identifier_in_explicitGenericInvocation5615); if (state.failed) return ;
 
-            pushFollow(FOLLOW_arguments_in_explicitGenericInvocation5610);
+            pushFollow(FOLLOW_arguments_in_explicitGenericInvocation5617);
             arguments();
 
             state._fsp--;
@@ -12752,25 +12792,25 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "nonWildcardTypeArguments"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:1013:1: nonWildcardTypeArguments : '<' typeList '>' ;
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:1023:1: nonWildcardTypeArguments : '<' typeList '>' ;
     public final void nonWildcardTypeArguments() throws RecognitionException {
         int nonWildcardTypeArguments_StartIndex = input.index();
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 132) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:1014:5: ( '<' typeList '>' )
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:1014:9: '<' typeList '>'
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:1024:5: ( '<' typeList '>' )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:1024:9: '<' typeList '>'
             {
-            match(input,49,FOLLOW_49_in_nonWildcardTypeArguments5633); if (state.failed) return ;
+            match(input,49,FOLLOW_49_in_nonWildcardTypeArguments5640); if (state.failed) return ;
 
-            pushFollow(FOLLOW_typeList_in_nonWildcardTypeArguments5635);
+            pushFollow(FOLLOW_typeList_in_nonWildcardTypeArguments5642);
             typeList();
 
             state._fsp--;
             if (state.failed) return ;
 
-            match(input,52,FOLLOW_52_in_nonWildcardTypeArguments5637); if (state.failed) return ;
+            match(input,52,FOLLOW_52_in_nonWildcardTypeArguments5644); if (state.failed) return ;
 
             }
 
@@ -12792,14 +12832,14 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "selector"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:1017:1: selector : ( '.' Identifier ( arguments )? | '.' 'this' | '.' 'super' superSuffix | '.' 'new' innerCreator | '[' expression ']' );
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:1027:1: selector : ( '.' Identifier ( arguments )? | '.' 'this' | '.' 'super' superSuffix | '.' 'new' innerCreator | '[' expression ']' );
     public final void selector() throws RecognitionException {
         int selector_StartIndex = input.index();
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 133) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:1018:5: ( '.' Identifier ( arguments )? | '.' 'this' | '.' 'super' superSuffix | '.' 'new' innerCreator | '[' expression ']' )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:1028:5: ( '.' Identifier ( arguments )? | '.' 'this' | '.' 'super' superSuffix | '.' 'new' innerCreator | '[' expression ']' )
             int alt167=5;
             int LA167_0 = input.LA(1);
 
@@ -12848,13 +12888,13 @@ public class JavaParser extends Parser {
             }
             switch (alt167) {
                 case 1 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:1018:9: '.' Identifier ( arguments )?
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:1028:9: '.' Identifier ( arguments )?
                     {
-                    match(input,43,FOLLOW_43_in_selector5660); if (state.failed) return ;
+                    match(input,43,FOLLOW_43_in_selector5667); if (state.failed) return ;
 
-                    match(input,Identifier,FOLLOW_Identifier_in_selector5662); if (state.failed) return ;
+                    match(input,Identifier,FOLLOW_Identifier_in_selector5669); if (state.failed) return ;
 
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:1018:24: ( arguments )?
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:1028:24: ( arguments )?
                     int alt166=2;
                     int LA166_0 = input.LA(1);
 
@@ -12863,9 +12903,9 @@ public class JavaParser extends Parser {
                     }
                     switch (alt166) {
                         case 1 :
-                            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:1018:24: arguments
+                            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:1028:24: arguments
                             {
-                            pushFollow(FOLLOW_arguments_in_selector5664);
+                            pushFollow(FOLLOW_arguments_in_selector5671);
                             arguments();
 
                             state._fsp--;
@@ -12880,22 +12920,22 @@ public class JavaParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:1019:9: '.' 'this'
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:1029:9: '.' 'this'
                     {
-                    match(input,43,FOLLOW_43_in_selector5675); if (state.failed) return ;
+                    match(input,43,FOLLOW_43_in_selector5682); if (state.failed) return ;
 
-                    match(input,99,FOLLOW_99_in_selector5677); if (state.failed) return ;
+                    match(input,99,FOLLOW_99_in_selector5684); if (state.failed) return ;
 
                     }
                     break;
                 case 3 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:1020:9: '.' 'super' superSuffix
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:1030:9: '.' 'super' superSuffix
                     {
-                    match(input,43,FOLLOW_43_in_selector5687); if (state.failed) return ;
+                    match(input,43,FOLLOW_43_in_selector5694); if (state.failed) return ;
 
-                    match(input,96,FOLLOW_96_in_selector5689); if (state.failed) return ;
+                    match(input,96,FOLLOW_96_in_selector5696); if (state.failed) return ;
 
-                    pushFollow(FOLLOW_superSuffix_in_selector5691);
+                    pushFollow(FOLLOW_superSuffix_in_selector5698);
                     superSuffix();
 
                     state._fsp--;
@@ -12904,13 +12944,13 @@ public class JavaParser extends Parser {
                     }
                     break;
                 case 4 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:1021:9: '.' 'new' innerCreator
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:1031:9: '.' 'new' innerCreator
                     {
-                    match(input,43,FOLLOW_43_in_selector5701); if (state.failed) return ;
+                    match(input,43,FOLLOW_43_in_selector5708); if (state.failed) return ;
 
-                    match(input,86,FOLLOW_86_in_selector5703); if (state.failed) return ;
+                    match(input,86,FOLLOW_86_in_selector5710); if (state.failed) return ;
 
-                    pushFollow(FOLLOW_innerCreator_in_selector5705);
+                    pushFollow(FOLLOW_innerCreator_in_selector5712);
                     innerCreator();
 
                     state._fsp--;
@@ -12919,17 +12959,17 @@ public class JavaParser extends Parser {
                     }
                     break;
                 case 5 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:1022:9: '[' expression ']'
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:1032:9: '[' expression ']'
                     {
-                    match(input,55,FOLLOW_55_in_selector5715); if (state.failed) return ;
+                    match(input,55,FOLLOW_55_in_selector5722); if (state.failed) return ;
 
-                    pushFollow(FOLLOW_expression_in_selector5717);
+                    pushFollow(FOLLOW_expression_in_selector5724);
                     expression();
 
                     state._fsp--;
                     if (state.failed) return ;
 
-                    match(input,56,FOLLOW_56_in_selector5719); if (state.failed) return ;
+                    match(input,56,FOLLOW_56_in_selector5726); if (state.failed) return ;
 
                     }
                     break;
@@ -12953,14 +12993,14 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "superSuffix"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:1025:1: superSuffix : ( arguments | '.' Identifier ( arguments )? );
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:1035:1: superSuffix : ( arguments | '.' Identifier ( arguments )? );
     public final void superSuffix() throws RecognitionException {
         int superSuffix_StartIndex = input.index();
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 134) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:1026:5: ( arguments | '.' Identifier ( arguments )? )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:1036:5: ( arguments | '.' Identifier ( arguments )? )
             int alt169=2;
             int LA169_0 = input.LA(1);
 
@@ -12980,9 +13020,9 @@ public class JavaParser extends Parser {
             }
             switch (alt169) {
                 case 1 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:1026:9: arguments
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:1036:9: arguments
                     {
-                    pushFollow(FOLLOW_arguments_in_superSuffix5742);
+                    pushFollow(FOLLOW_arguments_in_superSuffix5749);
                     arguments();
 
                     state._fsp--;
@@ -12991,13 +13031,13 @@ public class JavaParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:1027:9: '.' Identifier ( arguments )?
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:1037:9: '.' Identifier ( arguments )?
                     {
-                    match(input,43,FOLLOW_43_in_superSuffix5752); if (state.failed) return ;
+                    match(input,43,FOLLOW_43_in_superSuffix5759); if (state.failed) return ;
 
-                    match(input,Identifier,FOLLOW_Identifier_in_superSuffix5754); if (state.failed) return ;
+                    match(input,Identifier,FOLLOW_Identifier_in_superSuffix5761); if (state.failed) return ;
 
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:1027:24: ( arguments )?
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:1037:24: ( arguments )?
                     int alt168=2;
                     int LA168_0 = input.LA(1);
 
@@ -13006,9 +13046,9 @@ public class JavaParser extends Parser {
                     }
                     switch (alt168) {
                         case 1 :
-                            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:1027:24: arguments
+                            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:1037:24: arguments
                             {
-                            pushFollow(FOLLOW_arguments_in_superSuffix5756);
+                            pushFollow(FOLLOW_arguments_in_superSuffix5763);
                             arguments();
 
                             state._fsp--;
@@ -13042,19 +13082,19 @@ public class JavaParser extends Parser {
 
 
     // $ANTLR start "arguments"
-    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:1030:1: arguments : '(' ( expressionList )? ')' ;
+    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:1040:1: arguments : '(' ( expressionList )? ')' ;
     public final void arguments() throws RecognitionException {
         int arguments_StartIndex = input.index();
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 135) ) { return ; }
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:1031:5: ( '(' ( expressionList )? ')' )
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:1031:9: '(' ( expressionList )? ')'
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:1041:5: ( '(' ( expressionList )? ')' )
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:1041:9: '(' ( expressionList )? ')'
             {
-            match(input,32,FOLLOW_32_in_arguments5776); if (state.failed) return ;
+            match(input,32,FOLLOW_32_in_arguments5783); if (state.failed) return ;
 
-            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:1031:13: ( expressionList )?
+            // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:1041:13: ( expressionList )?
             int alt170=2;
             int LA170_0 = input.LA(1);
 
@@ -13063,9 +13103,9 @@ public class JavaParser extends Parser {
             }
             switch (alt170) {
                 case 1 :
-                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:1031:13: expressionList
+                    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:1041:13: expressionList
                     {
-                    pushFollow(FOLLOW_expressionList_in_arguments5778);
+                    pushFollow(FOLLOW_expressionList_in_arguments5785);
                     expressionList();
 
                     state._fsp--;
@@ -13077,7 +13117,7 @@ public class JavaParser extends Parser {
             }
 
 
-            match(input,33,FOLLOW_33_in_arguments5781); if (state.failed) return ;
+            match(input,33,FOLLOW_33_in_arguments5788); if (state.failed) return ;
 
             }
 
@@ -13098,16 +13138,16 @@ public class JavaParser extends Parser {
 
     // $ANTLR start synpred5_Java
     public final void synpred5_Java_fragment() throws RecognitionException {
-        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:230:9: ( annotations ( packageDeclaration ( importDeclaration )* ( typeDeclaration )* | classOrInterfaceDeclaration ( typeDeclaration )* ) )
-        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:230:9: annotations ( packageDeclaration ( importDeclaration )* ( typeDeclaration )* | classOrInterfaceDeclaration ( typeDeclaration )* )
+        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:236:9: ( annotations ( packageDeclaration ( importDeclaration )* ( typeDeclaration )* | classOrInterfaceDeclaration ( typeDeclaration )* ) )
+        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:236:9: annotations ( packageDeclaration ( importDeclaration )* ( typeDeclaration )* | classOrInterfaceDeclaration ( typeDeclaration )* )
         {
-        pushFollow(FOLLOW_annotations_in_synpred5_Java66);
+        pushFollow(FOLLOW_annotations_in_synpred5_Java65);
         annotations();
 
         state._fsp--;
         if (state.failed) return ;
 
-        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:231:9: ( packageDeclaration ( importDeclaration )* ( typeDeclaration )* | classOrInterfaceDeclaration ( typeDeclaration )* )
+        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:237:9: ( packageDeclaration ( importDeclaration )* ( typeDeclaration )* | classOrInterfaceDeclaration ( typeDeclaration )* )
         int alt176=2;
         int LA176_0 = input.LA(1);
 
@@ -13127,15 +13167,15 @@ public class JavaParser extends Parser {
         }
         switch (alt176) {
             case 1 :
-                // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:231:13: packageDeclaration ( importDeclaration )* ( typeDeclaration )*
+                // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:237:13: packageDeclaration ( importDeclaration )* ( typeDeclaration )*
                 {
-                pushFollow(FOLLOW_packageDeclaration_in_synpred5_Java80);
+                pushFollow(FOLLOW_packageDeclaration_in_synpred5_Java79);
                 packageDeclaration();
 
                 state._fsp--;
                 if (state.failed) return ;
 
-                // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:231:32: ( importDeclaration )*
+                // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:237:32: ( importDeclaration )*
                 loop173:
                 do {
                     int alt173=2;
@@ -13148,9 +13188,9 @@ public class JavaParser extends Parser {
 
                     switch (alt173) {
                 	case 1 :
-                	    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:231:32: importDeclaration
+                	    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:237:32: importDeclaration
                 	    {
-                	    pushFollow(FOLLOW_importDeclaration_in_synpred5_Java82);
+                	    pushFollow(FOLLOW_importDeclaration_in_synpred5_Java81);
                 	    importDeclaration();
 
                 	    state._fsp--;
@@ -13165,7 +13205,7 @@ public class JavaParser extends Parser {
                 } while (true);
 
 
-                // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:231:51: ( typeDeclaration )*
+                // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:237:51: ( typeDeclaration )*
                 loop174:
                 do {
                     int alt174=2;
@@ -13178,9 +13218,9 @@ public class JavaParser extends Parser {
 
                     switch (alt174) {
                 	case 1 :
-                	    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:231:51: typeDeclaration
+                	    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:237:51: typeDeclaration
                 	    {
-                	    pushFollow(FOLLOW_typeDeclaration_in_synpred5_Java85);
+                	    pushFollow(FOLLOW_typeDeclaration_in_synpred5_Java84);
                 	    typeDeclaration();
 
                 	    state._fsp--;
@@ -13198,7 +13238,7 @@ public class JavaParser extends Parser {
                 }
                 break;
             case 2 :
-                // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:232:13: classOrInterfaceDeclaration ( typeDeclaration )*
+                // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:238:13: classOrInterfaceDeclaration ( typeDeclaration )*
                 {
                 pushFollow(FOLLOW_classOrInterfaceDeclaration_in_synpred5_Java100);
                 classOrInterfaceDeclaration();
@@ -13206,7 +13246,7 @@ public class JavaParser extends Parser {
                 state._fsp--;
                 if (state.failed) return ;
 
-                // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:232:41: ( typeDeclaration )*
+                // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:238:41: ( typeDeclaration )*
                 loop175:
                 do {
                     int alt175=2;
@@ -13219,7 +13259,7 @@ public class JavaParser extends Parser {
 
                     switch (alt175) {
                 	case 1 :
-                	    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:232:41: typeDeclaration
+                	    // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:238:41: typeDeclaration
                 	    {
                 	    pushFollow(FOLLOW_typeDeclaration_in_synpred5_Java102);
                 	    typeDeclaration();
@@ -13249,10 +13289,10 @@ public class JavaParser extends Parser {
 
     // $ANTLR start synpred113_Java
     public final void synpred113_Java_fragment() throws RecognitionException {
-        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:544:13: ( explicitConstructorInvocation )
-        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:544:13: explicitConstructorInvocation
+        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:554:13: ( explicitConstructorInvocation )
+        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:554:13: explicitConstructorInvocation
         {
-        pushFollow(FOLLOW_explicitConstructorInvocation_in_synpred113_Java2484);
+        pushFollow(FOLLOW_explicitConstructorInvocation_in_synpred113_Java2491);
         explicitConstructorInvocation();
 
         state._fsp--;
@@ -13265,10 +13305,10 @@ public class JavaParser extends Parser {
 
     // $ANTLR start synpred117_Java
     public final void synpred117_Java_fragment() throws RecognitionException {
-        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:548:9: ( ( nonWildcardTypeArguments )? ( 'this' | 'super' ) arguments ';' )
-        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:548:9: ( nonWildcardTypeArguments )? ( 'this' | 'super' ) arguments ';'
+        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:558:9: ( ( nonWildcardTypeArguments )? ( 'this' | 'super' ) arguments ';' )
+        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:558:9: ( nonWildcardTypeArguments )? ( 'this' | 'super' ) arguments ';'
         {
-        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:548:9: ( nonWildcardTypeArguments )?
+        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:558:9: ( nonWildcardTypeArguments )?
         int alt184=2;
         int LA184_0 = input.LA(1);
 
@@ -13277,9 +13317,9 @@ public class JavaParser extends Parser {
         }
         switch (alt184) {
             case 1 :
-                // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:548:9: nonWildcardTypeArguments
+                // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:558:9: nonWildcardTypeArguments
                 {
-                pushFollow(FOLLOW_nonWildcardTypeArguments_in_synpred117_Java2509);
+                pushFollow(FOLLOW_nonWildcardTypeArguments_in_synpred117_Java2516);
                 nonWildcardTypeArguments();
 
                 state._fsp--;
@@ -13303,13 +13343,13 @@ public class JavaParser extends Parser {
         }
 
 
-        pushFollow(FOLLOW_arguments_in_synpred117_Java2520);
+        pushFollow(FOLLOW_arguments_in_synpred117_Java2527);
         arguments();
 
         state._fsp--;
         if (state.failed) return ;
 
-        match(input,48,FOLLOW_48_in_synpred117_Java2522); if (state.failed) return ;
+        match(input,48,FOLLOW_48_in_synpred117_Java2529); if (state.failed) return ;
 
         }
 
@@ -13318,10 +13358,10 @@ public class JavaParser extends Parser {
 
     // $ANTLR start synpred128_Java
     public final void synpred128_Java_fragment() throws RecognitionException {
-        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:580:9: ( annotation )
-        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:580:9: annotation
+        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:590:9: ( annotation )
+        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:590:9: annotation
         {
-        pushFollow(FOLLOW_annotation_in_synpred128_Java2733);
+        pushFollow(FOLLOW_annotation_in_synpred128_Java2740);
         annotation();
 
         state._fsp--;
@@ -13334,10 +13374,10 @@ public class JavaParser extends Parser {
 
     // $ANTLR start synpred151_Java
     public final void synpred151_Java_fragment() throws RecognitionException {
-        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:653:9: ( localVariableDeclarationStatement )
-        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:653:9: localVariableDeclarationStatement
+        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:663:9: ( localVariableDeclarationStatement )
+        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:663:9: localVariableDeclarationStatement
         {
-        pushFollow(FOLLOW_localVariableDeclarationStatement_in_synpred151_Java3260);
+        pushFollow(FOLLOW_localVariableDeclarationStatement_in_synpred151_Java3267);
         localVariableDeclarationStatement();
 
         state._fsp--;
@@ -13350,10 +13390,10 @@ public class JavaParser extends Parser {
 
     // $ANTLR start synpred152_Java
     public final void synpred152_Java_fragment() throws RecognitionException {
-        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:654:9: ( classOrInterfaceDeclaration )
-        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:654:9: classOrInterfaceDeclaration
+        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:664:9: ( classOrInterfaceDeclaration )
+        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:664:9: classOrInterfaceDeclaration
         {
-        pushFollow(FOLLOW_classOrInterfaceDeclaration_in_synpred152_Java3272);
+        pushFollow(FOLLOW_classOrInterfaceDeclaration_in_synpred152_Java3279);
         classOrInterfaceDeclaration();
 
         state._fsp--;
@@ -13366,12 +13406,12 @@ public class JavaParser extends Parser {
 
     // $ANTLR start synpred157_Java
     public final void synpred157_Java_fragment() throws RecognitionException {
-        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:674:54: ( 'else' statement )
-        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:674:54: 'else' statement
+        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:684:54: ( 'else' statement )
+        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:684:54: 'else' statement
         {
-        match(input,71,FOLLOW_71_in_synpred157_Java3426); if (state.failed) return ;
+        match(input,71,FOLLOW_71_in_synpred157_Java3433); if (state.failed) return ;
 
-        pushFollow(FOLLOW_statement_in_synpred157_Java3428);
+        pushFollow(FOLLOW_statement_in_synpred157_Java3435);
         statement();
 
         state._fsp--;
@@ -13384,18 +13424,18 @@ public class JavaParser extends Parser {
 
     // $ANTLR start synpred162_Java
     public final void synpred162_Java_fragment() throws RecognitionException {
-        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:679:11: ( catches 'finally' block )
-        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:679:11: catches 'finally' block
+        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:689:11: ( catches 'finally' block )
+        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:689:11: catches 'finally' block
         {
-        pushFollow(FOLLOW_catches_in_synpred162_Java3504);
+        pushFollow(FOLLOW_catches_in_synpred162_Java3511);
         catches();
 
         state._fsp--;
         if (state.failed) return ;
 
-        match(input,75,FOLLOW_75_in_synpred162_Java3506); if (state.failed) return ;
+        match(input,75,FOLLOW_75_in_synpred162_Java3513); if (state.failed) return ;
 
-        pushFollow(FOLLOW_block_in_synpred162_Java3508);
+        pushFollow(FOLLOW_block_in_synpred162_Java3515);
         block();
 
         state._fsp--;
@@ -13408,10 +13448,10 @@ public class JavaParser extends Parser {
 
     // $ANTLR start synpred163_Java
     public final void synpred163_Java_fragment() throws RecognitionException {
-        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:680:11: ( catches )
-        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:680:11: catches
+        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:690:11: ( catches )
+        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:690:11: catches
         {
-        pushFollow(FOLLOW_catches_in_synpred163_Java3520);
+        pushFollow(FOLLOW_catches_in_synpred163_Java3527);
         catches();
 
         state._fsp--;
@@ -13424,10 +13464,10 @@ public class JavaParser extends Parser {
 
     // $ANTLR start synpred178_Java
     public final void synpred178_Java_fragment() throws RecognitionException {
-        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:715:9: ( switchLabel )
-        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:715:9: switchLabel
+        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:725:9: ( switchLabel )
+        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:725:9: switchLabel
         {
-        pushFollow(FOLLOW_switchLabel_in_synpred178_Java3811);
+        pushFollow(FOLLOW_switchLabel_in_synpred178_Java3818);
         switchLabel();
 
         state._fsp--;
@@ -13440,18 +13480,18 @@ public class JavaParser extends Parser {
 
     // $ANTLR start synpred180_Java
     public final void synpred180_Java_fragment() throws RecognitionException {
-        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:719:9: ( 'case' constantExpression ':' )
-        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:719:9: 'case' constantExpression ':'
+        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:729:9: ( 'case' constantExpression ':' )
+        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:729:9: 'case' constantExpression ':'
         {
-        match(input,63,FOLLOW_63_in_synpred180_Java3838); if (state.failed) return ;
+        match(input,63,FOLLOW_63_in_synpred180_Java3845); if (state.failed) return ;
 
-        pushFollow(FOLLOW_constantExpression_in_synpred180_Java3840);
+        pushFollow(FOLLOW_constantExpression_in_synpred180_Java3847);
         constantExpression();
 
         state._fsp--;
         if (state.failed) return ;
 
-        match(input,47,FOLLOW_47_in_synpred180_Java3842); if (state.failed) return ;
+        match(input,47,FOLLOW_47_in_synpred180_Java3849); if (state.failed) return ;
 
         }
 
@@ -13460,18 +13500,18 @@ public class JavaParser extends Parser {
 
     // $ANTLR start synpred181_Java
     public final void synpred181_Java_fragment() throws RecognitionException {
-        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:720:9: ( 'case' enumConstantName ':' )
-        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:720:9: 'case' enumConstantName ':'
+        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:730:9: ( 'case' enumConstantName ':' )
+        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:730:9: 'case' enumConstantName ':'
         {
-        match(input,63,FOLLOW_63_in_synpred181_Java3852); if (state.failed) return ;
+        match(input,63,FOLLOW_63_in_synpred181_Java3859); if (state.failed) return ;
 
-        pushFollow(FOLLOW_enumConstantName_in_synpred181_Java3854);
+        pushFollow(FOLLOW_enumConstantName_in_synpred181_Java3861);
         enumConstantName();
 
         state._fsp--;
         if (state.failed) return ;
 
-        match(input,47,FOLLOW_47_in_synpred181_Java3856); if (state.failed) return ;
+        match(input,47,FOLLOW_47_in_synpred181_Java3863); if (state.failed) return ;
 
         }
 
@@ -13480,10 +13520,10 @@ public class JavaParser extends Parser {
 
     // $ANTLR start synpred182_Java
     public final void synpred182_Java_fragment() throws RecognitionException {
-        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:726:9: ( enhancedForControl )
-        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:726:9: enhancedForControl
+        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:736:9: ( enhancedForControl )
+        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:736:9: enhancedForControl
         {
-        pushFollow(FOLLOW_enhancedForControl_in_synpred182_Java3899);
+        pushFollow(FOLLOW_enhancedForControl_in_synpred182_Java3906);
         enhancedForControl();
 
         state._fsp--;
@@ -13496,10 +13536,10 @@ public class JavaParser extends Parser {
 
     // $ANTLR start synpred186_Java
     public final void synpred186_Java_fragment() throws RecognitionException {
-        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:731:9: ( localVariableDeclaration )
-        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:731:9: localVariableDeclaration
+        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:741:9: ( localVariableDeclaration )
+        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:741:9: localVariableDeclaration
         {
-        pushFollow(FOLLOW_localVariableDeclaration_in_synpred186_Java3939);
+        pushFollow(FOLLOW_localVariableDeclaration_in_synpred186_Java3946);
         localVariableDeclaration();
 
         state._fsp--;
@@ -13512,16 +13552,16 @@ public class JavaParser extends Parser {
 
     // $ANTLR start synpred188_Java
     public final void synpred188_Java_fragment() throws RecognitionException {
-        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:762:32: ( assignmentOperator expression )
-        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:762:32: assignmentOperator expression
+        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:772:32: ( assignmentOperator expression )
+        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:772:32: assignmentOperator expression
         {
-        pushFollow(FOLLOW_assignmentOperator_in_synpred188_Java4122);
+        pushFollow(FOLLOW_assignmentOperator_in_synpred188_Java4129);
         assignmentOperator();
 
         state._fsp--;
         if (state.failed) return ;
 
-        pushFollow(FOLLOW_expression_in_synpred188_Java4124);
+        pushFollow(FOLLOW_expression_in_synpred188_Java4131);
         expression();
 
         state._fsp--;
@@ -13534,14 +13574,14 @@ public class JavaParser extends Parser {
 
     // $ANTLR start synpred198_Java
     public final void synpred198_Java_fragment() throws RecognitionException {
-        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:775:9: ( '<' '<' '=' )
-        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:775:10: '<' '<' '='
+        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:785:9: ( '<' '<' '=' )
+        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:785:10: '<' '<' '='
         {
-        match(input,49,FOLLOW_49_in_synpred198_Java4241); if (state.failed) return ;
+        match(input,49,FOLLOW_49_in_synpred198_Java4248); if (state.failed) return ;
 
-        match(input,49,FOLLOW_49_in_synpred198_Java4243); if (state.failed) return ;
+        match(input,49,FOLLOW_49_in_synpred198_Java4250); if (state.failed) return ;
 
-        match(input,50,FOLLOW_50_in_synpred198_Java4245); if (state.failed) return ;
+        match(input,50,FOLLOW_50_in_synpred198_Java4252); if (state.failed) return ;
 
         }
 
@@ -13550,16 +13590,16 @@ public class JavaParser extends Parser {
 
     // $ANTLR start synpred199_Java
     public final void synpred199_Java_fragment() throws RecognitionException {
-        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:780:9: ( '>' '>' '>' '=' )
-        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:780:10: '>' '>' '>' '='
+        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:790:9: ( '>' '>' '>' '=' )
+        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:790:10: '>' '>' '>' '='
         {
-        match(input,52,FOLLOW_52_in_synpred199_Java4281); if (state.failed) return ;
+        match(input,52,FOLLOW_52_in_synpred199_Java4288); if (state.failed) return ;
 
-        match(input,52,FOLLOW_52_in_synpred199_Java4283); if (state.failed) return ;
+        match(input,52,FOLLOW_52_in_synpred199_Java4290); if (state.failed) return ;
 
-        match(input,52,FOLLOW_52_in_synpred199_Java4285); if (state.failed) return ;
+        match(input,52,FOLLOW_52_in_synpred199_Java4292); if (state.failed) return ;
 
-        match(input,50,FOLLOW_50_in_synpred199_Java4287); if (state.failed) return ;
+        match(input,50,FOLLOW_50_in_synpred199_Java4294); if (state.failed) return ;
 
         }
 
@@ -13568,14 +13608,14 @@ public class JavaParser extends Parser {
 
     // $ANTLR start synpred200_Java
     public final void synpred200_Java_fragment() throws RecognitionException {
-        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:787:9: ( '>' '>' '=' )
-        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:787:10: '>' '>' '='
+        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:797:9: ( '>' '>' '=' )
+        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:797:10: '>' '>' '='
         {
-        match(input,52,FOLLOW_52_in_synpred200_Java4326); if (state.failed) return ;
+        match(input,52,FOLLOW_52_in_synpred200_Java4333); if (state.failed) return ;
 
-        match(input,52,FOLLOW_52_in_synpred200_Java4328); if (state.failed) return ;
+        match(input,52,FOLLOW_52_in_synpred200_Java4335); if (state.failed) return ;
 
-        match(input,50,FOLLOW_50_in_synpred200_Java4330); if (state.failed) return ;
+        match(input,50,FOLLOW_50_in_synpred200_Java4337); if (state.failed) return ;
 
         }
 
@@ -13584,12 +13624,12 @@ public class JavaParser extends Parser {
 
     // $ANTLR start synpred211_Java
     public final void synpred211_Java_fragment() throws RecognitionException {
-        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:905:9: ( '<' '=' )
-        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:905:10: '<' '='
+        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:915:9: ( '<' '=' )
+        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:915:10: '<' '='
         {
-        match(input,49,FOLLOW_49_in_synpred211_Java4654); if (state.failed) return ;
+        match(input,49,FOLLOW_49_in_synpred211_Java4661); if (state.failed) return ;
 
-        match(input,50,FOLLOW_50_in_synpred211_Java4656); if (state.failed) return ;
+        match(input,50,FOLLOW_50_in_synpred211_Java4663); if (state.failed) return ;
 
         }
 
@@ -13598,12 +13638,12 @@ public class JavaParser extends Parser {
 
     // $ANTLR start synpred212_Java
     public final void synpred212_Java_fragment() throws RecognitionException {
-        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:908:9: ( '>' '=' )
-        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:908:10: '>' '='
+        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:918:9: ( '>' '=' )
+        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:918:10: '>' '='
         {
-        match(input,52,FOLLOW_52_in_synpred212_Java4688); if (state.failed) return ;
+        match(input,52,FOLLOW_52_in_synpred212_Java4695); if (state.failed) return ;
 
-        match(input,50,FOLLOW_50_in_synpred212_Java4690); if (state.failed) return ;
+        match(input,50,FOLLOW_50_in_synpred212_Java4697); if (state.failed) return ;
 
         }
 
@@ -13612,12 +13652,12 @@ public class JavaParser extends Parser {
 
     // $ANTLR start synpred215_Java
     public final void synpred215_Java_fragment() throws RecognitionException {
-        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:920:9: ( '<' '<' )
-        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:920:10: '<' '<'
+        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:930:9: ( '<' '<' )
+        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:930:10: '<' '<'
         {
-        match(input,49,FOLLOW_49_in_synpred215_Java4781); if (state.failed) return ;
+        match(input,49,FOLLOW_49_in_synpred215_Java4788); if (state.failed) return ;
 
-        match(input,49,FOLLOW_49_in_synpred215_Java4783); if (state.failed) return ;
+        match(input,49,FOLLOW_49_in_synpred215_Java4790); if (state.failed) return ;
 
         }
 
@@ -13626,14 +13666,14 @@ public class JavaParser extends Parser {
 
     // $ANTLR start synpred216_Java
     public final void synpred216_Java_fragment() throws RecognitionException {
-        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:923:9: ( '>' '>' '>' )
-        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:923:10: '>' '>' '>'
+        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:933:9: ( '>' '>' '>' )
+        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:933:10: '>' '>' '>'
         {
-        match(input,52,FOLLOW_52_in_synpred216_Java4815); if (state.failed) return ;
+        match(input,52,FOLLOW_52_in_synpred216_Java4822); if (state.failed) return ;
 
-        match(input,52,FOLLOW_52_in_synpred216_Java4817); if (state.failed) return ;
+        match(input,52,FOLLOW_52_in_synpred216_Java4824); if (state.failed) return ;
 
-        match(input,52,FOLLOW_52_in_synpred216_Java4819); if (state.failed) return ;
+        match(input,52,FOLLOW_52_in_synpred216_Java4826); if (state.failed) return ;
 
         }
 
@@ -13642,12 +13682,12 @@ public class JavaParser extends Parser {
 
     // $ANTLR start synpred217_Java
     public final void synpred217_Java_fragment() throws RecognitionException {
-        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:928:9: ( '>' '>' )
-        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:928:10: '>' '>'
+        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:938:9: ( '>' '>' )
+        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:938:10: '>' '>'
         {
-        match(input,52,FOLLOW_52_in_synpred217_Java4855); if (state.failed) return ;
+        match(input,52,FOLLOW_52_in_synpred217_Java4862); if (state.failed) return ;
 
-        match(input,52,FOLLOW_52_in_synpred217_Java4857); if (state.failed) return ;
+        match(input,52,FOLLOW_52_in_synpred217_Java4864); if (state.failed) return ;
 
         }
 
@@ -13656,10 +13696,10 @@ public class JavaParser extends Parser {
 
     // $ANTLR start synpred229_Java
     public final void synpred229_Java_fragment() throws RecognitionException {
-        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:953:9: ( castExpression )
-        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:953:9: castExpression
+        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:963:9: ( castExpression )
+        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:963:9: castExpression
         {
-        pushFollow(FOLLOW_castExpression_in_synpred229_Java5066);
+        pushFollow(FOLLOW_castExpression_in_synpred229_Java5073);
         castExpression();
 
         state._fsp--;
@@ -13672,20 +13712,20 @@ public class JavaParser extends Parser {
 
     // $ANTLR start synpred233_Java
     public final void synpred233_Java_fragment() throws RecognitionException {
-        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:958:8: ( '(' primitiveType ')' unaryExpression )
-        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:958:8: '(' primitiveType ')' unaryExpression
+        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:968:8: ( '(' primitiveType ')' unaryExpression )
+        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:968:8: '(' primitiveType ')' unaryExpression
         {
-        match(input,32,FOLLOW_32_in_synpred233_Java5104); if (state.failed) return ;
+        match(input,32,FOLLOW_32_in_synpred233_Java5111); if (state.failed) return ;
 
-        pushFollow(FOLLOW_primitiveType_in_synpred233_Java5106);
+        pushFollow(FOLLOW_primitiveType_in_synpred233_Java5113);
         primitiveType();
 
         state._fsp--;
         if (state.failed) return ;
 
-        match(input,33,FOLLOW_33_in_synpred233_Java5108); if (state.failed) return ;
+        match(input,33,FOLLOW_33_in_synpred233_Java5115); if (state.failed) return ;
 
-        pushFollow(FOLLOW_unaryExpression_in_synpred233_Java5110);
+        pushFollow(FOLLOW_unaryExpression_in_synpred233_Java5117);
         unaryExpression();
 
         state._fsp--;
@@ -13698,10 +13738,10 @@ public class JavaParser extends Parser {
 
     // $ANTLR start synpred234_Java
     public final void synpred234_Java_fragment() throws RecognitionException {
-        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:959:13: ( type )
-        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:959:13: type
+        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:969:13: ( type )
+        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:969:13: type
         {
-        pushFollow(FOLLOW_type_in_synpred234_Java5122);
+        pushFollow(FOLLOW_type_in_synpred234_Java5129);
         type();
 
         state._fsp--;
@@ -13714,12 +13754,12 @@ public class JavaParser extends Parser {
 
     // $ANTLR start synpred236_Java
     public final void synpred236_Java_fragment() throws RecognitionException {
-        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:964:17: ( '.' Identifier )
-        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:964:17: '.' Identifier
+        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:974:17: ( '.' Identifier )
+        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:974:17: '.' Identifier
         {
-        match(input,43,FOLLOW_43_in_synpred236_Java5163); if (state.failed) return ;
+        match(input,43,FOLLOW_43_in_synpred236_Java5170); if (state.failed) return ;
 
-        match(input,Identifier,FOLLOW_Identifier_in_synpred236_Java5165); if (state.failed) return ;
+        match(input,Identifier,FOLLOW_Identifier_in_synpred236_Java5172); if (state.failed) return ;
 
         }
 
@@ -13728,10 +13768,10 @@ public class JavaParser extends Parser {
 
     // $ANTLR start synpred237_Java
     public final void synpred237_Java_fragment() throws RecognitionException {
-        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:964:34: ( identifierSuffix )
-        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:964:34: identifierSuffix
+        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:974:34: ( identifierSuffix )
+        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:974:34: identifierSuffix
         {
-        pushFollow(FOLLOW_identifierSuffix_in_synpred237_Java5169);
+        pushFollow(FOLLOW_identifierSuffix_in_synpred237_Java5176);
         identifierSuffix();
 
         state._fsp--;
@@ -13744,12 +13784,12 @@ public class JavaParser extends Parser {
 
     // $ANTLR start synpred242_Java
     public final void synpred242_Java_fragment() throws RecognitionException {
-        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:968:21: ( '.' Identifier )
-        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:968:21: '.' Identifier
+        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:978:21: ( '.' Identifier )
+        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:978:21: '.' Identifier
         {
-        match(input,43,FOLLOW_43_in_synpred242_Java5217); if (state.failed) return ;
+        match(input,43,FOLLOW_43_in_synpred242_Java5224); if (state.failed) return ;
 
-        match(input,Identifier,FOLLOW_Identifier_in_synpred242_Java5219); if (state.failed) return ;
+        match(input,Identifier,FOLLOW_Identifier_in_synpred242_Java5226); if (state.failed) return ;
 
         }
 
@@ -13758,10 +13798,10 @@ public class JavaParser extends Parser {
 
     // $ANTLR start synpred243_Java
     public final void synpred243_Java_fragment() throws RecognitionException {
-        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:968:38: ( identifierSuffix )
-        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:968:38: identifierSuffix
+        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:978:38: ( identifierSuffix )
+        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:978:38: identifierSuffix
         {
-        pushFollow(FOLLOW_identifierSuffix_in_synpred243_Java5223);
+        pushFollow(FOLLOW_identifierSuffix_in_synpred243_Java5230);
         identifierSuffix();
 
         state._fsp--;
@@ -13774,18 +13814,18 @@ public class JavaParser extends Parser {
 
     // $ANTLR start synpred249_Java
     public final void synpred249_Java_fragment() throws RecognitionException {
-        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:975:10: ( '[' expression ']' )
-        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:975:10: '[' expression ']'
+        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:985:10: ( '[' expression ']' )
+        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:985:10: '[' expression ']'
         {
-        match(input,55,FOLLOW_55_in_synpred249_Java5298); if (state.failed) return ;
+        match(input,55,FOLLOW_55_in_synpred249_Java5305); if (state.failed) return ;
 
-        pushFollow(FOLLOW_expression_in_synpred249_Java5300);
+        pushFollow(FOLLOW_expression_in_synpred249_Java5307);
         expression();
 
         state._fsp--;
         if (state.failed) return ;
 
-        match(input,56,FOLLOW_56_in_synpred249_Java5302); if (state.failed) return ;
+        match(input,56,FOLLOW_56_in_synpred249_Java5309); if (state.failed) return ;
 
         }
 
@@ -13794,18 +13834,18 @@ public class JavaParser extends Parser {
 
     // $ANTLR start synpred262_Java
     public final void synpred262_Java_fragment() throws RecognitionException {
-        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:1001:29: ( '[' expression ']' )
-        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:1001:29: '[' expression ']'
+        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:1011:29: ( '[' expression ']' )
+        // /Users/rafaeldurelli/Documents/workspace/ANTLR Java Tester/src/a/b/c/Java.g:1011:29: '[' expression ']'
         {
-        match(input,55,FOLLOW_55_in_synpred262_Java5538); if (state.failed) return ;
+        match(input,55,FOLLOW_55_in_synpred262_Java5545); if (state.failed) return ;
 
-        pushFollow(FOLLOW_expression_in_synpred262_Java5540);
+        pushFollow(FOLLOW_expression_in_synpred262_Java5547);
         expression();
 
         state._fsp--;
         if (state.failed) return ;
 
-        match(input,56,FOLLOW_56_in_synpred262_Java5542); if (state.failed) return ;
+        match(input,56,FOLLOW_56_in_synpred262_Java5549); if (state.failed) return ;
 
         }
 
@@ -14473,7 +14513,7 @@ public class JavaParser extends Parser {
             this.transition = DFA123_transition;
         }
         public String getDescription() {
-            return "724:1: forControl options {k=3; } : ( enhancedForControl | ( forInit )? ';' ( expression )? ';' ( forUpdate )? );";
+            return "734:1: forControl options {k=3; } : ( enhancedForControl | ( forInit )? ';' ( expression )? ';' ( forUpdate )? );";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             TokenStream input = (TokenStream)_input;
@@ -14958,7 +14998,7 @@ public class JavaParser extends Parser {
             this.transition = DFA146_transition;
         }
         public String getDescription() {
-            return "959:12: ( type | expression )";
+            return "969:12: ( type | expression )";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             TokenStream input = (TokenStream)_input;
@@ -14993,10 +15033,10 @@ public class JavaParser extends Parser {
     }
  
 
-    public static final BitSet FOLLOW_annotations_in_compilationUnit66 = new BitSet(new long[]{0x0840000000000100L,0x00000000CF080404L});
-    public static final BitSet FOLLOW_packageDeclaration_in_compilationUnit80 = new BitSet(new long[]{0x0841000000000102L,0x00000000CE090404L});
-    public static final BitSet FOLLOW_importDeclaration_in_compilationUnit82 = new BitSet(new long[]{0x0841000000000102L,0x00000000CE090404L});
-    public static final BitSet FOLLOW_typeDeclaration_in_compilationUnit85 = new BitSet(new long[]{0x0841000000000102L,0x00000000CE080404L});
+    public static final BitSet FOLLOW_annotations_in_compilationUnit65 = new BitSet(new long[]{0x0840000000000100L,0x00000000CF080404L});
+    public static final BitSet FOLLOW_packageDeclaration_in_compilationUnit79 = new BitSet(new long[]{0x0841000000000102L,0x00000000CE090404L});
+    public static final BitSet FOLLOW_importDeclaration_in_compilationUnit81 = new BitSet(new long[]{0x0841000000000102L,0x00000000CE090404L});
+    public static final BitSet FOLLOW_typeDeclaration_in_compilationUnit84 = new BitSet(new long[]{0x0841000000000102L,0x00000000CE080404L});
     public static final BitSet FOLLOW_classOrInterfaceDeclaration_in_compilationUnit100 = new BitSet(new long[]{0x0841000000000102L,0x00000000CE080404L});
     public static final BitSet FOLLOW_typeDeclaration_in_compilationUnit102 = new BitSet(new long[]{0x0841000000000102L,0x00000000CE080404L});
     public static final BitSet FOLLOW_packageDeclaration_in_compilationUnit123 = new BitSet(new long[]{0x0841000000000102L,0x00000000CE090404L});
@@ -15005,689 +15045,689 @@ public class JavaParser extends Parser {
     public static final BitSet FOLLOW_88_in_packageDeclaration149 = new BitSet(new long[]{0x0000000000008000L});
     public static final BitSet FOLLOW_qualifiedName_in_packageDeclaration151 = new BitSet(new long[]{0x0001000000000000L});
     public static final BitSet FOLLOW_48_in_packageDeclaration153 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_80_in_importDeclaration176 = new BitSet(new long[]{0x0000000000008000L,0x0000000040000000L});
-    public static final BitSet FOLLOW_94_in_importDeclaration178 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_qualifiedName_in_importDeclaration181 = new BitSet(new long[]{0x0001080000000000L});
-    public static final BitSet FOLLOW_43_in_importDeclaration184 = new BitSet(new long[]{0x0000000400000000L});
-    public static final BitSet FOLLOW_34_in_importDeclaration186 = new BitSet(new long[]{0x0001000000000000L});
-    public static final BitSet FOLLOW_48_in_importDeclaration190 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_classOrInterfaceDeclaration_in_typeDeclaration213 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_48_in_typeDeclaration225 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_classOrInterfaceModifiers_in_classOrInterfaceDeclaration248 = new BitSet(new long[]{0x0040000000000100L,0x0000000000080004L});
-    public static final BitSet FOLLOW_classDeclaration_in_classOrInterfaceDeclaration251 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_interfaceDeclaration_in_classOrInterfaceDeclaration255 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_classOrInterfaceModifier_in_classOrInterfaceModifiers279 = new BitSet(new long[]{0x0840000000000002L,0x00000000CE000400L});
-    public static final BitSet FOLLOW_annotation_in_classOrInterfaceModifier299 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_91_in_classOrInterfaceModifier312 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_90_in_classOrInterfaceModifier327 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_89_in_classOrInterfaceModifier339 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_59_in_classOrInterfaceModifier353 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_94_in_classOrInterfaceModifier366 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_74_in_classOrInterfaceModifier381 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_95_in_classOrInterfaceModifier397 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_modifier_in_modifiers419 = new BitSet(new long[]{0x0840000000000002L,0x00000444CE200400L});
-    public static final BitSet FOLLOW_normalClassDeclaration_in_classDeclaration439 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_enumDeclaration_in_classDeclaration449 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_66_in_normalClassDeclaration472 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_Identifier_in_normalClassDeclaration474 = new BitSet(new long[]{0x0002000000000000L,0x0000100000008100L});
-    public static final BitSet FOLLOW_typeParameters_in_normalClassDeclaration476 = new BitSet(new long[]{0x0000000000000000L,0x0000100000008100L});
-    public static final BitSet FOLLOW_72_in_normalClassDeclaration490 = new BitSet(new long[]{0x5000000000008000L,0x0000000020141042L});
-    public static final BitSet FOLLOW_type_in_normalClassDeclaration492 = new BitSet(new long[]{0x0000000000000000L,0x0000100000008000L});
-    public static final BitSet FOLLOW_79_in_normalClassDeclaration505 = new BitSet(new long[]{0x5000000000008000L,0x0000000020141042L});
-    public static final BitSet FOLLOW_typeList_in_normalClassDeclaration507 = new BitSet(new long[]{0x0000000000000000L,0x0000100000000000L});
-    public static final BitSet FOLLOW_classBody_in_normalClassDeclaration519 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_49_in_typeParameters542 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_typeParameter_in_typeParameters544 = new BitSet(new long[]{0x0010008000000000L});
-    public static final BitSet FOLLOW_39_in_typeParameters547 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_typeParameter_in_typeParameters549 = new BitSet(new long[]{0x0010008000000000L});
-    public static final BitSet FOLLOW_52_in_typeParameters553 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_Identifier_in_typeParameter572 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000100L});
-    public static final BitSet FOLLOW_72_in_typeParameter575 = new BitSet(new long[]{0x5000000000008000L,0x0000000020141042L});
-    public static final BitSet FOLLOW_typeBound_in_typeParameter577 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_type_in_typeBound606 = new BitSet(new long[]{0x0000000040000002L});
-    public static final BitSet FOLLOW_30_in_typeBound609 = new BitSet(new long[]{0x5000000000008000L,0x0000000020141042L});
-    public static final BitSet FOLLOW_type_in_typeBound611 = new BitSet(new long[]{0x0000000040000002L});
-    public static final BitSet FOLLOW_ENUM_in_enumDeclaration632 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_Identifier_in_enumDeclaration634 = new BitSet(new long[]{0x0000000000000000L,0x0000100000008000L});
-    public static final BitSet FOLLOW_79_in_enumDeclaration637 = new BitSet(new long[]{0x5000000000008000L,0x0000000020141042L});
-    public static final BitSet FOLLOW_typeList_in_enumDeclaration639 = new BitSet(new long[]{0x0000000000000000L,0x0000100000000000L});
-    public static final BitSet FOLLOW_enumBody_in_enumDeclaration643 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_108_in_enumBody662 = new BitSet(new long[]{0x0041008000008000L,0x0001000000000000L});
-    public static final BitSet FOLLOW_enumConstants_in_enumBody664 = new BitSet(new long[]{0x0001008000000000L,0x0001000000000000L});
-    public static final BitSet FOLLOW_39_in_enumBody667 = new BitSet(new long[]{0x0001000000000000L,0x0001000000000000L});
-    public static final BitSet FOLLOW_enumBodyDeclarations_in_enumBody670 = new BitSet(new long[]{0x0000000000000000L,0x0001000000000000L});
-    public static final BitSet FOLLOW_112_in_enumBody673 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_enumConstant_in_enumConstants692 = new BitSet(new long[]{0x0000008000000002L});
-    public static final BitSet FOLLOW_39_in_enumConstants695 = new BitSet(new long[]{0x0040000000008000L});
-    public static final BitSet FOLLOW_enumConstant_in_enumConstants697 = new BitSet(new long[]{0x0000008000000002L});
-    public static final BitSet FOLLOW_annotations_in_enumConstant722 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_Identifier_in_enumConstant725 = new BitSet(new long[]{0x0000000100000002L,0x0000100000000000L});
-    public static final BitSet FOLLOW_arguments_in_enumConstant727 = new BitSet(new long[]{0x0000000000000002L,0x0000100000000000L});
-    public static final BitSet FOLLOW_classBody_in_enumConstant730 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_48_in_enumBodyDeclarations754 = new BitSet(new long[]{0x5843000000008102L,0x00001644EE3C1446L});
-    public static final BitSet FOLLOW_classBodyDeclaration_in_enumBodyDeclarations757 = new BitSet(new long[]{0x5843000000008102L,0x00001644EE3C1446L});
-    public static final BitSet FOLLOW_normalInterfaceDeclaration_in_interfaceDeclaration782 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_annotationTypeDeclaration_in_interfaceDeclaration792 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_83_in_normalInterfaceDeclaration815 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_Identifier_in_normalInterfaceDeclaration817 = new BitSet(new long[]{0x0002000000000000L,0x0000100000000100L});
-    public static final BitSet FOLLOW_typeParameters_in_normalInterfaceDeclaration819 = new BitSet(new long[]{0x0000000000000000L,0x0000100000000100L});
-    public static final BitSet FOLLOW_72_in_normalInterfaceDeclaration823 = new BitSet(new long[]{0x5000000000008000L,0x0000000020141042L});
-    public static final BitSet FOLLOW_typeList_in_normalInterfaceDeclaration825 = new BitSet(new long[]{0x0000000000000000L,0x0000100000000000L});
-    public static final BitSet FOLLOW_interfaceBody_in_normalInterfaceDeclaration829 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_type_in_typeList852 = new BitSet(new long[]{0x0000008000000002L});
-    public static final BitSet FOLLOW_39_in_typeList855 = new BitSet(new long[]{0x5000000000008000L,0x0000000020141042L});
-    public static final BitSet FOLLOW_type_in_typeList857 = new BitSet(new long[]{0x0000008000000002L});
-    public static final BitSet FOLLOW_108_in_classBody882 = new BitSet(new long[]{0x5843000000008100L,0x00011644EE3C1446L});
-    public static final BitSet FOLLOW_classBodyDeclaration_in_classBody884 = new BitSet(new long[]{0x5843000000008100L,0x00011644EE3C1446L});
-    public static final BitSet FOLLOW_112_in_classBody887 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_108_in_interfaceBody910 = new BitSet(new long[]{0x5843000000008100L,0x00010644EE3C1446L});
-    public static final BitSet FOLLOW_interfaceBodyDeclaration_in_interfaceBody912 = new BitSet(new long[]{0x5843000000008100L,0x00010644EE3C1446L});
-    public static final BitSet FOLLOW_112_in_interfaceBody915 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_48_in_classBodyDeclaration934 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_94_in_classBodyDeclaration944 = new BitSet(new long[]{0x0000000000000000L,0x0000100000000000L});
-    public static final BitSet FOLLOW_block_in_classBodyDeclaration947 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_modifiers_in_classBodyDeclaration957 = new BitSet(new long[]{0x5042000000008100L,0x00000200201C1046L});
-    public static final BitSet FOLLOW_memberDecl_in_classBodyDeclaration959 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_genericMethodOrConstructorDecl_in_memberDecl982 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_memberDeclaration_in_memberDecl992 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_105_in_memberDecl1002 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_Identifier_in_memberDecl1004 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_voidMethodDeclaratorRest_in_memberDecl1006 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_Identifier_in_memberDecl1016 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_constructorDeclaratorRest_in_memberDecl1018 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_interfaceDeclaration_in_memberDecl1028 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_classDeclaration_in_memberDecl1038 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_type_in_memberDeclaration1061 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_methodDeclaration_in_memberDeclaration1064 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_fieldDeclaration_in_memberDeclaration1068 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_typeParameters_in_genericMethodOrConstructorDecl1088 = new BitSet(new long[]{0x5000000000008000L,0x0000020020141042L});
-    public static final BitSet FOLLOW_genericMethodOrConstructorRest_in_genericMethodOrConstructorDecl1090 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_type_in_genericMethodOrConstructorRest1114 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_105_in_genericMethodOrConstructorRest1118 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_Identifier_in_genericMethodOrConstructorRest1121 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_methodDeclaratorRest_in_genericMethodOrConstructorRest1123 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_Identifier_in_genericMethodOrConstructorRest1133 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_constructorDeclaratorRest_in_genericMethodOrConstructorRest1135 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_Identifier_in_methodDeclaration1154 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_methodDeclaratorRest_in_methodDeclaration1156 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_variableDeclarators_in_fieldDeclaration1175 = new BitSet(new long[]{0x0001000000000000L});
-    public static final BitSet FOLLOW_48_in_fieldDeclaration1177 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_modifiers_in_interfaceBodyDeclaration1204 = new BitSet(new long[]{0x5042000000008100L,0x00000200201C1046L});
-    public static final BitSet FOLLOW_interfaceMemberDecl_in_interfaceBodyDeclaration1206 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_48_in_interfaceBodyDeclaration1216 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_interfaceMethodOrFieldDecl_in_interfaceMemberDecl1235 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_interfaceGenericMethodDecl_in_interfaceMemberDecl1245 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_105_in_interfaceMemberDecl1255 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_Identifier_in_interfaceMemberDecl1257 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_voidInterfaceMethodDeclaratorRest_in_interfaceMemberDecl1259 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_interfaceDeclaration_in_interfaceMemberDecl1269 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_classDeclaration_in_interfaceMemberDecl1279 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_type_in_interfaceMethodOrFieldDecl1302 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_Identifier_in_interfaceMethodOrFieldDecl1304 = new BitSet(new long[]{0x0084000100000000L});
-    public static final BitSet FOLLOW_interfaceMethodOrFieldRest_in_interfaceMethodOrFieldDecl1306 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_constantDeclaratorsRest_in_interfaceMethodOrFieldRest1329 = new BitSet(new long[]{0x0001000000000000L});
-    public static final BitSet FOLLOW_48_in_interfaceMethodOrFieldRest1331 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_interfaceMethodDeclaratorRest_in_interfaceMethodOrFieldRest1341 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_formalParameters_in_methodDeclaratorRest1364 = new BitSet(new long[]{0x0081000000000000L,0x0000102000000000L});
-    public static final BitSet FOLLOW_55_in_methodDeclaratorRest1367 = new BitSet(new long[]{0x0100000000000000L});
-    public static final BitSet FOLLOW_56_in_methodDeclaratorRest1369 = new BitSet(new long[]{0x0081000000000000L,0x0000102000000000L});
-    public static final BitSet FOLLOW_101_in_methodDeclaratorRest1382 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_qualifiedNameList_in_methodDeclaratorRest1384 = new BitSet(new long[]{0x0001000000000000L,0x0000100000000000L});
-    public static final BitSet FOLLOW_methodBody_in_methodDeclaratorRest1400 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_48_in_methodDeclaratorRest1414 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_formalParameters_in_voidMethodDeclaratorRest1447 = new BitSet(new long[]{0x0001000000000000L,0x0000102000000000L});
-    public static final BitSet FOLLOW_101_in_voidMethodDeclaratorRest1450 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_qualifiedNameList_in_voidMethodDeclaratorRest1452 = new BitSet(new long[]{0x0001000000000000L,0x0000100000000000L});
-    public static final BitSet FOLLOW_methodBody_in_voidMethodDeclaratorRest1468 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_48_in_voidMethodDeclaratorRest1482 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_formalParameters_in_interfaceMethodDeclaratorRest1515 = new BitSet(new long[]{0x0081000000000000L,0x0000002000000000L});
-    public static final BitSet FOLLOW_55_in_interfaceMethodDeclaratorRest1518 = new BitSet(new long[]{0x0100000000000000L});
-    public static final BitSet FOLLOW_56_in_interfaceMethodDeclaratorRest1520 = new BitSet(new long[]{0x0081000000000000L,0x0000002000000000L});
-    public static final BitSet FOLLOW_101_in_interfaceMethodDeclaratorRest1525 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_qualifiedNameList_in_interfaceMethodDeclaratorRest1527 = new BitSet(new long[]{0x0001000000000000L});
-    public static final BitSet FOLLOW_48_in_interfaceMethodDeclaratorRest1531 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_typeParameters_in_interfaceGenericMethodDecl1554 = new BitSet(new long[]{0x5000000000008000L,0x0000020020141042L});
-    public static final BitSet FOLLOW_type_in_interfaceGenericMethodDecl1557 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_105_in_interfaceGenericMethodDecl1561 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_Identifier_in_interfaceGenericMethodDecl1564 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_interfaceMethodDeclaratorRest_in_interfaceGenericMethodDecl1574 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_formalParameters_in_voidInterfaceMethodDeclaratorRest1597 = new BitSet(new long[]{0x0001000000000000L,0x0000002000000000L});
-    public static final BitSet FOLLOW_101_in_voidInterfaceMethodDeclaratorRest1600 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_qualifiedNameList_in_voidInterfaceMethodDeclaratorRest1602 = new BitSet(new long[]{0x0001000000000000L});
-    public static final BitSet FOLLOW_48_in_voidInterfaceMethodDeclaratorRest1606 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_formalParameters_in_constructorDeclaratorRest1629 = new BitSet(new long[]{0x0000000000000000L,0x0000102000000000L});
-    public static final BitSet FOLLOW_101_in_constructorDeclaratorRest1632 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_qualifiedNameList_in_constructorDeclaratorRest1634 = new BitSet(new long[]{0x0000000000000000L,0x0000100000000000L});
-    public static final BitSet FOLLOW_constructorBody_in_constructorDeclaratorRest1638 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_Identifier_in_constantDeclarator1657 = new BitSet(new long[]{0x0084000000000000L});
-    public static final BitSet FOLLOW_constantDeclaratorRest_in_constantDeclarator1659 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_variableDeclarator_in_variableDeclarators1682 = new BitSet(new long[]{0x0000008000000002L});
-    public static final BitSet FOLLOW_39_in_variableDeclarators1685 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_variableDeclarator_in_variableDeclarators1687 = new BitSet(new long[]{0x0000008000000002L});
-    public static final BitSet FOLLOW_variableDeclaratorId_in_variableDeclarator1708 = new BitSet(new long[]{0x0004000000000002L});
-    public static final BitSet FOLLOW_50_in_variableDeclarator1711 = new BitSet(new long[]{0x500003310260D0C0L,0x0002128920D41242L});
-    public static final BitSet FOLLOW_variableInitializer_in_variableDeclarator1713 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_constantDeclaratorRest_in_constantDeclaratorsRest1739 = new BitSet(new long[]{0x0000008000000002L});
-    public static final BitSet FOLLOW_39_in_constantDeclaratorsRest1742 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_constantDeclarator_in_constantDeclaratorsRest1744 = new BitSet(new long[]{0x0000008000000002L});
-    public static final BitSet FOLLOW_55_in_constantDeclaratorRest1766 = new BitSet(new long[]{0x0100000000000000L});
-    public static final BitSet FOLLOW_56_in_constantDeclaratorRest1768 = new BitSet(new long[]{0x0084000000000000L});
-    public static final BitSet FOLLOW_50_in_constantDeclaratorRest1772 = new BitSet(new long[]{0x500003310260D0C0L,0x0002128920D41242L});
-    public static final BitSet FOLLOW_variableInitializer_in_constantDeclaratorRest1774 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_Identifier_in_variableDeclaratorId1797 = new BitSet(new long[]{0x0080000000000002L});
-    public static final BitSet FOLLOW_55_in_variableDeclaratorId1800 = new BitSet(new long[]{0x0100000000000000L});
-    public static final BitSet FOLLOW_56_in_variableDeclaratorId1802 = new BitSet(new long[]{0x0080000000000002L});
-    public static final BitSet FOLLOW_arrayInitializer_in_variableInitializer1823 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_expression_in_variableInitializer1833 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_108_in_arrayInitializer1862 = new BitSet(new long[]{0x500003310260D0C0L,0x0003128920D41242L});
-    public static final BitSet FOLLOW_variableInitializer_in_arrayInitializer1865 = new BitSet(new long[]{0x0000008000000000L,0x0001000000000000L});
-    public static final BitSet FOLLOW_39_in_arrayInitializer1868 = new BitSet(new long[]{0x500003310260D0C0L,0x0002128920D41242L});
-    public static final BitSet FOLLOW_variableInitializer_in_arrayInitializer1870 = new BitSet(new long[]{0x0000008000000000L,0x0001000000000000L});
-    public static final BitSet FOLLOW_39_in_arrayInitializer1875 = new BitSet(new long[]{0x0000000000000000L,0x0001000000000000L});
-    public static final BitSet FOLLOW_112_in_arrayInitializer1882 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_annotation_in_modifier1901 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_91_in_modifier1911 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_90_in_modifier1921 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_89_in_modifier1931 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_94_in_modifier1941 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_59_in_modifier1951 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_74_in_modifier1961 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_85_in_modifier1971 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_98_in_modifier1981 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_102_in_modifier1991 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_106_in_modifier2001 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_95_in_modifier2011 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_qualifiedName_in_packageOrTypeName2030 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_Identifier_in_enumConstantName2049 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_qualifiedName_in_typeName2068 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_classOrInterfaceType_in_type2082 = new BitSet(new long[]{0x0080000000000002L});
-    public static final BitSet FOLLOW_55_in_type2085 = new BitSet(new long[]{0x0100000000000000L});
-    public static final BitSet FOLLOW_56_in_type2087 = new BitSet(new long[]{0x0080000000000002L});
-    public static final BitSet FOLLOW_primitiveType_in_type2094 = new BitSet(new long[]{0x0080000000000002L});
-    public static final BitSet FOLLOW_55_in_type2097 = new BitSet(new long[]{0x0100000000000000L});
-    public static final BitSet FOLLOW_56_in_type2099 = new BitSet(new long[]{0x0080000000000002L});
-    public static final BitSet FOLLOW_Identifier_in_classOrInterfaceType2112 = new BitSet(new long[]{0x0002080000000002L});
-    public static final BitSet FOLLOW_typeArguments_in_classOrInterfaceType2114 = new BitSet(new long[]{0x0000080000000002L});
-    public static final BitSet FOLLOW_43_in_classOrInterfaceType2118 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_Identifier_in_classOrInterfaceType2120 = new BitSet(new long[]{0x0002080000000002L});
-    public static final BitSet FOLLOW_typeArguments_in_classOrInterfaceType2122 = new BitSet(new long[]{0x0000080000000002L});
-    public static final BitSet FOLLOW_74_in_variableModifier2231 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_annotation_in_variableModifier2241 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_49_in_typeArguments2260 = new BitSet(new long[]{0x5020000000008000L,0x0000000020141042L});
-    public static final BitSet FOLLOW_typeArgument_in_typeArguments2262 = new BitSet(new long[]{0x0010008000000000L});
-    public static final BitSet FOLLOW_39_in_typeArguments2265 = new BitSet(new long[]{0x5020000000008000L,0x0000000020141042L});
-    public static final BitSet FOLLOW_typeArgument_in_typeArguments2267 = new BitSet(new long[]{0x0010008000000000L});
-    public static final BitSet FOLLOW_52_in_typeArguments2271 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_type_in_typeArgument2294 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_53_in_typeArgument2304 = new BitSet(new long[]{0x0000000000000002L,0x0000000100000100L});
-    public static final BitSet FOLLOW_set_in_typeArgument2307 = new BitSet(new long[]{0x5000000000008000L,0x0000000020141042L});
-    public static final BitSet FOLLOW_type_in_typeArgument2315 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_qualifiedName_in_qualifiedNameList2340 = new BitSet(new long[]{0x0000008000000002L});
-    public static final BitSet FOLLOW_39_in_qualifiedNameList2343 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_qualifiedName_in_qualifiedNameList2345 = new BitSet(new long[]{0x0000008000000002L});
-    public static final BitSet FOLLOW_32_in_formalParameters2366 = new BitSet(new long[]{0x5040000200008000L,0x0000000020141442L});
-    public static final BitSet FOLLOW_formalParameterDecls_in_formalParameters2368 = new BitSet(new long[]{0x0000000200000000L});
-    public static final BitSet FOLLOW_33_in_formalParameters2371 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_variableModifiers_in_formalParameterDecls2394 = new BitSet(new long[]{0x5000000000008000L,0x0000000020141042L});
-    public static final BitSet FOLLOW_type_in_formalParameterDecls2396 = new BitSet(new long[]{0x0000100000008000L});
-    public static final BitSet FOLLOW_formalParameterDeclsRest_in_formalParameterDecls2398 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_variableDeclaratorId_in_formalParameterDeclsRest2421 = new BitSet(new long[]{0x0000008000000002L});
-    public static final BitSet FOLLOW_39_in_formalParameterDeclsRest2424 = new BitSet(new long[]{0x5040000000008000L,0x0000000020141442L});
-    public static final BitSet FOLLOW_formalParameterDecls_in_formalParameterDeclsRest2426 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_44_in_formalParameterDeclsRest2438 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_variableDeclaratorId_in_formalParameterDeclsRest2440 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_block_in_methodBody2463 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_108_in_constructorBody2482 = new BitSet(new long[]{0x784303310260D1D0L,0x00031B9FFEDC766EL});
-    public static final BitSet FOLLOW_explicitConstructorInvocation_in_constructorBody2484 = new BitSet(new long[]{0x784103310260D1D0L,0x00031B9FFEDC766EL});
-    public static final BitSet FOLLOW_blockStatement_in_constructorBody2487 = new BitSet(new long[]{0x784103310260D1D0L,0x00031B9FFEDC766EL});
-    public static final BitSet FOLLOW_112_in_constructorBody2490 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_nonWildcardTypeArguments_in_explicitConstructorInvocation2509 = new BitSet(new long[]{0x0000000000000000L,0x0000000900000000L});
-    public static final BitSet FOLLOW_set_in_explicitConstructorInvocation2512 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_arguments_in_explicitConstructorInvocation2520 = new BitSet(new long[]{0x0001000000000000L});
-    public static final BitSet FOLLOW_48_in_explicitConstructorInvocation2522 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_primary_in_explicitConstructorInvocation2532 = new BitSet(new long[]{0x0000080000000000L});
-    public static final BitSet FOLLOW_43_in_explicitConstructorInvocation2534 = new BitSet(new long[]{0x0002000000000000L,0x0000000100000000L});
-    public static final BitSet FOLLOW_nonWildcardTypeArguments_in_explicitConstructorInvocation2536 = new BitSet(new long[]{0x0000000000000000L,0x0000000100000000L});
-    public static final BitSet FOLLOW_96_in_explicitConstructorInvocation2539 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_arguments_in_explicitConstructorInvocation2541 = new BitSet(new long[]{0x0001000000000000L});
-    public static final BitSet FOLLOW_48_in_explicitConstructorInvocation2543 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_Identifier_in_qualifiedName2563 = new BitSet(new long[]{0x0000080000000002L});
-    public static final BitSet FOLLOW_43_in_qualifiedName2566 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_Identifier_in_qualifiedName2568 = new BitSet(new long[]{0x0000080000000002L});
-    public static final BitSet FOLLOW_integerLiteral_in_literal2594 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_FloatingPointLiteral_in_literal2604 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_CharacterLiteral_in_literal2614 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_StringLiteral_in_literal2624 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_booleanLiteral_in_literal2634 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_87_in_literal2644 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_annotation_in_annotations2733 = new BitSet(new long[]{0x0040000000000002L});
-    public static final BitSet FOLLOW_54_in_annotation2753 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_annotationName_in_annotation2755 = new BitSet(new long[]{0x0000000100000002L});
-    public static final BitSet FOLLOW_32_in_annotation2759 = new BitSet(new long[]{0x504003330260D0C0L,0x0002128920D41242L});
-    public static final BitSet FOLLOW_elementValuePairs_in_annotation2763 = new BitSet(new long[]{0x0000000200000000L});
-    public static final BitSet FOLLOW_elementValue_in_annotation2767 = new BitSet(new long[]{0x0000000200000000L});
-    public static final BitSet FOLLOW_33_in_annotation2772 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_Identifier_in_annotationName2796 = new BitSet(new long[]{0x0000080000000002L});
-    public static final BitSet FOLLOW_43_in_annotationName2799 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_Identifier_in_annotationName2801 = new BitSet(new long[]{0x0000080000000002L});
-    public static final BitSet FOLLOW_elementValuePair_in_elementValuePairs2822 = new BitSet(new long[]{0x0000008000000002L});
-    public static final BitSet FOLLOW_39_in_elementValuePairs2825 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_elementValuePair_in_elementValuePairs2827 = new BitSet(new long[]{0x0000008000000002L});
-    public static final BitSet FOLLOW_Identifier_in_elementValuePair2848 = new BitSet(new long[]{0x0004000000000000L});
-    public static final BitSet FOLLOW_50_in_elementValuePair2850 = new BitSet(new long[]{0x504003310260D0C0L,0x0002128920D41242L});
-    public static final BitSet FOLLOW_elementValue_in_elementValuePair2852 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_conditionalExpression_in_elementValue2875 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_annotation_in_elementValue2885 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_elementValueArrayInitializer_in_elementValue2895 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_108_in_elementValueArrayInitializer2918 = new BitSet(new long[]{0x504003B10260D0C0L,0x0003128920D41242L});
-    public static final BitSet FOLLOW_elementValue_in_elementValueArrayInitializer2921 = new BitSet(new long[]{0x0000008000000000L,0x0001000000000000L});
-    public static final BitSet FOLLOW_39_in_elementValueArrayInitializer2924 = new BitSet(new long[]{0x504003310260D0C0L,0x0002128920D41242L});
-    public static final BitSet FOLLOW_elementValue_in_elementValueArrayInitializer2926 = new BitSet(new long[]{0x0000008000000000L,0x0001000000000000L});
-    public static final BitSet FOLLOW_39_in_elementValueArrayInitializer2933 = new BitSet(new long[]{0x0000000000000000L,0x0001000000000000L});
-    public static final BitSet FOLLOW_112_in_elementValueArrayInitializer2937 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_54_in_annotationTypeDeclaration2960 = new BitSet(new long[]{0x0000000000000000L,0x0000000000080000L});
-    public static final BitSet FOLLOW_83_in_annotationTypeDeclaration2962 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_Identifier_in_annotationTypeDeclaration2964 = new BitSet(new long[]{0x0000000000000000L,0x0000100000000000L});
-    public static final BitSet FOLLOW_annotationTypeBody_in_annotationTypeDeclaration2966 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_108_in_annotationTypeBody2989 = new BitSet(new long[]{0x5840000000008100L,0x00010444EE3C1446L});
-    public static final BitSet FOLLOW_annotationTypeElementDeclaration_in_annotationTypeBody2992 = new BitSet(new long[]{0x5840000000008100L,0x00010444EE3C1446L});
-    public static final BitSet FOLLOW_112_in_annotationTypeBody2996 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_modifiers_in_annotationTypeElementDeclaration3019 = new BitSet(new long[]{0x5040000000008100L,0x00000000201C1046L});
-    public static final BitSet FOLLOW_annotationTypeElementRest_in_annotationTypeElementDeclaration3021 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_type_in_annotationTypeElementRest3044 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_annotationMethodOrConstantRest_in_annotationTypeElementRest3046 = new BitSet(new long[]{0x0001000000000000L});
-    public static final BitSet FOLLOW_48_in_annotationTypeElementRest3048 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_normalClassDeclaration_in_annotationTypeElementRest3058 = new BitSet(new long[]{0x0001000000000002L});
-    public static final BitSet FOLLOW_48_in_annotationTypeElementRest3060 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_normalInterfaceDeclaration_in_annotationTypeElementRest3071 = new BitSet(new long[]{0x0001000000000002L});
-    public static final BitSet FOLLOW_48_in_annotationTypeElementRest3073 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_enumDeclaration_in_annotationTypeElementRest3084 = new BitSet(new long[]{0x0001000000000002L});
-    public static final BitSet FOLLOW_48_in_annotationTypeElementRest3086 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_annotationTypeDeclaration_in_annotationTypeElementRest3097 = new BitSet(new long[]{0x0001000000000002L});
-    public static final BitSet FOLLOW_48_in_annotationTypeElementRest3099 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_annotationMethodRest_in_annotationMethodOrConstantRest3123 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_annotationConstantRest_in_annotationMethodOrConstantRest3133 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_Identifier_in_annotationMethodRest3156 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_32_in_annotationMethodRest3158 = new BitSet(new long[]{0x0000000200000000L});
-    public static final BitSet FOLLOW_33_in_annotationMethodRest3160 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000010L});
-    public static final BitSet FOLLOW_defaultValue_in_annotationMethodRest3162 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_variableDeclarators_in_annotationConstantRest3186 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_68_in_defaultValue3209 = new BitSet(new long[]{0x504003310260D0C0L,0x0002128920D41242L});
-    public static final BitSet FOLLOW_elementValue_in_defaultValue3211 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_108_in_block3232 = new BitSet(new long[]{0x784103310260D1D0L,0x00031B9FFEDC766EL});
-    public static final BitSet FOLLOW_blockStatement_in_block3234 = new BitSet(new long[]{0x784103310260D1D0L,0x00031B9FFEDC766EL});
-    public static final BitSet FOLLOW_112_in_block3237 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_localVariableDeclarationStatement_in_blockStatement3260 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_classOrInterfaceDeclaration_in_blockStatement3272 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_statement_in_blockStatement3282 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_localVariableDeclaration_in_localVariableDeclarationStatement3306 = new BitSet(new long[]{0x0001000000000000L});
-    public static final BitSet FOLLOW_48_in_localVariableDeclarationStatement3309 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_variableModifiers_in_localVariableDeclaration3328 = new BitSet(new long[]{0x5000000000008000L,0x0000000020141042L});
-    public static final BitSet FOLLOW_type_in_localVariableDeclaration3330 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_variableDeclarators_in_localVariableDeclaration3332 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_variableModifier_in_variableModifiers3363 = new BitSet(new long[]{0x0040000000000002L,0x0000000000000400L});
-    public static final BitSet FOLLOW_block_in_statement3381 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ASSERT_in_statement3391 = new BitSet(new long[]{0x500003310260D0C0L,0x0002028920D41242L});
-    public static final BitSet FOLLOW_expression_in_statement3393 = new BitSet(new long[]{0x0001800000000000L});
-    public static final BitSet FOLLOW_47_in_statement3396 = new BitSet(new long[]{0x500003310260D0C0L,0x0002028920D41242L});
-    public static final BitSet FOLLOW_expression_in_statement3398 = new BitSet(new long[]{0x0001000000000000L});
-    public static final BitSet FOLLOW_48_in_statement3402 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_78_in_statement3412 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_parExpression_in_statement3414 = new BitSet(new long[]{0x700103310260D0D0L,0x00021B9F30D4726AL});
-    public static final BitSet FOLLOW_statement_in_statement3416 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000080L});
-    public static final BitSet FOLLOW_71_in_statement3426 = new BitSet(new long[]{0x700103310260D0D0L,0x00021B9F30D4726AL});
-    public static final BitSet FOLLOW_statement_in_statement3428 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_77_in_statement3440 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_32_in_statement3442 = new BitSet(new long[]{0x504103310260D0C0L,0x0002028920D41642L});
-    public static final BitSet FOLLOW_forControl_in_statement3444 = new BitSet(new long[]{0x0000000200000000L});
-    public static final BitSet FOLLOW_33_in_statement3446 = new BitSet(new long[]{0x700103310260D0D0L,0x00021B9F30D4726AL});
-    public static final BitSet FOLLOW_statement_in_statement3448 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_107_in_statement3458 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_parExpression_in_statement3460 = new BitSet(new long[]{0x700103310260D0D0L,0x00021B9F30D4726AL});
-    public static final BitSet FOLLOW_statement_in_statement3462 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_69_in_statement3472 = new BitSet(new long[]{0x700103310260D0D0L,0x00021B9F30D4726AL});
-    public static final BitSet FOLLOW_statement_in_statement3474 = new BitSet(new long[]{0x0000000000000000L,0x0000080000000000L});
-    public static final BitSet FOLLOW_107_in_statement3476 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_parExpression_in_statement3478 = new BitSet(new long[]{0x0001000000000000L});
-    public static final BitSet FOLLOW_48_in_statement3480 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_104_in_statement3490 = new BitSet(new long[]{0x0000000000000000L,0x0000100000000000L});
-    public static final BitSet FOLLOW_block_in_statement3492 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000801L});
-    public static final BitSet FOLLOW_catches_in_statement3504 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000800L});
-    public static final BitSet FOLLOW_75_in_statement3506 = new BitSet(new long[]{0x0000000000000000L,0x0000100000000000L});
-    public static final BitSet FOLLOW_block_in_statement3508 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_catches_in_statement3520 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_75_in_statement3534 = new BitSet(new long[]{0x0000000000000000L,0x0000100000000000L});
-    public static final BitSet FOLLOW_block_in_statement3536 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_97_in_statement3556 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_parExpression_in_statement3558 = new BitSet(new long[]{0x0000000000000000L,0x0000100000000000L});
-    public static final BitSet FOLLOW_108_in_statement3560 = new BitSet(new long[]{0x8000000000000000L,0x0001000000000010L});
-    public static final BitSet FOLLOW_switchBlockStatementGroups_in_statement3562 = new BitSet(new long[]{0x0000000000000000L,0x0001000000000000L});
-    public static final BitSet FOLLOW_112_in_statement3564 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_98_in_statement3574 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_parExpression_in_statement3576 = new BitSet(new long[]{0x0000000000000000L,0x0000100000000000L});
-    public static final BitSet FOLLOW_block_in_statement3578 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_92_in_statement3588 = new BitSet(new long[]{0x500103310260D0C0L,0x0002028920D41242L});
-    public static final BitSet FOLLOW_expression_in_statement3590 = new BitSet(new long[]{0x0001000000000000L});
-    public static final BitSet FOLLOW_48_in_statement3593 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_100_in_statement3603 = new BitSet(new long[]{0x500003310260D0C0L,0x0002028920D41242L});
-    public static final BitSet FOLLOW_expression_in_statement3605 = new BitSet(new long[]{0x0001000000000000L});
-    public static final BitSet FOLLOW_48_in_statement3607 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_61_in_statement3617 = new BitSet(new long[]{0x0001000000008000L});
-    public static final BitSet FOLLOW_Identifier_in_statement3619 = new BitSet(new long[]{0x0001000000000000L});
-    public static final BitSet FOLLOW_48_in_statement3622 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_67_in_statement3632 = new BitSet(new long[]{0x0001000000008000L});
-    public static final BitSet FOLLOW_Identifier_in_statement3634 = new BitSet(new long[]{0x0001000000000000L});
-    public static final BitSet FOLLOW_48_in_statement3637 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_48_in_statement3647 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_statementExpression_in_statement3658 = new BitSet(new long[]{0x0001000000000000L});
-    public static final BitSet FOLLOW_48_in_statement3660 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_Identifier_in_statement3670 = new BitSet(new long[]{0x0000800000000000L});
-    public static final BitSet FOLLOW_47_in_statement3672 = new BitSet(new long[]{0x700103310260D0D0L,0x00021B9F30D4726AL});
-    public static final BitSet FOLLOW_statement_in_statement3674 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_catchClause_in_catches3697 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000001L});
-    public static final BitSet FOLLOW_catchClause_in_catches3700 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000001L});
-    public static final BitSet FOLLOW_64_in_catchClause3725 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_32_in_catchClause3727 = new BitSet(new long[]{0x5040000000008000L,0x0000000020141442L});
-    public static final BitSet FOLLOW_formalParameter_in_catchClause3729 = new BitSet(new long[]{0x0000000200000000L});
-    public static final BitSet FOLLOW_33_in_catchClause3731 = new BitSet(new long[]{0x0000000000000000L,0x0000100000000000L});
-    public static final BitSet FOLLOW_block_in_catchClause3733 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_variableModifiers_in_formalParameter3752 = new BitSet(new long[]{0x5000000000008000L,0x0000000020141042L});
-    public static final BitSet FOLLOW_type_in_formalParameter3754 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_variableDeclaratorId_in_formalParameter3756 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_switchBlockStatementGroup_in_switchBlockStatementGroups3784 = new BitSet(new long[]{0x8000000000000002L,0x0000000000000010L});
-    public static final BitSet FOLLOW_switchLabel_in_switchBlockStatementGroup3811 = new BitSet(new long[]{0xF84103310260D1D2L,0x00021B9FFEDC767EL});
-    public static final BitSet FOLLOW_blockStatement_in_switchBlockStatementGroup3814 = new BitSet(new long[]{0x784103310260D1D2L,0x00021B9FFEDC766EL});
-    public static final BitSet FOLLOW_63_in_switchLabel3838 = new BitSet(new long[]{0x500003310260D0C0L,0x0002028920D41242L});
-    public static final BitSet FOLLOW_constantExpression_in_switchLabel3840 = new BitSet(new long[]{0x0000800000000000L});
-    public static final BitSet FOLLOW_47_in_switchLabel3842 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_63_in_switchLabel3852 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_enumConstantName_in_switchLabel3854 = new BitSet(new long[]{0x0000800000000000L});
-    public static final BitSet FOLLOW_47_in_switchLabel3856 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_68_in_switchLabel3866 = new BitSet(new long[]{0x0000800000000000L});
-    public static final BitSet FOLLOW_47_in_switchLabel3868 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_enhancedForControl_in_forControl3899 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_forInit_in_forControl3909 = new BitSet(new long[]{0x0001000000000000L});
-    public static final BitSet FOLLOW_48_in_forControl3912 = new BitSet(new long[]{0x500103310260D0C0L,0x0002028920D41242L});
-    public static final BitSet FOLLOW_expression_in_forControl3914 = new BitSet(new long[]{0x0001000000000000L});
-    public static final BitSet FOLLOW_48_in_forControl3917 = new BitSet(new long[]{0x500003310260D0C2L,0x0002028920D41242L});
-    public static final BitSet FOLLOW_forUpdate_in_forControl3919 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_localVariableDeclaration_in_forInit3939 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_expressionList_in_forInit3949 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_variableModifiers_in_enhancedForControl3972 = new BitSet(new long[]{0x5000000000008000L,0x0000000020141042L});
-    public static final BitSet FOLLOW_type_in_enhancedForControl3974 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_Identifier_in_enhancedForControl3976 = new BitSet(new long[]{0x0000800000000000L});
-    public static final BitSet FOLLOW_47_in_enhancedForControl3978 = new BitSet(new long[]{0x500003310260D0C0L,0x0002028920D41242L});
-    public static final BitSet FOLLOW_expression_in_enhancedForControl3980 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_expressionList_in_forUpdate3999 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_32_in_parExpression4020 = new BitSet(new long[]{0x500003310260D0C0L,0x0002028920D41242L});
-    public static final BitSet FOLLOW_expression_in_parExpression4022 = new BitSet(new long[]{0x0000000200000000L});
-    public static final BitSet FOLLOW_33_in_parExpression4024 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_expression_in_expressionList4047 = new BitSet(new long[]{0x0000008000000002L});
-    public static final BitSet FOLLOW_39_in_expressionList4050 = new BitSet(new long[]{0x500003310260D0C0L,0x0002028920D41242L});
-    public static final BitSet FOLLOW_expression_in_expressionList4052 = new BitSet(new long[]{0x0000008000000002L});
-    public static final BitSet FOLLOW_expression_in_statementExpression4073 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_expression_in_constantExpression4096 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_conditionalExpression_in_expression4119 = new BitSet(new long[]{0x0416444890000002L,0x0000400000000000L});
-    public static final BitSet FOLLOW_assignmentOperator_in_expression4122 = new BitSet(new long[]{0x500003310260D0C0L,0x0002028920D41242L});
-    public static final BitSet FOLLOW_expression_in_expression4124 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_50_in_assignmentOperator4150 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_38_in_assignmentOperator4160 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_42_in_assignmentOperator4170 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_35_in_assignmentOperator4180 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_46_in_assignmentOperator4190 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_31_in_assignmentOperator4200 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_110_in_assignmentOperator4210 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_58_in_assignmentOperator4220 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_28_in_assignmentOperator4230 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_49_in_assignmentOperator4251 = new BitSet(new long[]{0x0002000000000000L});
-    public static final BitSet FOLLOW_49_in_assignmentOperator4255 = new BitSet(new long[]{0x0004000000000000L});
-    public static final BitSet FOLLOW_50_in_assignmentOperator4259 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_52_in_assignmentOperator4293 = new BitSet(new long[]{0x0010000000000000L});
-    public static final BitSet FOLLOW_52_in_assignmentOperator4297 = new BitSet(new long[]{0x0010000000000000L});
-    public static final BitSet FOLLOW_52_in_assignmentOperator4301 = new BitSet(new long[]{0x0004000000000000L});
-    public static final BitSet FOLLOW_50_in_assignmentOperator4305 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_52_in_assignmentOperator4336 = new BitSet(new long[]{0x0010000000000000L});
-    public static final BitSet FOLLOW_52_in_assignmentOperator4340 = new BitSet(new long[]{0x0004000000000000L});
-    public static final BitSet FOLLOW_50_in_assignmentOperator4344 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_conditionalOrExpression_in_conditionalExpression4373 = new BitSet(new long[]{0x0020000000000002L});
-    public static final BitSet FOLLOW_53_in_conditionalExpression4377 = new BitSet(new long[]{0x500003310260D0C0L,0x0002028920D41242L});
-    public static final BitSet FOLLOW_expression_in_conditionalExpression4379 = new BitSet(new long[]{0x0000800000000000L});
-    public static final BitSet FOLLOW_47_in_conditionalExpression4381 = new BitSet(new long[]{0x500003310260D0C0L,0x0002028920D41242L});
-    public static final BitSet FOLLOW_expression_in_conditionalExpression4383 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_conditionalAndExpression_in_conditionalOrExpression4421 = new BitSet(new long[]{0x0000000000000002L,0x0000800000000000L});
-    public static final BitSet FOLLOW_111_in_conditionalOrExpression4425 = new BitSet(new long[]{0x500003310260D0C0L,0x0002028920D41242L});
-    public static final BitSet FOLLOW_conditionalAndExpression_in_conditionalOrExpression4427 = new BitSet(new long[]{0x0000000000000002L,0x0000800000000000L});
-    public static final BitSet FOLLOW_inclusiveOrExpression_in_conditionalAndExpression4449 = new BitSet(new long[]{0x0000000020000002L});
-    public static final BitSet FOLLOW_29_in_conditionalAndExpression4453 = new BitSet(new long[]{0x500003310260D0C0L,0x0002028920D41242L});
-    public static final BitSet FOLLOW_inclusiveOrExpression_in_conditionalAndExpression4455 = new BitSet(new long[]{0x0000000020000002L});
-    public static final BitSet FOLLOW_exclusiveOrExpression_in_inclusiveOrExpression4477 = new BitSet(new long[]{0x0000000000000002L,0x0000200000000000L});
-    public static final BitSet FOLLOW_109_in_inclusiveOrExpression4481 = new BitSet(new long[]{0x500003310260D0C0L,0x0002028920D41242L});
-    public static final BitSet FOLLOW_exclusiveOrExpression_in_inclusiveOrExpression4483 = new BitSet(new long[]{0x0000000000000002L,0x0000200000000000L});
-    public static final BitSet FOLLOW_andExpression_in_exclusiveOrExpression4505 = new BitSet(new long[]{0x0200000000000002L});
-    public static final BitSet FOLLOW_57_in_exclusiveOrExpression4509 = new BitSet(new long[]{0x500003310260D0C0L,0x0002028920D41242L});
-    public static final BitSet FOLLOW_andExpression_in_exclusiveOrExpression4511 = new BitSet(new long[]{0x0200000000000002L});
-    public static final BitSet FOLLOW_equalityExpression_in_andExpression4533 = new BitSet(new long[]{0x0000000040000002L});
-    public static final BitSet FOLLOW_30_in_andExpression4537 = new BitSet(new long[]{0x500003310260D0C0L,0x0002028920D41242L});
-    public static final BitSet FOLLOW_equalityExpression_in_andExpression4539 = new BitSet(new long[]{0x0000000040000002L});
-    public static final BitSet FOLLOW_instanceOfExpression_in_equalityExpression4561 = new BitSet(new long[]{0x0008000004000002L});
-    public static final BitSet FOLLOW_set_in_equalityExpression4565 = new BitSet(new long[]{0x500003310260D0C0L,0x0002028920D41242L});
-    public static final BitSet FOLLOW_instanceOfExpression_in_equalityExpression4573 = new BitSet(new long[]{0x0008000004000002L});
-    public static final BitSet FOLLOW_relationalExpression_in_instanceOfExpression4595 = new BitSet(new long[]{0x0000000000000002L,0x0000000000020000L});
-    public static final BitSet FOLLOW_81_in_instanceOfExpression4598 = new BitSet(new long[]{0x5000000000008000L,0x0000000020141042L});
-    public static final BitSet FOLLOW_type_in_instanceOfExpression4600 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_shiftExpression_in_relationalExpression4621 = new BitSet(new long[]{0x0012000000000002L});
-    public static final BitSet FOLLOW_relationalOp_in_relationalExpression4625 = new BitSet(new long[]{0x500003310260D0C0L,0x0002028920D41242L});
-    public static final BitSet FOLLOW_shiftExpression_in_relationalExpression4627 = new BitSet(new long[]{0x0012000000000002L});
-    public static final BitSet FOLLOW_49_in_relationalOp4662 = new BitSet(new long[]{0x0004000000000000L});
-    public static final BitSet FOLLOW_50_in_relationalOp4666 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_52_in_relationalOp4696 = new BitSet(new long[]{0x0004000000000000L});
-    public static final BitSet FOLLOW_50_in_relationalOp4700 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_49_in_relationalOp4721 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_52_in_relationalOp4732 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_additiveExpression_in_shiftExpression4752 = new BitSet(new long[]{0x0012000000000002L});
-    public static final BitSet FOLLOW_shiftOp_in_shiftExpression4756 = new BitSet(new long[]{0x500003310260D0C0L,0x0002028920D41242L});
-    public static final BitSet FOLLOW_additiveExpression_in_shiftExpression4758 = new BitSet(new long[]{0x0012000000000002L});
-    public static final BitSet FOLLOW_49_in_shiftOp4789 = new BitSet(new long[]{0x0002000000000000L});
-    public static final BitSet FOLLOW_49_in_shiftOp4793 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_52_in_shiftOp4825 = new BitSet(new long[]{0x0010000000000000L});
-    public static final BitSet FOLLOW_52_in_shiftOp4829 = new BitSet(new long[]{0x0010000000000000L});
-    public static final BitSet FOLLOW_52_in_shiftOp4833 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_52_in_shiftOp4863 = new BitSet(new long[]{0x0010000000000000L});
-    public static final BitSet FOLLOW_52_in_shiftOp4867 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_multiplicativeExpression_in_additiveExpression4897 = new BitSet(new long[]{0x0000011000000002L});
-    public static final BitSet FOLLOW_set_in_additiveExpression4901 = new BitSet(new long[]{0x500003310260D0C0L,0x0002028920D41242L});
-    public static final BitSet FOLLOW_multiplicativeExpression_in_additiveExpression4909 = new BitSet(new long[]{0x0000011000000002L});
-    public static final BitSet FOLLOW_unaryExpression_in_multiplicativeExpression4931 = new BitSet(new long[]{0x0000200408000002L});
-    public static final BitSet FOLLOW_set_in_multiplicativeExpression4935 = new BitSet(new long[]{0x500003310260D0C0L,0x0002028920D41242L});
-    public static final BitSet FOLLOW_unaryExpression_in_multiplicativeExpression4949 = new BitSet(new long[]{0x0000200408000002L});
-    public static final BitSet FOLLOW_36_in_unaryExpression4975 = new BitSet(new long[]{0x500003310260D0C0L,0x0002028920D41242L});
-    public static final BitSet FOLLOW_unaryExpression_in_unaryExpression4977 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_40_in_unaryExpression4987 = new BitSet(new long[]{0x500003310260D0C0L,0x0002028920D41242L});
-    public static final BitSet FOLLOW_unaryExpression_in_unaryExpression4989 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_37_in_unaryExpression4999 = new BitSet(new long[]{0x500003310260D0C0L,0x0002028920D41242L});
-    public static final BitSet FOLLOW_unaryExpression_in_unaryExpression5001 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_41_in_unaryExpression5011 = new BitSet(new long[]{0x500003310260D0C0L,0x0002028920D41242L});
-    public static final BitSet FOLLOW_unaryExpression_in_unaryExpression5013 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_unaryExpressionNotPlusMinus_in_unaryExpression5023 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_113_in_unaryExpressionNotPlusMinus5042 = new BitSet(new long[]{0x500003310260D0C0L,0x0002028920D41242L});
-    public static final BitSet FOLLOW_unaryExpression_in_unaryExpressionNotPlusMinus5044 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_25_in_unaryExpressionNotPlusMinus5054 = new BitSet(new long[]{0x500003310260D0C0L,0x0002028920D41242L});
-    public static final BitSet FOLLOW_unaryExpression_in_unaryExpressionNotPlusMinus5056 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_castExpression_in_unaryExpressionNotPlusMinus5066 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_primary_in_unaryExpressionNotPlusMinus5076 = new BitSet(new long[]{0x00800A2000000002L});
-    public static final BitSet FOLLOW_selector_in_unaryExpressionNotPlusMinus5078 = new BitSet(new long[]{0x00800A2000000002L});
-    public static final BitSet FOLLOW_32_in_castExpression5104 = new BitSet(new long[]{0x5000000000000000L,0x0000000020141042L});
-    public static final BitSet FOLLOW_primitiveType_in_castExpression5106 = new BitSet(new long[]{0x0000000200000000L});
-    public static final BitSet FOLLOW_33_in_castExpression5108 = new BitSet(new long[]{0x500003310260D0C0L,0x0002028920D41242L});
-    public static final BitSet FOLLOW_unaryExpression_in_castExpression5110 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_32_in_castExpression5119 = new BitSet(new long[]{0x500003310260D0C0L,0x0002028920D41242L});
-    public static final BitSet FOLLOW_type_in_castExpression5122 = new BitSet(new long[]{0x0000000200000000L});
-    public static final BitSet FOLLOW_expression_in_castExpression5126 = new BitSet(new long[]{0x0000000200000000L});
-    public static final BitSet FOLLOW_33_in_castExpression5129 = new BitSet(new long[]{0x500000010260D0C0L,0x0002028920D41242L});
-    public static final BitSet FOLLOW_unaryExpressionNotPlusMinus_in_castExpression5131 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_parExpression_in_primary5150 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_99_in_primary5160 = new BitSet(new long[]{0x0080080100000002L});
-    public static final BitSet FOLLOW_43_in_primary5163 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_Identifier_in_primary5165 = new BitSet(new long[]{0x0080080100000002L});
-    public static final BitSet FOLLOW_identifierSuffix_in_primary5169 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_96_in_primary5180 = new BitSet(new long[]{0x0000080100000000L});
-    public static final BitSet FOLLOW_superSuffix_in_primary5182 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_literal_in_primary5192 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_86_in_primary5202 = new BitSet(new long[]{0x5002000000008000L,0x0000000020141042L});
-    public static final BitSet FOLLOW_creator_in_primary5204 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_Identifier_in_primary5214 = new BitSet(new long[]{0x0080080100000002L});
-    public static final BitSet FOLLOW_43_in_primary5217 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_Identifier_in_primary5219 = new BitSet(new long[]{0x0080080100000002L});
-    public static final BitSet FOLLOW_identifierSuffix_in_primary5223 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_primitiveType_in_primary5234 = new BitSet(new long[]{0x0080080000000000L});
-    public static final BitSet FOLLOW_55_in_primary5237 = new BitSet(new long[]{0x0100000000000000L});
-    public static final BitSet FOLLOW_56_in_primary5239 = new BitSet(new long[]{0x0080080000000000L});
-    public static final BitSet FOLLOW_43_in_primary5243 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000004L});
-    public static final BitSet FOLLOW_66_in_primary5245 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_105_in_primary5255 = new BitSet(new long[]{0x0000080000000000L});
-    public static final BitSet FOLLOW_43_in_primary5257 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000004L});
-    public static final BitSet FOLLOW_66_in_primary5259 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_55_in_identifierSuffix5279 = new BitSet(new long[]{0x0100000000000000L});
-    public static final BitSet FOLLOW_56_in_identifierSuffix5281 = new BitSet(new long[]{0x0080080000000000L});
-    public static final BitSet FOLLOW_43_in_identifierSuffix5285 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000004L});
-    public static final BitSet FOLLOW_66_in_identifierSuffix5287 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_55_in_identifierSuffix5298 = new BitSet(new long[]{0x500003310260D0C0L,0x0002028920D41242L});
-    public static final BitSet FOLLOW_expression_in_identifierSuffix5300 = new BitSet(new long[]{0x0100000000000000L});
-    public static final BitSet FOLLOW_56_in_identifierSuffix5302 = new BitSet(new long[]{0x0080000000000002L});
-    public static final BitSet FOLLOW_arguments_in_identifierSuffix5315 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_43_in_identifierSuffix5325 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000004L});
-    public static final BitSet FOLLOW_66_in_identifierSuffix5327 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_43_in_identifierSuffix5337 = new BitSet(new long[]{0x0002000000000000L});
-    public static final BitSet FOLLOW_explicitGenericInvocation_in_identifierSuffix5339 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_43_in_identifierSuffix5349 = new BitSet(new long[]{0x0000000000000000L,0x0000000800000000L});
-    public static final BitSet FOLLOW_99_in_identifierSuffix5351 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_43_in_identifierSuffix5361 = new BitSet(new long[]{0x0000000000000000L,0x0000000100000000L});
-    public static final BitSet FOLLOW_96_in_identifierSuffix5363 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_arguments_in_identifierSuffix5365 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_43_in_identifierSuffix5375 = new BitSet(new long[]{0x0000000000000000L,0x0000000000400000L});
-    public static final BitSet FOLLOW_86_in_identifierSuffix5377 = new BitSet(new long[]{0x0002000000008000L});
-    public static final BitSet FOLLOW_innerCreator_in_identifierSuffix5379 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_nonWildcardTypeArguments_in_creator5398 = new BitSet(new long[]{0x5000000000008000L,0x0000000020141042L});
-    public static final BitSet FOLLOW_createdName_in_creator5400 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_classCreatorRest_in_creator5402 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_createdName_in_creator5412 = new BitSet(new long[]{0x0080000100000000L});
-    public static final BitSet FOLLOW_arrayCreatorRest_in_creator5415 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_classCreatorRest_in_creator5419 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_classOrInterfaceType_in_createdName5439 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_primitiveType_in_createdName5449 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_nonWildcardTypeArguments_in_innerCreator5472 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_Identifier_in_innerCreator5475 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_classCreatorRest_in_innerCreator5477 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_55_in_arrayCreatorRest5496 = new BitSet(new long[]{0x510003310260D0C0L,0x0002028920D41242L});
-    public static final BitSet FOLLOW_56_in_arrayCreatorRest5510 = new BitSet(new long[]{0x0080000000000000L,0x0000100000000000L});
-    public static final BitSet FOLLOW_55_in_arrayCreatorRest5513 = new BitSet(new long[]{0x0100000000000000L});
-    public static final BitSet FOLLOW_56_in_arrayCreatorRest5515 = new BitSet(new long[]{0x0080000000000000L,0x0000100000000000L});
-    public static final BitSet FOLLOW_arrayInitializer_in_arrayCreatorRest5519 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_expression_in_arrayCreatorRest5533 = new BitSet(new long[]{0x0100000000000000L});
-    public static final BitSet FOLLOW_56_in_arrayCreatorRest5535 = new BitSet(new long[]{0x0080000000000002L});
-    public static final BitSet FOLLOW_55_in_arrayCreatorRest5538 = new BitSet(new long[]{0x500003310260D0C0L,0x0002028920D41242L});
+    public static final BitSet FOLLOW_80_in_importDeclaration178 = new BitSet(new long[]{0x0000000000008000L,0x0000000040000000L});
+    public static final BitSet FOLLOW_94_in_importDeclaration180 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_qualifiedName_in_importDeclaration183 = new BitSet(new long[]{0x0001080000000000L});
+    public static final BitSet FOLLOW_43_in_importDeclaration186 = new BitSet(new long[]{0x0000000400000000L});
+    public static final BitSet FOLLOW_34_in_importDeclaration188 = new BitSet(new long[]{0x0001000000000000L});
+    public static final BitSet FOLLOW_48_in_importDeclaration192 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_classOrInterfaceDeclaration_in_typeDeclaration217 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_48_in_typeDeclaration228 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_classOrInterfaceModifiers_in_classOrInterfaceDeclaration251 = new BitSet(new long[]{0x0040000000000100L,0x0000000000080004L});
+    public static final BitSet FOLLOW_classDeclaration_in_classOrInterfaceDeclaration254 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_interfaceDeclaration_in_classOrInterfaceDeclaration258 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_classOrInterfaceModifier_in_classOrInterfaceModifiers282 = new BitSet(new long[]{0x0840000000000002L,0x00000000CE000400L});
+    public static final BitSet FOLLOW_annotation_in_classOrInterfaceModifier302 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_91_in_classOrInterfaceModifier315 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_90_in_classOrInterfaceModifier330 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_89_in_classOrInterfaceModifier342 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_59_in_classOrInterfaceModifier356 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_94_in_classOrInterfaceModifier369 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_74_in_classOrInterfaceModifier384 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_95_in_classOrInterfaceModifier400 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_modifier_in_modifiers422 = new BitSet(new long[]{0x0840000000000002L,0x00000444CE200400L});
+    public static final BitSet FOLLOW_normalClassDeclaration_in_classDeclaration442 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_enumDeclaration_in_classDeclaration452 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_66_in_normalClassDeclaration475 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_Identifier_in_normalClassDeclaration477 = new BitSet(new long[]{0x0002000000000000L,0x0000100000008100L});
+    public static final BitSet FOLLOW_typeParameters_in_normalClassDeclaration479 = new BitSet(new long[]{0x0000000000000000L,0x0000100000008100L});
+    public static final BitSet FOLLOW_72_in_normalClassDeclaration493 = new BitSet(new long[]{0x5000000000008000L,0x0000000020141042L});
+    public static final BitSet FOLLOW_type_in_normalClassDeclaration495 = new BitSet(new long[]{0x0000000000000000L,0x0000100000008000L});
+    public static final BitSet FOLLOW_79_in_normalClassDeclaration508 = new BitSet(new long[]{0x5000000000008000L,0x0000000020141042L});
+    public static final BitSet FOLLOW_typeList_in_normalClassDeclaration510 = new BitSet(new long[]{0x0000000000000000L,0x0000100000000000L});
+    public static final BitSet FOLLOW_classBody_in_normalClassDeclaration522 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_49_in_typeParameters545 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_typeParameter_in_typeParameters547 = new BitSet(new long[]{0x0010008000000000L});
+    public static final BitSet FOLLOW_39_in_typeParameters550 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_typeParameter_in_typeParameters552 = new BitSet(new long[]{0x0010008000000000L});
+    public static final BitSet FOLLOW_52_in_typeParameters556 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_Identifier_in_typeParameter575 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000100L});
+    public static final BitSet FOLLOW_72_in_typeParameter578 = new BitSet(new long[]{0x5000000000008000L,0x0000000020141042L});
+    public static final BitSet FOLLOW_typeBound_in_typeParameter580 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_type_in_typeBound609 = new BitSet(new long[]{0x0000000040000002L});
+    public static final BitSet FOLLOW_30_in_typeBound612 = new BitSet(new long[]{0x5000000000008000L,0x0000000020141042L});
+    public static final BitSet FOLLOW_type_in_typeBound614 = new BitSet(new long[]{0x0000000040000002L});
+    public static final BitSet FOLLOW_ENUM_in_enumDeclaration635 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_Identifier_in_enumDeclaration637 = new BitSet(new long[]{0x0000000000000000L,0x0000100000008000L});
+    public static final BitSet FOLLOW_79_in_enumDeclaration640 = new BitSet(new long[]{0x5000000000008000L,0x0000000020141042L});
+    public static final BitSet FOLLOW_typeList_in_enumDeclaration642 = new BitSet(new long[]{0x0000000000000000L,0x0000100000000000L});
+    public static final BitSet FOLLOW_enumBody_in_enumDeclaration646 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_108_in_enumBody665 = new BitSet(new long[]{0x0041008000008000L,0x0001000000000000L});
+    public static final BitSet FOLLOW_enumConstants_in_enumBody667 = new BitSet(new long[]{0x0001008000000000L,0x0001000000000000L});
+    public static final BitSet FOLLOW_39_in_enumBody670 = new BitSet(new long[]{0x0001000000000000L,0x0001000000000000L});
+    public static final BitSet FOLLOW_enumBodyDeclarations_in_enumBody673 = new BitSet(new long[]{0x0000000000000000L,0x0001000000000000L});
+    public static final BitSet FOLLOW_112_in_enumBody676 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_enumConstant_in_enumConstants695 = new BitSet(new long[]{0x0000008000000002L});
+    public static final BitSet FOLLOW_39_in_enumConstants698 = new BitSet(new long[]{0x0040000000008000L});
+    public static final BitSet FOLLOW_enumConstant_in_enumConstants700 = new BitSet(new long[]{0x0000008000000002L});
+    public static final BitSet FOLLOW_annotations_in_enumConstant725 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_Identifier_in_enumConstant728 = new BitSet(new long[]{0x0000000100000002L,0x0000100000000000L});
+    public static final BitSet FOLLOW_arguments_in_enumConstant730 = new BitSet(new long[]{0x0000000000000002L,0x0000100000000000L});
+    public static final BitSet FOLLOW_classBody_in_enumConstant733 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_48_in_enumBodyDeclarations757 = new BitSet(new long[]{0x5843000000008102L,0x00001644EE3C1446L});
+    public static final BitSet FOLLOW_classBodyDeclaration_in_enumBodyDeclarations760 = new BitSet(new long[]{0x5843000000008102L,0x00001644EE3C1446L});
+    public static final BitSet FOLLOW_normalInterfaceDeclaration_in_interfaceDeclaration785 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_annotationTypeDeclaration_in_interfaceDeclaration795 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_83_in_normalInterfaceDeclaration818 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_Identifier_in_normalInterfaceDeclaration820 = new BitSet(new long[]{0x0002000000000000L,0x0000100000000100L});
+    public static final BitSet FOLLOW_typeParameters_in_normalInterfaceDeclaration822 = new BitSet(new long[]{0x0000000000000000L,0x0000100000000100L});
+    public static final BitSet FOLLOW_72_in_normalInterfaceDeclaration826 = new BitSet(new long[]{0x5000000000008000L,0x0000000020141042L});
+    public static final BitSet FOLLOW_typeList_in_normalInterfaceDeclaration828 = new BitSet(new long[]{0x0000000000000000L,0x0000100000000000L});
+    public static final BitSet FOLLOW_interfaceBody_in_normalInterfaceDeclaration832 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_type_in_typeList855 = new BitSet(new long[]{0x0000008000000002L});
+    public static final BitSet FOLLOW_39_in_typeList858 = new BitSet(new long[]{0x5000000000008000L,0x0000000020141042L});
+    public static final BitSet FOLLOW_type_in_typeList860 = new BitSet(new long[]{0x0000008000000002L});
+    public static final BitSet FOLLOW_108_in_classBody885 = new BitSet(new long[]{0x5843000000008100L,0x00011644EE3C1446L});
+    public static final BitSet FOLLOW_classBodyDeclaration_in_classBody887 = new BitSet(new long[]{0x5843000000008100L,0x00011644EE3C1446L});
+    public static final BitSet FOLLOW_112_in_classBody890 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_108_in_interfaceBody913 = new BitSet(new long[]{0x5843000000008100L,0x00010644EE3C1446L});
+    public static final BitSet FOLLOW_interfaceBodyDeclaration_in_interfaceBody915 = new BitSet(new long[]{0x5843000000008100L,0x00010644EE3C1446L});
+    public static final BitSet FOLLOW_112_in_interfaceBody918 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_48_in_classBodyDeclaration937 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_94_in_classBodyDeclaration947 = new BitSet(new long[]{0x0000000000000000L,0x0000100000000000L});
+    public static final BitSet FOLLOW_block_in_classBodyDeclaration950 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_modifiers_in_classBodyDeclaration960 = new BitSet(new long[]{0x5042000000008100L,0x00000200201C1046L});
+    public static final BitSet FOLLOW_memberDecl_in_classBodyDeclaration962 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_genericMethodOrConstructorDecl_in_memberDecl985 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_memberDeclaration_in_memberDecl995 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_105_in_memberDecl1005 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_Identifier_in_memberDecl1007 = new BitSet(new long[]{0x0000000100000000L});
+    public static final BitSet FOLLOW_voidMethodDeclaratorRest_in_memberDecl1009 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_Identifier_in_memberDecl1019 = new BitSet(new long[]{0x0000000100000000L});
+    public static final BitSet FOLLOW_constructorDeclaratorRest_in_memberDecl1021 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_interfaceDeclaration_in_memberDecl1031 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_classDeclaration_in_memberDecl1041 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_type_in_memberDeclaration1064 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_methodDeclaration_in_memberDeclaration1067 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_fieldDeclaration_in_memberDeclaration1071 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_typeParameters_in_genericMethodOrConstructorDecl1093 = new BitSet(new long[]{0x5000000000008000L,0x0000020020141042L});
+    public static final BitSet FOLLOW_genericMethodOrConstructorRest_in_genericMethodOrConstructorDecl1095 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_type_in_genericMethodOrConstructorRest1119 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_105_in_genericMethodOrConstructorRest1123 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_Identifier_in_genericMethodOrConstructorRest1126 = new BitSet(new long[]{0x0000000100000000L});
+    public static final BitSet FOLLOW_methodDeclaratorRest_in_genericMethodOrConstructorRest1128 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_Identifier_in_genericMethodOrConstructorRest1138 = new BitSet(new long[]{0x0000000100000000L});
+    public static final BitSet FOLLOW_constructorDeclaratorRest_in_genericMethodOrConstructorRest1140 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_Identifier_in_methodDeclaration1159 = new BitSet(new long[]{0x0000000100000000L});
+    public static final BitSet FOLLOW_methodDeclaratorRest_in_methodDeclaration1161 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_variableDeclarators_in_fieldDeclaration1180 = new BitSet(new long[]{0x0001000000000000L});
+    public static final BitSet FOLLOW_48_in_fieldDeclaration1182 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_modifiers_in_interfaceBodyDeclaration1211 = new BitSet(new long[]{0x5042000000008100L,0x00000200201C1046L});
+    public static final BitSet FOLLOW_interfaceMemberDecl_in_interfaceBodyDeclaration1213 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_48_in_interfaceBodyDeclaration1223 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_interfaceMethodOrFieldDecl_in_interfaceMemberDecl1242 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_interfaceGenericMethodDecl_in_interfaceMemberDecl1252 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_105_in_interfaceMemberDecl1262 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_Identifier_in_interfaceMemberDecl1264 = new BitSet(new long[]{0x0000000100000000L});
+    public static final BitSet FOLLOW_voidInterfaceMethodDeclaratorRest_in_interfaceMemberDecl1266 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_interfaceDeclaration_in_interfaceMemberDecl1276 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_classDeclaration_in_interfaceMemberDecl1286 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_type_in_interfaceMethodOrFieldDecl1309 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_Identifier_in_interfaceMethodOrFieldDecl1311 = new BitSet(new long[]{0x0084000100000000L});
+    public static final BitSet FOLLOW_interfaceMethodOrFieldRest_in_interfaceMethodOrFieldDecl1313 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_constantDeclaratorsRest_in_interfaceMethodOrFieldRest1336 = new BitSet(new long[]{0x0001000000000000L});
+    public static final BitSet FOLLOW_48_in_interfaceMethodOrFieldRest1338 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_interfaceMethodDeclaratorRest_in_interfaceMethodOrFieldRest1348 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_formalParameters_in_methodDeclaratorRest1371 = new BitSet(new long[]{0x0081000000000000L,0x0000102000000000L});
+    public static final BitSet FOLLOW_55_in_methodDeclaratorRest1374 = new BitSet(new long[]{0x0100000000000000L});
+    public static final BitSet FOLLOW_56_in_methodDeclaratorRest1376 = new BitSet(new long[]{0x0081000000000000L,0x0000102000000000L});
+    public static final BitSet FOLLOW_101_in_methodDeclaratorRest1389 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_qualifiedNameList_in_methodDeclaratorRest1391 = new BitSet(new long[]{0x0001000000000000L,0x0000100000000000L});
+    public static final BitSet FOLLOW_methodBody_in_methodDeclaratorRest1407 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_48_in_methodDeclaratorRest1421 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_formalParameters_in_voidMethodDeclaratorRest1454 = new BitSet(new long[]{0x0001000000000000L,0x0000102000000000L});
+    public static final BitSet FOLLOW_101_in_voidMethodDeclaratorRest1457 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_qualifiedNameList_in_voidMethodDeclaratorRest1459 = new BitSet(new long[]{0x0001000000000000L,0x0000100000000000L});
+    public static final BitSet FOLLOW_methodBody_in_voidMethodDeclaratorRest1475 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_48_in_voidMethodDeclaratorRest1489 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_formalParameters_in_interfaceMethodDeclaratorRest1522 = new BitSet(new long[]{0x0081000000000000L,0x0000002000000000L});
+    public static final BitSet FOLLOW_55_in_interfaceMethodDeclaratorRest1525 = new BitSet(new long[]{0x0100000000000000L});
+    public static final BitSet FOLLOW_56_in_interfaceMethodDeclaratorRest1527 = new BitSet(new long[]{0x0081000000000000L,0x0000002000000000L});
+    public static final BitSet FOLLOW_101_in_interfaceMethodDeclaratorRest1532 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_qualifiedNameList_in_interfaceMethodDeclaratorRest1534 = new BitSet(new long[]{0x0001000000000000L});
+    public static final BitSet FOLLOW_48_in_interfaceMethodDeclaratorRest1538 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_typeParameters_in_interfaceGenericMethodDecl1561 = new BitSet(new long[]{0x5000000000008000L,0x0000020020141042L});
+    public static final BitSet FOLLOW_type_in_interfaceGenericMethodDecl1564 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_105_in_interfaceGenericMethodDecl1568 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_Identifier_in_interfaceGenericMethodDecl1571 = new BitSet(new long[]{0x0000000100000000L});
+    public static final BitSet FOLLOW_interfaceMethodDeclaratorRest_in_interfaceGenericMethodDecl1581 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_formalParameters_in_voidInterfaceMethodDeclaratorRest1604 = new BitSet(new long[]{0x0001000000000000L,0x0000002000000000L});
+    public static final BitSet FOLLOW_101_in_voidInterfaceMethodDeclaratorRest1607 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_qualifiedNameList_in_voidInterfaceMethodDeclaratorRest1609 = new BitSet(new long[]{0x0001000000000000L});
+    public static final BitSet FOLLOW_48_in_voidInterfaceMethodDeclaratorRest1613 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_formalParameters_in_constructorDeclaratorRest1636 = new BitSet(new long[]{0x0000000000000000L,0x0000102000000000L});
+    public static final BitSet FOLLOW_101_in_constructorDeclaratorRest1639 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_qualifiedNameList_in_constructorDeclaratorRest1641 = new BitSet(new long[]{0x0000000000000000L,0x0000100000000000L});
+    public static final BitSet FOLLOW_constructorBody_in_constructorDeclaratorRest1645 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_Identifier_in_constantDeclarator1664 = new BitSet(new long[]{0x0084000000000000L});
+    public static final BitSet FOLLOW_constantDeclaratorRest_in_constantDeclarator1666 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_variableDeclarator_in_variableDeclarators1689 = new BitSet(new long[]{0x0000008000000002L});
+    public static final BitSet FOLLOW_39_in_variableDeclarators1692 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_variableDeclarator_in_variableDeclarators1694 = new BitSet(new long[]{0x0000008000000002L});
+    public static final BitSet FOLLOW_variableDeclaratorId_in_variableDeclarator1715 = new BitSet(new long[]{0x0004000000000002L});
+    public static final BitSet FOLLOW_50_in_variableDeclarator1718 = new BitSet(new long[]{0x500003310260D0C0L,0x0002128920D41242L});
+    public static final BitSet FOLLOW_variableInitializer_in_variableDeclarator1720 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_constantDeclaratorRest_in_constantDeclaratorsRest1746 = new BitSet(new long[]{0x0000008000000002L});
+    public static final BitSet FOLLOW_39_in_constantDeclaratorsRest1749 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_constantDeclarator_in_constantDeclaratorsRest1751 = new BitSet(new long[]{0x0000008000000002L});
+    public static final BitSet FOLLOW_55_in_constantDeclaratorRest1773 = new BitSet(new long[]{0x0100000000000000L});
+    public static final BitSet FOLLOW_56_in_constantDeclaratorRest1775 = new BitSet(new long[]{0x0084000000000000L});
+    public static final BitSet FOLLOW_50_in_constantDeclaratorRest1779 = new BitSet(new long[]{0x500003310260D0C0L,0x0002128920D41242L});
+    public static final BitSet FOLLOW_variableInitializer_in_constantDeclaratorRest1781 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_Identifier_in_variableDeclaratorId1804 = new BitSet(new long[]{0x0080000000000002L});
+    public static final BitSet FOLLOW_55_in_variableDeclaratorId1807 = new BitSet(new long[]{0x0100000000000000L});
+    public static final BitSet FOLLOW_56_in_variableDeclaratorId1809 = new BitSet(new long[]{0x0080000000000002L});
+    public static final BitSet FOLLOW_arrayInitializer_in_variableInitializer1830 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_expression_in_variableInitializer1840 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_108_in_arrayInitializer1869 = new BitSet(new long[]{0x500003310260D0C0L,0x0003128920D41242L});
+    public static final BitSet FOLLOW_variableInitializer_in_arrayInitializer1872 = new BitSet(new long[]{0x0000008000000000L,0x0001000000000000L});
+    public static final BitSet FOLLOW_39_in_arrayInitializer1875 = new BitSet(new long[]{0x500003310260D0C0L,0x0002128920D41242L});
+    public static final BitSet FOLLOW_variableInitializer_in_arrayInitializer1877 = new BitSet(new long[]{0x0000008000000000L,0x0001000000000000L});
+    public static final BitSet FOLLOW_39_in_arrayInitializer1882 = new BitSet(new long[]{0x0000000000000000L,0x0001000000000000L});
+    public static final BitSet FOLLOW_112_in_arrayInitializer1889 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_annotation_in_modifier1908 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_91_in_modifier1918 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_90_in_modifier1928 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_89_in_modifier1938 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_94_in_modifier1948 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_59_in_modifier1958 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_74_in_modifier1968 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_85_in_modifier1978 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_98_in_modifier1988 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_102_in_modifier1998 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_106_in_modifier2008 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_95_in_modifier2018 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_qualifiedName_in_packageOrTypeName2037 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_Identifier_in_enumConstantName2056 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_qualifiedName_in_typeName2075 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_classOrInterfaceType_in_type2089 = new BitSet(new long[]{0x0080000000000002L});
+    public static final BitSet FOLLOW_55_in_type2092 = new BitSet(new long[]{0x0100000000000000L});
+    public static final BitSet FOLLOW_56_in_type2094 = new BitSet(new long[]{0x0080000000000002L});
+    public static final BitSet FOLLOW_primitiveType_in_type2101 = new BitSet(new long[]{0x0080000000000002L});
+    public static final BitSet FOLLOW_55_in_type2104 = new BitSet(new long[]{0x0100000000000000L});
+    public static final BitSet FOLLOW_56_in_type2106 = new BitSet(new long[]{0x0080000000000002L});
+    public static final BitSet FOLLOW_Identifier_in_classOrInterfaceType2119 = new BitSet(new long[]{0x0002080000000002L});
+    public static final BitSet FOLLOW_typeArguments_in_classOrInterfaceType2121 = new BitSet(new long[]{0x0000080000000002L});
+    public static final BitSet FOLLOW_43_in_classOrInterfaceType2125 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_Identifier_in_classOrInterfaceType2127 = new BitSet(new long[]{0x0002080000000002L});
+    public static final BitSet FOLLOW_typeArguments_in_classOrInterfaceType2129 = new BitSet(new long[]{0x0000080000000002L});
+    public static final BitSet FOLLOW_74_in_variableModifier2238 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_annotation_in_variableModifier2248 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_49_in_typeArguments2267 = new BitSet(new long[]{0x5020000000008000L,0x0000000020141042L});
+    public static final BitSet FOLLOW_typeArgument_in_typeArguments2269 = new BitSet(new long[]{0x0010008000000000L});
+    public static final BitSet FOLLOW_39_in_typeArguments2272 = new BitSet(new long[]{0x5020000000008000L,0x0000000020141042L});
+    public static final BitSet FOLLOW_typeArgument_in_typeArguments2274 = new BitSet(new long[]{0x0010008000000000L});
+    public static final BitSet FOLLOW_52_in_typeArguments2278 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_type_in_typeArgument2301 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_53_in_typeArgument2311 = new BitSet(new long[]{0x0000000000000002L,0x0000000100000100L});
+    public static final BitSet FOLLOW_set_in_typeArgument2314 = new BitSet(new long[]{0x5000000000008000L,0x0000000020141042L});
+    public static final BitSet FOLLOW_type_in_typeArgument2322 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_qualifiedName_in_qualifiedNameList2347 = new BitSet(new long[]{0x0000008000000002L});
+    public static final BitSet FOLLOW_39_in_qualifiedNameList2350 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_qualifiedName_in_qualifiedNameList2352 = new BitSet(new long[]{0x0000008000000002L});
+    public static final BitSet FOLLOW_32_in_formalParameters2373 = new BitSet(new long[]{0x5040000200008000L,0x0000000020141442L});
+    public static final BitSet FOLLOW_formalParameterDecls_in_formalParameters2375 = new BitSet(new long[]{0x0000000200000000L});
+    public static final BitSet FOLLOW_33_in_formalParameters2378 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_variableModifiers_in_formalParameterDecls2401 = new BitSet(new long[]{0x5000000000008000L,0x0000000020141042L});
+    public static final BitSet FOLLOW_type_in_formalParameterDecls2403 = new BitSet(new long[]{0x0000100000008000L});
+    public static final BitSet FOLLOW_formalParameterDeclsRest_in_formalParameterDecls2405 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_variableDeclaratorId_in_formalParameterDeclsRest2428 = new BitSet(new long[]{0x0000008000000002L});
+    public static final BitSet FOLLOW_39_in_formalParameterDeclsRest2431 = new BitSet(new long[]{0x5040000000008000L,0x0000000020141442L});
+    public static final BitSet FOLLOW_formalParameterDecls_in_formalParameterDeclsRest2433 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_44_in_formalParameterDeclsRest2445 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_variableDeclaratorId_in_formalParameterDeclsRest2447 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_block_in_methodBody2470 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_108_in_constructorBody2489 = new BitSet(new long[]{0x784303310260D1D0L,0x00031B9FFEDC766EL});
+    public static final BitSet FOLLOW_explicitConstructorInvocation_in_constructorBody2491 = new BitSet(new long[]{0x784103310260D1D0L,0x00031B9FFEDC766EL});
+    public static final BitSet FOLLOW_blockStatement_in_constructorBody2494 = new BitSet(new long[]{0x784103310260D1D0L,0x00031B9FFEDC766EL});
+    public static final BitSet FOLLOW_112_in_constructorBody2497 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_nonWildcardTypeArguments_in_explicitConstructorInvocation2516 = new BitSet(new long[]{0x0000000000000000L,0x0000000900000000L});
+    public static final BitSet FOLLOW_set_in_explicitConstructorInvocation2519 = new BitSet(new long[]{0x0000000100000000L});
+    public static final BitSet FOLLOW_arguments_in_explicitConstructorInvocation2527 = new BitSet(new long[]{0x0001000000000000L});
+    public static final BitSet FOLLOW_48_in_explicitConstructorInvocation2529 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_primary_in_explicitConstructorInvocation2539 = new BitSet(new long[]{0x0000080000000000L});
+    public static final BitSet FOLLOW_43_in_explicitConstructorInvocation2541 = new BitSet(new long[]{0x0002000000000000L,0x0000000100000000L});
+    public static final BitSet FOLLOW_nonWildcardTypeArguments_in_explicitConstructorInvocation2543 = new BitSet(new long[]{0x0000000000000000L,0x0000000100000000L});
+    public static final BitSet FOLLOW_96_in_explicitConstructorInvocation2546 = new BitSet(new long[]{0x0000000100000000L});
+    public static final BitSet FOLLOW_arguments_in_explicitConstructorInvocation2548 = new BitSet(new long[]{0x0001000000000000L});
+    public static final BitSet FOLLOW_48_in_explicitConstructorInvocation2550 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_Identifier_in_qualifiedName2570 = new BitSet(new long[]{0x0000080000000002L});
+    public static final BitSet FOLLOW_43_in_qualifiedName2573 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_Identifier_in_qualifiedName2575 = new BitSet(new long[]{0x0000080000000002L});
+    public static final BitSet FOLLOW_integerLiteral_in_literal2601 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_FloatingPointLiteral_in_literal2611 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_CharacterLiteral_in_literal2621 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_StringLiteral_in_literal2631 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_booleanLiteral_in_literal2641 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_87_in_literal2651 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_annotation_in_annotations2740 = new BitSet(new long[]{0x0040000000000002L});
+    public static final BitSet FOLLOW_54_in_annotation2760 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_annotationName_in_annotation2762 = new BitSet(new long[]{0x0000000100000002L});
+    public static final BitSet FOLLOW_32_in_annotation2766 = new BitSet(new long[]{0x504003330260D0C0L,0x0002128920D41242L});
+    public static final BitSet FOLLOW_elementValuePairs_in_annotation2770 = new BitSet(new long[]{0x0000000200000000L});
+    public static final BitSet FOLLOW_elementValue_in_annotation2774 = new BitSet(new long[]{0x0000000200000000L});
+    public static final BitSet FOLLOW_33_in_annotation2779 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_Identifier_in_annotationName2803 = new BitSet(new long[]{0x0000080000000002L});
+    public static final BitSet FOLLOW_43_in_annotationName2806 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_Identifier_in_annotationName2808 = new BitSet(new long[]{0x0000080000000002L});
+    public static final BitSet FOLLOW_elementValuePair_in_elementValuePairs2829 = new BitSet(new long[]{0x0000008000000002L});
+    public static final BitSet FOLLOW_39_in_elementValuePairs2832 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_elementValuePair_in_elementValuePairs2834 = new BitSet(new long[]{0x0000008000000002L});
+    public static final BitSet FOLLOW_Identifier_in_elementValuePair2855 = new BitSet(new long[]{0x0004000000000000L});
+    public static final BitSet FOLLOW_50_in_elementValuePair2857 = new BitSet(new long[]{0x504003310260D0C0L,0x0002128920D41242L});
+    public static final BitSet FOLLOW_elementValue_in_elementValuePair2859 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_conditionalExpression_in_elementValue2882 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_annotation_in_elementValue2892 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_elementValueArrayInitializer_in_elementValue2902 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_108_in_elementValueArrayInitializer2925 = new BitSet(new long[]{0x504003B10260D0C0L,0x0003128920D41242L});
+    public static final BitSet FOLLOW_elementValue_in_elementValueArrayInitializer2928 = new BitSet(new long[]{0x0000008000000000L,0x0001000000000000L});
+    public static final BitSet FOLLOW_39_in_elementValueArrayInitializer2931 = new BitSet(new long[]{0x504003310260D0C0L,0x0002128920D41242L});
+    public static final BitSet FOLLOW_elementValue_in_elementValueArrayInitializer2933 = new BitSet(new long[]{0x0000008000000000L,0x0001000000000000L});
+    public static final BitSet FOLLOW_39_in_elementValueArrayInitializer2940 = new BitSet(new long[]{0x0000000000000000L,0x0001000000000000L});
+    public static final BitSet FOLLOW_112_in_elementValueArrayInitializer2944 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_54_in_annotationTypeDeclaration2967 = new BitSet(new long[]{0x0000000000000000L,0x0000000000080000L});
+    public static final BitSet FOLLOW_83_in_annotationTypeDeclaration2969 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_Identifier_in_annotationTypeDeclaration2971 = new BitSet(new long[]{0x0000000000000000L,0x0000100000000000L});
+    public static final BitSet FOLLOW_annotationTypeBody_in_annotationTypeDeclaration2973 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_108_in_annotationTypeBody2996 = new BitSet(new long[]{0x5840000000008100L,0x00010444EE3C1446L});
+    public static final BitSet FOLLOW_annotationTypeElementDeclaration_in_annotationTypeBody2999 = new BitSet(new long[]{0x5840000000008100L,0x00010444EE3C1446L});
+    public static final BitSet FOLLOW_112_in_annotationTypeBody3003 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_modifiers_in_annotationTypeElementDeclaration3026 = new BitSet(new long[]{0x5040000000008100L,0x00000000201C1046L});
+    public static final BitSet FOLLOW_annotationTypeElementRest_in_annotationTypeElementDeclaration3028 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_type_in_annotationTypeElementRest3051 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_annotationMethodOrConstantRest_in_annotationTypeElementRest3053 = new BitSet(new long[]{0x0001000000000000L});
+    public static final BitSet FOLLOW_48_in_annotationTypeElementRest3055 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_normalClassDeclaration_in_annotationTypeElementRest3065 = new BitSet(new long[]{0x0001000000000002L});
+    public static final BitSet FOLLOW_48_in_annotationTypeElementRest3067 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_normalInterfaceDeclaration_in_annotationTypeElementRest3078 = new BitSet(new long[]{0x0001000000000002L});
+    public static final BitSet FOLLOW_48_in_annotationTypeElementRest3080 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_enumDeclaration_in_annotationTypeElementRest3091 = new BitSet(new long[]{0x0001000000000002L});
+    public static final BitSet FOLLOW_48_in_annotationTypeElementRest3093 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_annotationTypeDeclaration_in_annotationTypeElementRest3104 = new BitSet(new long[]{0x0001000000000002L});
+    public static final BitSet FOLLOW_48_in_annotationTypeElementRest3106 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_annotationMethodRest_in_annotationMethodOrConstantRest3130 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_annotationConstantRest_in_annotationMethodOrConstantRest3140 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_Identifier_in_annotationMethodRest3163 = new BitSet(new long[]{0x0000000100000000L});
+    public static final BitSet FOLLOW_32_in_annotationMethodRest3165 = new BitSet(new long[]{0x0000000200000000L});
+    public static final BitSet FOLLOW_33_in_annotationMethodRest3167 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000010L});
+    public static final BitSet FOLLOW_defaultValue_in_annotationMethodRest3169 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_variableDeclarators_in_annotationConstantRest3193 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_68_in_defaultValue3216 = new BitSet(new long[]{0x504003310260D0C0L,0x0002128920D41242L});
+    public static final BitSet FOLLOW_elementValue_in_defaultValue3218 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_108_in_block3239 = new BitSet(new long[]{0x784103310260D1D0L,0x00031B9FFEDC766EL});
+    public static final BitSet FOLLOW_blockStatement_in_block3241 = new BitSet(new long[]{0x784103310260D1D0L,0x00031B9FFEDC766EL});
+    public static final BitSet FOLLOW_112_in_block3244 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_localVariableDeclarationStatement_in_blockStatement3267 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_classOrInterfaceDeclaration_in_blockStatement3279 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_statement_in_blockStatement3289 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_localVariableDeclaration_in_localVariableDeclarationStatement3313 = new BitSet(new long[]{0x0001000000000000L});
+    public static final BitSet FOLLOW_48_in_localVariableDeclarationStatement3316 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_variableModifiers_in_localVariableDeclaration3335 = new BitSet(new long[]{0x5000000000008000L,0x0000000020141042L});
+    public static final BitSet FOLLOW_type_in_localVariableDeclaration3337 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_variableDeclarators_in_localVariableDeclaration3339 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_variableModifier_in_variableModifiers3370 = new BitSet(new long[]{0x0040000000000002L,0x0000000000000400L});
+    public static final BitSet FOLLOW_block_in_statement3388 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ASSERT_in_statement3398 = new BitSet(new long[]{0x500003310260D0C0L,0x0002028920D41242L});
+    public static final BitSet FOLLOW_expression_in_statement3400 = new BitSet(new long[]{0x0001800000000000L});
+    public static final BitSet FOLLOW_47_in_statement3403 = new BitSet(new long[]{0x500003310260D0C0L,0x0002028920D41242L});
+    public static final BitSet FOLLOW_expression_in_statement3405 = new BitSet(new long[]{0x0001000000000000L});
+    public static final BitSet FOLLOW_48_in_statement3409 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_78_in_statement3419 = new BitSet(new long[]{0x0000000100000000L});
+    public static final BitSet FOLLOW_parExpression_in_statement3421 = new BitSet(new long[]{0x700103310260D0D0L,0x00021B9F30D4726AL});
+    public static final BitSet FOLLOW_statement_in_statement3423 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000080L});
+    public static final BitSet FOLLOW_71_in_statement3433 = new BitSet(new long[]{0x700103310260D0D0L,0x00021B9F30D4726AL});
+    public static final BitSet FOLLOW_statement_in_statement3435 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_77_in_statement3447 = new BitSet(new long[]{0x0000000100000000L});
+    public static final BitSet FOLLOW_32_in_statement3449 = new BitSet(new long[]{0x504103310260D0C0L,0x0002028920D41642L});
+    public static final BitSet FOLLOW_forControl_in_statement3451 = new BitSet(new long[]{0x0000000200000000L});
+    public static final BitSet FOLLOW_33_in_statement3453 = new BitSet(new long[]{0x700103310260D0D0L,0x00021B9F30D4726AL});
+    public static final BitSet FOLLOW_statement_in_statement3455 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_107_in_statement3465 = new BitSet(new long[]{0x0000000100000000L});
+    public static final BitSet FOLLOW_parExpression_in_statement3467 = new BitSet(new long[]{0x700103310260D0D0L,0x00021B9F30D4726AL});
+    public static final BitSet FOLLOW_statement_in_statement3469 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_69_in_statement3479 = new BitSet(new long[]{0x700103310260D0D0L,0x00021B9F30D4726AL});
+    public static final BitSet FOLLOW_statement_in_statement3481 = new BitSet(new long[]{0x0000000000000000L,0x0000080000000000L});
+    public static final BitSet FOLLOW_107_in_statement3483 = new BitSet(new long[]{0x0000000100000000L});
+    public static final BitSet FOLLOW_parExpression_in_statement3485 = new BitSet(new long[]{0x0001000000000000L});
+    public static final BitSet FOLLOW_48_in_statement3487 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_104_in_statement3497 = new BitSet(new long[]{0x0000000000000000L,0x0000100000000000L});
+    public static final BitSet FOLLOW_block_in_statement3499 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000801L});
+    public static final BitSet FOLLOW_catches_in_statement3511 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000800L});
+    public static final BitSet FOLLOW_75_in_statement3513 = new BitSet(new long[]{0x0000000000000000L,0x0000100000000000L});
+    public static final BitSet FOLLOW_block_in_statement3515 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_catches_in_statement3527 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_75_in_statement3541 = new BitSet(new long[]{0x0000000000000000L,0x0000100000000000L});
+    public static final BitSet FOLLOW_block_in_statement3543 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_97_in_statement3563 = new BitSet(new long[]{0x0000000100000000L});
+    public static final BitSet FOLLOW_parExpression_in_statement3565 = new BitSet(new long[]{0x0000000000000000L,0x0000100000000000L});
+    public static final BitSet FOLLOW_108_in_statement3567 = new BitSet(new long[]{0x8000000000000000L,0x0001000000000010L});
+    public static final BitSet FOLLOW_switchBlockStatementGroups_in_statement3569 = new BitSet(new long[]{0x0000000000000000L,0x0001000000000000L});
+    public static final BitSet FOLLOW_112_in_statement3571 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_98_in_statement3581 = new BitSet(new long[]{0x0000000100000000L});
+    public static final BitSet FOLLOW_parExpression_in_statement3583 = new BitSet(new long[]{0x0000000000000000L,0x0000100000000000L});
+    public static final BitSet FOLLOW_block_in_statement3585 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_92_in_statement3595 = new BitSet(new long[]{0x500103310260D0C0L,0x0002028920D41242L});
+    public static final BitSet FOLLOW_expression_in_statement3597 = new BitSet(new long[]{0x0001000000000000L});
+    public static final BitSet FOLLOW_48_in_statement3600 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_100_in_statement3610 = new BitSet(new long[]{0x500003310260D0C0L,0x0002028920D41242L});
+    public static final BitSet FOLLOW_expression_in_statement3612 = new BitSet(new long[]{0x0001000000000000L});
+    public static final BitSet FOLLOW_48_in_statement3614 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_61_in_statement3624 = new BitSet(new long[]{0x0001000000008000L});
+    public static final BitSet FOLLOW_Identifier_in_statement3626 = new BitSet(new long[]{0x0001000000000000L});
+    public static final BitSet FOLLOW_48_in_statement3629 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_67_in_statement3639 = new BitSet(new long[]{0x0001000000008000L});
+    public static final BitSet FOLLOW_Identifier_in_statement3641 = new BitSet(new long[]{0x0001000000000000L});
+    public static final BitSet FOLLOW_48_in_statement3644 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_48_in_statement3654 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_statementExpression_in_statement3665 = new BitSet(new long[]{0x0001000000000000L});
+    public static final BitSet FOLLOW_48_in_statement3667 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_Identifier_in_statement3677 = new BitSet(new long[]{0x0000800000000000L});
+    public static final BitSet FOLLOW_47_in_statement3679 = new BitSet(new long[]{0x700103310260D0D0L,0x00021B9F30D4726AL});
+    public static final BitSet FOLLOW_statement_in_statement3681 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_catchClause_in_catches3704 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000001L});
+    public static final BitSet FOLLOW_catchClause_in_catches3707 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000001L});
+    public static final BitSet FOLLOW_64_in_catchClause3732 = new BitSet(new long[]{0x0000000100000000L});
+    public static final BitSet FOLLOW_32_in_catchClause3734 = new BitSet(new long[]{0x5040000000008000L,0x0000000020141442L});
+    public static final BitSet FOLLOW_formalParameter_in_catchClause3736 = new BitSet(new long[]{0x0000000200000000L});
+    public static final BitSet FOLLOW_33_in_catchClause3738 = new BitSet(new long[]{0x0000000000000000L,0x0000100000000000L});
+    public static final BitSet FOLLOW_block_in_catchClause3740 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_variableModifiers_in_formalParameter3759 = new BitSet(new long[]{0x5000000000008000L,0x0000000020141042L});
+    public static final BitSet FOLLOW_type_in_formalParameter3761 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_variableDeclaratorId_in_formalParameter3763 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_switchBlockStatementGroup_in_switchBlockStatementGroups3791 = new BitSet(new long[]{0x8000000000000002L,0x0000000000000010L});
+    public static final BitSet FOLLOW_switchLabel_in_switchBlockStatementGroup3818 = new BitSet(new long[]{0xF84103310260D1D2L,0x00021B9FFEDC767EL});
+    public static final BitSet FOLLOW_blockStatement_in_switchBlockStatementGroup3821 = new BitSet(new long[]{0x784103310260D1D2L,0x00021B9FFEDC766EL});
+    public static final BitSet FOLLOW_63_in_switchLabel3845 = new BitSet(new long[]{0x500003310260D0C0L,0x0002028920D41242L});
+    public static final BitSet FOLLOW_constantExpression_in_switchLabel3847 = new BitSet(new long[]{0x0000800000000000L});
+    public static final BitSet FOLLOW_47_in_switchLabel3849 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_63_in_switchLabel3859 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_enumConstantName_in_switchLabel3861 = new BitSet(new long[]{0x0000800000000000L});
+    public static final BitSet FOLLOW_47_in_switchLabel3863 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_68_in_switchLabel3873 = new BitSet(new long[]{0x0000800000000000L});
+    public static final BitSet FOLLOW_47_in_switchLabel3875 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_enhancedForControl_in_forControl3906 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_forInit_in_forControl3916 = new BitSet(new long[]{0x0001000000000000L});
+    public static final BitSet FOLLOW_48_in_forControl3919 = new BitSet(new long[]{0x500103310260D0C0L,0x0002028920D41242L});
+    public static final BitSet FOLLOW_expression_in_forControl3921 = new BitSet(new long[]{0x0001000000000000L});
+    public static final BitSet FOLLOW_48_in_forControl3924 = new BitSet(new long[]{0x500003310260D0C2L,0x0002028920D41242L});
+    public static final BitSet FOLLOW_forUpdate_in_forControl3926 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_localVariableDeclaration_in_forInit3946 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_expressionList_in_forInit3956 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_variableModifiers_in_enhancedForControl3979 = new BitSet(new long[]{0x5000000000008000L,0x0000000020141042L});
+    public static final BitSet FOLLOW_type_in_enhancedForControl3981 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_Identifier_in_enhancedForControl3983 = new BitSet(new long[]{0x0000800000000000L});
+    public static final BitSet FOLLOW_47_in_enhancedForControl3985 = new BitSet(new long[]{0x500003310260D0C0L,0x0002028920D41242L});
+    public static final BitSet FOLLOW_expression_in_enhancedForControl3987 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_expressionList_in_forUpdate4006 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_32_in_parExpression4027 = new BitSet(new long[]{0x500003310260D0C0L,0x0002028920D41242L});
+    public static final BitSet FOLLOW_expression_in_parExpression4029 = new BitSet(new long[]{0x0000000200000000L});
+    public static final BitSet FOLLOW_33_in_parExpression4031 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_expression_in_expressionList4054 = new BitSet(new long[]{0x0000008000000002L});
+    public static final BitSet FOLLOW_39_in_expressionList4057 = new BitSet(new long[]{0x500003310260D0C0L,0x0002028920D41242L});
+    public static final BitSet FOLLOW_expression_in_expressionList4059 = new BitSet(new long[]{0x0000008000000002L});
+    public static final BitSet FOLLOW_expression_in_statementExpression4080 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_expression_in_constantExpression4103 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_conditionalExpression_in_expression4126 = new BitSet(new long[]{0x0416444890000002L,0x0000400000000000L});
+    public static final BitSet FOLLOW_assignmentOperator_in_expression4129 = new BitSet(new long[]{0x500003310260D0C0L,0x0002028920D41242L});
+    public static final BitSet FOLLOW_expression_in_expression4131 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_50_in_assignmentOperator4157 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_38_in_assignmentOperator4167 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_42_in_assignmentOperator4177 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_35_in_assignmentOperator4187 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_46_in_assignmentOperator4197 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_31_in_assignmentOperator4207 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_110_in_assignmentOperator4217 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_58_in_assignmentOperator4227 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_28_in_assignmentOperator4237 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_49_in_assignmentOperator4258 = new BitSet(new long[]{0x0002000000000000L});
+    public static final BitSet FOLLOW_49_in_assignmentOperator4262 = new BitSet(new long[]{0x0004000000000000L});
+    public static final BitSet FOLLOW_50_in_assignmentOperator4266 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_52_in_assignmentOperator4300 = new BitSet(new long[]{0x0010000000000000L});
+    public static final BitSet FOLLOW_52_in_assignmentOperator4304 = new BitSet(new long[]{0x0010000000000000L});
+    public static final BitSet FOLLOW_52_in_assignmentOperator4308 = new BitSet(new long[]{0x0004000000000000L});
+    public static final BitSet FOLLOW_50_in_assignmentOperator4312 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_52_in_assignmentOperator4343 = new BitSet(new long[]{0x0010000000000000L});
+    public static final BitSet FOLLOW_52_in_assignmentOperator4347 = new BitSet(new long[]{0x0004000000000000L});
+    public static final BitSet FOLLOW_50_in_assignmentOperator4351 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_conditionalOrExpression_in_conditionalExpression4380 = new BitSet(new long[]{0x0020000000000002L});
+    public static final BitSet FOLLOW_53_in_conditionalExpression4384 = new BitSet(new long[]{0x500003310260D0C0L,0x0002028920D41242L});
+    public static final BitSet FOLLOW_expression_in_conditionalExpression4386 = new BitSet(new long[]{0x0000800000000000L});
+    public static final BitSet FOLLOW_47_in_conditionalExpression4388 = new BitSet(new long[]{0x500003310260D0C0L,0x0002028920D41242L});
+    public static final BitSet FOLLOW_expression_in_conditionalExpression4390 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_conditionalAndExpression_in_conditionalOrExpression4428 = new BitSet(new long[]{0x0000000000000002L,0x0000800000000000L});
+    public static final BitSet FOLLOW_111_in_conditionalOrExpression4432 = new BitSet(new long[]{0x500003310260D0C0L,0x0002028920D41242L});
+    public static final BitSet FOLLOW_conditionalAndExpression_in_conditionalOrExpression4434 = new BitSet(new long[]{0x0000000000000002L,0x0000800000000000L});
+    public static final BitSet FOLLOW_inclusiveOrExpression_in_conditionalAndExpression4456 = new BitSet(new long[]{0x0000000020000002L});
+    public static final BitSet FOLLOW_29_in_conditionalAndExpression4460 = new BitSet(new long[]{0x500003310260D0C0L,0x0002028920D41242L});
+    public static final BitSet FOLLOW_inclusiveOrExpression_in_conditionalAndExpression4462 = new BitSet(new long[]{0x0000000020000002L});
+    public static final BitSet FOLLOW_exclusiveOrExpression_in_inclusiveOrExpression4484 = new BitSet(new long[]{0x0000000000000002L,0x0000200000000000L});
+    public static final BitSet FOLLOW_109_in_inclusiveOrExpression4488 = new BitSet(new long[]{0x500003310260D0C0L,0x0002028920D41242L});
+    public static final BitSet FOLLOW_exclusiveOrExpression_in_inclusiveOrExpression4490 = new BitSet(new long[]{0x0000000000000002L,0x0000200000000000L});
+    public static final BitSet FOLLOW_andExpression_in_exclusiveOrExpression4512 = new BitSet(new long[]{0x0200000000000002L});
+    public static final BitSet FOLLOW_57_in_exclusiveOrExpression4516 = new BitSet(new long[]{0x500003310260D0C0L,0x0002028920D41242L});
+    public static final BitSet FOLLOW_andExpression_in_exclusiveOrExpression4518 = new BitSet(new long[]{0x0200000000000002L});
+    public static final BitSet FOLLOW_equalityExpression_in_andExpression4540 = new BitSet(new long[]{0x0000000040000002L});
+    public static final BitSet FOLLOW_30_in_andExpression4544 = new BitSet(new long[]{0x500003310260D0C0L,0x0002028920D41242L});
+    public static final BitSet FOLLOW_equalityExpression_in_andExpression4546 = new BitSet(new long[]{0x0000000040000002L});
+    public static final BitSet FOLLOW_instanceOfExpression_in_equalityExpression4568 = new BitSet(new long[]{0x0008000004000002L});
+    public static final BitSet FOLLOW_set_in_equalityExpression4572 = new BitSet(new long[]{0x500003310260D0C0L,0x0002028920D41242L});
+    public static final BitSet FOLLOW_instanceOfExpression_in_equalityExpression4580 = new BitSet(new long[]{0x0008000004000002L});
+    public static final BitSet FOLLOW_relationalExpression_in_instanceOfExpression4602 = new BitSet(new long[]{0x0000000000000002L,0x0000000000020000L});
+    public static final BitSet FOLLOW_81_in_instanceOfExpression4605 = new BitSet(new long[]{0x5000000000008000L,0x0000000020141042L});
+    public static final BitSet FOLLOW_type_in_instanceOfExpression4607 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_shiftExpression_in_relationalExpression4628 = new BitSet(new long[]{0x0012000000000002L});
+    public static final BitSet FOLLOW_relationalOp_in_relationalExpression4632 = new BitSet(new long[]{0x500003310260D0C0L,0x0002028920D41242L});
+    public static final BitSet FOLLOW_shiftExpression_in_relationalExpression4634 = new BitSet(new long[]{0x0012000000000002L});
+    public static final BitSet FOLLOW_49_in_relationalOp4669 = new BitSet(new long[]{0x0004000000000000L});
+    public static final BitSet FOLLOW_50_in_relationalOp4673 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_52_in_relationalOp4703 = new BitSet(new long[]{0x0004000000000000L});
+    public static final BitSet FOLLOW_50_in_relationalOp4707 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_49_in_relationalOp4728 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_52_in_relationalOp4739 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_additiveExpression_in_shiftExpression4759 = new BitSet(new long[]{0x0012000000000002L});
+    public static final BitSet FOLLOW_shiftOp_in_shiftExpression4763 = new BitSet(new long[]{0x500003310260D0C0L,0x0002028920D41242L});
+    public static final BitSet FOLLOW_additiveExpression_in_shiftExpression4765 = new BitSet(new long[]{0x0012000000000002L});
+    public static final BitSet FOLLOW_49_in_shiftOp4796 = new BitSet(new long[]{0x0002000000000000L});
+    public static final BitSet FOLLOW_49_in_shiftOp4800 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_52_in_shiftOp4832 = new BitSet(new long[]{0x0010000000000000L});
+    public static final BitSet FOLLOW_52_in_shiftOp4836 = new BitSet(new long[]{0x0010000000000000L});
+    public static final BitSet FOLLOW_52_in_shiftOp4840 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_52_in_shiftOp4870 = new BitSet(new long[]{0x0010000000000000L});
+    public static final BitSet FOLLOW_52_in_shiftOp4874 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_multiplicativeExpression_in_additiveExpression4904 = new BitSet(new long[]{0x0000011000000002L});
+    public static final BitSet FOLLOW_set_in_additiveExpression4908 = new BitSet(new long[]{0x500003310260D0C0L,0x0002028920D41242L});
+    public static final BitSet FOLLOW_multiplicativeExpression_in_additiveExpression4916 = new BitSet(new long[]{0x0000011000000002L});
+    public static final BitSet FOLLOW_unaryExpression_in_multiplicativeExpression4938 = new BitSet(new long[]{0x0000200408000002L});
+    public static final BitSet FOLLOW_set_in_multiplicativeExpression4942 = new BitSet(new long[]{0x500003310260D0C0L,0x0002028920D41242L});
+    public static final BitSet FOLLOW_unaryExpression_in_multiplicativeExpression4956 = new BitSet(new long[]{0x0000200408000002L});
+    public static final BitSet FOLLOW_36_in_unaryExpression4982 = new BitSet(new long[]{0x500003310260D0C0L,0x0002028920D41242L});
+    public static final BitSet FOLLOW_unaryExpression_in_unaryExpression4984 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_40_in_unaryExpression4994 = new BitSet(new long[]{0x500003310260D0C0L,0x0002028920D41242L});
+    public static final BitSet FOLLOW_unaryExpression_in_unaryExpression4996 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_37_in_unaryExpression5006 = new BitSet(new long[]{0x500003310260D0C0L,0x0002028920D41242L});
+    public static final BitSet FOLLOW_unaryExpression_in_unaryExpression5008 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_41_in_unaryExpression5018 = new BitSet(new long[]{0x500003310260D0C0L,0x0002028920D41242L});
+    public static final BitSet FOLLOW_unaryExpression_in_unaryExpression5020 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_unaryExpressionNotPlusMinus_in_unaryExpression5030 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_113_in_unaryExpressionNotPlusMinus5049 = new BitSet(new long[]{0x500003310260D0C0L,0x0002028920D41242L});
+    public static final BitSet FOLLOW_unaryExpression_in_unaryExpressionNotPlusMinus5051 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_25_in_unaryExpressionNotPlusMinus5061 = new BitSet(new long[]{0x500003310260D0C0L,0x0002028920D41242L});
+    public static final BitSet FOLLOW_unaryExpression_in_unaryExpressionNotPlusMinus5063 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_castExpression_in_unaryExpressionNotPlusMinus5073 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_primary_in_unaryExpressionNotPlusMinus5083 = new BitSet(new long[]{0x00800A2000000002L});
+    public static final BitSet FOLLOW_selector_in_unaryExpressionNotPlusMinus5085 = new BitSet(new long[]{0x00800A2000000002L});
+    public static final BitSet FOLLOW_32_in_castExpression5111 = new BitSet(new long[]{0x5000000000000000L,0x0000000020141042L});
+    public static final BitSet FOLLOW_primitiveType_in_castExpression5113 = new BitSet(new long[]{0x0000000200000000L});
+    public static final BitSet FOLLOW_33_in_castExpression5115 = new BitSet(new long[]{0x500003310260D0C0L,0x0002028920D41242L});
+    public static final BitSet FOLLOW_unaryExpression_in_castExpression5117 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_32_in_castExpression5126 = new BitSet(new long[]{0x500003310260D0C0L,0x0002028920D41242L});
+    public static final BitSet FOLLOW_type_in_castExpression5129 = new BitSet(new long[]{0x0000000200000000L});
+    public static final BitSet FOLLOW_expression_in_castExpression5133 = new BitSet(new long[]{0x0000000200000000L});
+    public static final BitSet FOLLOW_33_in_castExpression5136 = new BitSet(new long[]{0x500000010260D0C0L,0x0002028920D41242L});
+    public static final BitSet FOLLOW_unaryExpressionNotPlusMinus_in_castExpression5138 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_parExpression_in_primary5157 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_99_in_primary5167 = new BitSet(new long[]{0x0080080100000002L});
+    public static final BitSet FOLLOW_43_in_primary5170 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_Identifier_in_primary5172 = new BitSet(new long[]{0x0080080100000002L});
+    public static final BitSet FOLLOW_identifierSuffix_in_primary5176 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_96_in_primary5187 = new BitSet(new long[]{0x0000080100000000L});
+    public static final BitSet FOLLOW_superSuffix_in_primary5189 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_literal_in_primary5199 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_86_in_primary5209 = new BitSet(new long[]{0x5002000000008000L,0x0000000020141042L});
+    public static final BitSet FOLLOW_creator_in_primary5211 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_Identifier_in_primary5221 = new BitSet(new long[]{0x0080080100000002L});
+    public static final BitSet FOLLOW_43_in_primary5224 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_Identifier_in_primary5226 = new BitSet(new long[]{0x0080080100000002L});
+    public static final BitSet FOLLOW_identifierSuffix_in_primary5230 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_primitiveType_in_primary5241 = new BitSet(new long[]{0x0080080000000000L});
+    public static final BitSet FOLLOW_55_in_primary5244 = new BitSet(new long[]{0x0100000000000000L});
+    public static final BitSet FOLLOW_56_in_primary5246 = new BitSet(new long[]{0x0080080000000000L});
+    public static final BitSet FOLLOW_43_in_primary5250 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000004L});
+    public static final BitSet FOLLOW_66_in_primary5252 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_105_in_primary5262 = new BitSet(new long[]{0x0000080000000000L});
+    public static final BitSet FOLLOW_43_in_primary5264 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000004L});
+    public static final BitSet FOLLOW_66_in_primary5266 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_55_in_identifierSuffix5286 = new BitSet(new long[]{0x0100000000000000L});
+    public static final BitSet FOLLOW_56_in_identifierSuffix5288 = new BitSet(new long[]{0x0080080000000000L});
+    public static final BitSet FOLLOW_43_in_identifierSuffix5292 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000004L});
+    public static final BitSet FOLLOW_66_in_identifierSuffix5294 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_55_in_identifierSuffix5305 = new BitSet(new long[]{0x500003310260D0C0L,0x0002028920D41242L});
+    public static final BitSet FOLLOW_expression_in_identifierSuffix5307 = new BitSet(new long[]{0x0100000000000000L});
+    public static final BitSet FOLLOW_56_in_identifierSuffix5309 = new BitSet(new long[]{0x0080000000000002L});
+    public static final BitSet FOLLOW_arguments_in_identifierSuffix5322 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_43_in_identifierSuffix5332 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000004L});
+    public static final BitSet FOLLOW_66_in_identifierSuffix5334 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_43_in_identifierSuffix5344 = new BitSet(new long[]{0x0002000000000000L});
+    public static final BitSet FOLLOW_explicitGenericInvocation_in_identifierSuffix5346 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_43_in_identifierSuffix5356 = new BitSet(new long[]{0x0000000000000000L,0x0000000800000000L});
+    public static final BitSet FOLLOW_99_in_identifierSuffix5358 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_43_in_identifierSuffix5368 = new BitSet(new long[]{0x0000000000000000L,0x0000000100000000L});
+    public static final BitSet FOLLOW_96_in_identifierSuffix5370 = new BitSet(new long[]{0x0000000100000000L});
+    public static final BitSet FOLLOW_arguments_in_identifierSuffix5372 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_43_in_identifierSuffix5382 = new BitSet(new long[]{0x0000000000000000L,0x0000000000400000L});
+    public static final BitSet FOLLOW_86_in_identifierSuffix5384 = new BitSet(new long[]{0x0002000000008000L});
+    public static final BitSet FOLLOW_innerCreator_in_identifierSuffix5386 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_nonWildcardTypeArguments_in_creator5405 = new BitSet(new long[]{0x5000000000008000L,0x0000000020141042L});
+    public static final BitSet FOLLOW_createdName_in_creator5407 = new BitSet(new long[]{0x0000000100000000L});
+    public static final BitSet FOLLOW_classCreatorRest_in_creator5409 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_createdName_in_creator5419 = new BitSet(new long[]{0x0080000100000000L});
+    public static final BitSet FOLLOW_arrayCreatorRest_in_creator5422 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_classCreatorRest_in_creator5426 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_classOrInterfaceType_in_createdName5446 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_primitiveType_in_createdName5456 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_nonWildcardTypeArguments_in_innerCreator5479 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_Identifier_in_innerCreator5482 = new BitSet(new long[]{0x0000000100000000L});
+    public static final BitSet FOLLOW_classCreatorRest_in_innerCreator5484 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_55_in_arrayCreatorRest5503 = new BitSet(new long[]{0x510003310260D0C0L,0x0002028920D41242L});
+    public static final BitSet FOLLOW_56_in_arrayCreatorRest5517 = new BitSet(new long[]{0x0080000000000000L,0x0000100000000000L});
+    public static final BitSet FOLLOW_55_in_arrayCreatorRest5520 = new BitSet(new long[]{0x0100000000000000L});
+    public static final BitSet FOLLOW_56_in_arrayCreatorRest5522 = new BitSet(new long[]{0x0080000000000000L,0x0000100000000000L});
+    public static final BitSet FOLLOW_arrayInitializer_in_arrayCreatorRest5526 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_expression_in_arrayCreatorRest5540 = new BitSet(new long[]{0x0100000000000000L});
     public static final BitSet FOLLOW_56_in_arrayCreatorRest5542 = new BitSet(new long[]{0x0080000000000002L});
-    public static final BitSet FOLLOW_55_in_arrayCreatorRest5547 = new BitSet(new long[]{0x0100000000000000L});
+    public static final BitSet FOLLOW_55_in_arrayCreatorRest5545 = new BitSet(new long[]{0x500003310260D0C0L,0x0002028920D41242L});
+    public static final BitSet FOLLOW_expression_in_arrayCreatorRest5547 = new BitSet(new long[]{0x0100000000000000L});
     public static final BitSet FOLLOW_56_in_arrayCreatorRest5549 = new BitSet(new long[]{0x0080000000000002L});
-    public static final BitSet FOLLOW_arguments_in_classCreatorRest5580 = new BitSet(new long[]{0x0000000000000002L,0x0000100000000000L});
-    public static final BitSet FOLLOW_classBody_in_classCreatorRest5582 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_nonWildcardTypeArguments_in_explicitGenericInvocation5606 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_Identifier_in_explicitGenericInvocation5608 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_arguments_in_explicitGenericInvocation5610 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_49_in_nonWildcardTypeArguments5633 = new BitSet(new long[]{0x5000000000008000L,0x0000000020141042L});
-    public static final BitSet FOLLOW_typeList_in_nonWildcardTypeArguments5635 = new BitSet(new long[]{0x0010000000000000L});
-    public static final BitSet FOLLOW_52_in_nonWildcardTypeArguments5637 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_43_in_selector5660 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_Identifier_in_selector5662 = new BitSet(new long[]{0x0000000100000002L});
-    public static final BitSet FOLLOW_arguments_in_selector5664 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_43_in_selector5675 = new BitSet(new long[]{0x0000000000000000L,0x0000000800000000L});
-    public static final BitSet FOLLOW_99_in_selector5677 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_43_in_selector5687 = new BitSet(new long[]{0x0000000000000000L,0x0000000100000000L});
-    public static final BitSet FOLLOW_96_in_selector5689 = new BitSet(new long[]{0x0000080100000000L});
-    public static final BitSet FOLLOW_superSuffix_in_selector5691 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_43_in_selector5701 = new BitSet(new long[]{0x0000000000000000L,0x0000000000400000L});
-    public static final BitSet FOLLOW_86_in_selector5703 = new BitSet(new long[]{0x0002000000008000L});
-    public static final BitSet FOLLOW_innerCreator_in_selector5705 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_55_in_selector5715 = new BitSet(new long[]{0x500003310260D0C0L,0x0002028920D41242L});
-    public static final BitSet FOLLOW_expression_in_selector5717 = new BitSet(new long[]{0x0100000000000000L});
-    public static final BitSet FOLLOW_56_in_selector5719 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_arguments_in_superSuffix5742 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_43_in_superSuffix5752 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_Identifier_in_superSuffix5754 = new BitSet(new long[]{0x0000000100000002L});
-    public static final BitSet FOLLOW_arguments_in_superSuffix5756 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_32_in_arguments5776 = new BitSet(new long[]{0x500003330260D0C0L,0x0002028920D41242L});
-    public static final BitSet FOLLOW_expressionList_in_arguments5778 = new BitSet(new long[]{0x0000000200000000L});
-    public static final BitSet FOLLOW_33_in_arguments5781 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_annotations_in_synpred5_Java66 = new BitSet(new long[]{0x0840000000000100L,0x00000000CF080404L});
-    public static final BitSet FOLLOW_packageDeclaration_in_synpred5_Java80 = new BitSet(new long[]{0x0841000000000102L,0x00000000CE090404L});
-    public static final BitSet FOLLOW_importDeclaration_in_synpred5_Java82 = new BitSet(new long[]{0x0841000000000102L,0x00000000CE090404L});
-    public static final BitSet FOLLOW_typeDeclaration_in_synpred5_Java85 = new BitSet(new long[]{0x0841000000000102L,0x00000000CE080404L});
+    public static final BitSet FOLLOW_55_in_arrayCreatorRest5554 = new BitSet(new long[]{0x0100000000000000L});
+    public static final BitSet FOLLOW_56_in_arrayCreatorRest5556 = new BitSet(new long[]{0x0080000000000002L});
+    public static final BitSet FOLLOW_arguments_in_classCreatorRest5587 = new BitSet(new long[]{0x0000000000000002L,0x0000100000000000L});
+    public static final BitSet FOLLOW_classBody_in_classCreatorRest5589 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_nonWildcardTypeArguments_in_explicitGenericInvocation5613 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_Identifier_in_explicitGenericInvocation5615 = new BitSet(new long[]{0x0000000100000000L});
+    public static final BitSet FOLLOW_arguments_in_explicitGenericInvocation5617 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_49_in_nonWildcardTypeArguments5640 = new BitSet(new long[]{0x5000000000008000L,0x0000000020141042L});
+    public static final BitSet FOLLOW_typeList_in_nonWildcardTypeArguments5642 = new BitSet(new long[]{0x0010000000000000L});
+    public static final BitSet FOLLOW_52_in_nonWildcardTypeArguments5644 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_43_in_selector5667 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_Identifier_in_selector5669 = new BitSet(new long[]{0x0000000100000002L});
+    public static final BitSet FOLLOW_arguments_in_selector5671 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_43_in_selector5682 = new BitSet(new long[]{0x0000000000000000L,0x0000000800000000L});
+    public static final BitSet FOLLOW_99_in_selector5684 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_43_in_selector5694 = new BitSet(new long[]{0x0000000000000000L,0x0000000100000000L});
+    public static final BitSet FOLLOW_96_in_selector5696 = new BitSet(new long[]{0x0000080100000000L});
+    public static final BitSet FOLLOW_superSuffix_in_selector5698 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_43_in_selector5708 = new BitSet(new long[]{0x0000000000000000L,0x0000000000400000L});
+    public static final BitSet FOLLOW_86_in_selector5710 = new BitSet(new long[]{0x0002000000008000L});
+    public static final BitSet FOLLOW_innerCreator_in_selector5712 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_55_in_selector5722 = new BitSet(new long[]{0x500003310260D0C0L,0x0002028920D41242L});
+    public static final BitSet FOLLOW_expression_in_selector5724 = new BitSet(new long[]{0x0100000000000000L});
+    public static final BitSet FOLLOW_56_in_selector5726 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_arguments_in_superSuffix5749 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_43_in_superSuffix5759 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_Identifier_in_superSuffix5761 = new BitSet(new long[]{0x0000000100000002L});
+    public static final BitSet FOLLOW_arguments_in_superSuffix5763 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_32_in_arguments5783 = new BitSet(new long[]{0x500003330260D0C0L,0x0002028920D41242L});
+    public static final BitSet FOLLOW_expressionList_in_arguments5785 = new BitSet(new long[]{0x0000000200000000L});
+    public static final BitSet FOLLOW_33_in_arguments5788 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_annotations_in_synpred5_Java65 = new BitSet(new long[]{0x0840000000000100L,0x00000000CF080404L});
+    public static final BitSet FOLLOW_packageDeclaration_in_synpred5_Java79 = new BitSet(new long[]{0x0841000000000102L,0x00000000CE090404L});
+    public static final BitSet FOLLOW_importDeclaration_in_synpred5_Java81 = new BitSet(new long[]{0x0841000000000102L,0x00000000CE090404L});
+    public static final BitSet FOLLOW_typeDeclaration_in_synpred5_Java84 = new BitSet(new long[]{0x0841000000000102L,0x00000000CE080404L});
     public static final BitSet FOLLOW_classOrInterfaceDeclaration_in_synpred5_Java100 = new BitSet(new long[]{0x0841000000000102L,0x00000000CE080404L});
     public static final BitSet FOLLOW_typeDeclaration_in_synpred5_Java102 = new BitSet(new long[]{0x0841000000000102L,0x00000000CE080404L});
-    public static final BitSet FOLLOW_explicitConstructorInvocation_in_synpred113_Java2484 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_nonWildcardTypeArguments_in_synpred117_Java2509 = new BitSet(new long[]{0x0000000000000000L,0x0000000900000000L});
-    public static final BitSet FOLLOW_set_in_synpred117_Java2512 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_arguments_in_synpred117_Java2520 = new BitSet(new long[]{0x0001000000000000L});
-    public static final BitSet FOLLOW_48_in_synpred117_Java2522 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_annotation_in_synpred128_Java2733 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_localVariableDeclarationStatement_in_synpred151_Java3260 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_classOrInterfaceDeclaration_in_synpred152_Java3272 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_71_in_synpred157_Java3426 = new BitSet(new long[]{0x700103310260D0D0L,0x00021B9F30D4726AL});
-    public static final BitSet FOLLOW_statement_in_synpred157_Java3428 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_catches_in_synpred162_Java3504 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000800L});
-    public static final BitSet FOLLOW_75_in_synpred162_Java3506 = new BitSet(new long[]{0x0000000000000000L,0x0000100000000000L});
-    public static final BitSet FOLLOW_block_in_synpred162_Java3508 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_catches_in_synpred163_Java3520 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_switchLabel_in_synpred178_Java3811 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_63_in_synpred180_Java3838 = new BitSet(new long[]{0x500003310260D0C0L,0x0002028920D41242L});
-    public static final BitSet FOLLOW_constantExpression_in_synpred180_Java3840 = new BitSet(new long[]{0x0000800000000000L});
-    public static final BitSet FOLLOW_47_in_synpred180_Java3842 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_63_in_synpred181_Java3852 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_enumConstantName_in_synpred181_Java3854 = new BitSet(new long[]{0x0000800000000000L});
-    public static final BitSet FOLLOW_47_in_synpred181_Java3856 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_enhancedForControl_in_synpred182_Java3899 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_localVariableDeclaration_in_synpred186_Java3939 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_assignmentOperator_in_synpred188_Java4122 = new BitSet(new long[]{0x500003310260D0C0L,0x0002028920D41242L});
-    public static final BitSet FOLLOW_expression_in_synpred188_Java4124 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_49_in_synpred198_Java4241 = new BitSet(new long[]{0x0002000000000000L});
-    public static final BitSet FOLLOW_49_in_synpred198_Java4243 = new BitSet(new long[]{0x0004000000000000L});
-    public static final BitSet FOLLOW_50_in_synpred198_Java4245 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_52_in_synpred199_Java4281 = new BitSet(new long[]{0x0010000000000000L});
-    public static final BitSet FOLLOW_52_in_synpred199_Java4283 = new BitSet(new long[]{0x0010000000000000L});
-    public static final BitSet FOLLOW_52_in_synpred199_Java4285 = new BitSet(new long[]{0x0004000000000000L});
-    public static final BitSet FOLLOW_50_in_synpred199_Java4287 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_52_in_synpred200_Java4326 = new BitSet(new long[]{0x0010000000000000L});
-    public static final BitSet FOLLOW_52_in_synpred200_Java4328 = new BitSet(new long[]{0x0004000000000000L});
-    public static final BitSet FOLLOW_50_in_synpred200_Java4330 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_49_in_synpred211_Java4654 = new BitSet(new long[]{0x0004000000000000L});
-    public static final BitSet FOLLOW_50_in_synpred211_Java4656 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_52_in_synpred212_Java4688 = new BitSet(new long[]{0x0004000000000000L});
-    public static final BitSet FOLLOW_50_in_synpred212_Java4690 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_49_in_synpred215_Java4781 = new BitSet(new long[]{0x0002000000000000L});
-    public static final BitSet FOLLOW_49_in_synpred215_Java4783 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_52_in_synpred216_Java4815 = new BitSet(new long[]{0x0010000000000000L});
-    public static final BitSet FOLLOW_52_in_synpred216_Java4817 = new BitSet(new long[]{0x0010000000000000L});
-    public static final BitSet FOLLOW_52_in_synpred216_Java4819 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_52_in_synpred217_Java4855 = new BitSet(new long[]{0x0010000000000000L});
-    public static final BitSet FOLLOW_52_in_synpred217_Java4857 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_castExpression_in_synpred229_Java5066 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_32_in_synpred233_Java5104 = new BitSet(new long[]{0x5000000000000000L,0x0000000020141042L});
-    public static final BitSet FOLLOW_primitiveType_in_synpred233_Java5106 = new BitSet(new long[]{0x0000000200000000L});
-    public static final BitSet FOLLOW_33_in_synpred233_Java5108 = new BitSet(new long[]{0x500003310260D0C0L,0x0002028920D41242L});
-    public static final BitSet FOLLOW_unaryExpression_in_synpred233_Java5110 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_type_in_synpred234_Java5122 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_43_in_synpred236_Java5163 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_Identifier_in_synpred236_Java5165 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_identifierSuffix_in_synpred237_Java5169 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_43_in_synpred242_Java5217 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_Identifier_in_synpred242_Java5219 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_identifierSuffix_in_synpred243_Java5223 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_55_in_synpred249_Java5298 = new BitSet(new long[]{0x500003310260D0C0L,0x0002028920D41242L});
-    public static final BitSet FOLLOW_expression_in_synpred249_Java5300 = new BitSet(new long[]{0x0100000000000000L});
-    public static final BitSet FOLLOW_56_in_synpred249_Java5302 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_55_in_synpred262_Java5538 = new BitSet(new long[]{0x500003310260D0C0L,0x0002028920D41242L});
-    public static final BitSet FOLLOW_expression_in_synpred262_Java5540 = new BitSet(new long[]{0x0100000000000000L});
-    public static final BitSet FOLLOW_56_in_synpred262_Java5542 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_explicitConstructorInvocation_in_synpred113_Java2491 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_nonWildcardTypeArguments_in_synpred117_Java2516 = new BitSet(new long[]{0x0000000000000000L,0x0000000900000000L});
+    public static final BitSet FOLLOW_set_in_synpred117_Java2519 = new BitSet(new long[]{0x0000000100000000L});
+    public static final BitSet FOLLOW_arguments_in_synpred117_Java2527 = new BitSet(new long[]{0x0001000000000000L});
+    public static final BitSet FOLLOW_48_in_synpred117_Java2529 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_annotation_in_synpred128_Java2740 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_localVariableDeclarationStatement_in_synpred151_Java3267 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_classOrInterfaceDeclaration_in_synpred152_Java3279 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_71_in_synpred157_Java3433 = new BitSet(new long[]{0x700103310260D0D0L,0x00021B9F30D4726AL});
+    public static final BitSet FOLLOW_statement_in_synpred157_Java3435 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_catches_in_synpred162_Java3511 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000800L});
+    public static final BitSet FOLLOW_75_in_synpred162_Java3513 = new BitSet(new long[]{0x0000000000000000L,0x0000100000000000L});
+    public static final BitSet FOLLOW_block_in_synpred162_Java3515 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_catches_in_synpred163_Java3527 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_switchLabel_in_synpred178_Java3818 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_63_in_synpred180_Java3845 = new BitSet(new long[]{0x500003310260D0C0L,0x0002028920D41242L});
+    public static final BitSet FOLLOW_constantExpression_in_synpred180_Java3847 = new BitSet(new long[]{0x0000800000000000L});
+    public static final BitSet FOLLOW_47_in_synpred180_Java3849 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_63_in_synpred181_Java3859 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_enumConstantName_in_synpred181_Java3861 = new BitSet(new long[]{0x0000800000000000L});
+    public static final BitSet FOLLOW_47_in_synpred181_Java3863 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_enhancedForControl_in_synpred182_Java3906 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_localVariableDeclaration_in_synpred186_Java3946 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_assignmentOperator_in_synpred188_Java4129 = new BitSet(new long[]{0x500003310260D0C0L,0x0002028920D41242L});
+    public static final BitSet FOLLOW_expression_in_synpred188_Java4131 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_49_in_synpred198_Java4248 = new BitSet(new long[]{0x0002000000000000L});
+    public static final BitSet FOLLOW_49_in_synpred198_Java4250 = new BitSet(new long[]{0x0004000000000000L});
+    public static final BitSet FOLLOW_50_in_synpred198_Java4252 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_52_in_synpred199_Java4288 = new BitSet(new long[]{0x0010000000000000L});
+    public static final BitSet FOLLOW_52_in_synpred199_Java4290 = new BitSet(new long[]{0x0010000000000000L});
+    public static final BitSet FOLLOW_52_in_synpred199_Java4292 = new BitSet(new long[]{0x0004000000000000L});
+    public static final BitSet FOLLOW_50_in_synpred199_Java4294 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_52_in_synpred200_Java4333 = new BitSet(new long[]{0x0010000000000000L});
+    public static final BitSet FOLLOW_52_in_synpred200_Java4335 = new BitSet(new long[]{0x0004000000000000L});
+    public static final BitSet FOLLOW_50_in_synpred200_Java4337 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_49_in_synpred211_Java4661 = new BitSet(new long[]{0x0004000000000000L});
+    public static final BitSet FOLLOW_50_in_synpred211_Java4663 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_52_in_synpred212_Java4695 = new BitSet(new long[]{0x0004000000000000L});
+    public static final BitSet FOLLOW_50_in_synpred212_Java4697 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_49_in_synpred215_Java4788 = new BitSet(new long[]{0x0002000000000000L});
+    public static final BitSet FOLLOW_49_in_synpred215_Java4790 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_52_in_synpred216_Java4822 = new BitSet(new long[]{0x0010000000000000L});
+    public static final BitSet FOLLOW_52_in_synpred216_Java4824 = new BitSet(new long[]{0x0010000000000000L});
+    public static final BitSet FOLLOW_52_in_synpred216_Java4826 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_52_in_synpred217_Java4862 = new BitSet(new long[]{0x0010000000000000L});
+    public static final BitSet FOLLOW_52_in_synpred217_Java4864 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_castExpression_in_synpred229_Java5073 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_32_in_synpred233_Java5111 = new BitSet(new long[]{0x5000000000000000L,0x0000000020141042L});
+    public static final BitSet FOLLOW_primitiveType_in_synpred233_Java5113 = new BitSet(new long[]{0x0000000200000000L});
+    public static final BitSet FOLLOW_33_in_synpred233_Java5115 = new BitSet(new long[]{0x500003310260D0C0L,0x0002028920D41242L});
+    public static final BitSet FOLLOW_unaryExpression_in_synpred233_Java5117 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_type_in_synpred234_Java5129 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_43_in_synpred236_Java5170 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_Identifier_in_synpred236_Java5172 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_identifierSuffix_in_synpred237_Java5176 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_43_in_synpred242_Java5224 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_Identifier_in_synpred242_Java5226 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_identifierSuffix_in_synpred243_Java5230 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_55_in_synpred249_Java5305 = new BitSet(new long[]{0x500003310260D0C0L,0x0002028920D41242L});
+    public static final BitSet FOLLOW_expression_in_synpred249_Java5307 = new BitSet(new long[]{0x0100000000000000L});
+    public static final BitSet FOLLOW_56_in_synpred249_Java5309 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_55_in_synpred262_Java5545 = new BitSet(new long[]{0x500003310260D0C0L,0x0002028920D41242L});
+    public static final BitSet FOLLOW_expression_in_synpred262_Java5547 = new BitSet(new long[]{0x0100000000000000L});
+    public static final BitSet FOLLOW_56_in_synpred262_Java5549 = new BitSet(new long[]{0x0000000000000002L});
 
 }

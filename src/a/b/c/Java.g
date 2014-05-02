@@ -1,4 +1,3 @@
-
 /*
  [The "BSD licence"]
  Copyright (c) 2007-2008 Terence Parr
@@ -190,8 +189,10 @@ options {backtrack=true; memoize=true;}
 }
 
 @members {
-	
+
    private Set<String> selects = new HashSet<String>();
+   
+   private Set<String> imports = new HashSet<String>();
    
    private Set<String> updates = new HashSet<String>();
    
@@ -207,6 +208,11 @@ options {backtrack=true; memoize=true;}
    
    public Set<String> getSelects () {
       return this.selects;
+   }
+   
+   public Set<String> getImports () {
+   
+   	return this.imports;
    }
    
    public Set<String> getUpdates () {
@@ -228,22 +234,26 @@ options {backtrack=true; memoize=true;}
    a packageDeclaration or a typeDeclaration (and not an empty one). */
 compilationUnit
     :   annotations
-        (   packageDeclaration importDeclaration* typeDeclaration*
+        (   packageDeclaration importDeclaration* typeDeclaration* 
         |   classOrInterfaceDeclaration typeDeclaration*
         )
     |   packageDeclaration? importDeclaration* typeDeclaration*
     ;
 
 packageDeclaration
-    :   'package' qualifiedName ';'
+    :   'package' qualifiedName ';' {System.out.println("nome do Pacote "+ $qualifiedName.text);}
     ;
     
 importDeclaration
-    :   'import' 'static'? qualifiedName ('.' '*')? ';'
+    :   'import' 'static'? qualifiedName ('.' '*')? ';' {
+    
+    this.getImports().add($qualifiedName.text);
+    
+    }
     ;
     //{System.out.println($localVariableDeclarationStatement.text);}
 typeDeclaration
-    :   classOrInterfaceDeclaration {System.out.println( " Nome da Classe " +$typeDeclaration.text);}
+    :   classOrInterfaceDeclaration 
     |   ';'
     ;
     
@@ -351,7 +361,7 @@ memberDecl
     ;
     
 memberDeclaration
-    :   type (methodDeclaration | fieldDeclaration)
+    :   type (methodDeclaration | fieldDeclaration) {System.out.println("The type is " + $type.text);  System.out.println("The fieldDeclaration is " + $fieldDeclaration.text);}
     ;
 
 genericMethodOrConstructorDecl
@@ -368,7 +378,7 @@ methodDeclaration
     ;
 
 fieldDeclaration
-    :   variableDeclarators ';'
+    :   variableDeclarators ';' {System.out.println($variableDeclarators.text);}
     ;
         
 interfaceBodyDeclaration
@@ -660,8 +670,8 @@ localVariableDeclarationStatement
     ;
 
 localVariableDeclaration
-    :   variableModifiers type variableDeclarators {System.out.println("O declarator Ž "+ $variableDeclarators.text);}
-    {System.out.println("O type Ž "+ $type.text);}
+    :   variableModifiers type variableDeclarators {System.out.println("O declarator ÂŽ "+ $variableDeclarators.text);}
+    {System.out.println("O type ÂŽ "+ $type.text);}
     ;
     
 variableModifiers
@@ -803,57 +813,57 @@ conditionalExpression
     	
     	//regex para obter somente select
     	Pattern pattern = Pattern.compile("^\\W\\s*select", Pattern.CASE_INSENSITIVE);
-		
+
 		Matcher matcher = pattern.matcher($conditionalExpression.text);
-		
+
 		if(matcher.find()) {
-		
+
 			this.getSelects().add($conditionalExpression.text.trim().replaceFirst("\\s*select", "select").replace('"', ' ').replaceAll("\\+"+lineSeparator, "").replaceAll("\\s+", " ").replaceAll("\\+\\D*?\\+", " ")+";");
 			//System.err.println("ConditionalExpression AQUI "+ $conditionalExpression.text);
-		
+
 		}
-		
-		
+
+
 		//regex para obter somente update statement
 		Pattern patternUpdate = Pattern.compile("^\\W\\s*update", Pattern.CASE_INSENSITIVE);
-		
+
 		Matcher matcherUpdate = patternUpdate.matcher($conditionalExpression.text);
-		
+
 		if(matcherUpdate.find()) {
-		
+
 			this.getUpdates().add($conditionalExpression.text.trim().replaceFirst("\\s*update", "update").replace('"', ' ').replaceAll("\\+"+lineSeparator, "").replaceAll("\\s+", " ").replaceAll("\\+\\D*?\\+", " ")+";");
 			//System.err.println("ConditionalExpression AQUI "+ $conditionalExpression.text);
-		
+
 		}
-		
+
 		//regex para obter somente insert statement
 		Pattern patternInsert = Pattern.compile("^\\W\\s*insert", Pattern.CASE_INSENSITIVE);
-		
+
 		Matcher matcherInsert = patternInsert.matcher($conditionalExpression.text);
-		
+
 		if(matcherInsert.find()) {
-		
+
 			this.getInserts().add($conditionalExpression.text.trim().replaceFirst("\\s*insert", "insert").replace('"', ' ').replaceAll("\\+"+lineSeparator, "").replaceAll("\\s+", " ").replaceAll("\\+\\D*?\\+", " ")+";");
 			//System.err.println("ConditionalExpression AQUI "+ $conditionalExpression.text);
-		
+
 		}
-		
+
 		//regex para obter somente delele statement
 		Pattern patternDelete = Pattern.compile("^\\W\\s*delete", Pattern.CASE_INSENSITIVE);
-		
+
 		Matcher matcherDelete = patternDelete.matcher($conditionalExpression.text);
-		
+
 		if(matcherDelete.find()) {
-		
+
 			this.getDeletes().add($conditionalExpression.text.trim().replaceFirst("\\s*delete", "delete").replace('"', ' ').replaceAll("\\+"+lineSeparator, "").replaceAll("\\s+", " ").replaceAll("\\+\\D*?\\+", " ")+";");
 			//System.err.println("ConditionalExpression AQUI "+ $conditionalExpression.text);
-		
+
 		} 
-		
-		
-		
-		
-		
+
+
+
+
+
     
 //    	if($conditionalExpression.text.contains("select")){
 //    	
